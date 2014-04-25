@@ -10,11 +10,13 @@ there's also a more friendly PDF format of this document available. I hope to
 host and announce updates to this document there.
 
 LICENSE
+-------
 
 The document is distributed under the Creative Commons Attribution 4.0
 license: http://creativecommons.org/licenses/by/4.0/
 
 CONTRIBUTING
+------------
 
 I encourage and welcome help and contributions from anyone who may have
 improvements to offer. As the source is a ODT file, pull requests and diff
