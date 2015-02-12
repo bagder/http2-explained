@@ -19,6 +19,6 @@ CONTRIBUTING
 ------------
 
 I encourage and welcome help and contributions from anyone who may have
-improvements to offer. As the source is a ODT file, pull requests and diff
+improvements to offer. As the source is an FODT file, pull requests and diff
 probably won't work very well so let's try to file issues or send email to
 daniel-http2@haxx.se with your suggestions!
