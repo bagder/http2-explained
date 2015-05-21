@@ -1,9 +1,10 @@
 http2 explained
 ===============
 
-This is a detailed document (and associated presentation) describing http2,
-the background, concepts, protocol and something about existing
-implementations and what the future might hold.
+This is a detailed document (and associated presentation) describing HTTP/2
+[RFC 7540](https://httpwg.github.io/specs/rfc7540.html), the background,
+concepts, protocol and something about existing implementations and what the
+future might hold.
 
 See http://daniel.haxx.se/http2/ for the canonical home for this project where
 there's also a more friendly PDF format of this document available. I hope to
