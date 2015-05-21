@@ -2,7 +2,7 @@ http2 explained
 ===============
 
 This is a detailed document (and associated presentation) describing HTTP/2
-[RFC 7540](https://httpwg.github.io/specs/rfc7540.html), the background,
+([RFC 7540](https://httpwg.github.io/specs/rfc7540.html)), the background,
 concepts, protocol and something about existing implementations and what the
 future might hold.
 
