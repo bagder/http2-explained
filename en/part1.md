@@ -19,10 +19,13 @@ involved in the IETF HTTPbis working group for several years and there I've
 kept up-to-date with the refreshed HTTP 1.1 work as well as being involved in
 the http2 standardization work.
 
-    Email: daniel@haxx.se
-    Twitter: [@bagder](https://twitter.com/bagder)
-    Web: [daniel.haxx.se](http://daniel.haxx.se/)
-    Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Email: daniel@haxx.se
+
+  Twitter: [@bagder](https://twitter.com/bagder)
+
+  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+
+  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
 
 ## 1.2 Help!
 
