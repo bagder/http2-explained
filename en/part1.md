@@ -12,24 +12,27 @@ In this document I've tried to consistently use the word "http2" to describe the
 
 ## 1.1 Author
 
-My name is Daniel Stenberg and I work for Mozilla. I've been working with open source and networking for over twenty years in numerous projects. Possibly I'm best known for being the lead developer of curl and libcurl. I've been involved in the IETF HTTPbis working group for several years and there I've kept up-to-date with the refreshed HTTP 1.1 work as well as being involved in the http2 standardization work.
+My name is Daniel Stenberg and I work for Mozilla. I've been working with open
+source and networking for over twenty years in numerous projects. Possibly I'm
+best known for being the lead developer of curl and libcurl. I've been
+involved in the IETF HTTPbis working group for several years and there I've
+kept up-to-date with the refreshed HTTP 1.1 work as well as being involved in
+the http2 standardization work.
 
-   Email: daniel@haxx.se
-
-   Twitter: @bagder
-
-   Web: daniel.haxx.se
-
-   Blog: daniel.haxx.se/blog
-
+    Email: daniel@haxx.se
+    Twitter: [@bagder](https://twitter.com/bagder)
+    Web: [daniel.haxx.se](http://daniel.haxx.se/)
+    Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
 
 ## 1.2 Help!
 
 If you find mistakes, omissions, errors or blatant lies in this document, please send me a refreshed version of the affected paragraph and I'll make amended versions. I will give proper credits to everyone who helps out! I hope to make this document better over time.
 
-  This document is available at http://daniel.haxx.se/http2
+This document is available at [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
 
 ## 1.3 License
+
+![creative commons](../images/creative-commons.png)
 
 This document is licensed under the Creative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/
 
