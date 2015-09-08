@@ -45,6 +45,7 @@ The first version of this document was published on April 25th 2014. Here follow
 
 ### Version 1.13
 
+- Converted the master version of this document to Markdown syntax
 - 13: mention more resources, updated links and descriptions 
 - 12: Updated the QUIC description with reference to draft 
 - 8.5: refreshed with current numbers 
