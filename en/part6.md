@@ -67,7 +67,13 @@ Doing compression on dynamic content for a protocol without  then becoming vulne
 
 Enter [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2, which – as the name suitably suggests - is a compression format especially crafted for http2 headers and it is strictly speaking being specified in a separate internet draft. The new format, together with other counter-measures such as a bit that asks intermediaries to not compress a specific header and optional padding of frames should make it harder to exploit this compression.
 
-In the words of Roberto Peon (one of the creators of HPACK) “HPACK was designed to make it difficult for a conforming implementation to leak information, to make encoding and decoding very fast/cheap, to provide for receiver control over compression context size, to allow for proxy re-indexing (i.e. shared state between frontend and backend within a proxy), and for quick comparisons of huffman-encoded strings”.
+In the words of Roberto Peon (one of the creators of HPACK):
+
+> “HPACK was designed to make it difficult for a conforming implementation to
+> leak information, to make encoding and decoding very fast/cheap, to provide
+> for receiver control over compression context size, to allow for proxy
+> re-indexing (i.e. shared state between frontend and backend within a proxy),
+> and for quick comparisons of huffman-encoded strings”.
 
 ## 6.6. Reset - change your mind
 
