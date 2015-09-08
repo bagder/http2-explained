@@ -18,7 +18,8 @@ Debugging of this protocol will instead probably have to be done with tools like
 
 ## 6.2. The binary format
 
-![http2 frame format](https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png)
+<img style="float: right;" src="../images/frame-layout.png" />
+
 http2 sends binary frames. There are different frame types that can be sent and they all have the same setup:
 
 Type, Length, Flags, Stream Identifier and frame payload.
