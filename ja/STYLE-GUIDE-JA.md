@@ -1,5 +1,7 @@
 # 日本語翻訳スタイルガイド
 
+* ライセンスは以下に従います。
+  > The document is distributed under the Creative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/
 * 句読点は「、」「。」（それぞれU+3001、U+3002）を使う。句読点の目的で「,」「.」を使わない。
 * 丸括弧は全角の「（」「）」（それぞれU+FF08、U+FF09）を使う。
 * 日本語と英字の間に空白を挿入しない。
