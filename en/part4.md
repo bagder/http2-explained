@@ -14,7 +14,12 @@ The Internet Engineering Task Force (IETF) is an organization that develops and 
 
 Within IETF dedicated “working groups” are formed with a limited scope to work toward a goal. They establish a “charter” with some set guidelines and limitations for what they should produce. Everyone and anyone is allowed to join in the discussions and development. Everyone who attends and says something has the same weight and chance to affect the outcome and everyone is counted as humans and individuals, little care is given to which companies the individuals work for.
 
-The HTTPbis working group (see later for an explanation of the name) was formed during the summer of 2007 and tasked with creating an update of the HTTP 1.1 specification. Within this group the discussions about a next-version HTTP really started during late 2012. The HTTP 1.1 updating work was completed early 2014 and resulted in the RFC 7320 series.
+The HTTPbis working group (see later for an explanation of the name) was
+formed during the summer of 2007 and tasked with creating an update of the
+HTTP 1.1 specification. Within this group the discussions about a next-version
+HTTP really started during late 2012. The HTTP 1.1 updating work was completed
+early 2014 and resulted in the [RFC 7320](https://tools.ietf.org/html/rfc7320)
+series.
 
 The final inter-op meeting for the HTTPbis WG was held in New York City in the beginning of June 2014. The remaining discussions and the IETF procedures performed to actually get the official RFC out would prove to continue over into the following year.
 
