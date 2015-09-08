@@ -3,7 +3,7 @@
 As always when faced with problems, people gather to find workarounds. Some of the workarounds are clever and useful, some of them are just awful kludges.
 
 ## 3.1 Spriting
-![spriting](../images/spriting.jpg)
+<img style="float: right;" src="../images/spriting.jpg" />
 
 Spriting is the term often used to describe when you put a lot of small images together into a single large image. Then you use javascript or CSS to “cut out” pieces of that big image to show smaller individual ones.
 
@@ -14,7 +14,7 @@ Of course this has its downsides for the pages of the site that only want to sho
 ## 3.2 Inlining
 
 Inlining is another trick to avoid sending individual images, and this is done by using data: URLs embedded in the CSS file. This has similar benefits and drawbacks as the spriting case.
-  <pre>
+
     .icon1 {
         background: url(data:image/png;base64,<data>) no-repeat;
     }
@@ -22,7 +22,7 @@ Inlining is another trick to avoid sending individual images, and this is done b
     .icon2 {
         background: url(data:image/png;base64,<data>) no-repeat;
     }
-  </pre>
+
 
 ## 3.3 Concatenation
 
