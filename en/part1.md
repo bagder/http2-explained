@@ -35,7 +35,7 @@ This document is available at [http://daniel.haxx.se/http2](http://daniel.haxx.s
 
 ## 1.3 License
 
-![creative commons](../images/creative-commons.png)
+<img style="float: right;" src="../images/creative-commons.png" />
 
 This document is licensed under the Creative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/
 
