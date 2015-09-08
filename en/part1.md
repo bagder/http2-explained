@@ -1,14 +1,20 @@
 # 1. Background
 
-This is a document describing http2 from a technical and protocol level. It started out as a presentation I did in Stockholm in April 2014 that was then converted and extended into a full-blown document with all details and proper explanations.
+This document describes http2 from a technical and protocol level. It started
+out as a presentation Daniel did in Stockholm in April 2014 that was
+subsequently converted and extended into a full-blown document with all
+details and proper explanations.
 
 RFC 7540 is the official name of the final http2 specification and it was published on May 15th 2015: http://www.rfc-editor.org/rfc/rfc7540.txt
 
-All and any errors in this document are my own and the results of my shortcomings. Please point them out to me and I might do updates with corrections.
+All and any errors in this document are my own and the results of my
+shortcomings. Please point them out and they will be fixed in updated
+versions.
 
-In this document I've tried to consistently use the word "http2" to describe the new protocol while in pure technical terms, the proper name is HTTP/2. I made this choice for the sake of readability and to get a better flow in the language.
-
-*This is document version 1.13, published on September 7, 2015*
+In this document I've tried to consistently use the word "http2" to describe
+the new protocol while in pure technical terms, the proper name is HTTP/2. I
+made this choice for the sake of readability and to get a better flow in the
+language.
 
 ## 1.1 Author
 
