@@ -1,6 +1,7 @@
 # 11. http2 in curl
 
-The curl project has been providing experimental http2 support since September 2013.
+The [curl project](http://curl.haxx.se/) has been providing experimental http2
+support since September 2013.
 
 In the spirit of curl, we intend to support just about every aspect of http2 that we possibly can. curl is often used as a test tool and tinkerer's way to poke on web sites and we intend to keep that up for http2 as well.
 
@@ -26,4 +27,7 @@ To tell curl to use http2, either plain text or over TLS, you use the --http2 op
 
 ## 11.5. libcurl options
 
-Your application would use https:// or http:// URLs like normal, but you set curl_easy_setopt's CURLOPT_HTTP_VERSION option to CURL_HTTP_VERSION_2 to make libcurl attempt to use http2. It will then do a best effort and do http2 if it can, but otherwise continue to operate with HTTP 1.1.
+Your application would use https:// or http:// URLs like normal, but you set
+curl_easy_setopt's `CURLOPT_HTTP_VERSION` option to `CURL_HTTP_VERSION_2` to
+make libcurl attempt to use http2. It will then do a best effort and do http2
+if it can, but otherwise continue to operate with HTTP 1.1.
