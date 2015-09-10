@@ -17,7 +17,9 @@ Internally, curl will convert incoming http2 headers to HTTP 1.x style headers a
 
 ## 11.2. Plain text, insecure
 
-curl supports http2 over standard TCP via the Upgrade: header. If you do a HTTP request and ask for HTTP 2, curl will ask the server to update the connection to http2 if possible.
+curl supports http2 over standard TCP via the Upgrade: header. If you do an
+HTTP request and ask for HTTP 2, curl will ask the server to update the
+connection to http2 if possible.
 
 ## 11.3. TLS and what libraries
 

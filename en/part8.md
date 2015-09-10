@@ -1,4 +1,4 @@
-# 8. A http2 world
+# 8. An http2 world
 
 So what will things look like when http2 gets adopted? Will it get adopted?
 

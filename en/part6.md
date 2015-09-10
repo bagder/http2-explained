@@ -77,7 +77,10 @@ In the words of Roberto Peon (one of the creators of HPACK):
 
 ## 6.6. Reset - change your mind
 
-One of the drawbacks with HTTP 1.1 is that when a HTTP message has been sent off with a Content-Length of a certain size, you can't easily just stop it. Sure you can often (but not always) disconnect the TCP connection but that then comes as the price of having to negotiate a new TCP handshake again.
+One of the drawbacks with HTTP 1.1 is that when an HTTP message has been sent
+off with a Content-Length of a certain size, you can't easily just stop
+it. Sure you can often (but not always) disconnect the TCP connection but that
+then comes as the price of having to negotiate a new TCP handshake again.
 
 A better solution would be to just stop the message and start anew. This can be done with http2's RST_STREAM frame which will help in preventing wasted bandwidth and avoid having to tear down any connection.
 

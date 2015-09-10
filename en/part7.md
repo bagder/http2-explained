@@ -24,7 +24,11 @@ This is a somewhat debated feature. Such a connection would do unauthenticated T
 
 ## 7.2. Blocked
 
-A frame of this type is meant to be sent exactly once by a http2 party when it has data to send off but flow control forbids it to send any data. The idea being that if your implementation receives this frame you know your implementation has messed up something and/or you're getting less than perfect transfer speeds because of this.
+A frame of this type is meant to be sent exactly once by an http2 party when
+it has data to send off but flow control forbids it to send any data. The idea
+being that if your implementation receives this frame you know your
+implementation has messed up something and/or you're getting less than perfect
+transfer speeds because of this.
 
 A quote from draft-12, before this frame was moved out to become an extension:
 
