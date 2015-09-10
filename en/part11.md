@@ -8,8 +8,8 @@ In the spirit of curl, we intend to support just about every aspect of http2 tha
 curl uses the separate library [nghttp2](https://nghttp2.org/) for the http2
 frame layer functionality. curl requires nghttp2 1.0 or later.
 
-Note that curl and libcurl are not always delivered with HTTP/2 protocol
-support enabled yet if you install it from linux
+Note that currently on linux curl and libcurl are not always delivered with
+HTTP/2 protocol support enabled.
 
 ## 11.1. HTTP 1.x look-alike
 
