@@ -26,7 +26,7 @@ When looking at the trend for some of the most popular sites on the web today an
 
 As the graph below shows, the trend has been going on for a while and there is little to no indication that it'll change anytime soon. It shows the growth of the total transfer size (in green) and the total number of requests used on average (in red) to serve the most popular web sites in the world, and how they have changed over the last four years.
 
-![transfer size growth](../images/transfer-size-growth.png)
+![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
 ## 2.5 Latency kills
 
