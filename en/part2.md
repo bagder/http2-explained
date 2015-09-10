@@ -30,7 +30,7 @@ As the graph below shows, the trend has been going on for a while and there is l
 
 ## 2.5 Latency kills
 
-<img style="float: right;" src="../images/page-load-time-rtt-decreases.png" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
 HTTP 1.1 is very latency sensitive, partly because HTTP Pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
 
@@ -42,7 +42,7 @@ Another use case that really needs low latency is certain kinds of video, like v
 
 HTTP Pipelining is a way to send another request while waiting for the response to a previous request. It is very similar to queuing at a counter at the bank or in a super market. You just don't know if the person in front of you is a quick customer or that annoying one that will take forever before he/she is done: head of line blocking.
 
-<img style="float: right;" src="../images/head-of-line-blocking.jpg" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 
 Sure you can be careful about line picking so that you pick the one you really believe is the correct one, and at times you can even start a new line of your own but in the end you can't avoid making a decision and once it is made you cannot switch lines.
 

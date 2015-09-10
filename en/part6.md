@@ -18,7 +18,7 @@ Debugging of this protocol will instead probably have to be done with tools like
 
 ## 6.2. The binary format
 
-<img style="float: right;" src="../images/frame-layout.png" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png" />
 
 http2 sends binary frames. There are different frame types that can be sent and they all have the same setup:
 
@@ -34,12 +34,12 @@ A single http2 connection can contain multiple concurrently open streams, with e
 
 Multiplexing the streams means that packages from many streams are mixed over the same connection. Two (or more) individual trains of data are made into a single one and then split up again on the other side. Here are two trains:
 
-![one train](../images/train-justin.jpg)
-![another train](../images/train-ikea.jpg)
+![one train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-justin.jpg)
+![another train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-ikea.jpg)
 
 The two trains multiplexed over the same connections:
 
-![multiplexed train](../images/train-multiplexed.jpg)
+![multiplexed train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
 
 ## 6.4. Priorities and dependencies
 
