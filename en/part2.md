@@ -38,7 +38,7 @@ While we've seen a great increase in available bandwidth to people over the last
 
 Another use case that really needs low latency is certain kinds of video, like video conferencing, gaming and similar where there's not just a pre-generated stream to send out.
 
-## 2.6. Head of line blocking</h2>
+## 2.6. Head of line blocking
 
 HTTP Pipelining is a way to send another request while waiting for the response to a previous request. It is very similar to queuing at a counter at the bank or in a super market. You just don't know if the person in front of you is a quick customer or that annoying one that will take forever before he/she is done: head of line blocking.
 
