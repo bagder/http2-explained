@@ -35,7 +35,7 @@ so the extra option is necessary when you want http2.
 
 ## 11.5. libcurl options
 
-### 11.5.1 enable HTTP/2
+### 11.5.1 Enable HTTP/2
 
 Your application would use https:// or http:// URLs like normal, but you set
 curl_easy_setopt's `CURLOPT_HTTP_VERSION` option to `CURL_HTTP_VERSION_2` to
