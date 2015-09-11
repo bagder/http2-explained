@@ -50,4 +50,4 @@ Creating a new line is also associated with a performance and resource penalty s
 
 Even today, 2015, most desktop web browsers ship with HTTP pipelining disabled by default.
 
-Additional reading on this subject can be found for example in the Firefox [bugzilla entry 2643541](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+Additional reading on this subject can be found for example in the Firefox [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
