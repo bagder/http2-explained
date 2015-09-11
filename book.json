@@ -2,6 +2,6 @@
     "gitbook": ">=2.0.0",
     "title": "http2 explained",
     "pdf": {
-        "fontSize": 14
+        "fontSize": 18
     }
 }
