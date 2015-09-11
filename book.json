@@ -1,0 +1,10 @@
+// http://stackoverflow.com/questions/28341367/modifying-font-size-in-gitbook
+{
+    // Options for PDF generation
+    "pdf": {
+
+        // Font size for the file content
+        "fontSize": 12
+
+    }
+}
