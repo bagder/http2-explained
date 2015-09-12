@@ -52,34 +52,34 @@ The first version of this document was published on April 25th 2014. Here follow
 ### Version 1.13
 
 - Converted the master version of this document to Markdown syntax
-- 13: mention more resources, updated links and descriptions 
+- 13: Mention more resources, updated links and descriptions 
 - 12: Updated the QUIC description with reference to draft 
-- 8.5: refreshed with current numbers 
-- 3.4: the average is now 40 TCP connections 
+- 8.5: Refreshed with current numbers 
+- 3.4: The average is now 40 TCP connections 
 - 6.4: Updated to reflect what the spec says 
 
 ### Version 1.12
 
 - 1.1: HTTP/2 is now in an official RFC 
-- 6.5.1: link to the HPACK RFC 
-- 9.1: mention the Firefox 36+ config switch for http2 
+- 6.5.1: Link to the HPACK RFC 
+- 9.1: Mention the Firefox 36+ config switch for http2 
 - 12.1: Added section about QUIC 
 
 ### Version 1.11
 
 - Lots of language improvements mostly pointed out by friendly contributors 
-- 8.3.1: mention nginx and Apache httpd specific acitivities 
+- 8.3.1: Mention nginx and Apache httpd specific acitivities 
 
 ### Version 1.10
 
-- 1: the protocol has been “okayed” 
-- 4.1: refreshed the wording since 2014 is last year 
-- front: added image and call it “http2 explained” there, fixed link 
-- 1.4: added document history section 
-- many spelling and grammar mistakes corrected 
-- 14: added thanks to bug reporters 
-- 2.4: (better) labels for the HTTP growth graph 
-- 6.3: corrected the wagon order in the multiplexed train 
+- 1: The protocol has been “okayed” 
+- 4.1: Refreshed the wording since 2014 is last year 
+- Front: Added image and call it “http2 explained” there, fixed link 
+- 1.4: Added document history section 
+- Many spelling and grammar mistakes corrected 
+- 14: Added thanks to bug reporters 
+- 2.4: Better labels for the HTTP growth graph 
+- 6.3: Corrected the wagon order in the multiplexed train 
 - 6.5.1: HPACK draft-12 
 
 ### Version 1.9
@@ -88,7 +88,7 @@ The first version of this document was published on April 25th 2014. Here follow
 - Added section "10. http2 in Chromium" (== one page longer now)  
 - Lots of spell fixes  
 - At 30 implementations now  
-- 8.5: added some current usage numbers  
-- 8.3: mention internet explorer too  
-- 8.3.1 "missing implementations" added  
-- 8.4.3: mention that TLS also increases success rate
+- 8.5: Added some current usage numbers  
+- 8.3: Mention internet explorer too  
+- 8.3.1 Added "missing implementations"  
+- 8.4.3: Mention that TLS also increases success rate
