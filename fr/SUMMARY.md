@@ -12,5 +12,5 @@
 * [http2 et Chromium](part10.md)
 * [http2 et curl](part11.md)
 * [Après http2](part12.md)
-* [Lecture](part13.md)
+* [Lecture complémentaire](part13.md)
 * [Remerciements](part14.md)

@@ -70,7 +70,7 @@ Compresser du contenu dynamique sans devenir vulnérable à une de ces attaques 
 
 Voici [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2 (compression d'en-tête pour HTTP/2), qui, comme son nom l'indique, est un format de compression spécialement créé pour les entêtes http2 et spécifié dans un draft IETF distinct. Le nouveau format, avec d'autres contre-mesures comme un bit qui interdit aux intermédiaires de compresser un en-tête spécifique ou du remplissage de trames (padding), devrait rendre plus compliqué l'exploitation de cette compression.
 
-Voici les les mots de Roberto Peon (un des créateurs de HPACK):
+Voici les les mots de Roberto Peon (l'un des créateurs de HPACK):
 
 > “HPACK a été conçu pour rendre difficile la fuite d'information avec une implémentation s'y conformant, rendre le codage et décodage très rapide et peu coûteux, fournir au destinataire un contrôle sur la taille du contexte de compression, permettre une réindexation par un proxy, et permettre une comparaison rapide avec des chaînes codées avec un algorithme Huffman.”.
 

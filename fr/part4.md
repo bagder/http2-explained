@@ -16,7 +16,7 @@ Au sein de l'IETF existent des groupes de travail se penchant sur un sujet bien 
 
 Le groupe de travail HTTPbis (voir plus tard pour l'origine du nom) a été créé à l'été 2007 et chargé de mettre à jour la spécification HTTP 1.1. Des discussions sur une nouvelle version de HTTP ont réellement commencé fin 2012. La mise à jour HTTP 1.1 s'est terminée début 2014 avec la série des [RFC 7320](https://tools.ietf.org/html/rfc7320).
 
-La réunion d'interopérabilité potentiellement finale pour le groupe de travail HTTPbis s'est tenu à New York en juin 2014. Les dernières discussions et les procédures IETF pour obtenir une RFC officielle continueront finalement l'année suivante.
+La réunion finale d'interopérabilité pour le groupe de travail HTTPbis s'est tenue à New York en juin 2014. Les dernières discussions et les procédures IETF ont eu lieu pour obtenir la RFC officielle, continueront finalement l'année suivante.
 
 Des acteurs importants de HTTP ont manqué à l'appel du groupe de travail pendant les discussions et réunions. Je ne souhaite pas mentionner de nom de société ou produit, mais il est clair que ces acteurs de l'Internet font confiance à l'IETF pour finir le travail sans leur participation...
 
