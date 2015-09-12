@@ -107,7 +107,7 @@ Avec SPDY, Google a prouvé au monde que l'on pouvait déployer et utiliser un n
 
 http2, basé sur les même principes que SPDY et ratifié par l'IETF, devrait être encore plus largement déployé. Les déploiements SPDY ont toujours été limités par le syndrome "inventé par Google"
 
-Il y a plusieurs navigateurs importants derrière http2. Des représentants de Firefox, Chrome et Internet Explorer ont tous indiqué leur intention de livrer des navigateurs avec http2 et ont montré des implémentations fonctionnelles.
+Il y a plusieurs navigateurs importants derrière http2. Des représentants de Firefox, Chrome, Safari, Internet Explorer et Opera ont tous indiqué leur intention de livrer des navigateurs avec http2 et ont montré des implémentations fonctionnelles.
 
 Plusieurs gros sites proposent http2, avec Google, Twitter et Facebook et nous espérons que http2 sera ajouté aux serveurs Apache HTTP et nginx. H2o est un nouveau serveur très rapide supportant http2 avec beaucoup de potentiel.
 
@@ -115,4 +115,4 @@ Les plus gros proxy, HAProxy, Squid et Varnish ont mentionné leur intention de 
 
 Je pense qu'il y aura davantage d'implémentations quand la RFC sera ratifiée.
 
-Fin janvier 2015, après que Firefox 35 fut disponible avec HTTP/2 activé par défaut et Chrome 40 ayant activé http2 pour 2% de ses utilisateurs, Google a annoncé des chiffres d'utilisation, pas forcément statistiquement corrects. Google a vu HTTP/2 utilisé pour 5% de leur trafic global. En même temps, Firefox 35 affichait 9% de réponses en HTTP/2. Début mai, Google annonçait que Firefox avait augmenté de 18% et utilisait HTTP/2 dans 10% des requêtes.
+Durant tout 2015, la quantité de trafic en http2 n'a cessé d'augmenter. Au début Septembre, sur Firefox 40, il génère 13% de tout le trafic HTTP, and 27% du trafic HTTPS, tandis que Google voit 18% de HTTP/2. Il faut noter que Google déroule d'autres expérimentation en parallèle (voir QUIC en 12.1), ce qui rend la quantité de trafic http2 plus basse que ce qu'elle aurait pu être.
