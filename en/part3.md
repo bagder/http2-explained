@@ -42,4 +42,4 @@ Another reason is also to put images or similar resources on a separate host nam
 
 The picture below shows how a packet trace looks like when browsing one of Sweden's top web sites and how requests are distributed over several host names.
 
-![image sharing at expressen.se](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)
+![image sharding at expressen.se](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)
