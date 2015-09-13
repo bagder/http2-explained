@@ -8,6 +8,10 @@ document.
 We only use the markdown version these days. The old FODT files that can be
 found are only kept for historic references.
 
+The images used in the document are all used for all translations so use the
+same URL reference to get them into your translated version, use no local
+images unless there's a specific need for translation reasons.
+
 ## It will change
 
 This document is a living document and will keep getting updated and improved
