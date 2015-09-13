@@ -1,7 +1,7 @@
 # 1. Bakgrund
 
-Det här dokumented beskriver http2 från en teknisk och protokollnivå. Det
-började som en presentation Daniel gjorde i Stockholm i april 2014 som
+Det här dokumentet beskriver http2 från en teknisk och protokollnivå. Det
+började som en presentation Daniel gjorde April 2014 i Stockholm som
 sedemera gjordes om och breddades till ett fullt utvecklat dokument med alla
 detaljer och riktiga förklaringar.
 
@@ -13,13 +13,13 @@ gärna ut dem så åtgärdar vi dem till en kommande uppdatering.
 
 I det här dokumented har jag försökt att konsekvent använda ordet "http2" för
 att bekskriva det nya prokollet, medan det ju rent tekniskt och korrekt
-faktiskt heter HTTP/2. Jag har gjort det valet för läsligheten och för att få
+faktiskt heter HTTP/2. Jag har gjort det valet för läslighetens skull och för att få
 ett bättre flöde i texten.
 
 ## 1.1 Författaren
 
 Mitt namn är Daniel Stenberg och jag jobbar för Mozilla. Jag har arbetat med
-open source och nätverk i över tjugo år i otaliga projekt. Möjligen är jag
+open source och nätverk i över tjugo år i otaliga projekt. Möjligvis är jag
 mest känd för att jag är huvudutvecklaren av curl och libcurl. Jag har varit
 involverad inom IETF:s HTTPbis arbetsgrupp under flera år och där har jag
 hållit mig uppdaterad med uppdateringen av HTTP 1.1 samt varit inblandad i
@@ -37,7 +37,7 @@ arbetet med standardisering av http2.
 
 Om du hittar misstag, utelämnade detaljer, fel eller rent av lögner i det här
 dokumentet, skicka mig gärna en rättad version av det aktuella avsnittet och
-jag kommer publicera en uppdated version. Jag ger ordentlig omnämnande och
+jag kommer publicera en uppdated version. Jag ger ordentligt omnämnande och
 tack till alla som hjälper till! Jag ämnar göra dokumentet bättre över tid.
 
 Det här dokumented finns tillgängligt på [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
@@ -50,8 +50,8 @@ Det här dokumentet är licenserat under Creative Commons Attribution 4.0 licens
 
 ## 1.4 Dokumenthistoria
 
-Den första versionen av det här dokumentet publicerades 25e april 2014. Här
-följer de störa ändringar i de senaste versionerna.
+Den första versionen av det här dokumentet publicerades 25:e April 2014. Här
+följer de större förändringarna i de senaste versionerna.
 
 ### Version 1.13
 
