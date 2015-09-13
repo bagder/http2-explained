@@ -12,7 +12,7 @@ Référez-vous à https://github.com/bagder/http2-explained pour le code source 
 CONTRIBUTIONS
 -------------
 
-J'encourage et apprécie les aides et contributions de chaque personne qui aurait des améliorations à apporter. Nous acceptons les [pull
-requests](https://github.com/bagder/http2-explained/pulls), mais vous pouvez également simplement créer un [ticket](https://github.com/bagder/http2-explained/issues) ou encore envoyer un email à daniel-http2@haxx.se avec vos  suggestions!
+J'encourage et apprécie l'aide et les contributions de chaque personne qui désire apporter des améliorations. Nous acceptons les [pull
+requests](https://github.com/bagder/http2-explained/pulls), mais vous pouvez également simplement créer un [ticket](https://github.com/bagder/http2-explained/issues) ou encore envoyer un courriel à daniel-http2@haxx.se avec vos  suggestions!
 
  / Daniel Stenberg
