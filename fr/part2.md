@@ -49,6 +49,6 @@ Bien sûr vous pouvez faire attention et choisir la file que vous croyez être l
 
 Créer une nouvelle file joue sur les performances et les ressources disponibles, ce qui ne permet pas de créer de nouvelles files à l'infini. Il n'y a pas de solution parfaite.
 
-Même aujourd'hui, en 2015, le pipelining HTTP est désactivé par défaut sur la plupart des navigateures destinés aux ordinateurs personnels.
+Même aujourd'hui, en 2015, le pipelining HTTP est désactivé par défaut sur la plupart des navigateurs destinés aux ordinateurs personnels.
 
 Plus de détails sur ce sujet peuvent être consultés dans l'entrée [264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354) de la base de données Bugzilla de Firefox.
