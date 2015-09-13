@@ -40,7 +40,7 @@ dokumentet, skicka mig gärna en rättad version av det aktuella avsnittet och
 jag kommer publicera en uppdated version. Jag ger ordentligt omnämnande och
 tack till alla som hjälper till! Jag ämnar göra dokumentet bättre över tid.
 
-Det här dokumented finns tillgängligt på [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+Det här dokumentet finns tillgängligt på [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
 
 ## 1.3 Licens
 
