@@ -106,4 +106,4 @@ HTTP 1.1 очень чувствителен к задержкам, частич
 
 Дополнительные сведения по этой проблеме могут быть найдены в [баг-трекере
 Firefox под номером
-2643541](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
