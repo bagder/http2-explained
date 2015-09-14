@@ -42,7 +42,7 @@ Le fait que NPN arriva en premier et que la standardisation d'ALPN prit du temps
 
 ALPN diffère de NPN sur qui décide du protocole à utiliser. Avec ALPN, le client indique au serveur la liste des protocoles et ses préférences, le serveur obtient le dernier mot. Au contraire avec NPN, c'est le client qui impose son choix.
 
-## 5.4. http2 for http://
+## 5.4. http2 pour http://
 
 Comme indiqué précédemment, en HTTP 1.1 et en clair, la façon de négocier du http2 est de le demander au serveur avec l'en-tête Upgrade:. Si le serveur parle http2, il répond avec le code "101 Switching" et passe en http2 pour cette connexion. Bien que cette procédure d'upgrade coûte un aller-retour réseau, elle peut être conservée et réutilisée de manière bien plus efficace qu'une connexion HTTP1, amortissant ainsi le coût initial.
 
