@@ -16,16 +16,16 @@ Au sein de l'IETF existent des groupes de travail se penchant sur un sujet bien 
 
 Le groupe de travail HTTPbis (voir plus tard pour l'origine du nom) a été créé à l'été 2007 et chargé de mettre à jour la spécification HTTP 1.1. Des discussions sur une nouvelle version de HTTP ont réellement commencé fin 2012. La mise à jour HTTP 1.1 s'est terminée début 2014 avec la série des [RFC 7320](https://tools.ietf.org/html/rfc7320).
 
-La réunion finale d'interopérabilité pour le groupe de travail HTTPbis s'est tenue à New York en juin 2014. Les dernières discussions et les procédures IETF ont eu lieu pour obtenir la RFC officielle, continueront finalement l'année suivante.
+La réunion finale d'interopérabilité pour le groupe de travail HTTPbis s'est tenue à New York en juin 2014. Toutefois les discussions en suspens et les procédures IETF nécessaires pour obtenir la RFC officielle continueront jusque l'année suivante.
 
 Des acteurs importants de HTTP ont manqué à l'appel du groupe de travail pendant les discussions et réunions. Je ne souhaite pas mentionner de nom de société ou produit, mais il est clair que ces acteurs de l'Internet font confiance à l'IETF pour finir le travail sans leur participation...
 
 ### 4.1.1. Le "bis" dans HTTPbis
 
-Le groupe est appelé HTTPbis, le "bis" faisant référence au [latin "bis"](http://fr.wiktionary.org/wiki/bis#Latin). Bis est souvent utilisé comme suffixe ou partie d'un nom à l'IETF lors d'une mise à jour ou addendum d'une spécification. Dont acte avec HTTP 1.1.
+Le groupe est appelé HTTPbis, le "bis" faisant référence au [latin "bis"](http://fr.wiktionary.org/wiki/bis#Latin). Bis est souvent utilisé comme suffixe ou partie d'un nom à l'IETF lors d'une mise à jour ou addendum d'une spécification. Comme ici avec HTTP 1.1, donc.
 
-## 4.2. http2 started from SPDY
+## 4.2. http2 provient de SPDY
 
 [SPDY](http://en.wikipedia.org/wiki/SPDY) est un protocole développé par Google. Ils l'ont clairement créé dans un esprit d'ouverture et ont invité tout le monde à participer, mais il était évident qu'ils bénéficiaient d'une position de contrôle avec à la fois un navigateur populaire et un nombre significatif de serveurs très utilisés pour leurs services.
 
-Quand le groupe HTTPbis décida de travailler sur http2, SPDY avait déjà prouvé que le concept fonctionnait. Il a montré qu'il était possible de le déployer sur Internet et les chiffres publiés montraient comment il se comportait. Le travail sur http2 a donc démarré depuis le draft SPDY/3 rapidement transcrit en draft-00 http2 avec un peu de copier/coller.
+Quand le groupe HTTPbis décida de travailler sur http2, SPDY avait déjà prouvé que le concept fonctionnait. Il avait montré qu'il était possible de le déployer sur Internet et des mesures publiées montraient sa meilleure performance. Le travail sur http2 a donc démarré depuis le draft SPDY/3, rapidement transcrit dans un draft-00 de http2 grâce à quelques remplacements.
