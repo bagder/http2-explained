@@ -22,7 +22,7 @@ Débugger ce protocole se fera du coup probablement via des outils type curl ou 
 
 http2 envoit des trames binaires. Il y a différentes types de trames envoyées et elles ont toutes le même format:
 
-Type, Longueur, Flags, Identifiant de Flux et contenu (payload).
+Type, Longueur, Flags, Identifiant de Flux (Stream ID) et contenu (payload).
 
 Il y a dix trames différentes définies dans la spec http2 et deux sont fondamentales car répliquent le fonctionnement HTTP 1.1 avec DATA (données ou contenu) et HEADERS (en-tête). Je décris ces trames plus en détail par la suite.
 
