@@ -12,4 +12,6 @@ Google's [QUIC](https://www.chromium.org/quic) (Quick UDP Internet Connections) 
 
 QUIC allows the creation of connections with much less latency, it solves packet loss to only block individual streams instead of all of them like it does for HTTP/2 and it makes connections possible to be done over different network interfaces easily - thus also covering areas MPTCP is meant to solve.
 
-QUIC is so far only implemented by Google in Chrome and their server ends and that code is not easily re-used elsewhere, even if there's a [libquic](https://github.com/devsisters/libquic) effort trying exactly that. The protocol has been brought as a [draft](http://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) to the IETF transport working group.
+A another optimization for latency, it is have a support of 0-RTT to avoid 2-3 round trip actually on TCP+TLS (used on HTTP2). Zero RTT will be a part of [TLS 1.3](https://tlswg.github.io/tls13-spec/#rfc.section.6.2.2) specifications
+
+QUIC is so far only implemented by Google in Chrome and their server ends and that code is not easily re-used elsewhere, even if there's a [libquic](https://github.com/devsisters/libquic) or [QUIC Go](https://github.com/romain-jacotin/quic) effort trying exactly that. The protocol has been brought as a [draft](http://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) to the IETF transport working group.
