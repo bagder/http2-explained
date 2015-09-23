@@ -22,7 +22,7 @@ Debugging of this protocol will instead probably have to be done with tools like
 
 http2 sends binary frames. There are different frame types that can be sent and they all have the same setup:
 
-Type, Length, Flags, Stream Identifier and frame payload.
+Length, Type, Flags, Stream Identifier and frame payload.
 
 There are ten different frames defined in the http2 spec and the two perhaps most fundamental ones that map HTTP 1.1 features are DATA and HEADERS. I'll describe some of the frames in closer detail further on.
 
