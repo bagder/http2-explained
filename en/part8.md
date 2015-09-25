@@ -39,7 +39,7 @@ curl and libcurl support insecure http2 as well as the TLS based using on one ou
 
 ### 8.3.1. Missing implementations
 
-The two immensely popular servers Apache HTTPD and Nginx both offer SPDY support but none of them have yet shown official http2 support in a release. Nginx has released an ["alpha patch"](https://www.nginx.com/blog/early-alpha-patch-http2/) and the HTTP/2 module for Apache called [mod_h2](https://icing.github.io/mod_h2/) is well on its way to be shipped in a public release "soon"
+The two immensely popular servers Apache HTTPD and Nginx both offer SPDY support but as of September 22, 2015 only NGINX has shown official http2 support in a release. Nginx has released ["nginx-1.9.5"](https://www.nginx.com/blog/nginx-1-9-5/) and the HTTP/2 module for Apache called [mod_h2](https://icing.github.io/mod_h2/) is well on its way to be shipped in a public release "soon"
 
 ## 8.4. Common critiques of http2
 
