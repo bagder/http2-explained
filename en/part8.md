@@ -65,10 +65,21 @@ Not at all. The multiplexing capabilities will greatly help to improve the exper
 
 ### 8.4.4. “Its use of TLS makes it slower”
 
-This can be true to some extent. The TLS handshake does add a little extra, but there are existing and ongoing efforts on reducing the necessary round-trips even more for TLS. The overhead for doing TLS over the wire instead of plain-text is not insignificant and clearly notable so more CPU and power will be spent on the same traffic pattern as a non-secure protocol. How much and what impact it will have is a subject of opinions and measurements. See for example istlsfastyet.com for one source of info.
+This can be true to some extent. The TLS handshake does add a little extra,
+but there are existing and ongoing efforts on reducing the necessary
+round-trips even more for TLS. The overhead for doing TLS over the wire
+instead of plain-text is not insignificant and clearly notable so more CPU and
+power will be spent on the same traffic pattern as a non-secure protocol. How
+much and what impact it will have is a subject of opinions and
+measurements. See for example [istlsfastyet.com](https://istlsfastyet.com/)
+for one source of info.
 
-Telecom and other network operators, for example in the ATIS Open Web Alliance, say that they need unencrypted traffic1 to offer caching, compression and other techniques necessary to provide a fast web experience over satellite, in airplanes and similar.
-http2 does not make TLS use mandatory so we shouldn't conflate the terms.
+Telecom and other network operators, for example in the ATIS Open Web
+Alliance, say that they [need unencrypted
+traffic](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
+to offer caching, compression and other techniques necessary to provide a fast
+web experience over satellite, in airplanes and similar.  http2 does not make
+TLS use mandatory so we shouldn't conflate the terms.
 
 Many Internet users have expressed a preference for TLS to be used more widely and we should help to protect users' privacy.
 
