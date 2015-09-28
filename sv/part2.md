@@ -27,7 +27,7 @@ funktioner som nyttjades väldigt lite sällan implementerades i början, och de
 fall någon faktiskt implementerade dem såg väldigt liten användning.
 
 Senare skapade detta interoperabilitetsproblem när klienter och servrar
-började använda såna funktioner. HTTP pipelining är kanske det främsta exemple
+började använda såna funktioner. HTTP pipelining är kanske det främsta exempel
 på en sådan funktion.
 
 ## 2.3 Otillräcklig nyttjande av TCP
@@ -74,8 +74,8 @@ teknologier, gör det riktigt svårt att få en bra och snabb upplevelse av
 webben, även om du har en riktigt hög bandbredd på uppkopplingen.
 
 Ett annat användningsfall som verkligen behöver låga fördröjningar är vissa
-former av video, som till exemple videokonfernser, spel och liknande, där det
-inte bara är en för-genererad ström att skicka ut.
+former av video, som till exempel videokonferenser, spel och liknande, där det
+inte bara är en på förhand genererad ström att skicka ut.
 
 ## 2.6. Först-i-kön-blockering
 
@@ -99,4 +99,5 @@ enkelt ingen perfekt lösning för detta.
 Även idag, 2015, så har de flesta desktop-webbläsare HTTP pipelining avslaget
 per default.
 
-Vidare läsning på det här ämnet kan man hitta i till exemel Firefox [bugzilla 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+Vidare läsning på det här ämnet kan man hitta i till exempel Firefox [bugzilla
+264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
