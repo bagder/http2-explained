@@ -1,6 +1,6 @@
 # 9. http2 i Firefox
 
-Firefox har varit hack-i-häl med draftarna och har erbjudid
+Firefox har varit hack-i-häl med draftarna och har erbjudit
 http2-testimplemenationer under många månader. Under utvecklingen av
 http2-protkollet har klienter och servrar måste komma överrens om vilken
 draft-version av prokollet de implementerat vilket har gjort det lite lätt
