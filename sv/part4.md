@@ -20,7 +20,7 @@ arbetsområde som jobbar mot en mål. De etablerar en stadga med ett antal
 riktlinjer och begränsningar för vad de ska åstadkomma. Alla som vill är
 tillåtna att delta i diskussionerna och utvecklingen. Alla som deltar och
 säker något har samma vikt och chans att påverka utgången, och alla är där som
-enskilda invidier. Det läggs väldigt liten vikt vid vilka företag individerna
+enskilda individer. Det läggs väldigt liten vikt vid vilka företag individerna
 jobbar för.
 
 HTTPbis-gruppen (se nedan för en utvikning runt namnet) startades under
@@ -57,6 +57,6 @@ välanvända tjänster.
 
 När HTTPbis-arbetsgruppen bestämde att det var dags att börja jobba på http2
 hade SPDY redan bevisats vara ett fungerande koncept. Det hade visat att det
-var möjligt att deploya på Internet och det presenterade siffror som bevisade
+var möjligt att driftsätta på Internet och det presenterade siffror som bevisade
 hur bra det presterade. http2-arbetet började därmed från SPDY/3-utkastet som
 helt enkelt gjordes om till http2 draft-00 med lite sök och ersätt.
