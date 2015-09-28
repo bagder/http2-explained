@@ -35,36 +35,36 @@ nackdelar som i spriting-fallet ovan.
 
 ## 3.3 Concatenation
 
-En stor sajt kan lätt hamna i med väldigt många olika javascriptfiler.
-Frontendverktyg kan hjälpa utvecklar att slå ihop varenda en av dem till en
-enda stor klump så att webbläsaren hämtar en enda stor istället för dussintals
-mindre filer. För mycket data är skickat när enbart lite behvös. För mycket
-data laddas om när en ändring behövs.
+En stor sajt kan lätt hamna i en situation med väldigt många olika
+javascriptfiler.  Frontendverktyg kan hjälpa utvecklarna att slå ihop varenda
+en av dem till en enda stor klump så att webbläsaren hämtar en enda stor fil
+istället för dussintals mindre filer. För mycket data skickas därmed när
+enbart lite behvös. För mycket data laddas om när en enda ändring behövs.
 
-Den här utövningen är förstås mest ett besvär för de involverade utvecklarna.
+Den här övningen är förstås mest besvärlig för de involverade utvecklarna.
 
 ## 3.4 Sharding
 
-Det sista prestandatricket jag ska nämna kallas ofta "sharding". Det är i
-princip att hosta olika delar av din sajt från så många olika hostar som
-möjligt. Det kan förfalla konstigt vid en första anblick med det finns ett
+Det sista prestandatricket jag ska nämna kallas ofta för "sharding". Det är
+principen att hosta olika delar av din sajt från så många olika hostar som
+möjligt. Det kan förfalla konstigt vid en första anblick men det finns ett
 logiskt resonemang bakom.
 
-Från börjar sade HTTP 1.1-specifikationen att en klient bara var tillåten att
-använda maximalt två TCP-koppel till varje host. Så, för att inte bryta mot
-specen så uppfann smarta sajter nya host namn och - voilá - så kunde du få
+Från början sade HTTP 1.1-specifikationen att en klient endast var tillåten
+att använda maximalt två TCP-koppel till varje host. Så, för att inte bryta
+mot specen uppfann smarta sajter nya host namn och - voilá - så kunde du få
 många fler koppel till din sajt och minska sidladdningstider.
 
 Över tid har den gränsen tagits bort och dagens klienter använder lätt 6-8
-koppler per hostnamn, men de behöver fortfarande ha en gräns så sajter
+koppel per hostnamn, men de behöver fortfarande ha någon gräns så sajter
 fortsätter att använda den här tekniken för att öka antalet koppel. Med ett
-ständigt ökande antal object (som jag visade tidigare) så måste det större
+ständigt ökande antal objekt (som jag visade tidigare) så måste ett än större
 antalet koppel användas för att få HTTP att prestera bra och göra din sajt
 snabb. Det är inte ovanligt att enskilda sajter använder långt över 50 eller
 upp och förbi 100 koppel tack vare den här tekniken. Färsk statistik från
-httparchive.org visar att av de top-300K URLerna i världen så behövs i
-genomsnitt 40(!) TCP-koppel för att visa sajten, och trendkurvan säger att det
-fortsätter öka.
+httparchive.org visar att av de 300 000 mest populära URLerna i världen så
+behövs i genomsnitt 40(!) TCP-koppel för att visa sajten, och trendkurvan
+säger att det fortsätter växa.
 
 En annan anledning att också lägga bilder och liknande resurser på ett separat
 hostnamn som inte använder cookies, är att storleken på cookies idag kan bli
