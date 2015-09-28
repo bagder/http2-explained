@@ -2,7 +2,7 @@
 
 Protokollet kräver att en mottagare måste ta emot och ignorera alla paket som
 innehåller okända paket-typer. Två parter kan därmed förhandla om en
-användning av nya paket-typer på hop-by-hop basis (dvs överrenskommelsen
+användning av nya paket-typer på hop-by-hop basis (dvs överenskommelsen
 gäller endast mellan dessa två ändpunkter och inte längre än så), och de paket
 kan då inte ändra state och de kan inte flödeskontrolleras.
 
@@ -14,17 +14,17 @@ Utökningar är därmed inte del av det egentliga protokollen utan kommer
 dokumenteras utanför huvudspecen. Redan nu finns det två paket-typer som har
 diskuterats för att inkluderas i protokollet och som troligen tillhör de
 första typerna att skickas som utökningar. Jag beskriver dem här bara på grund
-deras populäritet och deras tidigare roll som "inhemska" typer.
+deras popularitet och deras tidigare roll som "inhemska" typer.
 
 ## 7.1. Alternativa Tjänster
 
 När http2 antas, finns det anledning att misstänk att TCP-koppel kommer bli
-mycket långvarigare och hållas levande mycket längre än vad HTTP 1.x-kopper
+mycket långvariga och hållas levande mycket längre än vad HTTP 1.x-kopper
 någonsin hållits. En klient bör kunna göra mycket av vad den vill över ett
 enda koppel per varje host/sajt och det enda kopplet kan då potentiellt hållas
 uppe riktigt länge.
 
-Detta påverkar hur HTTP-loadbalancerare arbetear och det kan komma situationer
+Detta påverkar hur HTTP-loadbalancerare arbetar och det kan komma situationer
 där en sajt vill annonsera och föreslå att klienten kopplar upp sig mot en
 annan host. Det kan vara för prestandans skull men även om en sajt håller på
 att tas ner för underhåll och liknande.
@@ -44,7 +44,7 @@ Alt-Svc-headern tillåter en server som tillhandahåller innehåll över http://
 att informera klienten att samma innehåll även finns tillgängligt över ett
 TLS-koppel.
 
-Detta är en någon omdiskuterad funktion. Såna koppel använder o-autentiserad
+Detta är en någon omdiskuterad funktion. Sådana koppel använder o-autentiserad
 TLS och kommer inte visas som "säkra" någonstans, kommer inte använda något
 hänglås i gränssnittet eller faktiskt inte på något vis berätta för användaren
 att det inte är gammal hederlig HTTP. Men det är fortfarande opportunistisk
@@ -61,5 +61,5 @@ du att din implementation har strulat till någonting och/eller du får mindre
 Ett citat från draft-12, innan det här paketet togs ut och blev en utökning:
 
 > “Paket-typen BLOCKED är med i den här draft-versionen för att erbjuda
-> experimentation.  Om resultaten av experimentaten inte resulterar i positiv
+> experimentering.  Om resultaten av experimenten inte resulterar i positiv
 > feedback kommer den tas bort.
