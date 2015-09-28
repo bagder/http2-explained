@@ -1,4 +1,4 @@
-# Swedish summary
+# Swedish/svenska
 
 * [Bakgrund](part1.md)
 * [HTTP idag](part2.md)
