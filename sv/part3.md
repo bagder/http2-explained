@@ -71,8 +71,8 @@ hostnamn som inte använder cookies, är att storleken på cookies idag kan bli
 betydande. Genom att använda cookie-lösa bild-värdar så kan du ibland öka
 prestandan enbart genom att HTTP-förfrågningarna blir så mycket mindre!
 
-Bilden nedan visar paket-spårning och hur det ser ut när en webbläsaren
-besöker en av Sveriges toppsajter, och hur förfrågningar är distribuerade över
-flera olika hostnamn.
+Bilden nedan visar paket-spårning och hur det ser ut när en webbläsare besöker
+en av Sveriges toppsajter, och hur förfrågningarna är distribuerade över flera
+olika hostnamn.
 
 ![image sharding at expressen.se](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)
