@@ -10,7 +10,7 @@ möjligheter att förnya protokollet.
   klienten skickar förfrågningar till en server över TCP.
 
 - http://- och https://-URLer kan inte ändras. Det kan inte göras ett nytt
-  schema. Mängden innehåll som redan använder såna URLer är helt enkelt för
+  schema. Mängden innehåll som redan använder sådana URLer är helt enkelt för
   stor för att tro att de kan ändras.
 
 - HTTP1-servrar och klienter kommer finnas kvar i decennier, vi måste kunna
@@ -27,7 +27,7 @@ möjligheter att förnya protokollet.
 
 - Ingen mera fraktionsdel i versionsnumret. Det beslöts att klienter och
   servrar är antingen kompatibla med http2 eller så är de det inte. Om det
-  kommer ett behov att utöka protkollet eller ändra saker så kommer http3 att
+  kommer ett behov att utöka protokollet eller ändra saker så kommer http3 att
   skapas. Det finns inte något "minor version" i http2.
 
 ## 5.1. http2 för existerande URI-scheman
@@ -39,7 +39,7 @@ eller på något vis be servern använda http2 istället för äldre protokoll.
 
 HTTP 1.1 har ett definierat sätt att göra detta på, nämligen genom
 Upgrade:-headern, som tillåter att server skickar tillbaks ett svar som
-använder det nya prokollet när den den fått en sådan förfrågan över det
+använder det nya protokollet när den den fått en sådan förfrågan över det
 gamla. Till priset av en tur-och-retur runda.
 
 Det priset av en tur-och-retur runda var något som SPDY-teamet inte kunde
@@ -55,19 +55,19 @@ En stor del av fokus för http2 har lags på att få det att bete sig ordentligt
 över TLS. SPDY används bara över TLS och det har varit en kraftigt tryck för
 att göra TLS obligatoriskt för http2, men det fick aldrig konsensus varvid
 http2 skeppas med TLS valbart. Hursomhelst, två prominenta implementatörer har
-tyldigt sagt att de bara kommer implementera http2 över TLS: Mozilla
+tydligt sagt att de bara kommer implementera http2 över TLS: Mozilla
 Firefox-ledaren och ledaren för Googles team. Två av de ledande webbläsarna
 idag.
 
 Anledningar att välja endast TLS inkluderar respekt för användarnas integritet
-samt att tidiga mätningar vissar att nya protokolla har en mycket högre chans
+samt att tidiga mätningar visar att nya protokoll har en mycket högre chans
 till att fungera när de görs över TLS. Det är på grund av den utspridda
 uppfattningen att allt som går över port 80 är HTTP 1.1 och det får en del
 mellan-boxar att blanda sig i och förstöra trafik när det faktiskt är något
 annat protokoll som pratas där.
 
 Obligatorisk TLS är ett ämne som orsakat en mycket handviftande och upprörda
-röster på mailnglistor och möten - är det bra eller är det ondska? Det är ett
+röster på mailinglistor och möten - är det bra eller är det ondska? Det är ett
 infekterat ämne - var medveten om detta när du kastar den här frågan i
 ansiktet på en HTTPbis-deltagare!
 
@@ -89,8 +89,8 @@ medan SPDY-klienter och -servrar fortsätter använda NPN.
 Det faktum att NPN fanns först och att ALPN tog ett stund att gå igenom
 standardiseringsprocessen har lett till att flera tidiga http2-klienter och
 servrar är gjorda att använda båda dessa tillägg när de förhandlar
-http2. Vidare, eftersom NPN avänds för SPDY och många servrar ju stöder både
-SPDY och http2 så är det vettigt att stödja både NPN och ALPN på såna servrar.
+http2. Vidare, eftersom NPN används för SPDY och många servrar ju stöder både
+SPDY och http2 så är det vettigt att stödja både NPN och ALPN på sådana servrar.
 
 ALPN skiljer sig i huvudsak från NPN genom vet det är som bestämmer vilket
 protokoll som pratas. Med ALPN är det klienten som ger servern en lista med
