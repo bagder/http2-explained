@@ -1,4 +1,4 @@
 * [English](en/)
-* [Français](fr/)
 * [Español](es/)
+* [Français](fr/)
 * [Русский](ru/)
