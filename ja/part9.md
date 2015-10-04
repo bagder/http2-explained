@@ -15,7 +15,7 @@ Firefoxはhttp2をTLS上でのみ実装することを忘れないでくださ�
 
 ## 9.3. 透過的！
 
-![透過的なhttp2の使用](../images/firefox-screenshot.png)
+![透過的なhttp2の使用](https://raw.githubusercontent.com/bagder/http2-explained/master/images/firefox-screenshot.png)
 
 http2が使われているかどうかを示すUIはありません。簡単にはわからないようになっています。確かめる一つの方法は、”Web developer->Network”を開いてレスポンスヘッダーを見て、サーバーが何を返しているかを見ることです。上のスクリーンショットに見るとおり、レスポンスは”HTTP/2.0”であり、Firefoxが”X-Firefox-Spdy:”という独自ヘッダーを挿入します。
 

@@ -22,7 +22,7 @@ http2はフレーミングを遥かに簡単にするためにバイナリーに
 
 http2はバイナリーフレームを送信します。数種類のフレームタイプがありますがそれらは共通して以下を含んでいます:
 
-タイプ、長さ、フラグ、ストリーム識別子（ID）、フレームペイロード
+長さ、タイプ、フラグ、ストリーム識別子（ID）、フレームペイロード
 
 10個のフレームがhttp2仕様書に定義されていて、その中でもHTTP 1.1の機能に対応づけるための基本的なフレームはDATAとHEADERSです。いくつかのフレームについては後で詳しく述べます。
 
@@ -34,12 +34,12 @@ http2はバイナリーフレームを送信します。数種類のフレーム
 
 ストリームの多重化は多くのストリームのフレームが同一接続上でフレーム単位で混合されるということを意味します。2つあるいはそれ以上の独立したデータの列車が、一つの列車に結合され、受信側でまた分離されます。ここに2編成の列車があります:
 
-![one train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-justin.jpg)
-![another train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-ikea.jpg)
+![列車](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-justin.jpg)
+![他の列車](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-ikea.jpg)
 
 2編成の列車が同じ接続上で多重化されました:
 
-![multiplexed train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
+![多重化された列車](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
 
 ## 6.4. 優先度と依存関係
 
