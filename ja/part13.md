@@ -12,4 +12,4 @@
 
 - HTTP 2 webサイト: http://http2.github.io/ and perhaps in particular the FAQ: http://http2.github.io/faq/
 
-- Ilya Grigorikの著書”High Performance Browser Networking”のHTTP 2の章: http://chimera.labs.oreilly.com/books/1230000000545/ch12.html
+- Ilya Grigorikの著書”High Performance Browser Networking”のHTTP/2の章: http://chimera.labs.oreilly.com/books/1230000000545/ch12.html

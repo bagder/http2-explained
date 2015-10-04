@@ -14,10 +14,10 @@ SPDYサポートは削除される予定です。[2015年2月](http://blog.chrom
 
 ChromeはHTTP 2をTLS上でのみ実装することを忘れないでください。Chromeではhttps://のHTTP 2をサポートするサイトでのみHTTP 2は動作します。
 
-## 10.3. HTTP 2の使用を可視化する
+## 10.3. HTTP/2の使用を可視化する
 
 サイトがHTTP 2を使用しているかどうかの可視化を手伝いするChromeプラグインがあります。それらの一つは[”SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin)です。
 
 ## 10.4. QUIC
 
-現在行われているChromeによるQUIC（12.1を参照）の試験が、HTTP 2の使用率を幾分下げています。
+現在行われているChromeによるQUIC（12.1を参照）の試験が、HTTP/2の使用率を幾分下げています。

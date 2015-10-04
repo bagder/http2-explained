@@ -38,7 +38,7 @@ curlとlibcurlは平文とTLS両方のHTTP 2をサポートしています。複
 
 ### 8.3.1. 今後に期待される実装
 
-極めて人気のあるサーバーApache HTTPDとNginxはSPDYをサポートしていますが、どちらもHTTP 2をサポートした正式版をリリースしていません。Nginxは["アルファパッチ"](https://www.nginx.com/blog/early-alpha-patch-http2/)をリリースしました。そしてApacheのHTTP 2モジュール[mod_h2](https://icing.github.io/mod_h2/)は”まもなく”正式にリリースされます。
+極めて人気のあるサーバーApache HTTPDとNginxはSPDYをサポートしていますが、どちらもHTTP 2をサポートした正式版をリリースしていません。Nginxは["アルファパッチ"](https://www.nginx.com/blog/early-alpha-patch-http2/)をリリースしました。そしてApacheのHTTP/2モジュール[mod_h2](https://icing.github.io/mod_h2/)は”まもなく”正式にリリースされます。
 
 ## 8.4. HTTP 2に対するよくある批判
 
@@ -48,7 +48,7 @@ curlとlibcurlは平文とTLS両方のHTTP 2をサポートしています。複
 
 世界はさらにGoogleに依存または支配されていくことを示唆するような亜種の批判もあります。このプロトコルはここ30年間に開発されたプロトコルと同様の手法でIETFによって開発されました。しかしながら我々はSPDYにおけるGoogleのすばらしい仕事を認めています。それは新しいプロトコルがデプロイできるということを証明しただけでなく、それによりどのような効果が得られるのかを示す数値も提供しました。
 
-Googleが公式に[発表](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html)したところによると、SPDYとNPNをChromeから2016年に削除し、サーバーもHTTP 2に移行していくことを急ぐということです。
+Googleが公式に[発表](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html)したところによると、SPDYとNPNをChromeから2016年に削除し、サーバーもHTTP/2に移行していくことを急ぐということです。
 
 ### 8.4.2. ”ブラウザーだけが得をするプロトコルだ”
 
@@ -83,7 +83,7 @@ HTTP 2はTLSを必須としているわけではありませんのでこれ以�
 
 ### 8.4.6. ”HTTP 1.1よりも速くない”
 
-これについては、もちろん速いというのが何を意味してどうやって計測するのか議論しなければなりませんが、SPDYの頃から多くのテストが行われていて速いページロードを証明しています（例えば、ワシントン大学の人々による["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)、Hervé Servyによる["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers)）。このような実験はHTTP 2でも同様に繰り返されてきました。私はより多くのこのようなテストや実験が公開されることを楽しみにしています。[httpwatch.comによる最初の基本的なテスト](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2)はHTTP 2がその約束を果たしていることを示唆しています。
+これについては、もちろん速いというのが何を意味してどうやって計測するのか議論しなければなりませんが、SPDYの頃から多くのテストが行われていて速いページロードを証明しています（例えば、ワシントン大学の人々による["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)、Hervé Servyによる["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers)）。このような実験はHTTP 2でも同様に繰り返されてきました。私はより多くのこのようなテストや実験が公開されることを楽しみにしています。[httpwatch.comによる最初の基本的なテスト](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2)はHTTP/2がその約束を果たしていることを示唆しています。
 
 ### 8.4.7. ”これは階層侵害だ”
 
@@ -109,4 +109,4 @@ Google、Twitter、Facebookといった巨大なサーバー事業者もHTTP 2�
 
 HAProxy、Squid、Varnishといった巨大プロキシーベンダーはHTTP 2サポートの意思を示しています。
 
-2015年全体を通して、HTTP 2のトラフィック量は増加しています。9月の初めにおいて、Firefox 40での使用率はHTTP全体の中の13%、HTTPSに限定すると27%でした。Googleは18%のトラフィックがHTTP 2だったと言っています。Googleは他の新しいプロトコルの実験も同時に行っている（12.1のQUICを参照してください）ので、HTTP 2の使用率は低く出てしまうことに注意してください。
+2015年全体を通して、HTTP/2のトラフィック量は増加しています。9月の初めにおいて、Firefox 40での使用率はHTTP全体の中の13%、HTTPSに限定すると27%でした。Googleは18%のトラフィックがHTTP 2だったと言っています。Googleは他の新しいプロトコルの実験も同時に行っている（12.1のQUICを参照してください）ので、HTTP 2の使用率は低く出てしまうことに注意してください。
