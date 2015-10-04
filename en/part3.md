@@ -3,7 +3,7 @@
 As always when faced with problems, people gather to find workarounds. Some of the workarounds are clever and useful, some of them are just awful kludges.
 
 ## 3.1 Spriting
-<img style="float: right;" src="../images/spriting.jpg" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg" />
 
 Spriting is the term often used to describe when you put a lot of small images together into a single large image. Then you use javascript or CSS to “cut out” pieces of that big image to show smaller individual ones.
 
@@ -42,4 +42,4 @@ Another reason is also to put images or similar resources on a separate host nam
 
 The picture below shows how a packet trace looks like when browsing one of Sweden's top web sites and how requests are distributed over several host names.
 
-![image sharing at expressen.se](../images/expressen-sharding.jpg)
+![image sharding at expressen.se](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)

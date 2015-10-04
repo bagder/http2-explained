@@ -8,8 +8,8 @@ In the spirit of curl, we intend to support just about every aspect of http2 tha
 curl uses the separate library [nghttp2](https://nghttp2.org/) for the http2
 frame layer functionality. curl requires nghttp2 1.0 or later.
 
-Note that curl and libcurl are not always delivered with HTTP/2 protocol
-support enabled yet if you install it from linux
+Note that currently on linux curl and libcurl are not always delivered with
+HTTP/2 protocol support enabled.
 
 ## 11.1. HTTP 1.x look-alike
 
@@ -17,7 +17,9 @@ Internally, curl will convert incoming http2 headers to HTTP 1.x style headers a
 
 ## 11.2. Plain text, insecure
 
-curl supports http2 over standard TCP via the Upgrade: header. If you do a HTTP request and ask for HTTP 2, curl will ask the server to update the connection to http2 if possible.
+curl supports http2 over standard TCP via the Upgrade: header. If you do an
+HTTP request and ask for HTTP 2, curl will ask the server to update the
+connection to http2 if possible.
 
 ## 11.3. TLS and what libraries
 
@@ -33,7 +35,7 @@ so the extra option is necessary when you want http2.
 
 ## 11.5. libcurl options
 
-### 11.5.1 enable HTTP/2
+### 11.5.1 Enable HTTP/2
 
 Your application would use https:// or http:// URLs like normal, but you set
 curl_easy_setopt's `CURLOPT_HTTP_VERSION` option to `CURL_HTTP_VERSION_2` to

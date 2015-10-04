@@ -26,11 +26,11 @@ When looking at the trend for some of the most popular sites on the web today an
 
 As the graph below shows, the trend has been going on for a while and there is little to no indication that it'll change anytime soon. It shows the growth of the total transfer size (in green) and the total number of requests used on average (in red) to serve the most popular web sites in the world, and how they have changed over the last four years.
 
-![transfer size growth](../images/transfer-size-growth.png)
+![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
 ## 2.5 Latency kills
 
-<img style="float: right;" src="../images/page-load-time-rtt-decreases.png" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
 HTTP 1.1 is very latency sensitive, partly because HTTP Pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
 
@@ -38,11 +38,11 @@ While we've seen a great increase in available bandwidth to people over the last
 
 Another use case that really needs low latency is certain kinds of video, like video conferencing, gaming and similar where there's not just a pre-generated stream to send out.
 
-## 2.6. Head of line blocking</h2>
+## 2.6. Head of line blocking
 
 HTTP Pipelining is a way to send another request while waiting for the response to a previous request. It is very similar to queuing at a counter at the bank or in a super market. You just don't know if the person in front of you is a quick customer or that annoying one that will take forever before he/she is done: head of line blocking.
 
-<img style="float: right;" src="../images/head-of-line-blocking.jpg" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 
 Sure you can be careful about line picking so that you pick the one you really believe is the correct one, and at times you can even start a new line of your own but in the end you can't avoid making a decision and once it is made you cannot switch lines.
 
@@ -50,4 +50,4 @@ Creating a new line is also associated with a performance and resource penalty s
 
 Even today, 2015, most desktop web browsers ship with HTTP pipelining disabled by default.
 
-Additional reading on this subject can be found for example in the Firefox [bugzilla entry 2643541](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+Additional reading on this subject can be found for example in the Firefox [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).

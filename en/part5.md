@@ -30,7 +30,10 @@ A lot of focus of http2 has been to make it behave properly over TLS. SPDY is on
 
 Reasons for choosing TLS-only include respect for user's privacy and early measurements showing that new protocols have a higher success rate when done with TLS. This because of the widespread assumption that anything that goes over port 80 is HTTP 1.1 makes some middle-boxes interfere and destroy traffic when instead other protocols are communicated there.
 
-The subject about mandatory TLS has caused much hand-waving and agitated voices in mailing lists and meetings – is it good or is it evil? It is an infected subject – be aware of this when you throw this question in the face of a HTTPbis participant!
+The subject about mandatory TLS has caused much hand-waving and agitated
+voices in mailing lists and meetings – is it good or is it evil? It is an
+infected subject – be aware of this when you throw this question in the face
+of an HTTPbis participant!
 
 Similarly, there's been a fierce and long-going debate on whether http2 should dictate a list of ciphers that should be mandatory when using TLS, or if it perhaps should blacklist a set or if it shouldn't require anything at all from the TLS “layer” but leave that to the TLS WG. The spec ended up specifying that TLS should be at least version 1.2 and there are  cipher suite restrictions.
 
@@ -44,6 +47,12 @@ ALPN primarily differs from NPN in who decides what protocol to speak. With ALPN
 
 ## 5.4. http2 for http://
 
-As mentioned briefly previously, for plain-text HTTP 1.1 the way to negotiate http2 is by asking the server with an Upgrade: header. If the server speaks http2 it responds with a “101 Switching” status and from then on it speaks http2 on that connection. You of course realize that this upgrade procedure costs a full network round-trip, but the upside is that a http2 connection should be possible to keep alive and re-use to a larger extent than HTTP1 connections generally are.
+As mentioned briefly previously, for plain-text HTTP 1.1 the way to negotiate
+http2 is by asking the server with an Upgrade: header. If the server speaks
+http2 it responds with a “101 Switching” status and from then on it speaks
+http2 on that connection. You of course realize that this upgrade procedure
+costs a full network round-trip, but the upside is that an http2 connection
+should be possible to keep alive and re-use to a larger extent than HTTP1
+connections generally are.
 
 While some browsers' spokespersons have stated they will not implement this means of speaking http2, the Internet Explorer team has expressed that they will, and curl already supports this.

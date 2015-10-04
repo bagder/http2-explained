@@ -14,7 +14,7 @@ Remember that Firefox only implements http2 over TLS. You will only ever see htt
 
 ## 9.3. Transparent!
 
-![transparent http2 use](../images/firefox-screenshot.png)
+![transparent http2 use](https://raw.githubusercontent.com/bagder/http2-explained/master/images/firefox-screenshot.png)
 
 There is no UI element anywhere that tells that you're talking http2. You just can't tell that easily. One way to figure it out, is to enable “Web developer->Network” and check the response headers and see what you got back from the server. The response is then “HTTP/2.0” something and Firefox inserts its own header called “X-Firefox-Spdy:” as shown in the screenshot above.
 

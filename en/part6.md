@@ -18,11 +18,11 @@ Debugging of this protocol will instead probably have to be done with tools like
 
 ## 6.2. The binary format
 
-<img style="float: right;" src="../images/frame-layout.png" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png" />
 
 http2 sends binary frames. There are different frame types that can be sent and they all have the same setup:
 
-Type, Length, Flags, Stream Identifier and frame payload.
+Length, Type, Flags, Stream Identifier and frame payload.
 
 There are ten different frames defined in the http2 spec and the two perhaps most fundamental ones that map HTTP 1.1 features are DATA and HEADERS. I'll describe some of the frames in closer detail further on.
 
@@ -34,12 +34,12 @@ A single http2 connection can contain multiple concurrently open streams, with e
 
 Multiplexing the streams means that packages from many streams are mixed over the same connection. Two (or more) individual trains of data are made into a single one and then split up again on the other side. Here are two trains:
 
-![one train](../images/train-justin.jpg)
-![another train](../images/train-ikea.jpg)
+![one train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-justin.jpg)
+![another train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-ikea.jpg)
 
 The two trains multiplexed over the same connections:
 
-![multiplexed train](../images/train-multiplexed.jpg)
+![multiplexed train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
 
 ## 6.4. Priorities and dependencies
 
@@ -77,7 +77,10 @@ In the words of Roberto Peon (one of the creators of HPACK):
 
 ## 6.6. Reset - change your mind
 
-One of the drawbacks with HTTP 1.1 is that when a HTTP message has been sent off with a Content-Length of a certain size, you can't easily just stop it. Sure you can often (but not always) disconnect the TCP connection but that then comes as the price of having to negotiate a new TCP handshake again.
+One of the drawbacks with HTTP 1.1 is that when an HTTP message has been sent
+off with a Content-Length of a certain size, you can't easily just stop
+it. Sure you can often (but not always) disconnect the TCP connection but that
+then comes as the price of having to negotiate a new TCP handshake again.
 
 A better solution would be to just stop the message and start anew. This can be done with http2's RST_STREAM frame which will help in preventing wasted bandwidth and avoid having to tear down any connection.
 

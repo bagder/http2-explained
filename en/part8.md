@@ -1,4 +1,4 @@
-# 8. A http2 world
+# 8. An http2 world
 
 So what will things look like when http2 gets adopted? Will it get adopted?
 
@@ -39,7 +39,7 @@ curl and libcurl support insecure http2 as well as the TLS based using on one ou
 
 ### 8.3.1. Missing implementations
 
-The two immensely popular servers Apache HTTPD and Nginx both offer SPDY support but none of them have yet shown official http2 support in a release. Nginx has released an ["alpha patch"](https://www.nginx.com/blog/early-alpha-patch-http2/) and the HTTP/2 module for Apache called [mod_h2](https://icing.github.io/mod_h2/) is well on its way to be shipped in a public release "soon"
+The two immensely popular servers Apache HTTPD and Nginx both offer SPDY support but as of September 22, 2015 only NGINX has shown official http2 support in a release. Nginx has released ["nginx-1.9.5"](https://www.nginx.com/blog/nginx-1-9-5/) and the HTTP/2 module for Apache called [mod_h2](https://icing.github.io/mod_h2/) is well on its way to be shipped in a public release "soon"
 
 ## 8.4. Common critiques of http2
 
@@ -65,10 +65,21 @@ Not at all. The multiplexing capabilities will greatly help to improve the exper
 
 ### 8.4.4. “Its use of TLS makes it slower”
 
-This can be true to some extent. The TLS handshake does add a little extra, but there are existing and ongoing efforts on reducing the necessary round-trips even more for TLS. The overhead for doing TLS over the wire instead of plain-text is not insignificant and clearly notable so more CPU and power will be spent on the same traffic pattern as a non-secure protocol. How much and what impact it will have is a subject of opinions and measurements. See for example istlsfastyet.com for one source of info.
+This can be true to some extent. The TLS handshake does add a little extra,
+but there are existing and ongoing efforts on reducing the necessary
+round-trips even more for TLS. The overhead for doing TLS over the wire
+instead of plain-text is not insignificant and clearly notable so more CPU and
+power will be spent on the same traffic pattern as a non-secure protocol. How
+much and what impact it will have is a subject of opinions and
+measurements. See for example [istlsfastyet.com](https://istlsfastyet.com/)
+for one source of info.
 
-Telecom and other network operators, for example in the ATIS Open Web Alliance, say that they need unencrypted traffic1 to offer caching, compression and other techniques necessary to provide a fast web experience over satellite, in airplanes and similar.
-http2 does not make TLS use mandatory so we shouldn't conflate the terms.
+Telecom and other network operators, for example in the ATIS Open Web
+Alliance, say that they [need unencrypted
+traffic](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
+to offer caching, compression and other techniques necessary to provide a fast
+web experience over satellite, in airplanes and similar.  http2 does not make
+TLS use mandatory so we shouldn't conflate the terms.
 
 Many Internet users have expressed a preference for TLS to be used more widely and we should help to protect users' privacy.
 
