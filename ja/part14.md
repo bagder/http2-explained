@@ -2,7 +2,7 @@
 
 発想とパッケージのフォーマットのレゴ画像は、Mark Nottingham氏から。
 
-HTTPトレンドデータはhttp://httparchive.orgから。
+HTTPトレンドデータは http://httparchive.org から。
 
 RTTのグラフはMike Belshe氏のプレゼンテーションから。
 

@@ -30,7 +30,7 @@ RFC 7540は公式なhttp2仕様書で、2015年5月15日に発行されました
 
 <img style="float: right;" src="../images/creative-commons.png" />
 
-この文書はCreative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/でライセンスされています。
+この文書はCreative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/ でライセンスされています。
 
 ## 1.4 履歴
 
