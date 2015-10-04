@@ -1,6 +1,6 @@
 * [English](en/)
 * [Español](es/)
 * [Français](fr/)
-* [Japanese](ja/)
+* [日本語](ja/)
 * [Русский](ru/)
 * [Svenska](sv/)
