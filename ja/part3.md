@@ -3,7 +3,7 @@
 問題に直面した時はいつも人々は集まって回避策を考えます。中には使いやすい案もあるし、ゴミのように役に立たない案もあります。
 
 ## 3.1 スプライティング
-<img style="float: right;" src="../images/spriting.jpg" />
+<img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg" />
 
 小さな画像をより集めて一つの大きな画像に結合することをスプライティングと言います。JavaScriptやCSSを使って大きな画像から個々の小さな画像を"切り取り"表示させるのです。
 
@@ -42,4 +42,4 @@
 
 下図はスウェーデンのトップwebサイトの一つをブラウジングしたとき、パケットのトレースがどうなっているか、そしてどのようにリクエストが複数のホスト名に分散されているかを示しています。
 
-![image sharing at expressen.se](../images/expressen-sharding.jpg)
+![expressen.seにおける画像のシャーディング](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)
