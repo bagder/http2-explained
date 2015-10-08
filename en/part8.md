@@ -31,15 +31,42 @@ Trying to document specific implementations in a document such as this is of cou
 
 There was a large amount of implementations already early on, and the amount has increased over time during the http2 work. At the time of  writing this there are over 40 implementations listed, and most of them implement the final version.
 
-Firefox has been the browser that's been on top of the bleeding edge drafts, Twitter has kept up and offered its services over http2. Google started during April 2014 to offer http2 support on a few test servers running their services and since May 2014 they offer http2 support in their development versions of Chrome. Microsoft has shown a tech preview with http2 support for their next Internet Explorer version. Safari and Opera have both said they will support http2.
+### 8.3.1 Browsers
 
-curl and libcurl support insecure http2 as well as the TLS based using on one out of several different TLS libraries.
+Firefox has been the browser that's been on top of the bleeding edge drafts,
+Twitter has kept up and offered its services over http2. Google started during
+April 2014 to offer http2 support on a few test servers running their services
+and since May 2014 they offer http2 support in their development versions of
+Chrome. Microsoft has shown a tech preview with http2 support for their next
+Internet Explorer version. Safari (with iOS 9 and Mac OS X El Capitan) and
+Opera have both said they will support http2.
 
-[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](http://trafficserver.apache.org/) and [nghttp2](https://nghttp2.org/) all have released http2 capable open source servers.
+### 8.3.2 Servers
 
-### 8.3.1. Missing implementations
+There are already many server implementations of http2.
 
-The two immensely popular servers Apache HTTPD and Nginx both offer SPDY support but as of September 22, 2015 only Nginx has shown official http2 support in a release. Nginx has released ["nginx-1.9.5"](https://www.nginx.com/blog/nginx-1-9-5/) and the HTTP/2 module for Apache called [mod_h2](https://icing.github.io/mod_h2/) is well on its way to be shipped in a public release "soon"
+The popular Nginx server offers http2 support with since
+[1.9.5](https://www.nginx.com/blog/nginx-1-9-5/) released on September 22,
+2015 (where it replaces the SPDY module, so they cannot both run in the same
+server instance).
+
+Apache's httpd server has a http2 module in the works called
+[mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) which is
+expected to be shipped in pending 2.4.17 release.
+
+[H2O](https://h2o.examp1e.net/), [Apache Traffic
+Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
+[Caddy](http://caddyserver.com/) and
+[LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)
+have all released http2 capable servers.
+
+### 8.3.3 Others
+
+curl and libcurl support insecure http2 as well as the TLS based using on one
+out of several different TLS libraries.
+
+Wireshark supports http2. The perfect tool for analyzing http2 network
+traffic.
 
 ## 8.4. Common critiques of http2
 
