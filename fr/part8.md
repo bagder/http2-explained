@@ -66,7 +66,7 @@ Les gros sites ont déjà une présence mondiale et du coup des aller-retours mo
 
 ### 8.4.4. “Its use of TLS makes it slower”
 
-Cela peut se révéler vrai. La négociation TLS ajoute un peu de latence, mais il existe des projets pour réduire encore les aller-retours en TLS. La surcharge du TLS par rapport à du texte en clair n'est pas neutre et a un impact CPU. L'impact en lui-même est sujet à discussions et mesures. Voir par exemple istlsfastyet.com
+Cela peut se révéler vrai. La négociation TLS ajoute un peu de latence, mais il existe des projets pour réduire encore les aller-retours en TLS. La surcharge du TLS par rapport à du texte en clair n'est pas neutre et a un impact CPU. L'impact en lui-même est sujet à discussions et mesures. Voir par exemple [istlsfastyet.com](https://istlsfastyet.com/) pour avoir une source d'information.
 
 Les opérateurs télécom et réseaux, par exemple l'ATIS Open Web Alliance, indiquent qu'ils nécessitent du [trafic non chiffré](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) pour permettre au cache et à la compression de fonctionner, notamment pour une expérience web rapide par satellite.
 http2 n'oblige pas à utiliser TLS, on ne devrait donc pas mélanger les deux.
