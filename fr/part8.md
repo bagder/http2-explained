@@ -36,9 +36,7 @@ curl et libcurl supportent http2 non-TLS et TLS à partir d'une des librairies T
 
 ### 8.3.1. Implémentations manquantes
 
-Il manque des marques importantes parmi la liste des implémentations existantes. Nous n'avons rien entendu de la part d'Apple quant au support http2 dans Safari. Les deux serveurs les plus populaires Apache HTTPD et Nginx supportent SPDY mais pas encore http2.
-
-Nginx [indique](https://www.nginx.com/blog/how-nginx-plans-to-support-http2/) qu'ils "supporteront HTTP/2 avec nginx et NGINX Plus d'ici la fin 2015". Il y a une version préliminaire d'un module HTTP/2 pour Apache appelé [mod_h2](https://icing.github.io/mod_h2/), qualifié de "version alpha".
+Les deux serveurs les plus populaires, Apache HTTPD et Nginx, supportent tous deux SPDY mais à la date du 22 Septembre 2015, seul Nginx a publié une version supportant officiellement http2. Nginx a publié ["nginx-1.9.5"](https://www.nginx.com/blog/nginx-1-9-5/) et le module HTTP/2 pour Apache, nommé [mod_h2](https://icing.github.io/mod_h2/), est en bonne voie pour être embarqué "bientôt" dans une nouvelle version.
 
 ## 8.4. Critiques courantes de http2
 
