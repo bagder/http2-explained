@@ -8,7 +8,7 @@ When HTTP was created and thrown out into the world it was probably perceived as
 
 ## 2.2 A world of options
 
-HTTP 1.1's nature of having lots of tiny details and options available for later extensions have grown a software ecosystem where almost no implementations ever implement everything – and it isn't even really possible to exactly tell what “everything” is. This has lead to a situation where features that were initially little used saw very few implementations and those who did implement the features then saw very little use of them.
+HTTP 1.1's nature of having lots of tiny details and options available for later extensions has grown a software ecosystem where almost no implementations ever implement everything – and it isn't even really possible to exactly tell what “everything” is. This has led to a situation where features that were initially little used saw very few implementations and those who did implement the features then saw very little use of them.
 
 Then later on, it caused an interoperability problem when clients and servers started to increase the use of such features. HTTP Pipelining is a primary example of such a feature.
 
