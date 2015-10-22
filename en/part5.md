@@ -1,4 +1,4 @@
-# http2 concepts
+# 5. http2 concepts
 
 So what does http2 accomplish? Where are the boundaries for what the HTTPbis group set out to do?
 
