@@ -6,7 +6,7 @@ So what will things look like when http2 gets adopted? Will it get adopted?
 
 http2 is not yet widely deployed nor used. We can't tell for sure exactly how things will turn out. We have seen how SPDY has been used and we can make some guesses and calculations based on that and other past and current experiments.
 
-http2 reduces the number of necessary network round-trips and it avoids the head of line blocking dilemma completely with multiplexing and fast discarding of unwanted streams.
+http2 reduces the number of necessary network round-trips and it avoids the head-of-line blocking dilemma completely with multiplexing and fast discarding of unwanted streams.
 
 It allows a large amount of parallel streams that go way over even the most sharding sites of today.
 
@@ -19,7 +19,7 @@ How much faster and how much improvements we will see, I don't think we can say 
 
 Over the years web developers and web development environments have gathered a full toolbox of tricks and tools to work around problems with HTTP 1.1, recall that I outlined  some of them in the beginning of this document as a justification for http2.
 
-Lots of those workarounds that tools and developers now use by default and without thinking, will probably hurt http2 performance or at least not really take advantage of http2's new super powers. Spriting and inlining should most likely not be done with http2. Sharding will probably be detrimental to http2 as it will probably benefit from using less connections.
+Lots of those workarounds that tools and developers now use by default and without thinking, will probably hurt http2 performance or at least not really take advantage of http2's new super powers. Spriting and inlining should most likely not be done with http2. Sharding will probably be detrimental to http2 as it will probably benefit from using fewer connections.
 
 A problem here is of course that web sites and web developers need to develop and deploy for a world that in the short term at least, will have both HTTP1.1 and http2 clients as users and to get maximum performance for all users can be challenging without having to offer two different front-ends.
 
@@ -62,10 +62,10 @@ have all released http2 capable servers.
 
 ### 8.3.3 Others
 
-curl and libcurl support insecure http2 as well as the TLS based using on one
-out of several different TLS libraries.
+curl and libcurl support insecure http2 as well as the TLS based using one
+of several different TLS libraries.
 
-Wireshark supports http2. The perfect tool for analyzing http2 network
+Wireshark supports http2, and is the perfect tool for analyzing http2 network
 traffic.
 
 ## 8.4. Common critiques of http2

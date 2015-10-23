@@ -1,14 +1,14 @@
 # 6. The http2 protocol
 
-Enough about the background, the history and politics behind what took us here. Let's dive into the specifics of the protocol. The bits and the concepts that create http2.
+Enough about the background, the history and politics behind what took us here. Let's dive into the specifics of the protocol: the bits and the concepts that create http2.
 
 ## 6.1. Binary
 
 http2 is a binary protocol.
 
-Just let that sink in for a minute. If you're a person who has been involved in internet protocols before, chances are that you will now be instinctively reacting against this choice and marshaling your arguments that spell out how protocols that are made based on text/ascii are superior because humans can handcraft request over telnet and so on..
+Just let that sink in for a minute. If you're a person who has been involved in internet protocols before, chances are that you will now be instinctively reacting against this choice and marshaling your arguments that spell out how protocols that are made based on text/ascii are superior because humans can handcraft request over telnet and so on.
 
-http2 is binary to make the framing much easier. Figuring out the start and the end of frames is one of the really complicated things in HTTP 1.1 and actually in text based protocols in general. By moving away from optional white spaces and different ways to write the same thing, implementations become simpler.
+http2 is binary to make the framing much easier. Figuring out the start and the end of frames is one of the really complicated things in HTTP 1.1 and actually in text-based protocols in general. By moving away from optional white spaces and different ways to write the same thing, implementations become simpler.
 
 Also, it makes it much easier to separate the actual protocol parts from the framing - which in HTTP1 is confusingly intermixed.
 
@@ -28,7 +28,7 @@ There are ten different frames defined in the http2 spec and the two perhaps mos
 
 ## 6.3. Multiplexed streams
 
-The Stream Identifier mentioned in the previous section describing the binary frame format, makes each frame sent over http2 get associated with a “stream”. A stream is a logical association. An independent, bi-directional sequence of frames exchanged between the client and server within an http2 connection.
+The Stream Identifier mentioned in the previous section causes each frame sent over http2 to be associated with a “stream”. A stream is a logical association: an independent, bi-directional sequence of frames exchanged between the client and server within an http2 connection.
 
 A single http2 connection can contain multiple concurrently open streams, with either endpoint interleaving frames from multiple streams. Streams can be established and used unilaterally or shared by either the client or server and they can be closed by either endpoint. The order in which frames are sent within a stream is significant. Recipients process frames in the order they are received. 
 
@@ -47,7 +47,7 @@ Each stream also has a priority (also known as “weight”), which is used to t
 
 Using the PRIORITY frame, a client can also specify for the server which other stream that this stream depends on. It allows a client to build a priority “tree” where several “child streams” may depend on the completion of “parent streams”.
 
-The priority weights and dependencies can be changed dynamically in run-time, which should enable browsers to make sure that when users scroll down a page full of images it can specify which images that are most important, or if you switch tabs it can prioritize a new set of streams then suddenly come into focus.
+The priority weights and dependencies can be changed dynamically in run-time, which should enable browsers to make sure that when users scroll down a page full of images it can specify which images are most important; or if you switch tabs, it can prioritize a new set of streams that suddenly come into focus.
 
 ## 6.5. Header compression
 
@@ -57,7 +57,7 @@ This makes HTTP repetitive. When a client asks for many resources from the same 
 
 While the number of objects per web page increases as I've mentioned earlier, the use of cookies and the size of the requests have also kept growing over time. Cookies also need to be included in all requests, mostly the same over many requests.
 
-The HTTP 1.1 request sizes have actually gotten so large over time so they sometimes even end up larger than the initial TCP window, which makes them very slow to send as they need a full round-trip to get an ACK back from the server before the full request has been sent. Another argument for compression.
+The HTTP 1.1 request sizes have actually gotten so large over time that they sometimes even end up larger than the initial TCP window, which makes them very slow to send, as they need a full round-trip to get an ACK back from the server before the full request has been sent. This is another argument for compression.
 
 ### 6.5.1. Compression is a tricky subject
 
