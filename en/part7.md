@@ -1,6 +1,6 @@
 # 7. Extensions
 
-The protocol mandates that a receiver must read and ignore all unknown frames using unknown frame types. Two parties can thus negotiate use of new frame types on a hop-by-hop basis, and those frames aren't allowed to change state and they will not be flow controlled.
+The protocol mandates that a receiver must read and ignore all unknown frames (frames with unknown frame types). Two parties can thus negotiate the use of new frame types on a hop-by-hop basis, but those frames aren't allowed to change state and they will not be flow controlled.
 
 The subject of whether http2 should allow extensions at all was debated at length during the time the protocol was developed with opinions swinging for and against. After draft-12 the pendulum swept back one last time and extensions were allowed again.
 
