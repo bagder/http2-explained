@@ -16,7 +16,7 @@ Remember that Chrome only implements http2 over TLS. You will only ever see http
 
 ## 10.3. Visualize HTTP/2 use
 
-There are Chrome plugins available that helps visualize if a site is using HTTP/2. One of them is [“SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin).
+There are Chrome plugins available that helps visualize if a site is using HTTP/2. One of them is [“HTTP/2 and SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin).
 
 ## 10.4. QUIC
 
