@@ -62,7 +62,7 @@ have all released http2 capable servers.
 
 ### 8.3.3 Others
 
-curl and libcurl support insecure http2 as well as the TLS based using on one
+curl and libcurl support insecure http2 as well as the TLS based one using one
 out of several different TLS libraries.
 
 Wireshark supports http2. The perfect tool for analyzing http2 network
