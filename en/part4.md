@@ -18,7 +18,7 @@ The HTTPbis working group (see later for an explanation of the name) was
 formed during the summer of 2007 and tasked with creating an update of the
 HTTP 1.1 specification. Within this group the discussions about a next-version
 HTTP really started during late 2012. The HTTP 1.1 updating work was completed
-early 2014 and resulted in the [RFC 7320](https://tools.ietf.org/html/rfc7320)
+early 2014 and resulted in the [RFC 7230](https://tools.ietf.org/html/rfc7230)
 series.
 
 The final inter-op meeting for the HTTPbis WG was held in New York City in the beginning of June 2014. The remaining discussions and the IETF procedures performed to actually get the official RFC out continued into the following year.
