@@ -16,13 +16,13 @@ O fato do protocolo oferecer compressão e que muitas vezes será executado sobr
 
 A depuração deste protocolo , provavelmente, será feita utilizando ferramentas como curl ou analisando o fluxo da rede com o _dissector_ de http2 do Wireshark ou algo similar.
 
-## 6.2. The binary format
+## 6.2. O formato binário
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png" />
 
-http2 sends binary frames. There are different frame types that can be sent and they all have the same setup: Length, Type, Flags, Stream Identifier, and frame payload.
+http2 envia quadros binários. Existem diferentes tipos de quadro que podem ser enviados e todos têm a mesma configuração: _Length_ (comprimento), _Type_ (tipo), _Flags_ (configurações), _Stream Identifier_ (identificador de fluxo) e _frame payload_ (quadro de informação).
 
-There are ten different frame types defined in the http2 spec and perhaps the two most fundamental ones that map to HTTP 1.1 features are DATA and HEADERS. I'll describe some of the frames in more detail further on.
+Existem 10 diferentes tipos de quadro definidos na especificação do http2 e talvez os dois tipos fundamentais que mapeiam para características do HTTP 1.1 são _DATA_ e _HEADERS_. Eu vou descrever alguns dos quadros com mais detalhes adiante.
 
 ## 6.3. Multiplexed streams
 
