@@ -24,7 +24,7 @@ http2 envia quadros binários. Existem diferentes tipos de quadro que podem ser 
 
 Existem 10 diferentes tipos de quadro definidos na especificação do http2 e talvez os dois tipos fundamentais que mapeiam para características do HTTP 1.1 são _DATA_ e _HEADERS_. Eu vou descrever alguns dos quadros com mais detalhes adiante.
 
-## 6.3. Multiplexed streams
+## 6.3. Fluxos multiplexados
 
 O identificador de fluxo (_Stream Identifier_) mencionado na seção anterior associa cada quadro enviar via http2 com um "fluxo". Um fluxo é uma sequência de quadros independentes e bi-direcionais trocadas entre o cliente e o servidor utilizando uma conexão http2.
 
@@ -39,9 +39,11 @@ Os dois trens multiplexados na mesma conexão:
 
 ![multiplexed train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
 
-## 6.4. Priorities and dependencies
+## 6.4. Prioridades e dependências
 
-Each stream also has a priority (also known as “weight”), which is used to tell the peer which streams to consider most important, in case there are resource restraints that force the server to select which streams to send first.
+Cada fluxo tem uma prioridade (também conhecido como "peso") que é utilizada para dizer ao par (_peer_) quais são os fluxos mais importantes, no caso de existirem restrições de recursos que forçam o servidor a selecionar quais fluxos enviar primeiro.
+
+Utilizando o quadro PRIORITY, um cliente também pode dizer ao servidor qual outro fluxo este fluxo atual depende. Ele permite que o cliente construa uma árvore de prioridades onde vários "fluxos filho" podem depender da conclusão de "fluxos pai".
 
 Using the PRIORITY frame, a client can also tell the server which other stream this stream depends on. It allows a client to build a priority “tree” where several “child streams”may depend on the completion of “parent streams”.
 
