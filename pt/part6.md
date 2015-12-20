@@ -47,15 +47,17 @@ Utilizando o quadro PRIORITY, um cliente também pode dizer ao servidor qual out
 
 A prioridade dos pesos e as dependências podem ser modificadas dinamicamente em tempo de execução, o que pode permitir que os navegadores especifiquem, numa página cheia de imagens e o usuário utiliza a barra de rolagem, quais são as imagens mais importantes para serem carregadas, ou se você alterna as abas ele pode priorizar um novo grupo de fluxos que, de repente, entram em foco.
 
-## 6.5. Header compression
+## 6.5. Compressão do cabeçalho
 
-HTTP is a stateless protocol. In short, this means that every request needs to bring with it as much detail as the server needs to serve that request, without the server having to store a lot of info and meta-data from previous requests. Since http2 doesn't change this paradigm, it has to work the same way.
+HTTP é um protocolo sem estado (_stateless_).
 
-This makes HTTP repetitive. When a client asks for many resources from the same server, like images from a web page, there will be a large series of requests that all look almost identical. A series of almost identical somethings begs for compression.
+HTTP is a stateless protocol. Em suma, isso significa que cada requisição necessita enviar ao servidor todos os detalhes necessários para atender essa solicitação, sem que o servidor necessite armazenar uma grande quantidade de informações e metadados de requisições anteriores. Como o http2 não muda esse paradigma, ele tem que funcionar da mesma forma.
 
-While the number of objects per web page has increased (as mentioned earlier), the use of cookies and the size of the requests have also kept growing over time. Cookies also need to be included in all requests, often the same ones in multiple requests.
+Isso torna o HTTP repetitivo. Quando um cliente solicita muitos recursos do mesmo servidor, como imagens de uma página _web_, haverá uma série de requisições e todas parecerão idênticas. Uma séria de coisas quase idênticas implora por compressão.
 
-The HTTP 1.1 request sizes have actually gotten so large that they sometimes end up larger than the initial TCP window, which makes them very slow to send as they need a full round-trip to get an ACK back from the server before the full request has been sent. This is another argument for compression.
+Enquanto o número de objetos por página _web_ tem aumentado (como mencionado anteriormente), o uso de cookies e o tamanho das requisições também tem aumentado ao longo do tempo. Cookies também precisam ser incluídos em todas as requisições, muitas vezes os mesmos em várias requisições.
+
+As requisições HTTP 1.1 tem realmente crescido tanto de tamanho que às vezes elas acabam ficando maior que a janela TCP inicial, o que as torna muito lentas para enviar, pois elas necessitam de um _round-trip_ completo para obter um ACK de volta do servidor antes que a requisição completa seja enviada. Esse é um outro argumento para compressão.
 
 ### 6.5.1. Compression is a tricky subject
 
