@@ -59,21 +59,22 @@ Enquanto o número de objetos por página _web_ tem aumentado (como mencionado a
 
 As requisições HTTP 1.1 tem realmente crescido tanto de tamanho que às vezes elas acabam ficando maior que a janela TCP inicial, o que as torna muito lentas para enviar, pois elas necessitam de um _round-trip_ completo para obter um ACK de volta do servidor antes que a requisição completa seja enviada. Esse é um outro argumento para compressão.
 
-### 6.5.1. Compression is a tricky subject
+### 6.5.1. Compressão é um assunto complicado
 
-HTTPS and SPDY compression were found to be vulnerable to the [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) and [CRIME](http://en.wikipedia.org/wiki/CRIME) attacks. By inserting known text into the stream and figuring out how that changes the output, an attacker can figure out what's being sent in an encrypted payload.
+A compressão de HTTPS e SPDY foi descoberta vulnerável aos ataques [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) e [CRIME](http://en.wikipedia.org/wiki/CRIME). Inserindo um texto conhecido no fluxo e descobrindo como isso altera a saída, um invasor pode descobrir o que está sendo enviado em uma carga criptografada.
 
-Doing compression on dynamic content for a protocol - without becoming vulnerable to one of these attacks - requires some thought and careful consideration. This is what the HTTPbis team tried to do.
+Realizando compressão em conteúdo dinâmico para um protocolo - sem se tornar vulnerável a um destes ataques - exige um pouco de reflexão e análise cuidadosa. Isto é o que o time HTTPbis tentou fazer.
 
-Enter [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2, which – as the name suggests - is a compression format especially crafted for http2 headers, and it is being specified in a separate internet draft. The new format, together with other counter-measures (such as a bit that asks intermediaries to not compress a specific header and optional padding of frames), should make it harder to exploit compression.
+Entra o [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), compressão de cabeçalho para HTTP/2, que - como o nome sugere - é um formato de compressão especialmente concebido para cabeçalhos http2, e está sendo especificado em um projeto separado. O novo formato, juntamente com outras medidas (como alguns pedem a intermediários que não comprimam cabeçalhos específicos e preenchimento opcional de quadros), deve torná-lo mais difícil de explorar a compressão.
 
-In the words of Roberto Peon (one of the creators of HPACK):
+Nas palavras de Roberto Peon (um dos criadores do HPACK):
 
-> “HPACK was designed to make it difficult for a conforming implementation to
-> leak information, to make encoding and decoding very fast/cheap, to provide
-> for receiver control over compression context size, to allow for proxy
-> re-indexing (i.e., shared state between frontend and backend within a proxy),
-> and for quick comparisons of Huffman-encoded strings”.
+> "HPACK" foi projetado para tornar o vazamento de informações mais difícil em
+> uma implementação de acordo, realizar a codificação e decodificação mais rápida
+> e barata, fornecer para o receptor controle sobre a compressão do tamanho do
+> contexto, permitir a reindexação por parte do proxy (ou seja, estado compartilhado)
+> entre _frontend_ e _backend_ dentro de um proxy), e comparações rápidas de
+> _strings_ utilizando a codificação de Huffman".
 
 ## 6.6. Reset - change your mind
 
