@@ -76,23 +76,20 @@ Nas palavras de Roberto Peon (um dos criadores do HPACK):
 > entre _frontend_ e _backend_ dentro de um proxy), e comparações rápidas de
 > _strings_ utilizando a codificação de Huffman".
 
-## 6.6. Reset - change your mind
+## 6.6. Reset - mude de ideia
 
-One of the drawbacks with HTTP 1.1 is that when an HTTP message has been sent
-off with a Content-Length of a certain size, you can't easily just stop
-it. Sure, you can often (but not always) disconnect the TCP connection, but that
-comes at the cost of having to negotiate a new TCP handshake again.
+Uma das desvantagens do HTTP 1.1 é que, quando uma mensagem é enviada com o cabeçalho _Content-Length_ com um certo tamanho, não é possível cancelá-lo facilmente. Você pode (mas nem sempre) cancelar a conexão TCP, mas isso vem com o custo de negociar um _handshake_ TCP novo.
 
-A better solution would be to just stop the message and start a new. This can be done with http2's RST_STREAM frame which will help prevent wasted bandwidth and the need to tear down connections.
+Uma solução melhor seria apenas parar a mensagem e enviar uma nova. Isto pode ser feito com o quadro RST_STREAM do http2 que ajudará a previnir desperdícios e a necessidade de cancelar conexões.
 
 ## 6.7. Server push
 
-This is the feature also known as “cache push”. The idea is that if the client asks for resource X, the server may know that the client will probably want resource Z as well, and sends it to the client without being asked. It helps the client by putting Z into its cache so that it will be there when it wants it.
+Esta funcionalidade também é conhecida como "cache push". A ideia é que, se o cliente solicita o recurso X, o servidor pode determinar que o cliente também solicitará o recurso Z e enviará sem que o cliente o solicite. Isso ajudará o cliente colocando o recurso Z em cache de forma que ele estará lá quando for solicitado.
 
-Server push is something a client must explicitly allow the server to do. Even then, the client can swiftly terminate a pushed stream at any time with RST_STREAM should it not want a particular resource.
+O envio a partir do servidor (_server push_) é algo que o cliente deve explicitamente permitir que o servidor faça. Mesmo assim, o cliente pode rapidamente encerrar o fluxo a qualquer momento com RST_STREAM não permitindo assim nenhum recurso em particular.
 
-## 6.8. Flow Control
+## 6.8. Controle de fluxo
 
-Each individual http2 stream has its own advertised flow window that the other end is allowed to send data for. If you happen to know how SSH works, this is very similar in style and spirit.
+Cada fluxo http2 individual tem sua própria janela de fluxo anunciada, onde a outra extremidade pode enviar informações. Se você conhece como SSH funciona, isto é muito semelhante em estilo e espírito.
 
-For every stream, both ends have to tell the peer that it has enough room to handle incoming data, and the other end is only allowed to send that much data until the window is extended. Only DATA frames are flow controlled.
+Para cada fluxo (_stream_), ambas as extremidades tem que informar ao seu par que possuem espaço suficiente para lidar com os dados de entrada, e a outra ponta só é permitida enviar a quantidade informada até que a janela se estenda. Só existe controle de fluxo para quadros (_frames_) DATA.
