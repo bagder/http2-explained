@@ -50,9 +50,7 @@ The popular Nginx server offers http2 support with since
 2015 (where it replaces the SPDY module, so they cannot both run in the same
 server instance).
 
-Apache's httpd server has a http2 module in the works called
-[mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) which is
-expected to be shipped in pending 2.4.17 release.
+Apache's httpd server has a http2 module [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) since 2.4.17 which was released on October 9, 2015.
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
 Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
