@@ -3,7 +3,7 @@ http2解説
 
 この文書はHTTP/2（[RFC 7540](https://httpwg.github.io/specs/rfc7540.html)）、その背景、コンセプト、プロトコル、既存の実装および未来がどうなるかを記述したものです。
 
-このプロジェクトのサイトは http://daniel.haxx.se/http2/ を見てください。
+このプロジェクトのサイトは https://daniel.haxx.se/http2/ を見てください。
 
 文書の全ソースコードは https://github.com/bagder/http2-explained を見てください。
 
