@@ -23,4 +23,4 @@ http2が使われているかどうかを示すUIはありません。簡単に�
 
 ## 9.4. http2の使用を可視化する
 
-サイトがhttp2を使用しているかどうかの可視化を手伝いするFirefoxプラグインがあります。それらの一つは[”SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/)です。
+サイトがhttp2を使用しているかどうかの可視化を手伝いするFirefoxプラグインがあります。それらの一つは[”HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/)です。
