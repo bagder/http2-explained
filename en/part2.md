@@ -1,12 +1,12 @@
-# 2. HTTP today
+# 2. HTTP 현재
 
-HTTP 1.1 has turned into a protocol used for virtually everything on the Internet. Huge investments have been made in protocols and infrastructure that take advantage of this, to the extent that it is often easier today to make things run on top of HTTP rather than building something new on its own.
+HTTP 1.1 은 거의 모든 인터넷에서 사용되는 범용적인 프로토콜이 되었습니다. 프로토콜과 사회 기반으로 만들어져온 거대한 투자들은 프로토콜과 사회 기반 시설을 통해 만들어져 왔습니다. 그 연장선으로 생각 해볼 때 오늘날에는 아예 새로운 것을 만들어 내는 것보다, HTTP위에서 만들어내는 것이 더 쉽다고 볼 수 있습니다.
 
-## 2.1 HTTP 1.1 is huge
+## 2.1 HTTP 1.1은 거대하다.
+HTTP가 처음 탄생되어 세상에 알려졌을 때 많은 사람들은 그저 단순하고 직선적인 프로토콜로 인식되었습니다. 하지만 시간이 지나면서 그것이 틀렸다는 것이 증명되었습니다. RFC 1945에서의 HTTP는 1996년에 기술된 60페이지 분량의 문서입니다. HTTP1.1이 기술된 RFC 2616은 1999년에서 불과 3년이후 176페이지로 상당한 분량으로 확대되어 발표 되었습니다. 아직 IETF에 맞춰 업데이트를 할 때, 6개 문서로 분할 변환 되었고, 훨씬 많은 분량이 되었습니다.(결과적으로 RFC 7230과 가족이 되었습니다.) 
+어떤 통계에 의하면 HTTP 1.1은 크고 수많은 상세 설명을 포함하고 있고,수많은 파트가 존재합니다.
 
-When HTTP was created and thrown out into the world it was probably perceived as a rather simple and straightforward protocol, but time has proved that to be false. HTTP 1.0 in RFC 1945 is a 60-page specification released in 1996. RFC 2616 that describes HTTP 1.1 was released only three years later in 1999 and had grown significantly to 176 pages. Yet, when we within IETF worked on the update to that spec, it was split up and converted into six documents, with a much larger page count in total (resulting in RFC 7230 and family). By any count, HTTP 1.1 is big and includes a myriad of details, subtleties and not the least a lot of optional parts.
-
-## 2.2 A world of options
+## 2.2 옵션의 세계
 
 HTTP 1.1's nature of having lots of tiny details and options available for later extensions has grown a software ecosystem where almost no implementation ever implements everything – and it isn't even really possible to exactly tell what “everything” is. This has led to a situation where features that were initially little used saw very few implementations and those who did implement the features then saw very little use of them.
 
