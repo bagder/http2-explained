@@ -14,7 +14,7 @@ http2 설명
 기여
 ------------
 
-개선 사항을 가지고 계신분응ㄴ 누구나 환영합니다. 우리는 [pull
+개선 사항을 가지고 계신분은 누구나 환영합니다. 우리는 [pull
 requests](https://github.com/bagder/http2-explained/pulls) 를 받고 있지만,
 daniel-http2@haxx.se 로 여러분의 제안을 메일로 보내주셔도 괜찮습니다 
 
