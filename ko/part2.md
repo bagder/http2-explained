@@ -12,13 +12,14 @@ HTTP 1.1's nature of having lots of tiny details and options available for later
 
 Later on, this caused an interoperability problem when clients and servers started to increase the use of such features. HTTP Pipelining is a primary example of such a feature.
 
-## 2.3 Inadequate use of TCP
+## 2.3 부적절한 TCP의 사용
 
-HTTP 1.1 has a hard time really taking full advantage of all the power and performance that TCP offers. HTTP clients and browsers have to be very creative to find solutions that decrease page load times.
+HTTP 1.1 TCP의 모든 장점과 능력, 그리고 퍼포먼스 등을 다루는 것이 어려웠습니다.
+HTTP 클라이언트와 브라우져들은 페이지 로딩시간을 줄이기 위해서 창의적인 해결책을 찾아야할 필요가 있었습니다.
 
-Other attempts that have been going on in parallel over the years have also confirmed that TCP is not that easy to replace and thus we keep working on improving both TCP and the protocols on top of it.
+수많은 시도들이 병행되었지만 TCP를 대체하는 일이 결코 쉽지 않다는 것을 알게되었고 결국 우리는 TCP와 프로토콜의 기능을 향상시키는 작업을 계속 했습니다.
 
-Simply put, TCP can be utilized better to avoid pauses or wasted intervals that could have been used to send or receive more data. The following sections will highlight some of these shortcomings.
+간단히 말해서 TCP는 더 많은 데이터를 송수신 할 수 있었음에도 공간낭비 등을 막는데에 이용될 수 있었습니다. 다음장에서는 이러한 단점들에 대해 다룹니다.
 
 ## 2.4 Transfer sizes and number of objects
 
