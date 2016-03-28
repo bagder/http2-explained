@@ -7,7 +7,7 @@
 * [http2 concepts](part5.md)
 * [The http2 protocol](part6.md)
 * [Extensions](part7.md)
-* [A http2 world](part8.md)
+* [An http2 world](part8.md)
 * [http2 in Firefox](part9.md)
 * [http2 in Chromium](part10.md)
 * [http2 in curl](part11.md)

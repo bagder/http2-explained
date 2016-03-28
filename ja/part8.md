@@ -30,15 +30,26 @@ http2はネットワークラウンドトリップの回数を削減します。
 
 早くから多くの実装が存在していて、http2の作業中にも増えてきました。この文書の執筆時において40を超える実装がリストに載っており、それらのほとんどは最終版を実装しています。
 
+### 8.3.1. ブラウザ
+
 Firefoxは最新ドラフトにもっとも速く追随してきたブラウザです。Twitterは最新版に追随しサービスをhttp2で提供しています。Googleは2014年4月頃からGoogleのサービスを提供するテストサーバーでhttp2をサポートしていて、2014年5月から開発版のChromeでhttp2サポートを提供しています。マイクロソフトは次期Internet Explorerとしてhttp2をサポートしたプレビュー版を公開しました。SafariとOperaはhttp2に対応予定であると言っています。
+
+### 8.3.2. サーバ
+
+既に多くのサーバがhttp2をサポートしています。
+
+人気のあるNginxサーバは2015年9月22日の[1.9.5](https://www.nginx.com/blog/nginx-1-9-5/)からhttp2を提供しています。
+（SPDYモジュールの置き換えが必要で、SPDYモジュールとhttp2の共存はできません。）
+
+Apacheのhttpdサーバは2015年10月9日にリリースされた2.4.17からhttp2モジュール [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) が提供されています。
+
+[H2O](https://h2o.examp1e.net/)、[Apache Traffic Server](http://trafficserver.apache.org/)、[nghttp2](https://nghttp2.org/)、[Caddy](http://caddyserver.com/)、[LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)は全てhttp2が使用できます。
+
+### 8.3.3. その他
 
 curlとlibcurlは平文とTLS両方のhttp2をサポートしています。複数のTLSライブラリで対応を行っています。
 
-[H2O](https://h2o.examp1e.net/)、[Apache Traffic Server](http://trafficserver.apache.org/)、[nghttp2](https://nghttp2.org/)はhttp2をサポートしたオープンソースのサーバーをリリースしています。
-
-### 8.3.1. 今後に期待される実装
-
-極めて人気のあるサーバーApache HTTPDとNginxはSPDYをサポートしていますが、2015年9月22日にNGINXはhttp2をサポートした正式版をリリースしました。Nginxは["nginx-1.9.5"](https://www.nginx.com/blog/nginx-1-9-5/)をリリースしました。そしてApacheのHTTP/2モジュール[mod_h2](https://icing.github.io/mod_h2/)は”まもなく”正式にリリースされます。
+Wiresharkはhttp2をサポートしています。http2のネットワークトラフィックを分析するための完璧なツールです。
 
 ## 8.4. http2に対するよくある批判
 
