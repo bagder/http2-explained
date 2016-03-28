@@ -8,7 +8,7 @@ might hold.
 
 The contents are translated into several different languages.
 
-See http://daniel.haxx.se/http2/ for the canonical home for this project.
+See https://daniel.haxx.se/http2/ for the canonical home for this project.
 
 See https://github.com/bagder/http2-explained for the source code of all book
 contents.

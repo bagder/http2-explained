@@ -12,7 +12,7 @@ Wouldn't it be nice to make an improved protocol? It would...
 
 The Internet Engineering Task Force (IETF) is an organization that develops and promotes internet standards, mostly on the protocol level. They're widely known for the RFC series of memos documenting everything from TCP, DNS, and FTP, to best practices, HTTP, and numerous protocol variants that never went anywhere.
 
-Within IETF dedicated “working groups” are formed with a limited scope to work toward a goal. They establish a “charter” with some set guidelines and limitations for what they should produce. Everyone and anyone is allowed to join in the discussions and development. Everyone who attends and says something has the same weight and chance to affect the outcome and everyone is counted as an individual, with little regard to which company they work for.
+Within IETF, dedicated “working groups” are formed with a limited scope to work toward a goal. They establish a “charter” with some set guidelines and limitations for what they should produce. Everyone and anyone is allowed to join in the discussions and development. Everyone who attends and says something has the same weight and chance to affect the outcome and everyone is counted as an individual, with little regard to which company they work for.
 
 The HTTPbis working group (see later for an explanation of the name) was
 formed during the summer of 2007 and tasked with creating an update of the

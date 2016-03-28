@@ -16,7 +16,7 @@ Chromeはhttp2をTLS上でのみ実装することを忘れないでください
 
 ## 10.3. HTTP/2の使用を可視化する
 
-サイトがhttp2を使用しているかどうかの可視化を手伝いするChromeプラグインがあります。それらの一つは[”SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin)です。
+サイトがhttp2を使用しているかどうかの可視化を手伝いするChromeプラグインがあります。それらの一つは[”HTTP/2 and SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin)です。
 
 ## 10.4. QUIC
 
