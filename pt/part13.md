@@ -1,4 +1,4 @@
-# 13. Demais leituras
+# 13. Outras leituras
 
 Se você acha que esse documento é um pouco superficial em conteúdo e detalhes técnicos, aqui estão recursos adicionar que podem ajudá-lo a satisfazer sua curiosidade:
 

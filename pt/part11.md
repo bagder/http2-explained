@@ -1,4 +1,4 @@
-# 11. http2 no curl
+# 11. http2 e curl
 
 O [projeto curl](http://curl.haxx.se/) provê suporte experimental para http2 desde Setembro de 2013.
 

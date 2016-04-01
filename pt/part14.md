@@ -1,4 +1,4 @@
-# 14. Obrigado
+# 14. Agradecimentos
 
 Inspiração e imagem de pacote no formato de Lego de Mark Nottingham.
 

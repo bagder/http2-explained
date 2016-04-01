@@ -1,4 +1,4 @@
-# 10. http2 no Chromium
+# 10. http2 e Chromium
 
 O time do Chromium implementa o http2 e provê suporte para ele nos canais _dev_ e _beta_ por bastante tempo. Começando pelo Chrome 40, lançando em 27 de Janeiro de 2015, http2 está habilitado por padrão para um certo número de usuários. O número começou realmente pequeno e então foi incrementado gradualmente com o passar do tempo.
 
