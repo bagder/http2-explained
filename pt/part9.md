@@ -1,4 +1,4 @@
-# 9. http2 no Firefox
+# 9. http2 e Firefox
 
 Firefox vem acompanhando as alterações de perto e tem proporcionado implementações http2 de testes por muitos meses. Durante o desenvolvimento do protocolo http2, clientes e servidores têm que concordar sobre qual versão do rascunho (_draft_) do protocolo implementar, o que dificulta um pouco a execução dos testes. Fique atento para que o cliente e servidor implementem a mesma versão de rascunho do protocolo.
 
