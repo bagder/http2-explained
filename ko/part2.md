@@ -28,15 +28,15 @@ HTTP 클라이언트와 브라우져들은 페이지 로딩시간을 줄이기 �
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
-## 2.5 Latency kills
+## 2.5 대기시간 없애기
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
-HTTP 1.1 is very latency sensitive, partly because HTTP Pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
+HTTP 1.1 은 대기시간에 굉장히 민감한데, 이는 HTTP 파이프라이닝이 아직도 수많은 사용자들이 스위치를 꺼놓은 상태로 놔둘만큼 많은 문제를 내포하고 있기 때문입니다.
 
-While we've seen a great increase in available bandwidth to people over the last few years, we have not seen the same level of improvements in reducing latency. High latency links, like many of the current mobile technologies, make it really hard to get a good and fast web experience even if you have a really high bandwidth connection.
+우리는 몇 년에 걸처 사람들에게서 유용한 대역폭의 커다란 증가를 보았지만, 동일한 수준의 대기시간 감소율을 보지는 못했습니다. 최근 대부분의 모바일 기술들 처럼 대기시간이 오래걸리는 링크들은 훌륭한 대역폭 연결을 활용하더라도 빠른 속도를 체험하는 것을 매우 어렵게 합니다.
 
-Another use case that really needs low latency is certain kinds of video, like video conferencing, gaming and similar where there's not just a pre-generated stream to send out.
+대기시간을 최소화 하여야하는 비디오나 화상회의, 게임 그리고 그와 비슷한 것들이 문제가 되고 있습니다.
 
 ## 2.6. Head of line blocking
 
