@@ -7,10 +7,9 @@ HTTP가 처음 탄생되어 세상에 알려졌을 때 많은 사람들은 그�
 어떤 통계에 의하면 HTTP 1.1은 크고 수많은 상세 설명을 포함하고 있고,수많은 파트가 존재합니다.
 
 ## 2.2 옵션의 세계
+수많은 세부사항들과 차후에 확장 가능한 유효한 옵션들을 갖고 있는 HTTP 1.1의 본질은 이제껏 구현하지 못했던 거의 모든 것을 구현할 수 있는 에코시스템 소프트웨어로 성장했습니다- 그리고 사실상 "모든"이라는 것을 정의하는 것이 거의 불가능합니다. 따라서 초기에 사용되지 않았던 기능들은 거의 구현되지 않고 그들을 구현하였다고 해도 대부분 사용할 수 없는 상황이 된 것입니다.
 
-HTTP 1.1's nature of having lots of tiny details and options available for later extensions has grown a software ecosystem where almost no implementation ever implements everything – and it isn't even really possible to exactly tell what “everything” is. This has led to a situation where features that were initially little used saw very few implementations and those who did implement the features then saw very little use of them.
-
-Later on, this caused an interoperability problem when clients and servers started to increase the use of such features. HTTP Pipelining is a primary example of such a feature.
+이후, 이러한 특징을 사용하는 클라이언트와 서버가 늘어나기 시작하면서 호환성의 문제가 발생했습니다. HTTP 파이프라이닝이 대표적인 예입니다.
 
 ## 2.3 부적절한 TCP의 사용
 
@@ -21,34 +20,35 @@ HTTP 클라이언트와 브라우져들은 페이지 로딩시간을 줄이기 �
 
 간단히 말해서 TCP는 더 많은 데이터를 송수신 할 수 있었음에도 공간낭비 등을 막는데에 이용될 수 있었습니다. 다음장에서는 이러한 단점들에 대해 다룹니다.
 
-## 2.4 Transfer sizes and number of objects
+## 2.4 전송 크기와 객체의 수
 
-When looking at the trend for some of the most popular sites on the web today and what it takes to download their front pages, a clear pattern emerges. Over the years the amount of data that needs to be retrieved has gradually risen up to and above 1.9MB . What is more important in this context is that on average over a hundred individual resources are required to display each page.
+오늘날 가장 인기있는 웹 사이트들 중 몇몇의 트랜드들을 보고 그들의 프론트 페이지를 다운받아 보면 분명한 패턴이 나타난다. 수년에 걸쳐 검색해야할 데이터의 양이 점차적으로 증가하여 1.9MB를 초과하게 되었다. 더 중요한 건 한 페이지를 표시하기 위해 평균적으로 100에 육박하는 개별 리소스가 요구되는 것입니다.
 
-As the graph below shows, the trend has been going on for a while and there is little to no indication that it will change anytime soon. It shows the growth of the total transfer size (in green) and the total number of requests used on average (in red) to serve the most popular web sites in the world, and how they have changed over the last four years.
+아래의 그래프를 보면, 트랜드는 계속되고 있어 당분간은 변화의 조짐이 보이지 않습니다. 아래 그래프는 세계에서 가장 인기있는 웹 사이트의 전송 크기의 성장률과 서버에서 이용되는 총 리퀘스트 수의 평균치의 변화를 최근 4년을 기준으로 나타내었습니다.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
-## 2.5 Latency kills
+## 2.5 대기시간 없애기
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
-HTTP 1.1 is very latency sensitive, partly because HTTP Pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
+HTTP 1.1 은 대기시간에 굉장히 민감한데, 이는 HTTP 파이프라이닝이 아직도 수많은 사용자들이 스위치를 꺼놓은 상태로 놔둘만큼 많은 문제를 내포하고 있기 때문입니다.
 
-While we've seen a great increase in available bandwidth to people over the last few years, we have not seen the same level of improvements in reducing latency. High latency links, like many of the current mobile technologies, make it really hard to get a good and fast web experience even if you have a really high bandwidth connection.
+우리는 몇 년에 걸처 사람들에게서 유용한 대역폭의 커다란 증가를 보았지만, 동일한 수준의 대기시간 감소율을 보지는 못했습니다. 최근 대부분의 모바일 기술들 처럼 대기시간이 오래걸리는 링크들은 훌륭한 대역폭 연결을 활용하더라도 빠른 속도를 체험하는 것을 매우 어렵게 합니다.
 
-Another use case that really needs low latency is certain kinds of video, like video conferencing, gaming and similar where there's not just a pre-generated stream to send out.
+대기시간을 최소화 하여야하는 비디오나 화상회의, 게임 그리고 그와 비슷한 것들이 문제가 되고 있습니다.
 
-## 2.6. Head of line blocking
+## 2.6. 라인 블로킹의 헤드
 
-HTTP Pipelining is a way to send another request while waiting for the response to a previous request. It is very similar to queuing at a counter at the bank or in a super market. You just don't know if the person in front of you is a quick customer or that annoying one that will take forever before he/she is done: head of line blocking.
+HTTP 파이프라이닝은 이전에 보냈던 리퀘스트에 대한 리스폰스를 기다리는 동안 다른 리퀘스트를 보내는 방법 중 하나다. 이것은 은행이나 슈퍼마켓 카운터에서 계산을 기다리는 것과 비슷합니다.
+당신은 그저 앞에 있는 사람이 계산이 빨리 끝날 손님인 것인지, 아니면 오래걸리는 성가신 사람인지 모를 뿐입니다: 이것이 헤드 오브 라인 블로킹입니다. 
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 
-Sure you can be careful about line picking so that you pick the one you really believe is the correct one, and at times you can even start a new line of your own but in the end you can't avoid making a decision and once it is made you cannot switch lines.
+물론 당신은 라인피킹에 대해서 주의할 수 있고 당신이 정말 정확하다고 생각하는 것을 고를 수 있으며 심지어는 스스로 새로운 라인을 시작할 수 있습니다 하지만 끝내 당신은 결정하는 것과 그것이 당신이 라인을 스위칭하지 못하게 하는 것을 피할 수 없습니다.
 
-Creating a new line is also associated with a performance and resource penalty so that's not scalable beyond a smaller number of lines. There's just no perfect solution to this.
+새로운 라인을 만드는 것은 퍼포먼스와 리소스 패널티와 관련이 있습니다. 그래서 더 작은 라인의 숫자를 뛰어넘는 확장성을 갖지는 못 합니다. 이 문제에 대해 완벽한 해결책은 없습니다.
 
-Even today, 2015, most desktop web browsers ship with HTTP pipelining disabled by default.
+2015년 오늘날 대부분의 데스크탑 웹 브라우져들은 '파이프라이닝 사용안함'이 기본값으로 설정되어있습니다.
 
-Additional reading on this subject can be found for example in the Firefox [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+이 주제에 대한 부가적인 읽을 거리는 파이어폭스에서 그 예를 찾으실 수 있습니다.[bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
