@@ -38,16 +38,17 @@ HTTP 1.1 은 대기시간에 굉장히 민감한데, 이는 HTTP 파이프라이
 
 대기시간을 최소화 하여야하는 비디오나 화상회의, 게임 그리고 그와 비슷한 것들이 문제가 되고 있습니다.
 
-## 2.6. Head of line blocking
+## 2.6. 라인 블로킹의 헤드
 
-HTTP Pipelining is a way to send another request while waiting for the response to a previous request. It is very similar to queuing at a counter at the bank or in a super market. You just don't know if the person in front of you is a quick customer or that annoying one that will take forever before he/she is done: head of line blocking.
+HTTP 파이프라이닝은 이전에 보냈던 리퀘스트에 대한 리스폰스를 기다리는 동안 다른 리퀘스트를 보내는 방법 중 하나다. 이것은 은행이나 슈퍼마켓 카운터에서 계산을 기다리는 것과 비슷합니다.
+당신은 그저 앞에 있는 사람이 계산이 빨리 끝날 손님인 것인지, 아니면 오래걸리는 성가신 사람인지 모를 뿐입니다: 이것이 헤드 오브 라인 블로킹입니다. 
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 
-Sure you can be careful about line picking so that you pick the one you really believe is the correct one, and at times you can even start a new line of your own but in the end you can't avoid making a decision and once it is made you cannot switch lines.
+물론 당신은 라인피킹에 대해서 주의할 수 있고 당신이 정말 정확하다고 생각하는 것을 고를 수 있으며 심지어는 스스로 새로운 라인을 시작할 수 있습니다 하지만 끝내 당신은 결정하는 것과 그것이 당신이 라인을 스위칭하지 못하게 하는 것을 피할 수 없습니다.
 
-Creating a new line is also associated with a performance and resource penalty so that's not scalable beyond a smaller number of lines. There's just no perfect solution to this.
+새로운 라인을 만드는 것은 퍼포먼스와 리소스 패널티와 관련이 있습니다. 그래서 더 작은 라인의 숫자를 뛰어넘는 확장성을 갖지는 못 합니다. 이 문제에 대해 완벽한 해결책은 없습니다.
 
-Even today, 2015, most desktop web browsers ship with HTTP pipelining disabled by default.
+2015년 오늘날 대부분의 데스크탑 웹 브라우져들은 '파이프라이닝 사용안함'이 기본값으로 설정되어있습니다.
 
-Additional reading on this subject can be found for example in the Firefox [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+이 주제에 대한 부가적인 읽을 거리는 파이어폭스에서 그 예를 찾으실 수 있습니다.[bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
