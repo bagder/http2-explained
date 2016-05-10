@@ -33,4 +33,4 @@ SPDY»](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgag
 
 ## 10.4. QUIC
 
-Текущие эксперименты Chrome с QUIC (смотри раздел 12.1) отчасти разбавляют количество HTTP/2.
+Текущие эксперименты Chrome с QUIC (смотри раздел 12.1) отчасти уменьшают долю HTTP/2.
