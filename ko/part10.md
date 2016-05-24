@@ -7,7 +7,7 @@ SPDY 지원은 삭제 될 예정 입니다. 2015년 2월에 블로그에서의 �
 "Chrome은 SPDY를 Chrome6에서 지원하고 왔습니다. 그러나 대부분의 혜택은 HTTP/2도 얻을 수 있어 안녕을 하기로 결정 했습니다. [SPDY을 2016년 초에 제거 할 예정](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html)입니다."
 
 
-## 10.1. 먼저 http2가 활성화 되어 있는지 확인 하십시오
+## 10.1. http2 활성화 확인
 브라우저의 주소 표시줄에 "chrome://flags/#enable-spdy4"를 입력하고 아직 활성화 되어 있지않은 경우에는 "enable"을 클릭합니다.
 
 
@@ -15,7 +15,7 @@ SPDY 지원은 삭제 될 예정 입니다. 2015년 2월에 블로그에서의 �
 Chrome은 http2를 TLS에서만 구현한 것을 잊지 마십시오. Chrome에서는 https://의 http2을 지원하는 사이트에서만 http2 작동합니다.
 
 
-## 10.3 HTTP/2의 사용 시각화
+## 10.3 HTTP/2 시각화
 
 사이트가 http2를 사용 하고 있는지 시각화를 도와 주는 Chrome플러그인이 있습니다. 그 중 하나는 [“HTTP/2 and SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin) 입니다.
 
