@@ -1,27 +1,26 @@
 
-10. Chromium 에서 http2
+#10. Chromium에서 http2
 
-Chromium 팀 은 http2 을 구현 하고 오랫동안 dev , beta 채널 에서 그 지원 을 실시하고 있습니다 . 2015 년 1 월 27 일 에 출시 된 Chrome 40 에서 일부 사용자 에 http2 이 기본적으로 활성화 되었습니다. 그 숫자는 처음에는 낮게 설정 되어 있었습니다 만, 시간이지나면서 점차 증가 했습니다.
+Chromium 팀은 http2을 구현하고 오랫동안 dev, beta 채널에서 그 지원을 실시하고 있습니다. 2015년 1월 27일에 출시된 Chrome 40에서 일부 사용자에 한해서 http2이 기본적으로 활성화 되었습니다. 그 숫자는 처음에는 낮게 설정 되어 있었습니다만, 시간이지나면서 점차 증가 했습니다.
 
-SPDY 지원 은 삭제 될 예정 입니다. 2015 년 2 월 의 블로그 에서 발표 에 따르면 :
-" Chrome 은 SPDY 를 Chrome 6 에서 지원 하고 왔습니다. 그러나 대부분 의 혜택 은 HTTP / 2 도 얻을 수있어 안녕 을 하기로 결정 했습니다 .SPDY 을 2016 년 초 에 제거 할 예정 입니다 "
-
-
-10.1 . 먼저 http2 가 활성화 되어 있는지 확인 하십시오
-브라우저 의 주소 표시 줄 에 " chrome : // flags / # enable - spdy4 " 를 입력 하고 아직 활성화 되어 있지 않은 경우에는 " enable " 을 클릭 합니다.
+SPDY 지원은 삭제 될 예정 입니다. 2015년 2월에 블로그에서의 발표에 따르면 :
+"Chrome은 SPDY를 Chrome6에서 지원하고 왔습니다. 그러나 대부분의 혜택은 HTTP/2도 얻을 수 있어 안녕을 하기로 결정 했습니다. [SPDY을 2016년 초에 제거 할 예정](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html)입니다."
 
 
-10.2 TLS 한정
-Chrome 은 http2 을 TLS 에서만 구현 하는 것을 잊지 마십시오. Chrome에서는 https : // 의 http2 을 지원 하는 사이트 에서만 http2 작동 합니다
+## 10.1. 먼저 http2가 활성화 되어 있는지 확인 하십시오
+브라우저의 주소 표시줄에 "chrome://flags/#enable-spdy4"를 입력하고 아직 활성화 되어 있지않은 경우에는 "enable"을 클릭합니다.
 
 
-10.3 HTTP / 2 의 사용 을 시각화
-
-사이트 가 http2 을 사용 하고 있는지 시각화 를 도와 하는 Chrome 플러그인 이 있습니다. 그 중 하나 는 " HTTP / 2 and SPDY Indicator " 입니다.
-
+## 10.2 TLS로 한정
+Chrome은 http2를 TLS에서만 구현한 것을 잊지 마십시오. Chrome에서는 https://의 http2을 지원하는 사이트에서만 http2 작동합니다.
 
 
-10.4 . QUIC
+## 10.3 HTTP/2의 사용 시각화
+
+사이트가 http2를 사용 하고 있는지 시각화를 도와 주는 Chrome플러그인이 있습니다. 그 중 하나는 [“HTTP/2 and SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin) 입니다.
 
 
- 크롬은 HTTP / 2를 어느 부분만 지원하고 있고 있기에 QUIC 을 실험하고있다 . (자세한 내용 은 12.1 를 참조하십시오 )
+
+## 10.4 . QUIC
+
+크롬은 HTTP/2를 어느 부분만 지원하고 있으며 QUIC를 실험하고있습니다. (자세한 내용은 12.1를 참조하십시오.)
