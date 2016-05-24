@@ -13,7 +13,7 @@ HTTP2는 HTTP1 HTTP2 사이 의 통신 을 프록시 할 수 있도록 욕망을
 
 ## 12.1. QUIC
 
-Google의 QUIC ( Quick UDP Internet Connections ) 은 흥미로운 실험입니다. 그것은 SPDY 때와 유사한 스타일과 정신으로 이루어지고 있습니다.
+Google의 [QUIC](https://www.chromium.org/quic)( Quick UDP Internet Connections )은 흥미로운 실험입니다. 그것은 SPDY 때와 유사한 스타일과 정신으로 이루어지고 있습니다.
 QUIC은 TCP + TLS + HTTP/2의 대안이며 UDP를 사용하여 구현되었습니다.
 
 QUIC은 연결을 빠르게 할 수 있습니다.  HTTP/2는 패킷 손실에 의해 전체 스트림을 차단 했지만, QUIC에서는 대상 스트림만 차단 만하면됩니다.
