@@ -38,7 +38,7 @@ TLS를 필수적으로 쓸 것인가에 대한 주제는 메일링과 미팅 자
 
 Next Protocol Negotiation (NPN)은 SPDY와 TLS서버의 협상에 이용되는 프로토콜입니다. 이것은 표준화되지 않았기 때문에, IETF에서 논의한 결과, ALPN: Application Layer Protocol Negotiation이 탄생하였습니다. SPDY client와 server가 NPN을 사용하는 동안 ALPN은 http2에서 사용하기 위해 지속적으로 추진되어왔습니다.
 
-The fact that NPN existed first and ALPN has taken a while to go through standardization has led to many early http2 clients and http2 servers implementing and using both these extensions when negotiating http2. Also, NPN is what's used for SPDY and many servers offer both SPDY and http2, so supporting both NPN and ALPN on those servers makes perfect sense.
+NPN가 먼저 존재하고 ALPN이 표준화를 통해서 이용된 사실은, http2 협상 때 수많은 http2의 server와 client의 구현과 두가지의 확장성을 이끌었습니다. 또한 NPN 는 SPDY 로 사용 되어 많은 서버 가 SPDY 와 http2 을 모두 지원 하기 때문에 NPN 과 ALPN 을 이 서버 에서 지원 하는 것은 의미가 있습니다.
 
 ALPN과 NPN간의 차이는 어떤 프로토콜을 이용할 것인지 결정하는 것에 있습니다. ALPN은 client가 server에게 우선순위로 나뉘어 정렬된 프로토콜 리스트를 보내고 서버는 그중에서 원하는 것을 선택합니다, 반면 NPN은 client가 최종 결정을 합니다.
 
