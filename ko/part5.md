@@ -42,14 +42,10 @@ The fact that NPN existed first and ALPN has taken a while to go through standar
 
 ALPN과 NPN간의 차이는 어떤 프로토콜을 이용할 것인지 결정하는 것에 있습니다. ALPN은 client가 server에게 우선순위로 나뉘어 정렬된 프로토콜 리스트를 보내고 서버는 그중에서 원하는 것을 선택합니다, 반면 NPN은 client가 최종 결정을 합니다.
 
-## 5.4. http2 for http://
+## 5.4. http://를 위한 http2
 
-As previously mentioned, for plain-text HTTP 1.1 the way to negotiate
-http2 is by presenting the server with an Upgrade: header. If the server speaks
-http2 it responds with a “101 Switching” status and from then on it speaks
-http2 on that connection. Of course this upgrade procedure
-costs a full network round-trip, but the upside is that it's generally possible to 
-keep an http2 connection alive much longer and re-use it more than a typical HTTP1
-connection.
+앞서 언급한 바와 같이, 일반 텍스트 HTTP 1.1 은 http2를 협상하기 위해서 Upgrade된 header를 보냅니다.
+만약 server가 http2를 말한다면, "101 Switching" status 코드를 반환하고 http2로 스위칭시켜 연결할 것입니다.
+물론 이 업그레이드 절차는 풀 네트워크 라운드트립을 필요합니다, 하지만 http2의 장점은 훨씬 더 오랫동안 연결을 유지할 수 있다는 것이며, HTTP1 여결보다 재사용성에 있어서 더 뛰어난 성능을 보여줍니다.
 
-While some browser's spokespersons have stated they will not implement this means of speaking http2, the Internet Explorer team has expressed that they will, and curl already supports this.
+몇몇 브라우저들은 이런식으로 http2를 구현하지 않는다고들 하지만, 인터넷 익스플로러 팀은 그 반대의 의견을 갖고있으며 curl은 이미 그것들을 지원하고 있습니다.
