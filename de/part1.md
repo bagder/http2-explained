@@ -4,26 +4,17 @@ Dieses Dokument beschreibt den technischen Aufbau und das Protokoll http2.
 
 Was als Präsentation im April 2014 in Stockholm anfing wurde daraufhin zu einer detaillierten Dokumentation und fügte einige sachgerechte Erklärungen hinzu
 
-RFC 7540 ist der offizielle Standard der letzten Spezifikation von http2. Am 15^ten Mai 2015 wurde diese veröffentlicht.
+RFC 7540 ist der offizielle Standard der letzten Spezifikation von http2. Am 15. Mai 2015 wurde diese veröffentlicht.
 URL: http://www.rfc-editor.org/rfc/rfc7540.txt
 
-All and any errors in this document are my own and the results of my
-shortcomings. Please point them out and they will be fixed in updated
-versions.
+Jegliche Fehler in diesem Dokument basieren auf meinem Verständnis der Materie. Ich bin offen für jede Korrektur welche beim update auf eine neue Version behoben wird.
 
-In this document I've tried to consistently use the word "http2" to describe
-the new protocol while in pure technical terms, the proper name is HTTP/2. I
-made this choice for the sake of readability and to get a better flow in the
-language.
+Ich nutze in diesem Dokument konsequent "http2" um das neue Protokoll zu beschreiben. Der technisch korrekte Name ist HTTP/2. Dies hab ich gemacht um die Lesbarkeit des Dokumentes zu gewährleisten.
+
 
 ## 1.1 Autor
 
-My name is Daniel Stenberg and I work for Mozilla. I've been working with open
-source and networking for over twenty years in numerous projects. Possibly I'm
-best known for being the lead developer of curl and libcurl. I've been
-involved in the IETF HTTPbis working group for several years and there I've
-kept up-to-date with the refreshed HTTP 1.1 work as well as being involved in
-the http2 standardization work.
+Der Name des original Autors ist Daniel Stenberg welcher für Mozilla arbeitet. Er arbeitet seit über 20 Jahren in verschiedenen Opern-Source Projekten mit. Das wohl bekannteste ist curl und libcurl wo er der leitende Entwickler ist. Daniel arbeitet auch seit Jahren in der Arbeitsgruppe der IETF HTTPbis welche HTTP 1.1 aktualisiert hat und war auch in der Entwicklung des http2 Standards involviert.
 
  Email: daniel@haxx.se
 
@@ -35,9 +26,9 @@ the http2 standardization work.
 
 ## 1.2 Hilfe!
 
-If you find mistakes, omissions, errors or blatant lies in this document, please send me a refreshed version of the affected paragraph and I'll make amended versions. I will give proper credits to everyone who helps out! I hope to make this document better over time.
+Falls du Fehler, Missverständnisse oder offensichtliche Lügen in diesem Dokument findest sende mir bitte eine verbesserte Version des betroffene Paragrafen und Ich erstelle eine novelliert Version des Dokumentes. Du wirst natürlich als Autor ordnungsgemäß als Mitautor aufgelistet. Ich hoffe damit dieses Dokument mit der Zeit immer wieder zu verbessern.
 
-This document is available at [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+Dieses Dokument ist unter der folgenden URL verfügbar. [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
 
 ## 1.3 Lizenz
 
@@ -46,6 +37,8 @@ This document is available at [http://daniel.haxx.se/http2](http://daniel.haxx.s
 Dieses Dokument ist unter der „Creative Commons Attribution 4.0“ Lizenz veröffentlicht: http://creativecommons.org/licenses/by/4.0/
 
 ## 1.4 Dokument Historie 
+
+Die Historie lasse ich in Englisch um die Wartung dieser einfach zu ermöglichen.
 
 The first version of this document was published on April 25th 2014. Here follows the largest changes in the most recent document versions.
 
