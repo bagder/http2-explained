@@ -6,4 +6,3 @@
 * [Русский](ru/)
 * [Svenska](sv/)
 * [简体中文](zh/)
-* [Deutsch](de/)
