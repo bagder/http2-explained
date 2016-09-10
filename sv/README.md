@@ -16,8 +16,8 @@ BIDRA
 ------
 
 Jag uppmuntrar och välkomnar all hjälp och alla bidrag från de som har
-förbättringar att erbjuda! Vi accepterar [pull-
-requests](https://github.com/bagder/http2-explained/pulls), men du kan också
+förbättringar att erbjuda! Vi accepterar [pull-requests]
+(https://github.com/bagder/http2-explained/pulls), men du kan också
 posta dina [problem](https://github.com/bagder/http2-explained/issues) eller
 skicka email till daniel-http2@haxx.se med dina förslag!
 
