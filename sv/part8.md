@@ -64,7 +64,7 @@ versionen.
 
 Firefox har varit webbläsaren som varit först med support för de allra senaste
 versionerna av specen. Twitter har hängt med och erbjuder sina tjänster över
-htp2. Google började under april 2014 att erbjudera http2-support på en del
+http2. Google började under april 2014 att erbjudera http2-support på en del
 test servrar som kör deras tjänster och sedan maj 2014 har de erbjudit http2
 support för deras utvecklingsversion av Chrome. Microsoft har visat en "tech
 preview" med http2 support i deras nästa Internet Explorer-version. Safari och
