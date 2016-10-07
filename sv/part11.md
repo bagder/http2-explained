@@ -38,10 +38,10 @@ i viss utsträckning stödet för NPN.
 Bygg curl med en modern version av OpenSSL eller NSS för att få både ALPN- och
 NPN-stöd. Använder du GnuTLS eller PolarSSL får du ALPN-stöd men inte NPN.
 
-## 11.4. Användning på kommanorad
+## 11.4. Användning på kommandorad
 
-För att säga åt curl att använda http2, antingen i klartexte eller över TLS,
-så använder du dess `--http2` flagga (det ör “minus minus http2”). curl
+För att säga åt curl att använda http2, antingen i klartext eller över TLS,
+så använder du dess `--http2` flagga (det är “minus minus http2”). curl
 använder fortfarande per default HTTP/1.1 så den extra optionen behövs när du
 vill ha http2.
 
