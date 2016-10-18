@@ -60,7 +60,7 @@ Wireshark同样支持了http2, 所以用它来分析http2网络数据流着实�
 
 江湖上有太多传言暗示着这个世界越来越被Google所控制，但事实显然并非如此。这个协议是IETF制定的，就跟过去30年间很多其他协议一样。但不得不承认，SPDY是Google非常出色的成果。它不仅仅证明了开发一个新协议的可行性，还充分展现了新协议能带来的好处。
 
-而Google也公开的[声明](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html)了他们会在2016年移除Chrome里对SPDY和NPN的支持，并且极力推动服务器迁移至HTTP/2。
+而Google也公开的[声明](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html)了他们会在2016年移除Chrome里对SPDY和NPN的支持，并且极力推动服务器迁移至HTTP/2。
 
 ### 8.4.2. “这个协议只在浏览器上有用”
 

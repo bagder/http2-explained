@@ -104,7 +104,7 @@ HTTP/2 модуль для Apache, названный [mod_h2](https://icing.git
 получить оценки того, что мы можем получить.
 
 Google публично
-[проанонсировали](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html),
+[проанонсировали](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html),
 что они удалят поддержку SPDY и NPN в Chrome в 2016 году и они призывают
 мигрировать сервера на HTTP/2.
 

@@ -8,7 +8,7 @@
 
 Поддержка SPDY вскоре будет удалена. Это было анонсировано в блоге проекта в
 [феврале
-2015](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html):
+2015](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html):
 
 > “Chrome поддерживал SPDY начиная с Chrome 6, но теперь все его преимущества
 > есть в HTTP/2, пришло время сказать прощай. Мы планируем убрать поддержку

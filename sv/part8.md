@@ -104,7 +104,7 @@ på det här sättet utan också tillhandahöll siffror som visade vilka vinster
 som kunde göras.
 
 Google har
-[annonserat](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html)
+[annonserat](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html)
 att de kommer ta bort support för SPDY och NPN i Chrom under 2016 och de
 uppmanar servrar att migrera till http2 istället.
 

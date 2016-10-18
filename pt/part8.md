@@ -63,7 +63,7 @@ Durante o desenvolvimento desse protocolo, houve muito debate e, certamente, há
 
 Existem variações indicando que o mundo ficaria ainda mais dependente e controlado pelo Google. Isso não é verdade. O protocolo foi desenvolvido no âmbito da IETF da mesma maneira que os protocolos são desenvolvidos por mais de 30 anos. No entanto, todos nós reconhecemos e admitimos o trabalho impressionante que o Google fez com o SPDY que não só provou ser possível implantar um novo protocolo dessa forma, mas que também forneceu números ilustrando quais ganhos poderiam ser obtidos.
 
-Google [anunciou](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html) publicamente que irão remover o suporte para SPDY e NPN no Chrome em 2016 e eles insistem que os servidores migrem para HTTP/2.
+Google [anunciou](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) publicamente que irão remover o suporte para SPDY e NPN no Chrome em 2016 e eles insistem que os servidores migrem para HTTP/2.
 
 ### 8.4.2. “O protocolo é útil somente para os navegadores”
 
