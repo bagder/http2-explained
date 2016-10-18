@@ -7,7 +7,7 @@ fåtal och har sedan gradvis ökats.
 
 SPDY-support kommer tas bort framöver enligt en bloggpost från projektet
 postat i [februari
-2015](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html):
+2015](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html):
 
 > "Chrome har stött SPDY sedan Chrome 6, men eftersom de flesta av fördelarna finns i HTTP/2, är det dags att säga adjö. Vi planerar att ta bort stödet för SPDY i början av 2016.
 
