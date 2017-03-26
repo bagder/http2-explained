@@ -98,7 +98,6 @@ Telecom和一些其他网络服务商，例如ATIS开放网络联盟，表示为
 
 当然，到底该如何定义和衡量“快”就是另外一个话题了，但在SPDY的时代，已经有很多实验证明了该协议会让浏览器载入页面变得更快（例如华盛顿大学的[“SPDY有多快？”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)和Hervé Servy的[“评估启用SPDY后的Web服务器的性能”](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers/)），同样这些实验也可以被用来证明http2。我期待能有越来越多的诸如此类的测试实验结果发布。而这篇文章[httpwatch.com的一个简单测试](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2/)亦能证明HTTP/2名副其实。<!-- 那一句“我也期待XX”放在那怪怪的 -->
 
-<!--http2在很多的场景下都证明了自己更快，尤其是在包含非常多资源的高延迟的连接上。而正如之前的章节中提到，目前的趋势就是每个网站包含越来越多的资源和数据。 revmoved (commented by saviio)-->
 
 ### 8.4.7. “它违反了网络分层”
 
