@@ -10,7 +10,7 @@ Firefox紧跟着草案，并且很早之前就实现了http2的测试实现。�
 
 ## 9.2. 仅限TLS
 
-请记住Firefox只在TLS上实现了http2。你只会在看到http2只在`https://`的网站里得到支持。
+请记住Firefox只在TLS上实现了http2。你只会看到http2只在`https://`的网站里得到支持。
 
 ## 9.3. 透明！ <!--这个标题改成： 一切都是透明的  怎么样-->
 
@@ -22,4 +22,4 @@ Firefox紧跟着草案，并且很早之前就实现了http2的测试实现。�
 
 ## 9.4. 图形化HTTP/2
 
-有一些Firefox的插件可以图形化HTTP/2，比如[“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/)。
+有一些Firefox的插件可以图形化HTTP/2，比如[“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/)。

@@ -16,7 +16,7 @@ SPDY的支持将会被移除。在2015年2月的一篇[博客](https://blog.chro
 
 ## 10.3. 图形化HTTP/2
 
-有一些Chrome的插件可以图形化HTTP/2，比如[SPDY Indicator](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin)。
+有一些Chrome的插件可以图形化HTTP/2，比如[“HTTP/2 and SPDY Indicator”](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin)。
 
 ## 10.4. QUIC
 
