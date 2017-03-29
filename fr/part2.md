@@ -32,7 +32,7 @@ Le graphique ci-dessous montre que cette tendance date déjà et rien n'indique 
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
-HTTP 1.1 est très sensible à la latence, en partie à cause du pipelining HTTP qui demeure problématique à un tel point qui'il est désactivé pour la plupart des utilisateurs.
+HTTP 1.1 est très sensible à la latence, en partie à cause du pipelining HTTP qui demeure problématique à un tel point qu'il est désactivé pour la plupart des utilisateurs.
 
 Bien qu'on ait observé une augmentation de la bande passante depuis plusieurs années, la réduction de la latence n'a pas suivi la même évolution. Les liens à forte latence, comme les technologies mobiles, rendent l'expérience Web difficile même avec une connexion haut débit.
 
