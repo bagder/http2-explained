@@ -103,7 +103,7 @@ Les esprits négatifs montreront "regardez comme IPv6 a marché" comme un exempl
 
 Avec SPDY, Google a prouvé au monde que l'on pouvait déployer et utiliser un nouveau protocole en peu de temps. Même si la somme des serveurs SPDY avoisine les 1% aujourd'hui, le volume de données est plus important. Certains des plus gros sites utilisent SPDY.
 
-http2, basé sur les même principes que SPDY et ratifié par l'IETF, devrait être encore plus largement déployé. Les déploiements SPDY ont toujours été limités par le syndrome "inventé par Google"
+http2, basé sur les mêmes principes que SPDY et ratifié par l'IETF, devrait être encore plus largement déployé. Les déploiements SPDY ont toujours été limités par le syndrome "inventé par Google"
 
 Il y a plusieurs navigateurs importants derrière http2. Des représentants de Firefox, Chrome, Safari, Internet Explorer et Opera ont tous indiqué leur intention de livrer des navigateurs avec http2 et ont montré des implémentations fonctionnelles.
 
@@ -113,4 +113,4 @@ Les plus gros proxy, HAProxy, Squid et Varnish ont mentionné leur intention de 
 
 Je pense qu'il y aura davantage d'implémentations quand la RFC sera ratifiée.
 
-Durant tout 2015, la quantité de trafic en http2 n'a cessé d'augmenter. Au début Septembre, sur Firefox 40, il génère 13% de tout le trafic HTTP, et 27% du trafic HTTPS, tandis que Google voit 18% de HTTP/2. Il faut noter que Google déroule d'autres expérimentation en parallèle (voir QUIC en 12.1), ce qui rend la quantité de trafic http2 plus basse que ce qu'elle aurait pu être.
+Durant tout 2015, la quantité de trafic en http2 n'a cessé d'augmenter. Au début Septembre, sur Firefox 40, il génère 13% de tout le trafic HTTP, et 27% du trafic HTTPS, tandis que Google voit 18% de HTTP/2. Il faut noter que Google déroule d'autres expérimentations en parallèle (voir QUIC en 12.1), ce qui rend la quantité de trafic http2 plus basse que ce qu'elle aurait pu être.
