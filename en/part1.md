@@ -29,9 +29,9 @@ the http2 standardization work.
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 Help!
 
