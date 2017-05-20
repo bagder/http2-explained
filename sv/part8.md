@@ -53,7 +53,7 @@ http2s fulla potential.
 Att försöka dokumentera specifika implementationer i ett dokument som det här
 är förstås helt futilt och dömt at misslyckas och kommer endast kännas gammalt
 redan inom kort. Istället kommer jag förklara situationen i bredare termer och
-hänvisa läsare till [lisan med
+hänvisa läsare till [listan med
 implementationer](https://github.com/http2/http2-spec/wiki/Implementations) på
 http2-sajten.
 
