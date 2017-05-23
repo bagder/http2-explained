@@ -55,4 +55,9 @@ costs a full network round-trip, but the upside is that it's generally possible 
 keep an http2 connection alive much longer and re-use it more than a typical HTTP1
 connection.
 
-While some browser's spokespersons have stated they will not implement this means of speaking http2, the Internet Explorer team has expressed that they will, and curl already supports this.
+While some browsers' spokespersons stated they will not implement this means
+of speaking http2, the Internet Explorer team once expressed that they would -
+although they have never delivered on that. curl and a few other non-browser
+clients support clear-text http2.
+
+Today, no major browser supports http2 without TLS.
