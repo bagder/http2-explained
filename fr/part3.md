@@ -32,7 +32,7 @@ Il est courant pour des sites de taille importante d'utiliser plusieurs fichiers
 
 La dernière astuce que je veux mentionner est connue sous le nom de "sharding". C'est la possibilité de charger le contenu d'un site depuis autant de hosts que possible. À première vue, cela paraît étrange mais c'est finalement assez astucieux.
 
-HTTP 1.1 limitait initialement à deux le nombre de connexions TCP simultanées d'un client à un même host. Pour ne pas contredire la spécification, des sites astucieux créaient simplement de nouveaux noms de hosts, et voilà, vous pouviez avoir davantage de connexions vers votre site et réduire le temps de chargement.
+HTTP 1.1 limitait initialement à deux le nombre de connexions TCP simultanées d'un client à un même host. Pour ne pas contredire la spécification, des sites astucieux créaient simplement de nouveaux noms de hosts, et voilà, vous pouvez avoir davantage de connexions vers votre site et réduire le temps de chargement.
 
 Avec le temps, cette limitation a été levée et les clients utilisent aujourd'hui typiquement 6 à 8 connexions par nom de host; cela dit, la limite perdure et certains sites continuent d'utiliser cette technique pour accroître le nombre de connexions. Comme le nombre d'objets augmente continuellement, l'utilisation d'un grand nombre de connexions permet de maximiser les performances. Il n'est pas inhabituel de voir des sites utiliser plus de 50 voire 100 connexions pour un seul site utilisant cette technique. Des statistiques récentes de httparchive.org montrent que le top 300.000 des URLs requiert en moyenne 40(!) connexions TCP pour afficher le site, et que ce nombre augmente de façon continue.
 
