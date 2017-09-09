@@ -1,4 +1,4 @@
-http2 açıklaması
+http2 açıklama
 ===============
 
 Döküman HTTP/2([RFC 7540](https://httpwg.github.io/specs/rfc7540.html)) protokolünü, arkaplanını, konseptini ve mevcut uygulamalarının gelecekte neler getireceğini açıklayan ayrıntılı bir belgedir.
