@@ -1,4 +1,4 @@
-# 1. Background
+# 1. Arkaplan
 
 Bu belge http2'yi teknik açıdan ve protokol düzeyinde açıklamaktadır. Bu girişim Daniel'in Nisan 2014'de Stokholm'de yaptığı bir sunum ile başladı ve artdından tüm detaylar ve açıklamalar ile dönüştürüldü ve düzenlendi.
 
