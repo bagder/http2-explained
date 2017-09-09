@@ -1,20 +1,12 @@
 # 1. Background
 
-This document describes http2 from a technical and protocol level. It started
-out as a presentation Daniel did in Stockholm in April 2014 that was
-subsequently converted and extended into a full-blown document with all
-details and proper explanations.
+Bu belge http2'yi teknik ve protokol düzeyinde açıklamaktadır. Bu girişim Daniel'in Nisan 2014'de Stokholm'de yaptigi bir sunum ile başladı ve artdından tüm detaylar ve açıklamalar ile dönüştürüldü ve düzenlendi.
 
-RFC 7540 is the official name of the final http2 specification and it was published on May 15th 2015: http://www.rfc-editor.org/rfc/rfc7540.txt
+RFC 7540 son http2 beyannamesinin resmi adıdır ve 15 Mayıs 2015'de yayınlanmiştır(http://www.rfc-editor.org/rfc/rfc7540.txt).
 
-All and any errors in this document are my own and the results of my
-shortcomings. Please point them out and they will be fixed in updated
-versions.
+Bu dökümanda bulunan tüm hatalar bana aittir ve kendi ihmalimin sonucudur. Lütfen güncellenen sürümlerde düzeltilmesi için  hataları belirleyin.
 
-In this document I've tried to consistently use the word "http2" to describe
-the new protocol while in pure technical terms, the proper name is HTTP/2. I
-made this choice for the sake of readability and to get a better flow in the
-language.
+Protokolü açıklamak için geçerli bir teknik terim olan "HTTP/2" yerine okunabilirlik ve daha iyi bir akış yakalamak adına "http2" kelimesini tercih ettim.
 
 ## 1.1 Author
 
