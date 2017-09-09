@@ -1,22 +1,16 @@
 http2 explained
 ===============
 
-This is a detailed document describing HTTP/2 ([RFC
-7540](https://httpwg.github.io/specs/rfc7540.html)), the background, concepts,
-protocol and something about existing implementations and what the future
-might hold.
+Bu proje HTTP/2([RFC 7540](https://httpwg.github.io/specs/rfc7540.html)) protokolünü, arkaplanını, konseptini ve mevcut uygulamalarının gelecekte neler getireceğini açıklayan ayrıntılı bir belgedir.
 
-See https://daniel.haxx.se/http2/ for the canonical home for this project.
+https://daniel.haxx.se/http2/ projenin standardıdır.
 
-See https://github.com/bagder/http2-explained for the source code of all book
-contents.
+https://github.com/bagder/http2-explained proje içeriğinin tamamı için kaynak bağlantısıdır.
 
-CONTRIBUTING
+GELİŞTİRİCİLER
 ------------
 
-I encourage and welcome help and contributions from anyone who may have
-improvements to offer. We accept [pull
-requests](https://github.com/bagder/http2-explained/pulls), but you can also
-just file [issues](https://github.com/bagder/http2-explained/issues) or send email to daniel-http2@haxx.se with your suggestions!
+Katkıda bulunmak ve iyileştirmeler sunmak isteyen geliştiricilerden memnuniyet duyar ve desteklerim. Çekme isteklerini[pull
+requests] https://github.com/bagder/http2-explained/pulls adresinden iletiniz ayrıca  https://github.com/bagder/http2-explained/issues adresinden dosyalayabilir ya da daniel-http2@haxx.se adresine önerilerinizi elektronik posta gönderebilirsiniz.
 
  / Daniel Stenberg
