@@ -8,16 +8,11 @@ Bu dökümanda bulunan tüm hatalar bana aittir ve kendi ihmalimin sonucudur. L�
 
 Protokolü açıklamak için geçerli bir teknik terim olan "HTTP/2" yerine okunabilirlik ve daha iyi bir akış yakalamak adına "http2" kelimesini tercih ettim.
 
-## 1.1 Author
+## 1.1 Yazar
 
-My name is Daniel Stenberg and I work for Mozilla. I've been working with open
-source and networking for over twenty years in numerous projects. Possibly I'm
-best known for being the lead developer of curl and libcurl. I've been
-involved in the IETF HTTPbis working group for several years and there I've
-kept up-to-date with the refreshed HTTP 1.1 work as well as being involved in
-the http2 standardization work.
+Benim adım Daniel Stenberg ve Mozilla'da çalışıyorum. Açık kaynak ve ağ ile 20 yıldan fazla bir süredir sayısız projede çalıştım. Muhtemelen bilinen en öncü curl ve libcurl geliştiricisiyim.Birkaç yıldır IETF HTTPbis çalışma grubunda yer aldım ve orada http 1.1 yeniliklerini takip ettim, aynı zamanda http2 standartlaştırma çalışmalarına dahil oldum.
 
-  Email: daniel@haxx.se
+  Elektronik posta: daniel@haxx.se
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
