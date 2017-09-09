@@ -10,6 +10,6 @@ https://github.com/bagder/http2-explained dökümanın içeriğinin tamamı içi
 GELİŞTİRİCİLER
 ------------
 
-Katkıda bulunmak ve iyileştirmeler sunmak isteyen geliştiricilerden memnuniyet duyarım ve katkılarını desteklerim. Çekme isteklerini[pull requests] https://github.com/bagder/http2-explained/pulls adresinden iletiniz ayrıca https://github.com/bagder/http2-explained/issues adresinden dosyalayabilir ya da daniel-http2@haxx.se adresine önerilerinizi elektronik posta gönderebilirsiniz.
+Katkıda bulunmak ve iyileştirmeler sunmak isteyen geliştiricilerden memnuniyet duyarım ve katkılarını desteklerim. Çekme isteklerini[pull requests] https://github.com/bagder/http2-explained/pulls adresinden iletiniz ayrıca https://github.com/bagder/http2-explained/issues adresinden dosyalayabilir ya da daniel-http2@haxx.se adresine önerilerinizi elektronik posta gönderebilirsiniz!
 
  / Daniel Stenberg
