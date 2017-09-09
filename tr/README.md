@@ -1,11 +1,11 @@
 http2 açıklaması
 ===============
 
-Proje HTTP/2([RFC 7540](https://httpwg.github.io/specs/rfc7540.html)) protokolünü, arkaplanını, konseptini ve mevcut uygulamalarının gelecekte neler getireceğini açıklayan ayrıntılı bir belgedir.
+Döküman HTTP/2([RFC 7540](https://httpwg.github.io/specs/rfc7540.html)) protokolünü, arkaplanını, konseptini ve mevcut uygulamalarının gelecekte neler getireceğini açıklayan ayrıntılı bir belgedir.
 
-https://daniel.haxx.se/http2/ projenin standardıdır.
+https://daniel.haxx.se/http2/ dökümanın standardıdır.
 
-https://github.com/bagder/http2-explained proje içeriğinin tamamı için kaynak bağlantısıdır.
+https://github.com/bagder/http2-explained dökümanın içeriğinin tamamı için kaynak bağlantısıdır.
 
 GELİŞTİRİCİLER
 ------------
