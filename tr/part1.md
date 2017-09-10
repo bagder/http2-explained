@@ -35,48 +35,48 @@ Bu döküman Creative Commons Attribution 4.0 license tarafından lisanslanmış
 
 ## 1.4 Döküman tarihi
 
-The first version of this document was published on April 25th 2014. Here follows the largest changes in the most recent document versions.
+Dökümanın ilk versiyonu, 25 Nisan 2014 tarihinde yayınlandı. Burada en son doküman versiyonundaki en büyük değişiklikler takip ediliyor.
 
 ### Versiyon 1.13
 
-- Converted the master version of this document to Markdown syntax
-- 13: Mention more resources, updated links and descriptions 
-- 12: Updated the QUIC description with reference to draft 
-- 8.5: Refreshed with current numbers 
-- 3.4: The average is now 40 TCP connections 
-- 6.4: Updated to reflect what the spec says 
+- Ana versiyonun Markdown sözdizimine dönüşümü
+- 13: Daha fazla kaynak, güncel bağlantılar ve açıklamalar 
+- 12: QUIC açıklaması referans ile güncelleme
+- 8.5: Şimdiki sayılarla yenilenme
+- 3.4: Ortalama 40 TCP bağlantısı 
+- 6.4: Tenik özellikleri aksettirmek için güncelleme 
 
 ### Versiyon 1.12
 
-- 1.1: HTTP/2 is now in an official RFC 
-- 6.5.1: Link to the HPACK RFC 
-- 9.1: Mention the Firefox 36+ config switch for http2 
-- 12.1: Added section about QUIC 
+- 1.1: HTTP/2 bu versiyonda official RFC'de
+- 6.5.1: HPACK RFC'ye bağlantı
+- 9.1:  http2 için Firefox 36+ yapılandırma ayarları
+- 12.1: QUIC ile ilgili eklemeler
 
 ### Versiyon 1.11
 
-- Lots of language improvements mostly pointed out by friendly contributors 
-- 8.3.1: Mention nginx and Apache httpd specific acitivities 
+- Dostça katkıda bulunanların işaret ettiği birçok dil iyileştirmesi
+- 8.3.1: Nginx and Apache httpd hakkında atıflar.
 
 ### Versiyon 1.10
 
-- 1: The protocol has been “okayed” 
-- 4.1: Refreshed the wording since 2014 is last year 
-- Front: Added image and call it “http2 explained” there, fixed link 
-- 1.4: Added document history section 
-- Many spelling and grammar mistakes corrected 
-- 14: Added thanks to bug reporters 
-- 2.4: Better labels for the HTTP growth graph 
-- 6.3: Corrected the wagon order in the multiplexed train 
-- 6.5.1: HPACK draft-12 
+- 1: Protokol tamamlandı
+- 4.1: 2014 yılından intibaren yenilene kelimeler
+- Ön: Resim eklendi ve "http2 açıklama" denildi,bağlantı düzenlendi 
+- 1.4: Döküman tarihi bölümü eklendi
+- Birçok yazım ve dil bilgisi hatası düzenltildi 
+- 14: Hata raporcularına teşekkür bölümü eklendi 
+- 2.4:Büyüme artışı için daha iyi duyuru
+- 6.3: Çoklama özelliğinde sıralama düzeltildi
+- 6.5.1: HPACK taslağı-12 
 
 ### Versiyon 1.9
 
-- Updated to HTTP/2 draft-17 and HPACK draft-11  
-- Added section "10. http2 in Chromium" (== one page longer now)  
-- Lots of spell fixes  
-- At 30 implementations now  
-- 8.5: Added some current usage numbers  
-- 8.3: Mention internet explorer too  
-- 8.3.1 Added "missing implementations"  
-- 8.4.3: Mention that TLS also increases success rate
+- HTTP/2 taslak-17 and HPACK taslak-11 güncellemesi
+- "10. Chromium'da http2" (== şimdi bir sayfa daha uzun) bölümü
+- Birçok bölüm düzenlemesi
+- 30 uygulama  
+- 8.5: Bazı güncel kullanım numaraları
+- 8.3: internet explorer'a atıf
+- 8.3.1 Eksik uygulamalar bölümü
+- 8.4.3: TLS'nin başarı oranı artışı
