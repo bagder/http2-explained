@@ -33,9 +33,9 @@ Grafik toplam aktarım boyutunun büyümesini(yeşil olan) ve dünyadaki en popu
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
-HTTP 1.1 is very latency sensitive, partly because HTTP Pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
+HTTP 1.1'in gecikmeye karşı çok hassas olması, kısmen HTTP boruhattının buyuk bir kullanıcı oranına sahip olması ile ilgilidir.
 
-While we've seen a great increase in available bandwidth to people over the last few years, we have not seen the same level of improvements in reducing latency. High latency links, like many of the current mobile technologies, make it really hard to get a good and fast web experience even if you have a really high bandwidth connection.
+Geçtiğimiz birkaç yılda kullanıcılara mevcut bant genişliğinde büyük bir artış göstersede, gecikmeyi azaltma yolunda aynı seviyede bir gelişmeye rastlamadık. Geçmişteki mobil teknolojiler gibi yüksek gecikme süresi olan bağlantılar yüksek bant genişliği bağlantısı sağladı fakat  bu dahi hızlı bir web deneyimi elde etmeyi mümkün kılmadı.
 
 Another use case that really needs low latency is certain kinds of video, like video conferencing, gaming and similar where there's not just a pre-generated stream to send out.
 
