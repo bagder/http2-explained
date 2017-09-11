@@ -2,7 +2,7 @@
 
 Bu belge http2'yi teknik açıdan ve protokol düzeyinde açıklamaktadır. Girişim Daniel'in Nisan 2014'de Stokholm'de yaptığı bir sunum ile başladı ve artdından tüm detaylar ve açıklamalar ile dönüştürüldü ve düzenlendi.
 
-RFC 7540 son http2 beyannamesinin resmi adıdır ve 15 Mayıs 2015'de yayınlanmıştır(http://www.rfc-editor.org/rfc/rfc7540.txt).
+RFC 7540 son http2 şartnamesinin resmi adıdır ve 15 Mayıs 2015'de yayınlanmıştır(http://www.rfc-editor.org/rfc/rfc7540.txt).
 
 Bu dökümanda bulunan tüm hatalar bana aittir ve kendi ihmalimin sonucudur. Lütfen güncellenen sürümlerde düzeltilmesi için  hataları belirleyin.
 
