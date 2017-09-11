@@ -1,34 +1,35 @@
-# 2. HTTP today
+# 2. Günümüzde HTTP 
 
-HTTP 1.1 has turned into a protocol used for virtually everything on the Internet. Huge investments have been made in protocols and infrastructure that take advantage of this, to the extent that it is often easier today to make things run on top of HTTP rather than building something new on its own.
+HTPP 1.1, internette neredeyse herşeyde kullanılan bir protocol haline geldi. Büyük yatırımlar protocolde yapılır  ve  bundan altyapı avantaj elde eder öyle ki artık genellikle günümüzde işleri(web işlerini ) çalışır hale getirmek ,yeni birşey üzerinden çalıştırmaktansa,HTTP üzerinde daha kolaydır.
 
-## 2.1 HTTP 1.1 is huge
+## 2.1 HTTP 1.1 Devasadır
 
-When HTTP was created and thrown out into the world it was probably perceived as a rather simple and straightforward protocol, but time has proved that to be false. HTTP 1.0 in RFC 1945 is a 60-page specification released in 1996. RFC 2616 that describes HTTP 1.1 was released only three years later in 1999 and had grown significantly to 176 pages. Yet, when we within IETF worked on the update to that spec, it was split up and converted into six documents, with a much larger page count in total (resulting in RFC 7230 and family). By any count, HTTP 1.1 is big and includes a myriad of details, subtleties and not the least a lot of optional parts.
+HTTP oluşturulduğunda ve dünyaya yayıldığında,muhtemelen oldukça basit ve karmaşıksız bir protokol olarak algılanmış olsa da zaman bunun doğru olmadığını ispatlamıştır. RFC 1945 HTTP 1.0'i, 1996 yılında, 60 sayfa tanımlamayla yayınlanmıştır. RFC2616 HTTP 1.1'i ise yalnızca 3 sene sonra 1999 da yayınlanmıştır ve önemli ölçüde artiş göstererek 176 sayfaya çıkmıştır. Bununla birlikte, IETF bu spektrumdaki güncelleme üzerinde çalışırken bölünmüş ve altı belgeye dönüştürülmüştür(RFC7230 ve ailesi). HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve çok sayıda isteğe bağlı bölüm içermektedir.
 
-## 2.2 A world of options
+## 2.2 Seçenekler dünyası
 
-HTTP 1.1's nature of having lots of tiny details and options available for later extensions has grown a software ecosystem where almost no implementation ever implements everything – and it isn't even really possible to exactly tell what “everything” is. This has led to a situation where features that were initially little used saw very few implementations and those who did implement the features then saw very little use of them.
+HTTP 1.1 in  bir çok detaya sahip yapısı ve sonraki eklentiler için de kullanılabilen seçenekleri, neredeyse hiç bir uygulamanın hiç bir zaman hiç bir şeyin uygulayamıcağı bir yazılım ekosistemi oluşturmuştur ve "hiçbirşey" kavramının tam olarak ne olduğunu söylemek mümkün değil. Bu, özelliklerin çok az sayıda olmasına ve çok az yararlanıldığı bir duruma neden oldu.
 
-Later on, this caused an interoperability problem when clients and servers started to increase the use of such features. HTTP Pipelining is a primary example of such a feature.
+Daha sonraları, sunucu ve istemciler bu tür özellikleri daha çok kullanmaya başladığında, bu "birlikte çalışabilirlik"(interoperability) sorununa neden oldu. HTTP boruhattı, bu tarz özelliklere birincil örnektir. 
 
-## 2.3 Inadequate use of TCP
+## 2.3 TCP’nin yetersiz kullanımı
 
-HTTP 1.1 has a hard time really taking full advantage of all the power and performance that TCP offers. HTTP clients and browsers have to be very creative to find solutions that decrease page load times.
+HTTP 1.1, TCP'nin sunduğu tüm gücü ve performansı tam olarak kullanmanın zor bir dönemini yaşamaktadır.HTTP istemcileri ve tarayıcılar,sayfa yükleme sürelerini azaltan çözümler bulmak için çok yaratıcı olmalıdırlar.
 
-Other attempts that have been going on in parallel over the years have also confirmed that TCP is not that easy to replace and thus we keep working on improving both TCP and the protocols on top of it.
+ Yıllar boyunca paralel olarak devam eden diğer girişimler TCP’nin bu kadar kolay değiştirilmediğini doğruladı ve bu yüzden hem TCP hem de protokolleri geliştirmeye çalışmaya devam ediyoruz.
 
-Simply put, TCP can be utilized better to avoid pauses or wasted intervals that could have been used to send or receive more data. The following sections will highlight some of these shortcomings.
+Basitce söylemek gerekirse, TCP'nin daha fazla veri göndermek veya almak ve boş sürelerden kaçınmak için daha iyi değerlendirilebilir. Sıradaki başlıklarda bu eksikliklerin bazıları vurgulanacaktır. 
 
-## 2.4 Transfer sizes and number of objects
+## 2.4 Aktarım boyutları ve nesne sayısı
 
-When looking at the trend for some of the most popular sites on the web today and what it takes to download their front pages, a clear pattern emerges. Over the years the amount of data that needs to be retrieved has gradually risen up to and above 1.9MB . What is more important in this context is that on average over a hundred individual resources are required to display each page.
+Bugün Webteki en popüler sitelerin bazılarına ve bunların ön sayfalarını indirmek için neye ihtiyaç olduğuna bakıldığında net bir model ortaya çıkıyor. Yıllar geçtikce alınan veri miktarı kademeli olarak 1.9MB'ın üzerine çıkmıştır.Burda daha önemli olan şey, her sayfayı görüntülemek için ortalama olarak yüzü aşkın bireysel kaynağa ihtiyaç duyulmasıdır.
 
-As the graph below shows, the trend has been going on for a while and there is little to no indication that it will change anytime soon. It shows the growth of the total transfer size (in green) and the total number of requests used on average (in red) to serve the most popular web sites in the world, and how they have changed over the last four years.
+Aşağıdaki grafiğin gösterdiği gibi, trend bir süredir devam etmektedir ve yakın zamanda bunun değişeceğine dair hiç bir gösterge yoktur.
+Grafik toplam aktarım boyutunun büyümesini(yeşil olan) ve dünyadaki en populer web sitelerine gelen ortalama istek sayısını(kırmızı olan) göstermektedir.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
-## 2.5 Latency kills
+## 2.5 Gecikme öldürür
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
