@@ -47,9 +47,9 @@ Akışların çoğullaması, birçok akıştan gelen paketlerin aynı bağlantı
 
 ![multiplexed train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
 
-## 6.4. Priorities and dependencies
+## 6.4. Öncelikler ve Bağımlılıklar
 
-Each stream also has a priority (also known as “weight”), which is used to tell the peer which streams to consider most important, in case there are resource restraints that force the server to select which streams to send first.
+Her bir akış, sunucuyu öncelikle hangi akışların gönderileceğini seçmeye zorlayan kaynak kısıtlamaları olması durumunda, hangi akışın en önemli olduğunu söylemek için kullanılan bir öncelik(ağırlık olarak da bilinir) bilgisine sahiptir.
 
 Using the PRIORITY frame, a client can also tell the server which other stream this stream depends on. It allows a client to build a priority “tree” where several “child streams” may depend on the completion of “parent streams”.
 
