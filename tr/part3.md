@@ -40,8 +40,6 @@ Başlangıçta HTTP 1.1 spesifikasyonu, bir istemcinin her bir ana bilgisayar i�
 
 Zamanla bu sınırlama kaldırıldı ve bugün müşteriler istemci başına 6-8 bağlantıyı kolayca kullanıyor ancak hala limit vardır, bu nedenle siteler bağlantı sayısını arttırmak için tekniği kullanmaya devam ediyor. Nesnelerin sayısı arttıkça, daha önce de gösterildiği gibi, çok sayıda bağlantı olması, HTTP'nin iyi performans göstermesinden ve sitenizi daha hızlı hale getirdiğinden emin olmak için kullanılır. Sitelerin bu tekniği kullanarak tek bir site için 50'den fazla, hatta 100'e kadar veya daha fazla bağlantıyı kullanması olağandır. Httparchive.org tarafından yayınlanan son istatistikler, siteyi görüntülemek için dünyanın en büyük 300K linklerinin ortalama 40 TCP bağlantısı gerektirdiğini ve eğilim bunun zaman içinde yavaş ilerlediğini gösteriyor.
 
-Another reason is also to put images or similar resources on a separate host name that doesn't use any cookies, as the size of cookies these days can be quite significant. By using cookie-free image hosts you can sometimes increase performance simply by allowing much smaller HTTP requests!
-
 Bir başka sebep de, resimler veya benzeri kaynakları, çerezleri kullanmayan ayrı bir sunucu adına koymaktır; çünkü bu günlerde çerezlerin boyutu oldukça önemli olabilir. Baen çerezsiz resim sunucularını kullanarak çok daha küçük HTTP isteklerine izin verebilir ve böylece performansı arttırabilirsiniz!
 
 Aşağıdaki resim, İsveç'in en iyi web sitelerinden birinde, taleplerin çeşitli ana sunucu adları üzerinden nasıl dağıtıldığını ve bir paket izinin nasıl göründüğünü göstermektedir.
