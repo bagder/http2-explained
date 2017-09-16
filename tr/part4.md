@@ -14,7 +14,7 @@ Geliştirilmiş bir protokol yapmak hoş olmaz mıydı? Elbette olurdu...
  
 IETF'de, bir hedefe doğru çalışmak için "çalışma grupları" sınırlı bir kapsam ile oluşturulmuştur.  Ortaya koyduklaı şey için bazı belirlenmiş yönergeler ve sınırlamalar içeren bir "tanımlama"(charter) oluştururlar. Tartışmalara ve gelişmelere herkesinkatılmasına müsade ederler.  Katılmak ve bir şeyler söylemek konusunda herkes, eşit haklara ve ağırlığa sahiptir ve herkes, çalıştığı şirkti yok sayarcasına bir birey olarak sayılır.
 
-HTTPbis çalışma grubu (adın açıklaması için daha sonra inceleyelim) 2007 yazında kuruldu ve HTTP 1.1 şartnamesinin güncellenmesi görevini üstlendi.  Bu grup içinde HTTP'nin bir sonraki sürümü ile ilgili tartışmalar 2012'nin sonlarında gerçekten başlamıştı.  HTTP 1.1 güncelleme çalışması 2014 yılının başında tamamlandı ve [RFC 7230](https://tools.ietf.org/html/rfc7230) serisi ile sonuçlandı.
+HTTPbis çalışma grubu (adın açıklaması için daha sonra inceleyelim) 2007 yazında kuruldu ve HTTP 1.1 şartnamesinin güncellenmesi görevini üstlendi.  Bu grup içinde HTTP'nin bir sonraki sürümü ile ilgili tartışmalar 2012'nin sonlarında gerçekten başlamıştı.  HTTP 1.1 güncelleme çalışması 2014 yılının başında tamamlandı ve [RFC 7230](https://tools.ietf.org/html/rfc7230) ile sonuçlandı.
 
 HTTPbis WG için yapılan son görüşmeler, Haziran 2014'ün başında New York'ta yapıldı. Geri kalan tartışmalar ve resmi RFC'yi almak için gerçekleştirilen IETF prosedürleri ertesi yıl devam etti.
 
@@ -22,7 +22,7 @@ HTTP sahasındaki daha büyük oyuncuların bazıları çalışma grubu tartış
 
 ### 4.1.1. İsimin "bis" bölümü
 
-"HTTPbis" isminin "bis" bölmüü latin alfabesinden[Latin adverb for two](http://en.wiktionary.org/wiki/bis#Latin) alıyor. bis genellikle sonek(suffix) veya IETF içinde bir güncelleme ya da ikinci bir spesifikasyon gibi kullanıldı: HTTP 1.1 için güncelleme'dir.
+"HTTPbis" isminin "bis" bölmüü latin alfabesinden [Latin adverb for two](http://en.wiktionary.org/wiki/bis#Latin) alıyor. bis genellikle sonek(suffix) veya IETF içinde bir güncelleme ya da ikinci bir spesifikasyon gibi kullanıldı: HTTP 1.1 için güncelleme'dir.
 
 ## 4.2. http2 SPDY'den başladı
 
