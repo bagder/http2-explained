@@ -14,17 +14,17 @@ Daha sonraları, sunucu ve istemciler bu tür özellikleri daha çok kullanmaya 
 
 ## 2.3 TCP’nin yetersiz kullanımı
 
-HTTP 1.1, TCP'nin sunduğu tüm gücü ve performansı tam olarak kullanmanın zor bir dönemini yaşamaktadır.HTTP istemcileri ve tarayıcılar,sayfa yükleme sürelerini azaltan çözümler bulmak için çok yaratıcı olmalıdırlar.
+HTTP 1.1, TCP'nin sunduğu tüm gücü ve performansı tam olarak kullanmanın zor bir dönemini yaşamaktadır.HTTP istemcileri ve tarayıcılar, sayfa yükleme sürelerini azaltan çözümler bulmak için çok yaratıcı olmalıdırlar.
 
- Yıllar boyunca paralel olarak devam eden diğer girişimler TCP’nin bu kadar kolay değiştirilmediğini doğruladı ve bu yüzden hem TCP hem de protokolleri geliştirmeye çalışmaya devam ediyoruz.
+Yıllar boyunca paralel olarak devam eden diğer girişimler TCP’nin bu kadar kolay değiştirilmediğini doğruladı ve bu yüzden hem TCP hem de protokolleri geliştirmeye devam ediyoruz.
 
-Basitce söylemek gerekirse, TCP'nin daha fazla veri göndermek veya almak ve boş sürelerden kaçınmak için daha iyi değerlendirilebilir. Sıradaki başlıklarda bu eksikliklerin bazıları vurgulanacaktır. 
+Basitce söylemek gerekirse, TCP daha fazla veri göndermek veya almak ve boş sürelerden kaçınmak için daha iyi değerlendirilebilir. Sıradaki başlıklarda bu eksikliklerin bazıları vurgulanacaktır. 
 
 ## 2.4 Aktarım boyutları ve nesne sayısı
 
-Bugün Webteki en popüler sitelerin bazılarına ve bunların ön sayfalarını indirmek için neye ihtiyaç olduğuna bakıldığında net bir model ortaya çıkıyor. Yıllar geçtikce alınan veri miktarı kademeli olarak 1.9MB'ın üzerine çıkmıştır.Burda daha önemli olan şey, her sayfayı görüntülemek için ortalama olarak yüzü aşkın bireysel kaynağa ihtiyaç duyulmasıdır.
+Bugün Web'deki en popüler sitelerin bazılarına ve bunların ön sayfalarını indirmek için neye ihtiyaç olduğuna bakıldığında net bir model ortaya çıkıyor. Yıllar geçtikce alınan veri miktarı kademeli olarak 1.9MB'ın üzerine çıkmıştır.Burda daha önemli olan şey, her sayfayı görüntülemek için ortalama olarak yüzü aşkın bireysel kaynağa ihtiyaç duyulmasıdır.
 
-Aşağıdaki grafiğin gösterdiği gibi, trend bir süredir devam etmektedir ve yakın zamanda bunun değişeceğine dair hiç bir gösterge yoktur.
+Aşağıdaki grafiğin gösterdiği gibi, trend, bir süredir devam etmektedir ve yakın zamanda bunun değişeceğine dair hiç bir gösterge yoktur.
 Grafik toplam aktarım boyutunun büyümesini(yeşil olan) ve dünyadaki en populer web sitelerine gelen ortalama istek sayısını(kırmızı olan) göstermektedir.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
@@ -49,6 +49,6 @@ Satır seçimi konusunda dikkatli olabilirsiniz, bu yüzden doğru olduğunu ger
 
 Yeni bir satır oluşturmak da bir performans ve kaynak cezasıyla ilişkilidir, bu yüzden daha küçük satır sayılarının ötesinde ölçeklenebilir değildir. Dolayısıyla bu da mükemmel bir çözüm değildir.
 
-Bugün bile(2015), çoğu masaüstü web tarayıcısında varsayılan olarak HTTP baruhattı devre dışı bırakılmıştır.
+Bugün bile(2015), çoğu masaüstü web tarayıcısında varsayılan olarak HTTP boru hattı devre dışı bırakılmıştır.
 
 Ek olarak bu konu ile ilgili örnekler Firefox'un adresinde bulunur[bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
