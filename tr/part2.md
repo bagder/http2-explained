@@ -8,7 +8,7 @@ HTTP oluşturulduğunda ve dünyaya yayıldığında,muhtemelen oldukça basit v
 
 ## 2.2 Seçenekler dünyası
 
-HTTP 1.1 in  bir çok detaya sahip yapısı ve sonraki eklentiler için de kullanılabilen seçenekleri, neredeyse hiç bir uygulamanın hiç bir zaman hiç bir şeyin uygulayamıcağı bir yazılım ekosistemi oluşturmuştur ve "hiçbirşey" kavramının tam olarak ne olduğunu söylemek mümkün değil. Bu, özelliklerin çok az sayıda olmasına ve çok az yararlanıldığı bir duruma neden oldu.
+HTTP 1.1 in  bir çok detaya sahip yapısı ve sonraki eklentiler için de kullanılabilen seçenekleri, neredeyse hiçbir uygulamanın hiçbir zaman hiçbir yerde uygulayamayacağı bir yazılım ekosistemi haline getirmiş ve "hiçbir şey" kavramının tam olarak ne olduğunu söylemek mümkün değildir. Bu, özelliklerin çok az sayıda olmasına ve çok az yararlanıldığı bir duruma neden oldu.
 
 Daha sonraları, sunucu ve istemciler bu tür özellikleri daha çok kullanmaya başladığında, bu "birlikte çalışabilirlik"(interoperability) sorununa neden oldu. HTTP boruhattı, bu tarz özelliklere birincil örnektir. 
 
