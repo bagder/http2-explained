@@ -1,41 +1,49 @@
-# 6. The http2 protocol
+# 6. Http2 protokolü
 
-Enough about the background, the history and politics behind what got us here. Let's dive into the specifics of the protocol: the bits and the concepts that make up http2.
+Arkaplan hakkında, bizi ilgilendiren tarih ve siyaset hakkında yeterince bilgi bulunuyor. Protokolün özelliklerine, http2'yi oluşturan bitler ve kavramlara bakalım.
 
-## 6.1. Binary
+## 6.1. İkili protokol
 
-http2 is a binary protocol.
+http2, ikili bir protokoldür.
 
-Just let that sink in for a minute. If you've been involved in internet protocols before, chances are that you will now be instinctively reacting against this choice, marshaling your arguments that spell out how protocols based on text/ascii are superior because humans can handcraft requests over telnet and so on...
+Bir dakika izin ver yeter. Daha önce internet protokolleri ile ilgilendiyseniz, bu değişime bir şekilde tepki göstereceksiniz, çünkü insanlar telnet ve benzeri yollarla istekte bulunabileceğinden metin / ascii tabanlı protokollerin nasıl daha üstün olduğunu argümanlarınızı sıralayarak ispatlamaya çalışacaktır...
 
-http2 is binary to make the framing much easier. Figuring out the start and the end of frames is one of the really complicated things in HTTP 1.1 and, actually, in text-based protocols in general. By moving away from optional white space and different ways to write the same thing, implementation becomes simpler.
+http2, çerçevelemeyi çok daha kolay hale getirmek için ikilidir. Çerçevelerin başlangıcını ve bitişini bulmak HTTP 1.1'de ve aslında genel olarak metin tabanlı diğer protokollerde de karmaşık durumlardan biridir. İsteğe bağlı beyaz boşluğun dışına ve aynı şey için farklı yollarla ilerleyerek uygulama daha basit hale gelir.?
 
-Also, it makes it much easier to separate the actual protocol parts from the framing - which in HTTP1 is confusingly intermixed.
+Ayrıca, gerçek protokol bölümlerini çerçeveden ayırmak daha kolaydır, ki HTTP1 karmaşıktır.
 
 The fact that the protocol features compression and will often run over TLS also diminishes the value of text, since you won't see text over the wire anyway. We simply have to get used to the idea of using something like a Wireshark inspector to figure out exactly what's going on at the protocol level in http2.
 
+Protokolün sıkıştırma özelliğine sahip olması ve genellikle TLS ile çalışması da, metnin önemini düşürür; zira yine de hat üzerinde metin görmezsiniz. Http2'deki protokol seviyesinde neler olduğunu tam olarak anlamak için bir Wireshark gibi ağdaki paketler inceleyebileceğiniz bir ygulama kullanma fikrine alışmamız yeterlidir.
+
 Debugging this protocol will probably have to be done with tools like curl, or by analyzing the network stream with Wireshark's http2 dissector and similar.
 
-## 6.2. The binary format
+Bu protokolün hata ayıklamasının muhtemelen curl gibi araçlarla veya ağ akışının Wireshark ve benzerleriyle analiz ederek yapılması gerekecektir.
+
+## 6.2. İkili format
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png" />
 
-http2 sends binary frames. There are different frame types that can be sent and they all have the same setup: Length, Type, Flags, Stream Identifier, and frame payload.
+http2, ikili çerçeveler gönderir. Gönderilebilen farklı çerçeve türleri de vardır ve hepsi aynı ayarlara sahiptir: Uzunluk, Tip, Bayraklar, Akış Tanımlayıcı ve çerçeve yükü.
 
 There are ten different frame types defined in the http2 spec and perhaps the two most fundamental ones that map to HTTP 1.1 features are DATA and HEADERS. I'll describe some of the frames in more detail further on.
 
-## 6.3. Multiplexed streams
+Http2 beyannamesinde tanımlanan on farklı çerçeve türü vardır ve HTTP 1.1 özelliklerine eşleyen iki temel çerçeve VERİ ve BAŞLIK'tır. Çerçevelerin bazılarını daha ayrıntılı olarak açıklayacağım.
 
-The Stream Identifier mentioned in the previous section associates each frame sent over http2 with a “stream”. A stream is an independent, bi-directional sequence of frames exchanged between the client and server within an http2 connection.
+## 6.3. Çoklu akışlar
 
-A single http2 connection can contain multiple concurrently-open streams, with either endpoint interleaving frames from multiple streams. Streams can be established and used unilaterally or shared by either the client or server and they can be closed by either endpoint. The order in which frames are sent within a stream is significant. Recipients process frames in the order they are received. 
+Önceki bölümde bahsedilen Akım Tanımlayıcı, http2 üzerinden gönderilen her kareyi bir "akış" ile ilişkilendirir. Akış, http2 bağlantısı içinde istemci ve sunucu arasında değiştirilen bağımsız, çift yönlü bir çerçeve dizisidir.
+
+Tek bir http2 bağlantısı,eşzamanlı birden fazla açık akış içerebilir; bu uç noktalarda çoklu akışlardan çerçeveler araya girebilir. Akışlar kurulabilir ve tek taraflı olarak kullanılabilir veya istemci veya sunucu tarafından paylaşılabilir ve iki uç nokta tarafından da kapatılabilir. Çerçevelerin bir akış içinde gönderilme sırası önemlidir. Alıcılar, çerçeveleri aldığı sıraya göre işlerler.
 
 Multiplexing the streams means that packages from many streams are mixed over the same connection. Two (or more) individual trains of data are made into a single one and then split up again on the other side. Here are two trains:
+
+Akışların çoğullaması, birçok akıştan gelen paketlerin aynı bağlantı üzerinden karışabilmesi anlamına gelir. İki bireysel tren tek bir tren haline gelebilir ve daha sonra diğer tarafta tekrar ayrılabilir.
 
 ![one train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-justin.jpg)
 ![another train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-ikea.jpg)
 
-The two trains multiplexed over the same connection:
+İki tren aynı bağlantı üzerinden çoğullandı:
 
 ![multiplexed train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
 
