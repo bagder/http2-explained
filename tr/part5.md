@@ -34,7 +34,7 @@ Zorunlu TLS konusu, toplantılarda titrek sesler çıkmasına neden olan, çok t
 
 Similarly, there's been a fierce and long-running debate about whether http2 should dictate a list of ciphers that should be mandatory when using TLS, or if it should perhaps blacklist a set, or if it shouldn't require anything at all from the TLS “layer” but leave that to the TLS working group. The spec ended up specifying that TLS should be at least version 1.2 and there are cipher suite restrictions.
 
-Http2'nin TLS kullanırken zorunlu olması gereken şifrelerin bir listesini mi tutmalı, belki de bir seti kara listeye almalı ya da TLS'i katman olarak değiştirilmeli yada TLS'den hiç bir şey talep etmemesi gerekip gerekmediğine ilişkin konularda uzun ve sıkı müzakereler oldu.
+Http2 TLS kullanırken zorunlu olması gereken şifrelerin bir listesini tutmalı mı, bazılarını kara listeye almalı mı, TLS'i katman olarak değiştirilmeli mi, TLS'den bir şey talep etmesi gerekip gerekmediğine ilişkin konularda uzun ve sıkı müzakereler oldu ve bu konularda tartışmalar sürüyor. Beyanname TLS'in en az 1.2 sürümü olmasını ve şifre paketi kısıtlamaları olduğunu belirledi.
 
 ## 5.3. TLS üzerinden http2 anlaşması
 
