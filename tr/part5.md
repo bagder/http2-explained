@@ -48,9 +48,6 @@ ALPN, öncelikle kimin hangi protokolü kullanacağına karar vermesinde NPN'den
 
 Daha önce de belirtildiği gibi, düz metin HTTP 1.1 için http2 sunucuya bir yükseltme(Upgrade): başlığı sunar. Sunucu http2 konuşursa, "101 Anahtarlama"(“101 Switching”) durumu ile yanıt verir ve o andan itibaren bu bağlantı http2 olarak devam eder. Tabi ki bu yükseltme prosedürü tam bir ağ gidiş-dönüş süresine yol açar, ancak, http2 bağantısını daha uzun süre canlı tutmak ve onu tipik bir HTTP1 bagantısından daha fazla kullanmak mümkündür.
 
-While some browsers' spokespersons stated they will not implement this means
-of speaking http2, the Internet Explorer team once expressed that they would -
-although they have never delivered on that. curl and a few other non-browser
-clients support clear-text http2.
+Bazı tarayıcıların sözcüleri http2'yi uygulamayacaklarını söyleseler de, Internet Explorer ekibi destekleyecelerini söyledi. curl ve diğer tarayıcı dışı irkaç istemci de açık metin http2'yi destekler.
 
-Today, no major browser supports http2 without TLS.
+Bugün, TLS olmadan http2'yi destekleyen hiçbir başlıca tarayıcı yok.
