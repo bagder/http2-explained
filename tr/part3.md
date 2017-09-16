@@ -1,13 +1,13 @@
-# 3. Things done to overcome latency pains
+# 3. Gecikmelerin üstesinden gelmek için yapılanlar
 
-As always when faced with problems, people gather to find workarounds. Some of the workarounds are clever and useful, some of them are just awful kludges.
+Her zaman olduğu gibi sorunlarla karşı karşıya kaldıklarında, insanlar geçici çözüm bulmak için toplanırlar. Geçici çözümlerin bazıları zekice ve kullanışlı, bazıları ise berbattır.
 
-## 3.1 Spriting
+## 3.1 Birleştirme
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg" />
 
-Spriting is the term often used to describe when you put a lot of small images together into a single large image. Then you use javascript or CSS to “cut out” pieces of that big image to show smaller individual ones.
+Birleştirme, çok sayıda küçük görüntüyü tek bir büyük görüntü olması için bir araya getirdiğinizde bu durumu tanımlamak için sıklıkla kullanılan bir terimdir. Daha sonra javascript ve css gibi daha küçük parçaları belirlemek adına bu birleşim daha küçük parçalara bölünür, bu da kesme olarak ifade edilir.
 
-A site would use this trick for speed. Getting a single big image is much faster in HTTP 1.1 than getting a 100 smaller individual ones.
+Bir site bu hileyi hız için kullanır. , HTTP 1.1'de Tek bir büyük görüntü elde etmek, 100 küçük görüntüyü tek tek bir araya getirmekten daha hızlıdır.
 
 Of course this has its downsides for the pages of the site that only want to show one or two of the small pictures and similar. It also makes all pictures get evicted from the cache at the same time instead of possibly letting the most commonly used ones remain.
 
