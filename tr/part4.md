@@ -14,9 +14,7 @@ The Internet Engineering Task Force (IETF) çoğunlukla protokol seviyesinde, in
  
 IETF'de, bir hedefe doğru çalışmak için "çalışma grupları" sınırlı bir kapsam ile oluşturulmuştur.  Ortaya koyduklaı şey için bazı belirlenmiş yönergeler ve sınırlamalar içeren bir "tanımlama"(charter) oluştururlar. Tartışmalara ve gelişmelere herkesinkatılmasına müsade ederler.  Katılmak ve bir şeyler söylemek konusunda herkes, eşit haklara ve ağırlığa sahiptir ve herkes, çalıştığı şirkti yok sayarcasına bir birey olarak sayılır.
 
-The HTTPbis working group (see later for an explanation of the name) was
-formed during the summer of 2007 and tasked with creating an update of the
-HTTP 1.1 specification. Within this group the discussions about a next-version
+HTTPbis çalışma grubu (adın açıklaması için daha sonra inceleyelim) 2007 yazında kuruldu ve HTTP 1.1 şartnamesinin güncellenmesi görevini üstlendi. Within this group the discussions about a next-version
 HTTP really started during late 2012. The HTTP 1.1 updating work was completed
 early 2014 and resulted in the [RFC 7230](https://tools.ietf.org/html/rfc7230)
 series.
