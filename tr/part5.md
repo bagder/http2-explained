@@ -14,15 +14,15 @@ Sınırlar aslında oldukça katıydı ve ekibin yenilik yapma kabiliyetine çok
 
 - Protokoldeki isteğe bağlı parçaları çıkarın veya azaltın. Bu gerçekten bir şart değil fakat her şeyin gerekli olduğu düşünüldüğünde, yeni hiçbir şey uygulayamayacağınız tuzağına düşülebilir.
 
-- Artık ara bir sürüm yok. İstemcilerin ve sunucuların http2 ile uyumlu olduğu ya da olmadığı kararlaştırıldı. Protokolü genişletmek veya değişiklik yapmak için http3 gibi bir ihtiyaç domamalı
+- Artık ara bir sürüm yok. İstemcilerin ve sunucuların http2 ile uyumlu olduğu ya da olmadığı kararlaştırıldı. Protokolü genişletmek veya değişiklik yapmak için http3 gibi bir ihtiyaç doğmamalı.
 
-## 5.1. http2 for existing URI schemes
+## 5.1. Varolan URI şemaları için http2
 
-As mentioned already, the existing URI schemes cannot be modified, so http2 must use the existing ones. Since they are used for HTTP 1.x today, we obviously need a way to upgrade the protocol to http2, or otherwise ask the server to use http2 instead of older protocols.
+Daha önce de belirtildiği gibi, varolan URI şemaları değiştirilemez, bu nedenle http2 bunları kullanmalıdır. Bugün HTTP 1.x için kullanılan her neyse, protokol http2'ye yükseltildiğinde de URI şemalarında bir değişiklik olmasına sebep olmayacak bir yola ihtiyacımız var.
 
-HTTP 1.1 has a defined way to do this, namely the Upgrade: header, which allows the server to send back a response using the new protocol when getting such a request over the old protocol, at the cost of an additional round-trip.
+HTTP 1.1, bunu yapmak için tanımlanmış bir yönteme sahiptir; yani sunucu, eski protokol üzerinden böyle bir istekte bulunulduğunda, yeni bir protokolü kullansa dahi, ek bir gidiş dönüş maliyeti ile bir yanıt göndermesini sağlayan Upgrade: başlığını içerir.
 
-That round-trip penalty was not something the SPDY team would accept, and since they only implemented SPDY over TLS, they developed a new TLS extension which shortcuts the negotiation significantly. Using this extension, called NPN for Next Protocol Negotiation, the server tells the client which protocols it knows and the client can then use the protocol it prefers.
+Bu gidiş geliş maliyeti, SPDY ekibinin kabul etmeyeceği bir şey değildi, ve SPFY'nin TLS'i uyguladıgının ardından yeni bir TLS uzantısı geliştirdiler. NPN(Next Protocol Negotiation) olarak adlandırılan bu uzantıda, sunucu istemciye hangi protokolleri sağladığını bildirir ve istemci daha sonra tercih ettiği protokolü kullanabilir.
 
 ## 5.2. http2 for https://
 
