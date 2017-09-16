@@ -2,7 +2,7 @@
 
 HTPP 1.1, internette neredeyse herşeyde kullanılan bir protocol haline geldi. Büyük yatırımlar protocolde yapılır  ve  bundan altyapı avantaj elde eder öyle ki artık genellikle günümüzde işleri(web işlerini ) çalışır hale getirmek ,yeni birşey üzerinden çalıştırmaktansa,HTTP üzerinde daha kolaydır.
 
-## 2.1 HTTP 1.1 Devasadır
+## 2.1 HTTP 1.1 devasadır
 
 HTTP oluşturulduğunda ve dünyaya yayıldığında,muhtemelen oldukça basit ve karmaşıksız bir protokol olarak algılanmış olsa da zaman bunun doğru olmadığını ispatlamıştır. RFC 1945 HTTP 1.0'i, 1996 yılında, 60 sayfa tanımlamayla yayınlanmıştır. RFC2616 HTTP 1.1'i ise yalnızca 3 sene sonra 1999 da yayınlanmıştır ve önemli ölçüde artiş göstererek 176 sayfaya çıkmıştır. Bununla birlikte, IETF bu spektrumdaki güncelleme üzerinde çalışırken bölünmüş ve altı belgeye dönüştürülmüştür(RFC7230 ve ailesi). HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve çok sayıda isteğe bağlı bölüm içermektedir.
 
