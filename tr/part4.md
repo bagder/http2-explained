@@ -12,9 +12,7 @@ Geliştirilmiş bir protokol yapmak hoş olmaz mıydı? Elbette olurdu...
 
 The Internet Engineering Task Force (IETF) çoğunlukla protokol seviyesinde, internet standartlarını geliştiren ve tanıtan bir organizasyondur. TCP, DNS, FTP'den en iyi uygulamalara, HTTP'ye ve çok sayıda protokol türevine varıncaya kadar herşeyi belgeleyen RFC dökümanları için dünya çapında bilinirler.
  
-IETF'de, bir hedefe doğru çalışmak için "çalışma grupları" sınırlı bir kapsam ile oluşturulmuştur.  Ortaya koyduklaı şey için bazı belirlenmiş yönergeler ve sınırlamalar içeren bir "tanımlama"(charter) oluştururlar. Tartışmalara ve gelişmelere herkesinkatılmasına müsade ederler.  Katılmak ve bir şeyler söylemek konusunda herkes, eşit haklara ve ağırlığa sahiptir ve herkes, çalıştığı yeri yok sayarcasına bir birey olarak sayılır.
-
-Everyone and anyone is allowed to join in the discussions and development. Everyone who attends and says something has the same weight and chance to affect the outcome and everyone is counted as an individual, with little regard to which company they work for.
+IETF'de, bir hedefe doğru çalışmak için "çalışma grupları" sınırlı bir kapsam ile oluşturulmuştur.  Ortaya koyduklaı şey için bazı belirlenmiş yönergeler ve sınırlamalar içeren bir "tanımlama"(charter) oluştururlar. Tartışmalara ve gelişmelere herkesinkatılmasına müsade ederler.  Katılmak ve bir şeyler söylemek konusunda herkes, eşit haklara ve ağırlığa sahiptir ve herkes, çalıştığı şirkti yok sayarcasına bir birey olarak sayılır.
 
 The HTTPbis working group (see later for an explanation of the name) was
 formed during the summer of 2007 and tasked with creating an update of the
