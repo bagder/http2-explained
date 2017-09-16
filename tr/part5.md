@@ -1,20 +1,20 @@
-# 5. http2 concepts
+# 5. http2 konsepti
 
-So what does http2 accomplish? Where are the boundaries for what the HTTPbis group set out to do?
+Peki http2 neyin üstesinden geldi? HTTPbis grubunun ne yapmak için ne gibi sınırları vardır?
 
-The boundaries were actually quite strict and put many restraints on the team's ability to innovate:
+Sınırlar aslında oldukça katıydı ve ekibin yenilik yapma kabiliyetine çok fazla engeller oluşturuyordu:
 
-- http2 has to maintain HTTP paradigms. It is still a protocol where the client sends requests to the server over TCP.
+- http2, HTTP paradigmalarını korumak zorunda. Hala, istemcinin TCP üzerinden sunucuya istek gönderdiği bir protokoldür.
 
-- http:// and https:// URLs cannot be changed. There can be no new scheme for this. The amount of content using such URLs is too big to expect them to change.
+- http:// ve https:// URL'leri değiştirilemez. Bunun için yeni bir plan olamaz. Bu tür URL'leri kullanarak, çok büyük değişiklikler beklenemez.
 
-- HTTP1 servers and clients will be around for decades, we need to be able to proxy them to http2 servers.
+- HTTP1 sunucularını ve istemcilerini proxyleştirebilmeliyiz.
 
-- Subsequently, proxies must be able to map http2 features to HTTP 1.1 clients one-to-one.
+- Proxy'ler http2 özelliklerini HTTP 1.1 istemcileri ile bire bir eşleyecek halde şekillenmelidir.
 
-- Remove or reduce optional parts from the protocol. This wasn't really a requirement but more a mantra coming from SPDY and the Google team. By making sure everything is mandatory there's no way you can not implement anything now and fall into a trap later on.
+- Protokoldeki isteğe bağlı parçaları çıkarın veya azaltın. Bu gerçekten bir şart değil fakat her şeyin gerekli olduğu düşünüldüğünde, yeni hiçbir şey uygulayamayacağınız tuzağına düşülebilir.
 
-- No more minor version. It was decided that clients and servers are either compatible with http2 or they are not. If a need arises to extend the protocol or modify things, then http3 will be born. There are no more minor versions in http2.
+- Artık ara bir sürüm yok. İstemcilerin ve sunucuların http2 ile uyumlu olduğu ya da olmadığı kararlaştırıldı. Protokolü genişletmek veya değişiklik yapmak için http3 gibi bir ihtiyaç domamalı
 
 ## 5.1. http2 for existing URI schemes
 
