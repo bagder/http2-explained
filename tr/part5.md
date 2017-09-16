@@ -38,21 +38,15 @@ Http2'nin TLS kullanırken zorunlu olması gereken şifrelerin bir listesini mi 
 
 ## 5.3. TLS üzerinden http2 anlaşması
 
-Next Protocol Negotiation (NPN), SPDY'yi TLS sunucularıyla pazarlık etmesi için kullanımış protokoldür. Uygun bir standart olmadığı için, IETF aracılığıyla oluşturuldu ve sonuç ALPN oldu: Application Layer Protocol Negotiation. SPDY istemcileri ve sunucuları hala NPN kullanırken, ALPN http2 tarafından kullanılmak üzere yükseltilmektedir.
+Next Protocol Negotiation (NPN), SPDY'yi TLS sunucularıyla pazarlık etmesi için kullanımış protokoldür. Uygun bir standart olmadığı için, IETF aracılığıyla oluşturuldu ve sonuç ALPN oldu: Application Layer Protocol Negotiation. SPDY istemcileri ve sunucuları hala NPN kullanırken, ALPN http2 tarafından kullanılmak üzere yükseltilmektedir. 
 
-The fact that NPN existed first and ALPN has taken a while to go through standardization has led to many early http2 clients and http2 servers implementing and using both these extensions when negotiating http2. Also, NPN is what's used for SPDY and many servers offer both SPDY and http2, so supporting both NPN and ALPN on those servers makes perfect sense.
+The fact that NPN existed first and ALPN has taken a while to go through standardization has led to many early http2 clients and http2 servers implementing and using both these extensions when negotiating http2. Ayrıca SPDY için NPN kullanılır ve birçok sunucu hem SPDY hem de http2 sunar, bu nedenle bu sunucularda hem NPN hem de ALPN'yi desteklemek mantıklıdır.
 
-ALPN differs from NPN primarily in who decides what protocol to speak. With ALPN, the client gives the server a list of protocols in its order of preference and the server picks the one it wants, while with NPN the client makes the final choice.
+ALPN, öncelikle kimin hangi protokolü kullanacağına karar vermesinde NPN'den farklıdır. ALPN ile istemci sunucuya kendi tercih sırasına göre bir protokol listesi verir ve sunucu, NPN ile istemci son seçim yaparken, istediği protokolü tercih eder.
 
-## 5.4. http2 for http://
+## 5.4. http:// için http2
 
-As previously mentioned, for plain-text HTTP 1.1 the way to negotiate
-http2 is by presenting the server with an Upgrade: header. If the server speaks
-http2 it responds with a “101 Switching” status and from then on it speaks
-http2 on that connection. Of course this upgrade procedure
-costs a full network round-trip, but the upside is that it's generally possible to 
-keep an http2 connection alive much longer and re-use it more than a typical HTTP1
-connection.
+Daha önce de belirtildiği gibi, düz metin HTTP 1.1 için http2 sunucuya bir yükseltme(Upgrade): başlığı sunar. Sunucu http2 konuşursa, "101 Anahtarlama"(“101 Switching”) durumu ile yanıt verir ve o andan itibaren bu bağlantı http2 olarak devam eder. Tabi ki bu yükseltme prosedürü tam bir ağ gidiş-dönüş süresine yol açar, ancak, http2 bağantısını daha uzun süre canlı tutmak ve onu tipik bir HTTP1 bagantısından daha fazla kullanmak mümkündür.
 
 While some browsers' spokespersons stated they will not implement this means
 of speaking http2, the Internet Explorer team once expressed that they would -
