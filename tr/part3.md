@@ -14,8 +14,7 @@ Aynı zamanda bu durum, muhtemelen en çok kullanılan resimlerin gösterilmesin
 
 ## 3.2 İçerilme
 
-İçerilme, serimleri tek tek göndermekten kaçınmanın diğer bir hilesidir ve bu kullanılan veri ile gerçekleşir: 
-Inlining is another trick to avoid sending individual images, and this is done by using data: linkler css dosyalarında gömülmüştür. Bunun birleştirme durumunda olduğu gibi benzer faydaları ve zararları vardır.
+İçerilme, resimleri tek tek göndermekten kaçınmanın diğer bir hilesidir ve bu kullanılan veri ile gerçekleşir. Linkler css dosyalarında gömülmüştür. Bunun birleştirme'de olduğu gibi benzer faydaları ve zararları vardır.
 
     .icon1 {
         background: url(data:image/png;base64,<data>) no-repeat;
