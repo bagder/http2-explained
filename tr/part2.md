@@ -37,18 +37,18 @@ HTTP 1.1'in gecikmeye karşı çok hassas olması, kısmen HTTP boruhattının b
 
 Geçtiğimiz birkaç yılda kullanıcılara mevcut bant genişliğinde büyük bir artış göstersede, gecikmeyi azaltma yolunda aynı seviyede bir gelişmeye rastlamadık. Geçmişteki mobil teknolojiler gibi yüksek gecikme süresi olan bağlantılar yüksek bant genişliği bağlantısı sağladı fakat  bu dahi hızlı bir web deneyimi elde etmeyi mümkün kılmadı.
 
-Another use case that really needs low latency is certain kinds of video, like video conferencing, gaming and similar where there's not just a pre-generated stream to send out.
+Gerçekten düşük gecikmeye ihtiyaç duyan başka bir kullanım örneği video konferansı, oyunlar gibi video türleridir ki bunlarda önceden oluşturulmuş akışlar yoktur.
 
-## 2.6. Head of line blocking
+## 2.6. Satır başı engelleme
 
-HTTP Pipelining is a way to send another request while waiting for the response to a previous request. It is very similar to queuing at a counter at the bank or in a super market. You just don't know if the person in front of you is a quick customer or that annoying one that will take forever before he/she is done: head of line blocking.
+HTTP Boru Hattı, bir önceki isteğe yanıt beklerken başka bir istek göndermenin bir yoludur. Bu durum bankadaki veya süper marketteki bir işlem alanında sıra oluşmasına çok benzer. Önünüzdeki kişi işini hızlıca halledecek dakik bir müşteri midir, yoksa işe başlamadan önce sonsuza dek süreceğine inanan sinir bozucu bir müşteri midir bilmiyorsunuz: satır başı engelleme.
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 
-Sure you can be careful about line picking so that you pick the one you really believe is the correct one, and at times you can even start a new line of your own but in the end you can't avoid making a decision and once it is made you cannot switch lines.
+Satır seçimi konusunda dikkatli olabilirsiniz, bu yüzden doğru olduğunu gerçekten düşündüğünüz bir satırı seçebilirsiniz veya bazen kendinize ait yeni bir satırdan başlayabilirsiniz fakat bunun sonunda seçtiğiniz bu satırı değiştiremezsiniz.
 
-Creating a new line is also associated with a performance and resource penalty so that's not scalable beyond a smaller number of lines. There's just no perfect solution to this.
+Yeni bir satır oluşturmak da bir performans ve kaynak cezasıyla ilişkilidir, bu yüzden daha küçük satır sayılarının ötesinde ölçeklenebilir değildir. Dolayısıyla bu da mükemmel bir çözüm değildir.
 
-Even today, 2015, most desktop web browsers ship with HTTP pipelining disabled by default.
+Bugün bile(2015), çoğu masaüstü web tarayıcısında varsayılan olarak HTTP baruhattı devre dışı bırakılmıştır.
 
-Additional reading on this subject can be found for example in the Firefox [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+Ek olarak bu konu ile ilgili örnekler Firefox'un adresinde bulunur[bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
