@@ -24,22 +24,21 @@ HTTP 1.1, bunu yapmak için tanımlanmış bir yönteme sahiptir; yani sunucu, e
 
 Bu gidiş geliş maliyeti, SPDY ekibinin kabul etmeyeceği bir şey değildi, ve SPFY'nin TLS'i uyguladıgının ardından yeni bir TLS uzantısı geliştirdiler. NPN(Next Protocol Negotiation) olarak adlandırılan bu uzantıda, sunucu istemciye hangi protokolleri sağladığını bildirir ve istemci daha sonra tercih ettiği protokolü kullanabilir.
 
-## 5.2. http2 for https://
+## 5.2. https:// için http2
 
-A lot of focus of http2 has been to make it behave properly over TLS. SPDY requires TLS and there's been a strong push for making TLS mandatory for http2, but it didn't get consensus so http2 shipped with TLS as optional. However, two prominent implementers have stated clearly that they will only implement http2 over TLS: the Mozilla Firefox lead and the Google Chrome lead, two of today's leading web browsers.
+Http2'nin odak noktası, TLS üzerinde uygun davranmasını sağlamak olmuştur. Spdy TLS gerektirir ve http2'de TLS zorunluluğu için güçlü bir itme söz konusu, fakat ortak bir karar sağlanamadı, bu yüzden http2, isteğe bağlı olarak TLS ile birlikte oluşturuldu. Ancak günümüzün lider web tarayıcılarından ikisi, Mozilla Firefox ve Google Chrome, sadece TLS üzerinden http2 uygulayacaklarını açıkça ifade etmişlerdir.
 
-Reasons for choosing TLS-only include respect for user's privacy and early measurements showing that the new protocols have a higher success rate when done with TLS. This is because of the widespread assumption that anything that goes over port 80 is HTTP 1.1, which makes some middle-boxes interfere with or destroy traffic when any other protocols are used on that port.
+Yalnızca TLS'yi seçme nedenleri, kullanıcıların gizliliği konusundaki çekinceleri ve TLS ile yapılan yeni protokollerin daha yüksek başarı oranına sahip olduğunu gösteren ölçümlerdir. Ayrıca 80 numaralı bağlantı noktasını aşan HTTP 1.1'dir ve bu bağlantı noktasında diğer tüm protokoller kullanıldığında bazı ortak alanlarda etkileşime girmeleri veya trafiği yok etmeleri gibi yaygın varsayımlar olmasıdır.
 
-The subject of mandatory TLS has caused much hand-wringing and agitated
-voices in mailing lists and meetings – is it good or is it evil? It is a highly
-controversial topic – be aware of this when you throw this question in the face
-of an HTTPbis participant!
+Zorunlu TLS konusu, toplantılarda titrek sesler çıkmasına neden olan, çok tartışma yaratan bir konudur. İyi mi yoksa kötü mü gibi. Bu sorunu bir HTTPbis katılımcısının karşısına çıkardığınızda bunun farkında olun!
 
 Similarly, there's been a fierce and long-running debate about whether http2 should dictate a list of ciphers that should be mandatory when using TLS, or if it should perhaps blacklist a set, or if it shouldn't require anything at all from the TLS “layer” but leave that to the TLS working group. The spec ended up specifying that TLS should be at least version 1.2 and there are cipher suite restrictions.
 
-## 5.3. http2 negotiation over TLS
+Http2'nin TLS kullanırken zorunlu olması gereken şifrelerin bir listesini mi tutmalı, belki de bir seti kara listeye almalı ya da TLS'i katman olarak değiştirilmeli yada TLS'den hiç bir şey talep etmemesi gerekip gerekmediğine ilişkin konularda uzun ve sıkı müzakereler oldu.
 
-Next Protocol Negotiation (NPN) is the protocol used to negotiate SPDY with TLS servers. As it wasn't a proper standard, it was taken through the IETF and the result was ALPN: Application Layer Protocol Negotiation. ALPN is being promoted for use by http2, while SPDY clients and servers still use NPN.
+## 5.3. TLS üzerinden http2 anlaşması
+
+Next Protocol Negotiation (NPN), SPDY'yi TLS sunucularıyla pazarlık etmesi için kullanımış protokoldür. Uygun bir standart olmadığı için, IETF aracılığıyla oluşturuldu ve sonuç ALPN oldu: Application Layer Protocol Negotiation. SPDY istemcileri ve sunucuları hala NPN kullanırken, ALPN http2 tarafından kullanılmak üzere yükseltilmektedir.
 
 The fact that NPN existed first and ALPN has taken a while to go through standardization has led to many early http2 clients and http2 servers implementing and using both these extensions when negotiating http2. Also, NPN is what's used for SPDY and many servers offer both SPDY and http2, so supporting both NPN and ALPN on those servers makes perfect sense.
 
