@@ -1,6 +1,6 @@
 # 2. Günümüzde HTTP 
 
-HTPP 1.1, internette neredeyse herşeyde kullanılan bir protocol haline geldi. Büyük yatırımlar protocolde yapılır  ve  bundan altyapı avantaj elde eder öyle ki artık genellikle günümüzde işleri(web işlerini ) çalışır hale getirmek ,yeni birşey üzerinden çalıştırmaktansa,HTTP üzerinde daha kolaydır.
+HTPP 1.1, internette neredeyse herşeyde kullanılan bir protocol haline geldi. Büyük yatırımlar protocolde yapılır  ve  bundan altyapı avantaj elde eder öyle ki artık genellikle günümüzde web işlerini çalışır hale getirmek, yeni birşey üzerinden çalıştırmaktansa, HTTP üzerinde daha kolaydır.
 
 ## 2.1 HTTP 1.1 devasadır
 
