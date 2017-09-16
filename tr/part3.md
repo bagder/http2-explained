@@ -1,19 +1,20 @@
-# 3. Things done to overcome latency pains
+# 3. Gecikmelerin üstesinden gelmek için yapılanlar
 
-As always when faced with problems, people gather to find workarounds. Some of the workarounds are clever and useful, some of them are just awful kludges.
+Her zaman olduğu gibi sorunlarla karşı karşıya kaldıklarında, insanlar geçici çözüm bulmak için toplanırlar. Geçici çözümlerin bazıları zekice ve kullanışlı, bazıları ise berbattır.
 
-## 3.1 Spriting
+## 3.1 Birleştirme
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg" />
 
-Spriting is the term often used to describe when you put a lot of small images together into a single large image. Then you use javascript or CSS to “cut out” pieces of that big image to show smaller individual ones.
+Birleştirme, çok sayıda küçük görüntüyü tek bir büyük görüntü olması için bir araya getirdiğinizde bu durumu tanımlamak için sıklıkla kullanılan bir terimdir. Daha sonra javascript ve css gibi daha küçük parçaları belirlemek adına bu birleşim daha küçük parçalara bölünür, bu da kesme olarak ifade edilir.
 
-A site would use this trick for speed. Getting a single big image is much faster in HTTP 1.1 than getting a 100 smaller individual ones.
+Bir site bu hileyi hız için kullanır. HTTP 1.1'de Tek bir büyük görüntü elde etmek, 100 küçük görüntüyü tek tek bir araya getirmekten daha hızlıdır.
 
-Of course this has its downsides for the pages of the site that only want to show one or two of the small pictures and similar. It also makes all pictures get evicted from the cache at the same time instead of possibly letting the most commonly used ones remain.
+Tabi ki bu, sitenin yalnızca bir veya iki küçük resmi ve benzerlerini göstermek isteyen site sayfaları için dezavantajları vardır. 
+Aynı zamanda bu durum, muhtemelen en çok kullanılan resimlerin gösterilmesine izin vermek yerine, tüm resimleri aynı anda önbellekten çıkarılabilecek hale getirir.
 
-## 3.2 Inlining
+## 3.2 İçerilme
 
-Inlining is another trick to avoid sending individual images, and this is done by using data: URLs embedded in the CSS file. This has similar benefits and drawbacks as the spriting case.
+İçerilme, resimleri tek tek göndermekten kaçınmanın diğer bir hilesidir ve bu kullanılan veri ile gerçekleşir. Kaynak Konumlandırıcılar(URLs) css dosyalarında gömülmüştür. Bunun birleştirme'de olduğu gibi benzer faydaları ve zararları vardır.
 
     .icon1 {
         background: url(data:image/png;base64,<data>) no-repeat;
@@ -24,22 +25,22 @@ Inlining is another trick to avoid sending individual images, and this is done b
     }
 
 
-## 3.3 Concatenation
+## 3.3 Bitiştirme
 
-A big site can end up with a lot of different javascript files. Front-end tools will help developers merge every one of them into a single huge lump so that the browser will get a single big one instead of dozens of smaller files. Too much data is sent when only little is needed. Too much data needs to be reloaded when a change is needed.
+Büyük bir site, bir sürü farklı javascript dosyası bulundurabilir. Kullanıcı arayüzünü kontrol eden araçlar, geliştiricilerin hepsini bir araya getirmelerine yardım ederek, tarayıcının onlarca küçük dosya yerine tek bir büyük dosyaya ulaşmasını sağlar. Çok az veri gerektiğinde çok fazla veri gönderilir. Bu yüzden, bir değişiklik yapılması gerektiğinde çok fazla veri yeniden yüklenmelidir.
 
-This practice is of course mostly an inconvenience to the developers involved.
+Bu uygulama tabi ki çoğunlukla söz konusu geliştiricilere zahmet veriyor.
 
-## 3.4 Sharding
+## 3.4 Püskürtme
 
-The final performance trick I'll mention is often referred to as “sharding”. It basically means serving aspects of your service on as many different hosts as possible. At first glance this seems strange but there is sound reasoning behind it.
+Nihai performans hilesi ben sıklıkla "püskürtme" olarak bahsedeceğim. Bu basitçe şu anlama geliyor; olabildiğince çok sayıda farklı barındırıcıya hizmet edilmesi. İlk bakışta bu tuhaf gözükse de bunun arkasında bır mantık vardır.
 
-Initially the HTTP 1.1 specification stated that a client was allowed to use maximum of two TCP connections for each host. So, in order to not violate the spec clever sites simply invented new host names and – voilà - you could get more connections to your site and decreased page load times.
+Başlangıçta HTTP 1.1 beyannamesi, bir istemcinin her bir ana bilgisayar için en fazla iki TCP bağlantısı kullanmasına izin verildiğini belirtti. Dolayısıyla, akıllı siteleri ihlal etmemek için, yeni barındırıcı adları keşfedildi ve böylece voilà tekniği sitenize daha fazla bağlantı sağlayabilir ve sayfa yükleme sürelerini azaltabilirsiniz.
 
-Over time, that limitation was removed and today clients easily use 6-8 connections per host name but they still have a limit so sites continue to use this technique to bump the number of connections. As the number of objects are ever increasing – as I showed before – the large number of connections are then used just to make sure HTTP performs well and makes your site fast. It is not unusual for sites to use well over 50 or even up to 100 or more connections now for a single site using this technique. Recent stats from httparchive.org show that the top 300K URLs in the world need on average 40(!) TCP connections to display the site, and the trend says this is still increasing slowly over time.
+Zamanla bu sınırlama kaldırıldı ve bugün müşteriler barındırıcı başına 6-8 bağlantıyı kolayca kullanıyor ancak hala limit vardır, bu nedenle siteler bağlantı sayısını arttırmak için tekniği kullanmaya devam ediyor. Nesnelerin sayısı arttıkça, daha önce de gösterildiği gibi, çok sayıda bağlantı olması, HTTP'nin iyi performans göstermesinden ve sitenizi daha hızlı hale getirdiğinden emin olmak için kullanılır. Sitelerin bu tekniği kullanarak tek bir site için 50'den fazla, hatta 100'e kadar veya daha fazla bağlantıyı kullanması olağandır. Httparchive.org tarafından yayınlanan son istatistikler, siteyi görüntülemek için dünyanın en büyük 300K URL'lerinin ortalama 40 TCP bağlantısı gerektirdiğini ve eğilim bunun zaman içinde yavaş ilerlediğini gösteriyor.
 
-Another reason is also to put images or similar resources on a separate host name that doesn't use any cookies, as the size of cookies these days can be quite significant. By using cookie-free image hosts you can sometimes increase performance simply by allowing much smaller HTTP requests!
+Bir başka sebep de, resimler veya benzeri kaynakları, çerezleri kullanmayan ayrı bir barındırıcı adına koymaktır; çünkü bu günlerde çerezlerin boyutu oldukça önemli olabilir. Bazen çerezsiz resim barındırıcıları kullanarak çok daha küçük HTTP isteklerine izin verebilir ve böylece performansı arttırabilirsiniz!
 
-The picture below shows how a packet trace looks like when browsing one of Sweden's top web sites and how requests are distributed over several host names.
+Aşağıdaki resim, İsveç'in en iyi web sitelerinden birinde, taleplerin çeşitli ana barındırıcı adları üzerinden nasıl dağıtıldığını ve bir paket izinin nasıl göründüğünü göstermektedir.
 
 ![image sharding at expressen.se](https://raw.githubusercontent.com/bagder/http2-explained/master/images/expressen-sharding.jpg)
