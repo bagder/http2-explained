@@ -1,56 +1,47 @@
-# 8. An http2 world
+# 8. http2 dünyası
 
-So what will things look like when http2 gets adopted? Will it get adopted?
+Peki, http2 kabul edildiğinde işler nasıl gözükecek? Kabul edilecek mi?
 
-## 8.1. How will http2 affect ordinary humans?
+## 8.1. Http2 sıradan insanları nasıl etkiler?
 
-http2 is not yet widely deployed nor used. We can't tell for sure exactly how things will turn out. We have seen how SPDY has been used and we can make some guesses and calculations based on that and other past and current experiments.
+http2 henüz geniş ölçüde ne kullanıldı ne de uygulandı. Her şeyin nasıl gerçekleşeceğini kesin olarak bilemeyiz fakat SPDY'nin nasıl kullanıldığını gördük ve o andaki geçmiş ve güncel deneylere dayanan bazı tahminler ve hesaplamalar yapabiliriz.
 
-http2 reduces the number of necessary network round-trips and it avoids the head of line blocking dilemma completely with multiplexing and fast discarding of unwanted streams.
+http2, gerekli ağ gidiş-dönüş sayısını azaltır ve istenmeyen satır başını engelleme problemini çoğullama ve hızlı atılma tamamen önler.
 
-It allows a large amount of parallel streams that go way over even the most sharding sites of today.
+Bugünün en yaygın kullanılan sitelerinde bile büyük miktarda paralel akışa izin verir.
 
-With priorities used properly on the streams, chances are much better that clients will actually get the important data before the less important data.
-All this taken together, I'd say that the chances are very good that this will lead to faster page loads and to more responsive web sites. Shortly put: a better web experience.
+Akışlar üzerinde doğru olarak kullanılan önceliklerle, istemcilerin daha az önemli olan veriden önce aslında daha önemli verileri alması ihtimali daha yüksektir.
 
-How much faster and how much improvements we will see, I don't think we can say yet. First, the technology is still very early and then we haven't even started to see clients and servers trim implementations to really take advantage of all the powers this new protocol offers.
+Bütün bunlar bir araya getirildiğinde, şansın çok daha yüksek olduğunu ve bunun daha hızlı sayfa yüklemelerine ve daha duyarlı web sitelerine yol açacağını söyleyebilirim. Kısaca: daha iyi web deneyimi.
 
-## 8.2. How will http2 affect web development?
+Ne kadar hızlı  bir sürede ne kadar iyileştirme göreceğimizi, henüz söyleyebileceğimizi sanmıyorum. Birincisi, teknoloji hala çok erken ve istemcilerin ve sunucuların, bu yeni protokolün sunduğu tüm güçlerden gerçekten yararlanmak için uygulamaların düzeltildiğini görmeye bile başlamadık.
 
-Over the years web developers and web development environments have gathered a full toolbox of tricks and tools to work around problems with HTTP 1.1, recall that I outlined  some of them in the beginning of this document as a justification for http2.
+## 8.2. Http2 web gelişmelerini nasıl etkiler?
 
-Lots of those workarounds that tools and developers now use by default and without thinking, will probably hurt http2 performance or at least not really take advantage of http2's new super powers. Spriting and inlining should most likely not be done with http2. Sharding will probably be detrimental to http2 as it will probably benefit from using less connections.
+Yıllar içinde web geliştiricileri ve web geliştirme ortamları HTTP 1.1 ile ilgili sorunları çözmek için çeşitli araçlar(toolbox) oluşturmuşlardır; hatırlatmak gerekirse, http2'nin aleyhinde haklı neden olarak bunlardan bazılarını özetledim.
 
-A problem here is of course that web sites and web developers need to develop and deploy for a world that in the short term at least, will have both HTTP1.1 and http2 clients as users and to get maximum performance for all users can be challenging without having to offer two different front-ends.
+Araçlar ve geliştiricilerin düşünmeden kullandıkları bu geçici çözümlerin büyük bir kısmı büyük olasılıkla http2'nin performansını düşürür veya en azından yeni süper güçlerinden yararlanmaz. İçerilme ve püskürtme http2 ile yapılmamalıdır. Muhtemelen daha az bağlantı kullanacağı için, Sharding? http2 için zararlıdır.
 
-For these reasons alone, I suspect there will be some time before we will see the full potential of http2 being reached.
+web sitelerinin ve web geliştiricilerinin en azından kısa vadede geliştirmeye ve konuşlandırmaya ihtiyacı olması bir problemdir ki bu, hem HTTP1.1 hem de http2 istemcilerine sahip olması ve tüm kullanıcılar için maksimum performans sağlaması açısından iki farklı ön uç sunmak zorunda kalmadan zorlu olabilir.
 
-## 8.3. http2 implementations
+Yalnız bu nedenlerden dolayı, http2'nin tam potansiyeline ulaşıldığına karar vermemizin biraz zaman alacağını düşünüyoruz.
 
-Trying to document specific implementations in a document such as this is of course completely futile and doomed to fail and only feel outdated within a really short period of time. Instead I'll explain the situation in broader terms and refer readers to the [list of implementations](https://github.com/http2/http2-spec/wiki/Implementations) on the http2 web site.
+## 8.3. http2 uygulamaları
 
-There was a large amount of implementations already early on, and the amount has increased over time during the http2 work. At the time of  writing this there are over 40 implementations listed, and most of them implement the final version.
+Böyle bir belgede belirli uygulamaları belgelemeye çalışmak, tamamen boş bir çabaydı ve başarısızlığa mahkûm edildi ve yalnızca kısa sürede zaman aşımına uğramıştı. Bunun yerine durumu daha geniş anlamda açıklayacağım ve okuyucuları http2'nin web sitesine  [uygulamaların listesi](https://github.com/http2/http2-spec/wiki/Implementations) yönlendireceğim.
 
-### 8.3.1 Browsers
+Daha önce çok fazla sayıda uygulama vardı ve bu miktar http2 çalışması sırasında zamanla arttı. Yazı yazarken 40'dan fazla uygulama listelendi ve bunların çoğu son sürümü uyguluyor.
 
-Firefox has been the browser that's been on top of the bleeding edge drafts,
-Twitter has kept up and offered its services over http2. Google started during
-April 2014 to offer http2 support on a few test servers running their services
-and since May 2014 they offer http2 support in their development versions of
-Chrome. Microsoft has shown a tech preview with http2 support for their next
-Internet Explorer version. Safari (with iOS 9 and Mac OS X El Capitan) and
-Opera have both said they will support http2.
+### 8.3.1 Tarayıcılar
+Firefox yeni tasarimlarin ustunde bir internet tarayicisi olmustur, twitter uzak kalmistır ve servislerini http2 nin ustunde sunmuştur.? Google, hizmetlerini çalıştıran birkaç test sunucusunda http2 desteği sunmak için Nisan 2014'te başladı ve Mayıs 2014'ten bu yana Chrome'un geliştirme sürümlerinde http2 desteği sağladı. Microsoft, bir sonraki Internet Explorer sürümü için http2 desteğiyle bir teknik önizleme gösterdi. Hem Safari (iOS 9 ve Mac OS X El Capitan ile birlikte) hem Opera hem de http2'yi destekleyeceklerini söyledi.
 
-### 8.3.2 Servers
+### 8.3.2 Sunucular
 
-There are already many server implementations of http2.
+Http2'nin zaten çok sayıda sunucu uygulaması var.
 
-The popular Nginx server offers http2 support with since
-[1.9.5](https://www.nginx.com/blog/nginx-1-9-5/) released on September 22,
-2015 (where it replaces the SPDY module, so they cannot both run in the same
-server instance).
+Popüler Nginx sunucusu 22 Eylül 2015'te piyasaya sürülen [1.9.5](https://www.nginx.com/blog/nginx-1-9-5/)'den beri http2 desteği sunmaktadır(SPDY modülünün yerine geçer; böylece her ikisi de aynı sunucuda çalışamazlar).
 
-Apache's httpd server has a http2 module [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) since 2.4.17 which was released on October 9, 2015.
+Apache'nin httpd sunucusu, 9 Ekim 2015'te çıkan 2.4.17'den bu yana http2 modülü [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) içeriyor.
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
 Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
@@ -58,93 +49,97 @@ Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
 [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)
 have all released http2 capable servers.
 
-### 8.3.3 Others
+[H2O](https://h2o.examp1e.net/), [Apache Traffic
+Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
+[Caddy](http://caddyserver.com/) ve
+[LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview); bu yetenekli sunucuları hepsi http2'yi destekledi.
 
-curl and libcurl support insecure http2 as well as the TLS based one using one
-out of several different TLS libraries.
+### 8.3.3 Diğerleri
 
-Wireshark supports http2. The perfect tool for analyzing http2 network
-traffic.
+curl ve libcurl, güvensiz http2'yi ve farklı TLS kütüphanelerini destekler.
 
-## 8.4. Common critiques of http2
+Wireshark http2'yi destekliyor. Http2 ağ trafiğini analiz etmek için mükemmel bir araç.
 
-During the development of this protocol the debate has been going back and forth and of course there is a certain amount of people who believe this protocol ended up completely wrong. I wanted to mention a few of the more common complaints and mention the arguments against them:
+## 8.4. Http2'nin ortak eleştirileri
 
-### 8.4.1. “The protocol is designed or made by Google”
+Bu protokolün geliştirilmesi sırasında tartışmalar vardır ve tabi ki bu protokolün tamamen hatalı olduğuna inanılan belli bir miktarda insanlar var. Yaygın olan birkaç şikayetten bahsetmek ve onlara karşı oluşan argümanlardan bahsetmek istedim:
 
-It also has variations implying that the world gets even further dependent or controlled by Google by this. This isn't true. The protocol was developed within the IETF in the same manner that protocols have been developed for over 30 years. However, we all recognize and acknowledge Google's impressive work with SPDY that not only proved that it is possible to deploy a new protocol this way but also provided numbers illustrating what gains could be made.
+### 8.4.1. "Protokol, Google tarafından tasarlanmış veya üretilmiştir"
+
+Dünyanın Google tarafından daha da bağımlı veya denetime tabi tutulduğunu ima eden önyargılar de vardır. Bu doğru değildir. Protokol, protokollerin 30 yılı aşkın bir süredir geliştirildiği şekilde IETF içinde geliştirildi. Bununla birlikte, hepimiz, Google'ın bu şekilde yeni bir protokol kurulmasının mümkün olduğunu kanıtlayan SPDY ile, yaptığı etkileyici çalışmaları tanıklık ettik ve bu kazanımlar ile neler yapılabileceğini gösteren numaralar sağladığını da kabul ediyoruz
 
 Google has publicly [announced](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) that they will remove support for SPDY and NPN in Chrome in 2016 and they urge servers to migrate to HTTP/2 instead.
 
-### 8.4.2. “The protocol is only useful for browsers”
+Google, 2016'da Chrome'da SPDY ve NPN'ye olan desteği kaldıracaklarını kamuoyuna ilan etti (https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) ve sunucuları geçiş yapılması için teşvik ediyorlar. Sunucularınızı HTTP / 2 olarak ayarlayın.
 
-This is sort of true. One of the primary drivers behind the http2 development is the fixing of HTTP pipelining. If your use case originally didn't have any need for pipelining then chances are http2 won't do a lot of good for you. It certainly isn't the only improvement in the protocol but a big one.
+### 8.4.2. "Protokol yalnızca tarayıcılar için yararlıdır"
 
-As soon as services start realizing the full power and abilities the multiplexed streams over a single connection brings, I suspect we will see more application use of http2.
+Bu doğru. Http2 gelişiminin ardındaki ana sürücülerden biri, HTTP boru hattının kurulumudur. Kullanım durumunuz başlangıçta boruhattı imkânına ihtiyaç duymuyorsa, http2 sizin için bir şey yapmaz. Protokoldeki tek gelişme kesinlikle kesinlikle bu değildir ama büyük bir gelişmedir.
+
+Hizmetler, güç ve yetenekleri tam anlamıyla fark ettirmeye başladığında, tek bir bağlantı üzerinden birden çok akış getiriyor, http2'nin daha fazla uygulama kullanımını göreceğimizden şüphe yoktur.
 
 Small REST APIs and simpler programmatic uses of HTTP 1.x may not find the step to http2 to offer very big benefits. But also, there should be very few downsides with http2 for most users.
 
-### 8.4.3. “The protocol is only useful for big sites”
+Küçük REST API'leri ve HTTP 1.x'in daha basit programlı kullanımı, http2 için çok büyük yararlar sağlamak için bir adım bulamayabilir. Ancak aynı zamanda çoğu kullanıcı http2 ile ilgili çok az olumsuzluğa sahip olmalıdır.
+
+### 8.4.3. "Protokol yalnızca büyük siteler için yararlıdır"
 
 Not at all. The multiplexing capabilities will greatly help to improve the experience for high latency connections that smaller sites without wide geographical distributions often offer. Large sites are already very often faster and more distributed with shorter round-trip times to users.
 
-### 8.4.4. “Its use of TLS makes it slower”
+Hepsi değil. Çoklama yetenekleri, geniş coğrafi dağılımlara sahip olmayan daha küçük sitelerin genellikle sundukları yüksek gecikme süresin ve bağlantı deneyimini iyileştirmeye yardımcı olacaktır. Büyük siteler zaten sıklıkla daha hızlıdır ve kullanıcılara daha kısa dolaşma süreleri ile daha fazla performans sağlarlar.
 
-This can be true to some extent. The TLS handshake does add a little extra,
-but there are existing and ongoing efforts on reducing the necessary
-round-trips even more for TLS. The overhead for doing TLS over the wire
-instead of plain-text is not insignificant and clearly notable so more CPU and
-power will be spent on the same traffic pattern as a non-secure protocol. How
-much and what impact it will have is a subject of opinions and
-measurements. See for example [istlsfastyet.com](https://istlsfastyet.com/)
-for one source of info.
+### 8.4.4. "TLS kullanımı yavaşlatıyor"
 
-Telecom and other network operators, for example in the ATIS Open Web
-Alliance, say that they [need unencrypted
-traffic](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
-to offer caching, compression and other techniques necessary to provide a fast
-web experience over satellite, in airplanes and similar.  http2 does not make
-TLS use mandatory so we shouldn't conflate the terms.
+Bu, bir dereceye kadar doğru olabilir. TLS el sıkışması biraz ekstra para harcatabilir, ancak TLS için gereken gidişatları azaltmaya yönelik mevcut ve devam eden çabalar vardır. Düz metin yerine wire-hat? üzerinde TLS yapmak için yapılan ek yük çaba önemsiz değildir, daha fazla CPU ve güç, güvenli olmayan bir protokol ile aynı trafik modelinde harcanır. Ne kadar ve ne gibi bir etkiye sahip olacağı düşünülür. Bir bilgi kaynağı için [istlsfastyet.com](https://istlsfastyet.com/)'a bakın.
 
-Many Internet users have expressed a preference for TLS to be used more widely and we should help to protect users' privacy.
+Telekom ve diğer ağ operatörleri, örneğin ATIS Open Web Alliance'da, uydu, uçak ve benzeri ortamlarda hızlı bir web deneyimi sağlamak için önbellek, sıkıştırma ve diğer teknikler sunacaklarını söylüyorlar[need unencrypted
+traffic](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf). http2, TLS kullanımını zorunlu kılmaz, bu nedenle şartları birleştirmemeliyiz.
+
+Pek çok İnternet kullanıcısı, kullanıcıların gizliliğinin korunması gerekçesiyle TLS'in daha yaygın kullanılmasını tercih ettiğini belirtti.
 
 Experiments have also shown that by using TLS, there is a higher degree of success than when implementing new plain-text protocols over port 80 as there are just too many middle boxes out in the world that interfere with what they would think is HTTP 1.1 if it goes over port 80 and might look like HTTP at times.
 
-Finally, thanks to http2's multiplexed streams over a single connection, normal browser use cases still could end up doing substantially fewer TLS handshakes and thus perform faster than HTTPS would when still using HTTP 1.1.
+Deneyler ayrıca, TLS'yi kullanarak, bağlantı noktası 80 üzerinden yeni düz metin protokolleri uygularkenkinden daha yüksek bir başarı derecesine sahip olduğunu gösterdi; çünkü dünyada, HTTP1.1 olduğunu düşüneceklerine müdahale eden çok fazla orta kutu var 80 numaralı bağlantı noktasını aşıyor ve bazen HTTP gibi görünebilir.
 
-### 8.4.5. “Not being ASCII is a deal-breaker”
+TLS'i kullanan deneyler gosteriyor ki, 80 numaralı bağlantı noktasından yeni düz metin protokolleri uygularkenkinden daha yüksek bir başarı derecesi var çünkü 80 numaralı bağlantı noktasından geçerse HTTP1 olduğunu düşünerek çok fazla müdahale olabilir.?
 
-Yes, we like being able to see protocols in the clear since it makes debugging and tracing easier. But text based protocols are also more error prone and open up for much more parsing and parsing problems.
+Son olarak, tek bir bağlantı üzerinden HTTP2'nin çok katlı akışları sayesinde, normal tarayıcı kullanım örnekleri halen daha az TLS el sıkışmasıyla sonuçlanabilir ve böylece hala HTTP 1.1 kullanıldığında HTTPS'den daha hızlı performans gösterebilir.
+
+### 8.4.5. "ASCII olmamak bir anlaşmazlıktır"
+
+Evet, hata ayıklama ve izleme kolaylığı sağladığından açık bir şekilde protokolleri seviyoruz. Ancak metin tabanlı protokoller daha hataya eğilimli ve çok daha dönüştürme(parsing) problemlerine sahiptir.
 
 If you really can't take a binary protocol, then you couldn't handle TLS and compression in HTTP 1.x either and its been there and used for a very long time.
 
-### 8.4.6. “It isn't any faster than HTTP/1.1”
+### 8.4.6. "HTTP / 1.1'den daha hızlı değil"
 
-This is of course subject to debate and discussions on how to measure what faster means, but already in the SPDY days many tests were made that proved faster browser page loads (like ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) by people at University of Washington and ["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) by Hervé Servy) and such experiments have been repeated with http2 as well. I'm looking forward to seeing more such tests and experiments getting published. A [basic first test made by httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) might imply that HTTP/2 holds its promises.
+Bu tabi ki daha hızlı olanı ölçmenin nasıl yapıldığı üzerine tartışmalara tabidir, ancak daha önce SPDY günlerinde daha fazla tarayıcı sayfası yüklendiğini kanıtlayan birçok test yapıldı (like ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) by people at University of Washington and ["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) by Hervé Servy) ve bu tür denemeler de http2 ile tekrarlandı. Bu tür testlerin ve deneylerin yayınlanmaya başlaması için sabırsızlıkla bekliyorum. [basic first test made by httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2), HTTP / 2'nin sözlerini tuttuğunu ima edebilir.
 
-### 8.4.7. “It has layering violations”
+### 8.4.7. "Katman ihlalleri var"
 
-Seriously, that's your argument? Layers are not holy untouchable pillars of a global religion and if we've crossed into a few gray areas when making http2 it has been in the interest of making a good and effective protocol within the given constraints.
+Cidden, bu argümanınız bu mı? Katmanlar, küresel bir dinin kutsal dokunulmaz direkleri değildir ve eğer http2 yaparken birkaç gri alana girersek, verilen kısıtlamalar içinde iyi ve etkili bir protokol yapmakla ilgilenilmiştir.
 
-### 8.4.8. “It doesn't fix several HTTP/1.1 shortcomings”
+### 8.4.8. "Birkaç HTTP / 1.1 eksikliğini gidermez"
 
-That's true. With the specific goal of maintaining HTTP/1.1 paradigms there were several old HTTP features that had to remain. Such as the common headers that also include the often dreaded cookies, authorization headers and more. But by the upside of maintaining these paradigms is that we got a protocol that is possible to deploy without an inconceivable amount of upgrade work that requires fundamental parts to be completely replaced or rewritten. Http2 is basically just a new framing layer.
+Bu doğru. HTTP / 1.1 paradigmalarını sürdürmenin spesifik amacı ile birlikte, kalması gereken eski HTTP özellikleri de vardı. Sıklıkla korkulan çerezleri, yetkilendirme başlıklarını ve daha fazlasını içeren ortak başlıklar olduğu gibi. Fakat bu paradigmaların korunabilmesi le birlikte, protokol, temel parçaların bir yukseltmeye ihtiyaç duymdan tamamen değiştirilebilmesi veya yeniden yazılabilmesini mümkün kılar.
 
-## 8.5. Will http2 become widely deployed?
+## 8.5. Http2 yaygın olarak kullanılacak mı?
 
-It is too early to tell for sure, but I can still guess and estimate and that's what I'll do here.
+Herhalde söylemek için henüz erken, fakat yine de tahmin edebilir ve burada yapacağım da budur.
 
-The naysayers will say “look at how good IPv6 has done” as an example of a new protocol that's taken decades to just start to get widely deployed. http2 is not an IPv6 though. This is a protocol on top of TCP using the ordinary HTTP update mechanisms and port numbers and TLS etc. It will not require most routers or firewalls to change at all.
+On yıllarca süren ve yeni bir protokolün yaygınlaşması için örnek olarak naysayerler "IPv6'nın ne kadar iyi yapıldığına bakın" diyecek. http2 IPv6 değildir. Bu sıradan HTTP güncelleme mekanizmalarını ve port numaralarını ve TLS'yi kullanan TCP'nin üstünde bir protokoldür. Çoğu yönlendirici veya güvenlik duvarının hiç değişmesini gerektirmez.
 
-Google proved to the world with their SPDY work that a new protocol like this can be deployed and used by browsers and services with multiple implementations in a fairly short amount of time. While the amount of servers on the Internet that offer SPDY today is in the 1% range, the amount of data those servers deal with is much larger. Some of the absolutely most popular web sites today offer SPDY.
+Google, SPDY çalışmalarıyla dünyaya onu kanıtladı; bunun gibi yeni bir protokol tarayıcılar ve hizmetler tarafından çok sayıda uygulama ile oldukça kısa sürede kullanılabiliyor. Internet'te bugün SPDY'yi sunan sunucuların miktarı % 1 aralığında iken, bu sunucuların ele aldığı veri miktarı çok daha büyük. Bugün kesinlikle en popüler web sitelerinden bazıları SPDY'yi önriyor.
 
-http2, based on the same basic paradigms as SPDY, I would say is likely to be deployed even more since it is an IETF protocol. SPDY deployment was always held back a bit by the “it is a Google protocol” stigma.
+http2, SPDY ile aynı temel paradigmaları temel alarak, bir IETF protokolü olduğundan daha fazla konuşlandırılacağını söyleyebilirim. SPDY dağıtımı her zaman "bir Google protokolüdür" damgasının gerisinde kaldı.
 
-There are several big browsers behind the roll-out. Representatives from Firefox, Chrome, Safari, Internet Explorer and Opera have expressed they will ship http2 capable browsers and they have shown working implementations.
+Yayınlamanın arkasında birkaç büyük tarayıcı var. Firefox, Chrome, Safari, Internet Explorer ve Opera temsilcileri http2 özellikli tarayıcılar göndereceklerini ve  çalışma uygulamalarını gösterdiklerini belirttiler.
 
-There are several big server operators that are likely to offer http2 soon, including Google, Twitter and Facebook and we hope to see http2 support soon get added to popular server implementations such as the Apache HTTP Server and nginx. H2o is a new blazingly fast HTTP server with http2 support that shows potential.
+Google, Twitter ve Facebook dahil olmak üzere yakında http2 sunacak pek çok büyük sunucu operatörü var ve http2'nin yakında Apache HTTP Sunucusu ve nginx gibi popüler sunucu uygulamalarına eklendiğini görmek istiyoruz. H2o, potansiyelini gösteren http2 desteğine sahip yeni ve inanılmaz hızlı bir HTTP sunucusudur.
 
-Some of the biggest proxy vendors, including HAProxy, Squid and Varnish have expressed their intentions to support http2.
+HAProxy, Squid ve Varnish de dahil olmak üzere en büyük proxy sunucularından bazıları, http2'yi destekleme niyetlerini ifade ettiler.
 
 All through-out 2015, the amount of traffic that is http2 has been increasing. In early September, Firefox 40 usage was at 13% out of all HTTP traffic and 27% out of all HTTPS traffic, while Google see roughly 18% incoming HTTP/2. It should be noted that Google runs other new protocol experiments as well (see QUIC in 12.1) which makes the http2 usage levels lower than it could otherwise be.
+
+2015 yılına kadar, http2 olan trafik miktarı artıyor. Google, yaklaşık% 18 oranında HTTP / 2 trafiği görürken, Eylül ayının başında Firefox 40'ın kullanımı tüm HTTP trafiğinin% 13'ünde, tüm HTTPS trafiğinin% 27'sinde gerçekleşti.
 
