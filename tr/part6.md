@@ -51,27 +51,33 @@ Akışların çoğullaması, birçok akıştan gelen paketlerin aynı bağlantı
 
 Her bir akış, sunucuyu öncelikle hangi akışların gönderileceğini seçmeye zorlayan kaynak kısıtlamaları olması durumunda, hangi akışın en önemli olduğunu söylemek için kullanılan bir öncelik(ağırlık olarak da bilinir) bilgisine sahiptir.
 
-Using the PRIORITY frame, a client can also tell the server which other stream this stream depends on. It allows a client to build a priority “tree” where several “child streams” may depend on the completion of “parent streams”.
+ÖNCELİK çerçevesini kullanarak bir istemci, sunucuya bir akışın bağlı olduğu diğer bir akışı da söyleyebilir. Bu istemciye öncelik agacı oluşturmasına izin verir  ki bu ağacda "cocuk akışlar" bircok "ebeveyn akışa" bağlı olabilir.
 
-The priority weights and dependencies can be changed dynamically at run-time, which should enable browsers to make sure that when users scroll down a page full of images, the browser can specify which images are most important, or if you switch tabs it can prioritize a new set of streams that suddenly come into focus.
+Öncelik ağırlıkları ve bağımlılıkları çalışma zamanında dinamik olarak değiştirilebilir, ki bu da, kullanıcılar görüntülerin bulunduğu bir sayfayı aşağıya kaydırdığında, tarayıcıların hangi görüntülerin en önemli olduğunu belirleyebilmsine veya sekmeleri değiştirirseniz, birdenbire odaklanacak yeni bir dizi akışın önceliğini oluşturabilmesine olanak tanır.
 
-## 6.5. Header compression
+## 6.5. Başlık sıkıştırma
 
-HTTP is a stateless protocol. In short, this means that every request needs to bring with it as much detail as the server needs to serve that request, without the server having to store a lot of info and meta-data from previous requests. Since http2 doesn't change this paradigm, it has to work the same way.
+HTTP yurtsuz(stateless) bir protokoldür. Kısaca, bu, sunucunun önceki isteklerden çok fazla bilgi ve meta veri depolaması gerekmeden, her talebin sunucunun bu talebi sunması için gereken kadar ayrıntılı getirmesi gerektiği anlamına gelir. Http2 bu paradigmayı değiştirmediği için aynı şekilde çalışması gerekir.
 
-This makes HTTP repetitive. When a client asks for many resources from the same server, like images from a web page, there will be a large series of requests that all look almost identical. A series of almost identical somethings begs for compression.
+Bu, HTTP'yi tekrarlı yapar. Bir müşteri bir web sayfasındaki, örneğin görüntüler gibi aynı sunucudan birçok kaynak istediğinde, hepsi için neredeyse aynı görünen bir istek dizisi talep edecektir. Sıklıkla aynı olan bu dizi sıkıştırma için yalvarır.
 
-While the number of objects per web page has increased (as mentioned earlier), the use of cookies and the size of the requests have also kept growing over time. Cookies also need to be included in all requests, often the same ones in multiple requests.
+Web sayfası başına düşen nesne sayısı arttıkça (önceden belirtildiği gibi), çerezlerin kullanımı ve isteklerin boyutu da zamanla artmaya devam etti. Çerezlerin tüm isteklerde bulunması gerekir, çoğu zaman aynı istek çoklu istekler içindedir.
 
-The HTTP 1.1 request sizes have actually gotten so large that they sometimes end up larger than the initial TCP window, which makes them very slow to send as they need a full round-trip to get an ACK back from the server before the full request has been sent. This is another argument for compression.
+HTTP 1.1 istek boyutları o kadar büyük oluyor ki bazen ilk TCP penceresinden daha büyük olabiliyor, bu da istek gönderilmeden önce sunucudan ACK almak için tam bir gidiş dönüş zamanına ihtiyaç duyduklarından göndermenin çok yavaş olmasına sebep oluyor. Sıkıştırmanın bir başka kanıtı bu durumdur.
 
-### 6.5.1. Compression is a tricky subject
+### 6.5.1. Sıkıştırma hileli bir konudur
 
-HTTPS and SPDY compression were found to be vulnerable to the [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) and [CRIME](http://en.wikipedia.org/wiki/CRIME) attacks. By inserting known text into the stream and figuring out how that changes the output, an attacker can figure out what's being sent in an encrypted payload.
+HTTPS ve SPDY sıkıştırmasının [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) ve [CRIME](http://en.wikipedia.org/wiki/CRIME) saldırılarına karşı savunmasız olduğu tespit edildi. Bilinen metni akışa çıktıyı ekleyerek, nasıl değiştirdiğini öğrenebilir, böylece saldırgan şifreli bir yükte gönderileni anlamaya çalışabilir.
 
 Doing compression on dynamic content for a protocol - without becoming vulnerable to one of these attacks - requires some thought and careful consideration. This is what the HTTPbis team tried to do.
 
-Enter [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2, which – as the name suggests - is a compression format especially crafted for http2 headers, and it is being specified in a separate internet draft. The new format, together with other counter-measures (such as a bit that asks intermediaries to not compress a specific header and optional padding of frames), should make it harder to exploit compression.
+Bir protokol için dinamik içeriğe sıkıştırma yapmak biraz düşünülmesi ve dikkatli olması gereken bir konudur(saldırılardan birine karşı savunmasız hale gelmeden yapılır). HTTPbis ekibi bunu yapmaya çalıştı.
+
+[HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK(adından da anlaşılacağı gibi), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. 
+
+
+
+Header Compression for HTTP/2, which – as the name suggests - is a compression format especially crafted for http2 headers, and it is being specified in a separate internet draft. The new format, together with other counter-measures (such as a bit that asks intermediaries to not compress a specific header and optional padding of frames), should make it harder to exploit compression.
 
 In the words of Roberto Peon (one of the creators of HPACK):
 
@@ -81,7 +87,7 @@ In the words of Roberto Peon (one of the creators of HPACK):
 > re-indexing (i.e., shared state between frontend and backend within a proxy),
 > and for quick comparisons of Huffman-encoded strings”.
 
-## 6.6. Reset - change your mind
+## 6.6. Sıfırla - fikrini değiştir
 
 One of the drawbacks with HTTP 1.1 is that when an HTTP message has been sent
 off with a Content-Length of a certain size, you can't easily just stop
