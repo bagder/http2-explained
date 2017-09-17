@@ -1,31 +1,32 @@
-# 8. An http2 world
+# 8. Bir http2 dünyası
 
-So what will things look like when http2 gets adopted? Will it get adopted?
+Peki, http2 kabul edildiğinde işler nasıl gözükecek? Kabul edilecek mi?
 
-## 8.1. How will http2 affect ordinary humans?
+## 8.1. Http2 sıradan insanları nasıl etkiler?
 
-http2 is not yet widely deployed nor used. We can't tell for sure exactly how things will turn out. We have seen how SPDY has been used and we can make some guesses and calculations based on that and other past and current experiments.
+http2 henüz geniş ölçüde ne kullanıldı ne de uygulandı. Her şeyin nasıl gerçekleşeceğini kesin olarak bilemeyiz fakat SPDY'nin nasıl kullanıldığını gördük ve o andaki geçmiş ve güncel deneylere dayanan bazı tahminler ve hesaplamalar yapabiliriz.
 
-http2 reduces the number of necessary network round-trips and it avoids the head of line blocking dilemma completely with multiplexing and fast discarding of unwanted streams.
+http2, gerekli ağ gidiş-dönüş sayısını azaltır ve istenmeyen satır başını engelleme problemini çoğullama ve hızlı atılma tamamen önler.
 
-It allows a large amount of parallel streams that go way over even the most sharding sites of today.
+Bugünün en yaygın kullanılan sitelerinde bile büyük miktarda paralel akışa izin verir.
 
-With priorities used properly on the streams, chances are much better that clients will actually get the important data before the less important data.
-All this taken together, I'd say that the chances are very good that this will lead to faster page loads and to more responsive web sites. Shortly put: a better web experience.
+Akışlar üzerinde doğru olarak kullanılan önceliklerle, istemcilerin daha az önemli olan veriden önce aslında daha önemli verileri alması ihtimali daha yüksektir.
 
-How much faster and how much improvements we will see, I don't think we can say yet. First, the technology is still very early and then we haven't even started to see clients and servers trim implementations to really take advantage of all the powers this new protocol offers.
+Bütün bunlar bir araya getirildiğinde, şansın çok daha yüksek olduğunu ve bunun daha hızlı sayfa yüklemelerine ve daha duyarlı web sitelerine yol açacağını söyleyebilirim. Kısaca: daha iyi web deneyimi.
 
-## 8.2. How will http2 affect web development?
+Ne kadar hızlı  bir sürede ne kadar iyileştirme göreceğimizi, henüz söyleyebileceğimizi sanmıyorum. Birincisi, teknoloji hala çok erken ve istemcilerin ve sunucuların, bu yeni protokolün sunduğu tüm güçlerden gerçekten yararlanmak için uygulamaların düzeltildiğini görmeye bile başlamadık.
 
-Over the years web developers and web development environments have gathered a full toolbox of tricks and tools to work around problems with HTTP 1.1, recall that I outlined  some of them in the beginning of this document as a justification for http2.
+## 8.2. Http2 web gelişmelerini nasıl etkiler?
 
-Lots of those workarounds that tools and developers now use by default and without thinking, will probably hurt http2 performance or at least not really take advantage of http2's new super powers. Spriting and inlining should most likely not be done with http2. Sharding will probably be detrimental to http2 as it will probably benefit from using less connections.
+Yıllar içinde web geliştiricileri ve web geliştirme ortamları HTTP 1.1 ile ilgili sorunları çözmek için çeşitli araçlar(toolbox) oluşturmuşlardır; hatırlatmak gerekirse, http2'nin aleyhinde haklı neden olarak bunlardan bazılarını özetledim.
 
-A problem here is of course that web sites and web developers need to develop and deploy for a world that in the short term at least, will have both HTTP1.1 and http2 clients as users and to get maximum performance for all users can be challenging without having to offer two different front-ends.
+Araçlar ve geliştiricilerin düşünmeden kullandıkları bu geçici çözümlerin büyük bir kısmı büyük olasılıkla http2'nin performansını düşürür veya en azından yeni süper güçlerinden yararlanmaz. İçerilme ve püskürtme http2 ile yapılmamalıdır. Muhtemelen daha az bağlantı kullanacağı için, Sharding? http2 için zararlıdır.
 
-For these reasons alone, I suspect there will be some time before we will see the full potential of http2 being reached.
+web sitelerinin ve web geliştiricilerinin en azından kısa vadede geliştirmeye ve konuşlandırmaya ihtiyacı olması bir problemdir ki bu, hem HTTP1.1 hem de http2 istemcilerine sahip olması ve tüm kullanıcılar için maksimum performans sağlaması açısından iki farklı ön uç sunmak zorunda kalmadan zorlu olabilir.
 
-## 8.3. http2 implementations
+Yalnız bu nedenlerden dolayı, http2'nin tam potansiyeline ulaşıldığına karar vermemizin biraz zaman alacağını düşünüyoruz.
+
+## 8.3. http2 uygulamaları
 
 Trying to document specific implementations in a document such as this is of course completely futile and doomed to fail and only feel outdated within a really short period of time. Instead I'll explain the situation in broader terms and refer readers to the [list of implementations](https://github.com/http2/http2-spec/wiki/Implementations) on the http2 web site.
 
