@@ -22,11 +22,11 @@ Alt-Svc başlığı, aynı içeriğin bir TLS bağlantısı üzerinden de erişi
 
 Bu biraz tartışılabilir bir özelliktir. Böyle bir bağlantı kimliği doğrulanmamış TLS yapacak, herhangi bir yerde "güvenli" olarak ilan edilemeyecek, UI'da herhangi bir asma kilit(padlock) kullanamayacak, aslında kullanıcıya düz eski HTTP olmadığını göstremeyecektir ancak bu hala fırsatçı TLS'dir ve bazı insanlar bu kavrama karşı fazlasıyla karşıdır.
 
-## 7.2. Bloke edilmiş
+## 7.2. BlokeLİ
 
 Bu tür bir çerçeve, gönderilecek veriler olduğunda ancak akış denetimi herhangi bir veri göndermeyi yasakladığında dahi http2 tarafında tam olarak bir kez gönderilmesi amaçlanmıştır. Fikir şudur ki; eğer uygulamanız bu çerçeveyi alırsa, bir şeyi berbat ettiğinizi ve/veya mükemmel aktarım hızlarından daha azını aldığınızı biliyorsunuzdur.
 
 Çerçeve bir uzantı haline gelmeden önce taslak-12'den bir alıntı:
 
-> “Deneyi kolaylaştırmak için BLOKE EDİLMİŞ çerçeve bu taslak sürüme dahil edilmiştir. Deney sonuçları olumlu geri bildirim sağlamıyorsa kaldırılabilir.”
+> “Deneyi kolaylaştırmak için BLOKELİ çerçeve bu taslak sürüme dahil edilmiştir. Deney sonuçları olumlu geri bildirim sağlamıyorsa kaldırılabilir.”
 
