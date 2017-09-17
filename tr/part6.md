@@ -73,38 +73,32 @@ Doing compression on dynamic content for a protocol - without becoming vulnerabl
 
 Bir protokol için dinamik içeriğe sıkıştırma yapmak biraz düşünülmesi ve dikkatli olması gereken bir konudur(saldırılardan birine karşı savunmasız hale gelmeden yapılır). HTTPbis ekibi bunu yapmaya çalıştı.
 
-[HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK(adından da anlaşılacağı gibi), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. 
+[HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK(adından da anlaşılacağı gibi), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. Yeni format, diğer karşı ölçümlerle(belirli bir üstbilgiyi ve çerçevelerin dolgusunu(adding) sıkıştırmamasını sağlayan bir bit gibi), sıkıştırmanın kullanılmasını zorlaştırır.
 
+Roberto Peon'un (HPACK'in yaratıcılarından biri) sözleriyle:
 
-
-Header Compression for HTTP/2, which – as the name suggests - is a compression format especially crafted for http2 headers, and it is being specified in a separate internet draft. The new format, together with other counter-measures (such as a bit that asks intermediaries to not compress a specific header and optional padding of frames), should make it harder to exploit compression.
-
-In the words of Roberto Peon (one of the creators of HPACK):
-
-> “HPACK was designed to make it difficult for a conforming implementation to
-> leak information, to make encoding and decoding very fast/cheap, to provide
-> for receiver control over compression context size, to allow for proxy
-> re-indexing (i.e., shared state between frontend and backend within a proxy),
-> and for quick comparisons of Huffman-encoded strings”.
+> HPACK sızan bilgiyi önlemek,
+> kodlama ve kod çözme işlemini hem hızlandırmak hem ucuzlaştirmak,
+> sıkıştırılan içrik boyutu üzerinde alıcı adına kontrol sağlamak,
+> proxy'nin yeniden indexlenmesine izin vermek(yani, bir proxy içindeki ön uç ve arka uç arasında paylaşılan durum)
+> ve Huffman kodlu dizelerin çabuk karşılaştırmaları için tasarlandı.
 
 ## 6.6. Sıfırla - fikrini değiştir
 
-One of the drawbacks with HTTP 1.1 is that when an HTTP message has been sent
-off with a Content-Length of a certain size, you can't easily just stop
-it. Sure, you can often (but not always) disconnect the TCP connection, but that
-comes at the cost of having to negotiate a new TCP handshake again.
+HTTP 1.1'in getirdiği dezavantajlardan biri, belirli bir boyuta sahip bir İçerik-Uzunluğu ile bir HTTP mesajı gönderildiğinde, onu kolayca durdurmanızın mümkün olamayacağıdır. Tabi, TCP bağlantısını kesebilirsiniz (her zaman değil) ancak yine de yeni bir TCP el sıkışması yapmak zorunda kalmanız maliyetlidir.
 
-A better solution would be to just stop the message and start a new. This can be done with http2's RST_STREAM frame which will help prevent wasted bandwidth and the need to tear down connections.
+Daha iyi bir çözüm, mesajı durdurup yeni bir başlangıç yapmak olacaktır. Bunu, boşa harcanmış bant genişliğini ve bağlantıları yıkma ihtiyacını önlemeye yardımcı olacak, http2'nin RST_STREAM çerçevesiyle yapabilirsiniz.
 
-## 6.7. Server push
+## 6.7. Sunucu İtme
 
-This is the feature also known as “cache push”. The idea is that if the client asks for resource X, the server may know that the client will probably want resource Z as well, and sends it to the client without being asked. It helps the client by putting Z into its cache so that it will be there when it wants it.
+Bu, "önbellek itme" olarak da bilinen özelliktir. Müşteri kaynak X sorduğunda, sunucu istemcinin istemcinin Z kaynağı da istediğini bilir ve sorulmadan istemciye gönderir. İstediğinde orada olacak şekilde Z'yi önbelleğine koyarak müşteriye yardımcı olur.
 
-Server push is something a client must explicitly allow the server to do. Even then, the client can swiftly terminate a pushed stream at any time with RST_STREAM should it not want a particular resource.
+Sunucu itme, istemcinin sunucuya açıkça izin vermesi gereken bir özelliktir. İstemci belirli bir kaynağı istemiyorsa, itilen bir akışı RST_STREAM ile hızla sonlandırabilir.
 
-## 6.8. Flow Control
+## 6.8. Akış kontrolü
 
-Each individual http2 stream has its own advertised flow window that the other end is allowed to send data for. If you happen to know how SSH works, this is very similar in style and spirit.
+Her bir http2 akışının kendi akış penceresi vardır, bu pencerede diğer ucun veri göndermesine izin verilir. SSH'ın nasıl çalıştığını biliyorsanız, çok benzerolduğunu göreceksiniz.
 
 For every stream, both ends have to tell the peer that it has enough room to handle incoming data, and the other end is only allowed to send that much data until the window is extended. Only DATA frames are flow controlled.
 
+Her bir akış için, iki uçun da gelen veriyi işlemek için yeterli alana sahip olup omadığı veya diğer uçta yalnızca pencere genişletilinceye kadar belirli miktarda veri gönderilmesine izin verilebileceği gibi durumları bildirmeye hakları vardır. Sadece VERİ çerçeveleri akış kontrollüdür.
