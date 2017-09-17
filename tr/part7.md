@@ -4,9 +4,7 @@ Http2 protokolü, bir alıcının bilinmeyen tüm çerçeveleri (bilinmeyen bir 
 
 Http2'nin uzantılara izin verip vermeyeceği konusunun tartışılması,  protokolün gelişimi boyunca farkli ve zıt görüşlerle birlikte  devam etti. Taslak-12'den sonra nihai olarak uzantılara izin verildi.
 
-Extensions are not part of the actual protocol but will be documented outside of the core protocol spec. There are already two frame types that have been discussed for inclusion in the protocol that will probably be the first frames sent as extensions. I'll describe them here because of their popularity and previous state as “native” frames:
-
-Uzantılar gerçek protokolün bir parçası değildir ve çekirdek protokolün dışında belgelendirilecektir. Protokole dahil olacak ve  muhtemelen uzantılar olarak gönderilen ilk çerçeveler olacak olan, tartışılan iki çerçeve türü vardır.
+Uzantılar gerçek protokolün bir parçası değildir ve çekirdek protokolün dışında belgelendirilecektir. Protokole dahil olacak ve  muhtemelen uzantılar olarak gönderilen ilk çerçeveler olacak olan, tartışılan iki çerçeve türü vardır:
 
 ## 7.1. Alternatif Hizmetler
 
