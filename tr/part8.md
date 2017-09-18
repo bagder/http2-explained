@@ -92,18 +92,18 @@ Hepsi değil. Çoklama yetenekleri, geniş coğrafi dağılımlara sahip olmayan
 
 Bu, bir dereceye kadar doğru olabilir. TLS el sıkışması biraz ekstra para harcatabilir, ancak TLS için gereken gidişatları azaltmaya yönelik mevcut ve devam eden çabalar vardır. Düz metin yerine wire-hat? üzerinde TLS yapmak için yapılan ek yük çaba önemsiz değildir, daha fazla CPU ve güç, güvenli olmayan bir protokol ile aynı trafik modelinde harcanır. Ne kadar ve ne gibi bir etkiye sahip olacağı düşünülür. Bir bilgi kaynağı için [istlsfastyet.com](https://istlsfastyet.com/)'a bakın.
 
-Telecom and other network operators, for example in the ATIS Open Web
-Alliance, say that they [need unencrypted
-traffic](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
-to offer caching, compression and other techniques necessary to provide a fast
-web experience over satellite, in airplanes and similar.  http2 does not make
-TLS use mandatory so we shouldn't conflate the terms.
+Telekom ve diğer ağ operatörleri, örneğin ATIS Open Web Alliance'da, uydu, uçak ve benzeri ortamlarda hızlı bir web deneyimi sağlamak için önbellek, sıkıştırma ve diğer teknikler sunacaklarını söylüyorlar[need unencrypted
+traffic](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf). http2, TLS kullanımını zorunlu kılmaz, bu nedenle şartları birleştirmemeliyiz.
 
-Many Internet users have expressed a preference for TLS to be used more widely and we should help to protect users' privacy.
+Pek çok İnternet kullanıcısı, kullanıcıların gizliliğinin korunması gerekçesiyle TLS'in daha yaygın kullanılmasını tercih ettiğini belirtti.
 
 Experiments have also shown that by using TLS, there is a higher degree of success than when implementing new plain-text protocols over port 80 as there are just too many middle boxes out in the world that interfere with what they would think is HTTP 1.1 if it goes over port 80 and might look like HTTP at times.
 
-Finally, thanks to http2's multiplexed streams over a single connection, normal browser use cases still could end up doing substantially fewer TLS handshakes and thus perform faster than HTTPS would when still using HTTP 1.1.
+Deneyler ayrıca, TLS'yi kullanarak, bağlantı noktası 80 üzerinden yeni düz metin protokolleri uygularkenkinden daha yüksek bir başarı derecesine sahip olduğunu gösterdi; çünkü dünyada, HTTP1.1 olduğunu düşüneceklerine müdahale eden çok fazla orta kutu var 80 numaralı bağlantı noktasını aşıyor ve bazen HTTP gibi görünebilir.
+
+TLS'i kullanan deneyler gosteriyor ki, 80 numaralı bağlantı noktasından yeni düz metin protokolleri uygularkenkinden daha yüksek bir başarı derecesi var çünkü 80 numaralı bağlantı noktasından geçerse HTTP1 olduğunu düşünerek çok fazla müdahale olabilir.?
+
+Son olarak, tek bir bağlantı üzerinden HTTP2'nin çok katlı akışları sayesinde, normal tarayıcı kullanım örnekleri halen daha az TLS el sıkışmasıyla sonuçlanabilir ve böylece hala HTTP 1.1 kullanıldığında HTTPS'den daha hızlı performans gösterebilir.
 
 ### 8.4.5. “Not being ASCII is a deal-breaker”
 
