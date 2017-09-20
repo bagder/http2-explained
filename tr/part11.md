@@ -1,15 +1,12 @@
 # 11. http2 in curl
 
-The [curl project](http://curl.haxx.se/) has been providing experimental http2
-support since September 2013.
+[curl projesi](http://curl.haxx.se/), Eylül 2013'ten beri deneysel http2 desteği sağlıyor.
 
-In the spirit of curl, we intend to support just about every aspect of http2 that we possibly can. curl is often used as a test tool and tinkerer's way to poke on web sites and we intend to keep that up for http2 as well.
+curl ruhu içinde, mümkün olduğunca http2'nin her yönünü desteklemeyi düşünüyoruz. curl sıklıkla bir test aracı ve web sitelerinde takla(poke on) atmanın yolu olarak kullanılır ve bunu http2 için de tutmak niyetindeyiz.
 
-curl uses the separate library [nghttp2](https://nghttp2.org/) for the http2
-frame layer functionality. curl requires nghttp2 1.0 or later.
+curl, http2 çerçeve katmanı işlevselliği için ayrı kütüphane [nghttp2](https://nghttp2.org/) kullanır. curl, nghttp2 1.0 veya üstünü gerektirir.
 
-Note that currently on linux curl and libcurl are not always delivered with
-HTTP/2 protocol support enabled.
+Şu anda linux'da curl ve libcurl her zaman HTTP / 2 protokol desteği etkin değildir.
 
 ## 11.1. HTTP 1.x look-alike
 
