@@ -1,4 +1,4 @@
-# 8. Bir http2 dünyası
+# 8. http2 dünyası
 
 Peki, http2 kabul edildiğinde işler nasıl gözükecek? Kabul edilecek mi?
 
