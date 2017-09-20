@@ -10,7 +10,7 @@ Protokolü açıklamak için geçerli bir teknik terim olan "HTTP/2" yerine okun
 
 ## 1.1 Yazar
 
-Benim adım Daniel Stenberg ve Mozilla'da çalışıyorum. Açık kaynak ve ağ ile 20 yıldan fazla bir süredir sayısız projede yer aldım. Muhtemelen bilinen en öncü curl ve libcurl geliştiricisiyim.Birkaç yıldır IETF HTTPbis çalışma grubunda yer aldım ve orada http 1.1 yeniliklerini takip ettim, aynı zamanda http2 standartlaştırma çalışmalarına dahil oldum.
+Benim adım Daniel Stenberg ve Mozilla'da çalışıyorum. Açık kaynak ve ağ ile 20 yıldan fazla bir süredir sayısız projede yer aldım. Muhtemelen bilinen en öncü curl ve libcurl geliştiricisiyim. Birkaç yıldır IETF HTTPbis çalışma grubunda yer aldım ve orada http 1.1 yeniliklerini takip ettim, aynı zamanda http2 standartlaştırma çalışmalarına dahil oldum.
 
   Elektronik posta: daniel@haxx.se
 
