@@ -1,14 +1,15 @@
-# 14. Thanks
+# 14. Teşekkürler
 
-Inspiration and the package format Lego image from Mark Nottingham.
+Mark Nottingham'dan ilham ve paket formatı Lego görüntüsü.
 
-HTTP trend data comes from http://httparchive.org.
+HTTP eğilim verileri http://httparchive.org'dan gelir.
 
-The RTT graph comes from presentations done by Mike Belshe.
+RTT grafiği, Mike Belshe tarafından yapılan sunumlardan geliyor.
 
-My kids Agnes and Rex for letting me borrow their Lego figures for the head of line picture.
+Çocuklarım Agnes ve Rex, satir başı engelleme için Legolarından ödünç almama izin verdikleri için.
 
-Thanks to the following friends for reviews and feedback: Kjell Ericson, Bjorn Reese, Linus Swälas and Anthony Bryan. Your help is greatly appreciated and has really improved the document!
+İncelemeler ve geri bildirimler için aşağıdaki arkadaşlara teşekkür ederiz: Kjell Ericson, Bjorn Reese, Linus Swälas ve Anthony Bryan. Yardımınız çok değerlidir ve belgeyi gerçekten geliştirmiştir!
 
-During the various iterations, the following friendly people have provided bug reports and improvements to the document: Mikael Olsson, Remi Gacogne, Benjamin Kircher, saivlis, florin-andrei-tp, Brett Anthoine, Nick Parlante, Matthew King, Nicolas Peels, Jon Forrest, sbrickey, Marcin Olak, Gary Rowe, Ben Frain, Mats Linander, Raul Siles, Alex Lee, Richard Moore
+Çeşitli tekrarlamalar sırasında, aşağıdaki samimi insanlar belgede hata raporları ve geliştirmeler sağladı:
+Mikael Olsson, Remi Gacogne, Benjamin Kircher, saivlis, florin-andrei-tp, Brett Anthoine, Nick Parlante, Matthew King, Nicolas Peels, Jon Forrest, sbrickey, Marcin Olak, Gary Rowe, Ben Frain, Mats Linander, Raul Siles, Alex Lee, Richard Moore
 
