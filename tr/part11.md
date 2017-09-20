@@ -1,53 +1,40 @@
 # 11. http2 in curl
 
-The [curl project](http://curl.haxx.se/) has been providing experimental http2
-support since September 2013.
+[curl projesi](http://curl.haxx.se/), Eylül 2013'ten beri deneysel http2 desteği sağlıyor.
 
-In the spirit of curl, we intend to support just about every aspect of http2 that we possibly can. curl is often used as a test tool and tinkerer's way to poke on web sites and we intend to keep that up for http2 as well.
+curl ruhu içinde, mümkün olduğunca http2'nin her yönünü desteklemeyi düşünüyoruz. curl sıklıkla bir test aracı ve web sitelerinde takla(poke on) atmanın yolu olarak kullanılır ve bunu http2 için de tutmak niyetindeyiz.
 
-curl uses the separate library [nghttp2](https://nghttp2.org/) for the http2
-frame layer functionality. curl requires nghttp2 1.0 or later.
+curl, http2 çerçeve katmanı işlevselliği için ayrı kütüphane [nghttp2](https://nghttp2.org/) kullanır. curl, nghttp2 1.0 veya üstünü gerektirir.
 
-Note that currently on linux curl and libcurl are not always delivered with
-HTTP/2 protocol support enabled.
+Şu anda linux'da curl ve libcurl her zaman HTTP / 2 protokol desteği etkin değildir.
 
 ## 11.1. HTTP 1.x look-alike
 
-Internally, curl will convert incoming http2 headers to HTTP 1.x style headers and provide them to the user, so that they will appear very similar to existing HTTP. This allows for an easier transition for whatever is using curl and HTTP today. Similarly curl will convert outgoing headers in the same style. Give them to curl in HTTP 1.x style and it will convert them on the fly when talking to http2 servers. This also allows users to not have to bother or care very much with which particular HTTP version that is actually used on the wire.
+Dahili olarak, curl gelen HTTP2 üstbilgilerini HTTP 1.x stil üstbilgilerine dönüştürür ve kullanıcıya sunar; böylece mevcut HTTP'ye çok benzer görünürler. Bu, curl ve HTTP'yi bugün kullananlar için daha kolay bir geçiş sağlar. Benzer şekilde curl, giden üstbilgileri aynı stilde dönüştürür. Onları HTTP 1.x tarzında curl'e verin ve http2 sunucularıyla konuşurken bunları anında dönüştüreceksiniz. Böylece, kullanıcıların hat(wire) üzerinde gerçekten kullanılan belirli HTTP sürümleriyle uğraşmasına veya bakım yapmasına gerek kalmamaktadır.
 
-## 11.2. Plain text, insecure
+## 11.2. Düz metin, güvensiz
 
-curl supports http2 over standard TCP via the Upgrade: header. If you do an
-HTTP request and ask for HTTP 2, curl will ask the server to update the
-connection to http2 if possible.
+curl, HTTP2'yi Standart TCP üzerinden Upgrade: başlığı üzerinden destekler. Bir HTTP isteği yaparsanız ve HTTP 2'yi sorarsanız, curl, sunucudan mümkünse http2 bağlantısını güncellemesini isteyecektir.
 
-## 11.3. TLS and what libraries
+## 11.3. TLS ve bazı kütüphaneler
 
-curl supports a wide range of different TLS libraries for its TLS back-end, and that is still valid for http2 support. The challenge with TLS for http2's sake is the ALPN support and to some extent NPN support.
+curl, TLS arka uç için geniş bir yelpazede farklı TLS kütüphanelerini destekler ve bu hala http2 desteği için geçerlidir.  Http2'nin uğruna TLS ile olan meydan okuma ALPN desteğidir ve bir ölçüde NPN desteğidir.
 
-Build curl against modern versions of OpenSSL or NSS to get both ALPN and NPN support. Using GnuTLS or PolarSSL you will get ALPN support but not NPN.
+Hem ALPN hem de NPN desteği almak için curl'ü OpenSSL veya NSS'nin modern sürümlerine karşı oluşturun. GnuTLS veya PolarSSL'yi kullanarak NPN değil ALPN desteği elde edersiniz.
 
-## 11.4. Command line use
+## 11.4. Komut satırı kullanımı
 
-To tell curl to use http2, either plain text or over TLS, you use the
-`--http2` option (that is “dash dash http2”). curl still defaults to HTTP/1.1
-so the extra option is necessary when you want http2.
+Curl'e http2'yi (düz metin veya TLS) kullanmasını söylemek için `--http2` seçeneğini (yani" tire çizgisi http2 ") kullanırsınız. curl hâlâ HTTP / 1.1 varsayılanıdır, bu nedenle HTTP2'yi istediğinizde ekstra seçenek gereklidir.
 
-## 11.5. libcurl options
+## 11.5. libcurl seçeneği
 
-### 11.5.1 Enable HTTP/2
+### 11.5.1 Etkin HTTP/2
 
-Your application would use https:// or http:// URLs like normal, but you set
-curl_easy_setopt's `CURLOPT_HTTP_VERSION` option to `CURL_HTTP_VERSION_2` to
-make libcurl attempt to use http2. It will then do a best effort and do http2
-if it can, but otherwise continue to operate with HTTP 1.1.
+Uygulamanız normal gibi https: // veya http: // URL'leri kullanıyor ancak libcurl'un http2 kullanmaya teşvik etmek için curl_easy_setopt'ın `CURLOPT_HTTP_VERSION` seçeneğini `CURL_HTTP_VERSION_2` olarak ayarlamalısınız. Daha sonra elinden gelen çabayı gösterebilir ve http2 yapabilir, aksi halde HTTP 1.1 ile çalışmaya devam eder.
 
-### 11.5.2 Multiplexing
+### 11.5.2 Çoğullama
 
-As libcurl tries to maintain existing behaviors to a far extent, you need to
-enable HTTP/2 multiplexing for your application with the
-[CURLMOPT_PIPELINING](http://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html)
-option. Otherwise it will continue using one request at a time per connection.
+Libcurl mevcut davranışları büyük ölçüde korumaya çalıştığından, uygulamanız için [CURLMOPT_PIPELINING](http://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html) seçeneği ile HTTP / 2 çoğullama özelliğini etkinleştirmeniz gerekir. Aksi takdirde, her bağlantı için bir defada bir istek kullanmaya devam edecektir.
 
 Another little detail to keep in mind is that if you ask for several transfers
 at once with libcurl, using its multi interface, an applicaton can very well
@@ -57,11 +44,8 @@ connections for all of them at once, you use the
 [CURLOPT_PIPEWAIT](http://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) option
 for each individual transfer you rather wait.
 
-### 11.5.3 Server push
+Akılda tutulması gereken diğer bir küçük ayrıntı da, bir seferde libcurl ile çoklu aktarım isterseniz, çoklu arayüzü kullanmak, bir uygulama aynı anda herhangi bir sayıda aktarmaya başlayabilir ve daha sonra libcurl'yı eklemek için biraz beklemek zorunda kalırsanız hepsinin aynı anda birden fazla bağlantı kurmasına değil, aynı bağlantıya her seferinde beklediğiniz her bir aktarım için [CURLOPT_PIPEWAIT] [CURLOPT_PIPEWAIT](http://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) seçeneğini kullanabilirsiniz.
 
-libcurl 7.44.0 and later supports HTTP/2 server push. You can take advantage
-of this feature by setting up a push callback with the
-[CURLMOPT_PUSHFUNCTION](http://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html)
-option. If the push is accepted by the application, it'll create a new
-transfer as an CURL easy handle and deliver content on it, just like any other
-transfer.
+### 11.5.3 Sunucu itme
+
+libcurl 7.44.0 ve sonrası, HTTP / 2 sunucu itme özelliğini destekler. [CURLMOPT_PUSHFUNCTION](http://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html) seçeneği ile bir geri arama geri alma kurarak bu özelliğin avantajından yararlanabilirsiniz. Baskı uygulama tarafından kabul edilirse, başka herhangi bir aktarımda olduğu gibi, CURL kolay işleyici olarak yeni bir aktarım oluşturacak ve içeriği teslim edecektir.
