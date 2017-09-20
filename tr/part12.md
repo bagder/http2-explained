@@ -12,6 +12,4 @@ Google'ın [QUIC] (https://www.chromium.org/quic) (Hızlı UDP İnternet Bağlan
 
 QUIC, çok daha az gecikme ile bağlantıların oluşturulmasına izin verir, sadece HTTP / 2 için olduğu gibi her biri için değil, bireysel akışları engellemek için de paket kaybını çözer ve farklı ağ arayüzleri üzerinden kolayca bağlantı yapılmasını sağlar, dolayısıyla MPTCP'nin çözeceği alanları da kapsar.
 
-QUIC is so far only implemented by Google in Chrome and their server ends and that code is not easily re-used elsewhere, even if there's a [libquic](https://github.com/devsisters/libquic) effort trying exactly that. The protocol has been brought as a [draft](http://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) to the IETF transport working group.
-
 QUIC şimdiye kadar yalnızca Google tarafından Chrome'da uygulanmaktadır ve bu kod, bir [libquic] (https://github.com/devsisters/libquic) çabasıyla tam olarak çalışılsa bile başka yerlerde kolayca yeniden kullanılamaz. Protokol IETF ulaştırma çalışma grubuna [taslak] (http://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) olarak getirildi.
