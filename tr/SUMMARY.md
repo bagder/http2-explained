@@ -1,10 +1,10 @@
 # Türkçe Özeti
 
 * [Arkaplan](part1.md)
-* [Bugün HTTP](part2.md)
+* [HTTP'nin Bugünü](part2.md)
 * [Gecikmelerin üstesinden gelmek için yapılanlar](part3.md)
-* [HTTP güncellenmesi](part4.md)
-* [http2 konsepti](part5.md)
+* [HTTP'nin güncellenmesi](part4.md)
+* [http2 konseptleri](part5.md)
 * [http2 protokolü](part6.md)
 * [Uzantılar](part7.md)
 * [http2 dünyası](part8.md)
