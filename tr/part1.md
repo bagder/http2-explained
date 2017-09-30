@@ -62,21 +62,21 @@ Bu dokümanın ilk versiyonu, 25 Nisan 2014 tarihinde yayınlandı. En son dokü
 
 - 1: Protokol tamam oldu.
 - 4.1: 2014 yılından intibaren kullanılan üslup yenilendi
-- Ön: Resim eklendi ve "http2 açıklama" denildi,bağlantı düzenlendi 
-- 1.4: Döküman tarihi bölümü eklendi
+- Ön: Burada resim eklendi ve "http2'nin açıklaması" denildi, bağlantı düzenlendi 
+- 1.4: Doküman tarihçesi bölümü eklendi
 - Birçok yazım ve dil bilgisi hatası düzenltildi 
-- 14: Hata raporcularına teşekkür bölümü eklendi 
-- 2.4:Büyüme artışı için daha iyi duyuru
-- 6.3: Çoklama özelliğinde sıralama düzeltildi
-- 6.5.1: HPACK taslağı-12 
+- 14: Hataları iletenler sayesinde teşekkürler bölümü eklendi 
+- 2.4:HTTP büyüme grafiği için daha iyi etiketler
+- 6.3: Çoklama treninde vagon sıralaması düzeltildi
+- 6.5.1: HPACK taslak-12 
 
 ### Versiyon 1.9
 
-- HTTP/2 taslak-17 and HPACK taslak-11 güncellemesi
-- "10. Chromium'da http2" (== şimdi bir sayfa daha uzun) bölümü
+- HTTP/2 taslak-17 and HPACK taslak-11 güncellendi
+- "10. Chromium'da http2" (== şimdi bir sayfa daha uzun) bölümü eklendi
 - Birçok bölüm düzenlemesi
-- 30 uygulama  
-- 8.5: Bazı güncel kullanım numaraları
-- 8.3: internet explorer'a atıf
-- 8.3.1 Eksik uygulamalar bölümü
-- 8.4.3: TLS'nin başarı oranı artışı
+- Şimdi 30 uygulamada  
+- 8.5: Bazı güncel kullanım rakamları
+- 8.3: internet explorer'a da atıf
+- 8.3.1 "Eksik uygulamalar" bölümü eklendi
+- 8.4.3: Ayrıca TLS'in başarı oranı artışından bahseder
