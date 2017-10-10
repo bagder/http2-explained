@@ -1,10 +1,10 @@
 # 2. Günümüzde HTTP 
 
-HTPP 1.1, internette neredeyse herşeyde kullanılan bir protocol haline geldi. Büyük yatırımlar protocolde yapılır  ve  bundan altyapı avantaj elde eder öyle ki artık genellikle günümüzde web işlerini çalışır hale getirmek, yeni birşey üzerinden çalıştırmaktansa, HTTP üzerinde daha kolaydır.
+HTTP 1.1, İnternet'teki neredeyse her şey için kullanılan bir protokoldür. Bunun avantajlarından yararlanan protokollerde ve altyapıda büyük yatırımlar yapılmıştır, çünkü bugün kendiliğinden yeni şeyler yapmaktan çok, HTTP'nin üstünde çalışmak daha kolay olmaktadır.
 
 ## 2.1 HTTP 1.1 devasadır
 
-HTTP oluşturulduğunda ve dünyaya yayıldığında,muhtemelen oldukça basit ve açık bir protokol olarak algılanmış olsa da zaman bunun doğru olmadığını ispatlamıştır. RFC 1945 HTTP 1.0'i, 1996 yılında, 60 sayfa tanımlamayla yayınlanmıştır. RFC2616 HTTP 1.1'i ise yalnızca 3 sene sonra 1999 da yayınlanmıştır ve önemli ölçüde artış göstererek 176 sayfaya çıkmıştır. Bununla birlikte, IETF bu spektrumdaki güncelleme üzerinde çalışırken bölünmüş ve altı belgeye dönüştürülmüştür(RFC7230 ve ailesi). HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve çok sayıda isteğe bağlı bölüm içermektedir.
+HTTP oluşturulduğunda ve dünyaya yayıldığında, muhtemelen basit ve anlaşılır bir protokol olarak algılanıyordu, fakat zaman bunun yanlış olduğunu kanıtladı. RFC 1945 HTTP 1.0'i, 1996 yılında, 60 sayfa tanımlamayla yayınlanmıştır. RFC2616 HTTP 1.1'i ise yalnızca 3 sene sonra 1999 da yayınlanmıştır ve önemli ölçüde artış göstererek 176 sayfaya çıkmıştır. Bununla birlikte, IETF bu spektrumdaki güncelleme üzerinde çalışırken bölünmüş ve altı belgeye dönüştürülmüştür(RFC7230 ve ailesi). HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve çok sayıda isteğe bağlı bölüm içermektedir.
 
 ## 2.2 Seçenekler dünyası
 
