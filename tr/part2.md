@@ -4,21 +4,21 @@ HTTP 1.1, İnternet'teki neredeyse her şey için kullanılan bir protokoldür. 
 
 ## 2.1 HTTP 1.1 devasadır
 
-HTTP oluşturulduğunda ve dünyaya yayıldığında, muhtemelen basit ve anlaşılır bir protokol olarak algılanıyordu, fakat zaman bunun yanlış olduğunu kanıtladı. RFC 1945 HTTP 1.0'i, 1996 yılında, 60 sayfa tanımlamayla yayınlanmıştır. RFC2616 HTTP 1.1'i ise yalnızca 3 sene sonra 1999 da yayınlanmıştır ve önemli ölçüde artış göstererek 176 sayfaya çıkmıştır. Bununla birlikte, IETF bu spektrumdaki güncelleme üzerinde çalışırken bölünmüş ve altı belgeye dönüştürülmüştür(RFC7230 ve ailesi). HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve çok sayıda isteğe bağlı bölüm içermektedir.
+HTTP oluşturulduğunda ve dünyaya yayıldığında, muhtemelen basit ve anlaşılır bir protokol olarak algılanıyordu, fakat zaman bunun yanlış olduğunu kanıtladı. RFC 1945'de HTTP 1.0, 1996'da yayınlanan 60 sayfalık bir beyannamedir. HTTP 1.1'i açıklayan RFC 2616, yalnızca 3 sene sonra 1999'da yayınlanmıştır ve önemli ölçüde artış göstererek 176 sayfaya yükselmiştir. Bununla birlikte, IETF bu beyannamenin güncellemesi üzerinde çalışırken, bu beyanname bölünmüş ve toplamda daha büyük sayfa sayısı ile altı dokümana dönüştürülmüş(RFC7230 ve ailesi ile sonuçlanır). Herhangi bir sayımla, HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve en azından çok sayıda isteğe bağlı parça içermektedir.
 
 ## 2.2 Seçenekler dünyası
 
-HTTP 1.1 in  bir çok detaya sahip yapısı ve sonraki eklentiler için de kullanılabilen seçenekleri, neredeyse hiçbir uygulamanın hiçbir zaman hiçbir yerde uygulayamayacağı bir yazılım ekosistemi haline getirmiştir ve "hiçbir şey" kavramının tam olarak ne olduğunu söylemek mümkün değildir. Bu, özelliklerin çok az sayıda olmasına ve çok az yararlanıldığı bir duruma neden oldu.
+HTTP 1.1'in daha sonraki uzantılar için kullanılabilecek çok sayıda minik ayrıntı ve seçeneğe sahip olma özelliği, neredeyse hiçbir uygulamanın hiçbir zaman hiçbir yerde uygulayamayacağı bir yazılım ekosistemi geliştirmiştir ve "hiçbir şey" kavramının tam olarak ne olduğunu söylemek mümkün değildir. Bu başlangıçta az kullanılan özelliklerin çok az sayıda uygulamanın yapıldığına ve özelliklerini uygulayanlardan çok az yararlanıldığı bir duruma neden oldu.
 
-Daha sonraları, sunucu ve istemciler bu tür özellikleri daha çok kullanmaya başladığında, bu "birlikte çalışabilirlik" sorununa neden oldu. HTTP boruhattı, bu tarz özelliklere birincil örnektir. 
+Daha sonraları, sunucu ve istemciler bu tür özelliklerin kullanımını arttırmaya başladığında, bu "birlikte çalışabilirlik" sorununa neden oldu. HTTP boruhattı, böyle bir özelliğin temel bir örneğidir. 
 
 ## 2.3 TCP’nin yetersiz kullanımı
 
-HTTP 1.1, TCP'nin sunduğu tüm gücü ve performansı tam olarak kullanmanın zor bir dönemini yaşamaktadır. HTTP istemcileri ve tarayıcılar, sayfa yükleme sürelerini azaltan çözümler bulmak için çok yaratıcı olmalıdır.
+HTTP 1.1, TCP'nin sunduğu tüm gücü ve performanstan tam anlamıyla yararlanan bir zorluk yaşıyor. HTTP istemcileri ve tarayıcılar, sayfa yükleme sürelerini azaltan çözümler bulmak için çok yaratıcı olmalıdır.
 
-Yıllar boyunca paralel olarak devam eden diğer girişimler TCP’nin bu kadar kolay değiştirilmediğini doğruladı ve bu yüzden hem TCP'yi hem de protokolleri geliştirmeye devam ediyoruz.
+Yıllar boyunca paralel olarak devam eden diğer girişimler TCP’nin bu kadar kolay değiştirilmediğini doğruladı ve bu nedenle hem TCP hem de protokolleri iyileştirmeye çalışıyoruz.
 
-Basitce söylemek gerekirse, TCP daha fazla veri göndermek veya almak ve boş sürelerden kaçınmak için daha iyi değerlendirilebilir. Sıradaki başlıklarda bu eksikliklerin bazıları vurgulanacaktır. 
+Basitce söylemek gerekirse, TCP daha fazla veri göndermek veya almak adına oluşabilecek duraklamalar ve boş sürelerden kaçınmak için daha iyi kullanılabilir. Sıradaki bölümlerde bu eksikliklerin bazıları vurgulanacaktır. 
 
 ## 2.4 Aktarım boyutları ve nesne sayısı
 
