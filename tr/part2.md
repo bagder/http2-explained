@@ -22,10 +22,9 @@ Basitce söylemek gerekirse, TCP daha fazla veri göndermek veya almak adına ol
 
 ## 2.4 Aktarım boyutları ve nesne sayısı
 
-Bugün Web'deki en popüler sitelerin bazılarına ve bunların ön sayfalarını indirmek için neye ihtiyaç olduğuna bakıldığında net bir model ortaya çıkıyor. Yıllar geçtikce alınan veri miktarı kademeli olarak 1.9MB'ın üzerine çıkmıştır.Burda daha önemli olan şey, her sayfayı görüntülemek için ortalama olarak yüzü aşkın bireysel kaynağa ihtiyaç duyulmasıdır.
+Bugün Web'deki en popüler sitelerin bazılarına ve bunların ön sayfalarını indirmek için neye ihtiyaç olduğuna bakıldığında net bir model ortaya çıkıyor. Yıllar geçtikce alınan veri yavaş yavaş 1.9MB'ın üzerine çıkmıştır. Bu bağlamda daha önemli olan şey, her sayfayı görüntülemek için ortalama olarak yüzü aşkın bireysel kaynağa ihtiyaç duyulmasıdır.
 
-Aşağıdaki grafiğin gösterdiği gibi, trend, bir süredir devam etmektedir ve yakın zamanda bunun değişeceğine dair hiç bir gösterge yoktur.
-Grafik toplam aktarım boyutunun büyümesini(yeşil olan) ve dünyadaki en populer web sitelerine gelen ortalama istek sayısını(kırmızı olan) göstermektedir.
+Aşağıdaki grafiğin gösterdiği gibi, eğilim bir süredir devam ediyor ve yakın zamanda bunun değişeceğine dair hiç bir gösterge yoktur. Grafik dünyadaki en popüler web sitelerine hizmet vermek için toplam aktarım boyutunun (yeşil renkte) ve ortalama olarak kullanılan toplam talep sayısının (kırmızı renkte) son dört yılda nasıl değiştiğini göstermektedir.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
@@ -35,9 +34,9 @@ Grafik toplam aktarım boyutunun büyümesini(yeşil olan) ve dünyadaki en popu
 
 HTTP 1.1'in gecikmeye karşı çok hassas olması, kısmen HTTP boruhattının buyuk bir kullanıcı oranına sahip olması ile ilgilidir.
 
-Geçtiğimiz birkaç yılda kullanıcılara mevcut bant genişliğinde büyük bir artış gösterse de, gecikmeyi azaltma yolunda aynı seviyede bir gelişmeye rastlamadık. Geçmişteki mobil teknolojiler gibi yüksek gecikme süresi olan bağlantılar, yüksek bant genişliği bağlantısı sağladı fakat bu dahi hızlı bir web deneyimi elde etmeyi mümkün kılmadı.
+Geçtiğimiz birkaç yılda kullanıcılara mevcut bant genişliğinde büyük bir artış gösterse de, gecikmeyi azaltma yolunda aynı seviyede bir gelişmeye rastlamadık. Geçmişteki mobil teknolojiler gibi yüksek gecikme süresi olan bağlantılar, yüksek bant genişliği bağlantısı sağladı fakat bu dahi iyi ve hızlı bir web deneyimi elde etmeyi mümkün kılmadı.
 
-Gerçekten düşük gecikmeye ihtiyaç duyan başka bir kullanım örneği video konferansı, oyunlar gibi video türleridir, ki bunlarda önceden oluşturulmuş akışlar yoktur.
+Gerçekten düşük gecikmeye ihtiyaç duyan başka bir kullanım örneği, video konferans, oyun ve benzeri türde videolardır, ki bunlarda önceden oluşturulmuş akışlar yoktur.
 
 ## 2.6. Satır başı engelleme
 
@@ -45,10 +44,10 @@ HTTP Boru Hattı, bir önceki isteğe yanıt beklerken başka bir istek gönderm
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 
-Satır seçimi konusunda dikkatli olabilirsiniz, bu yüzden doğru olduğunu gerçekten düşündüğünüz bir satırı seçebilirsiniz veya bazen kendinize ait yeni bir satırdan başlayabilirsiniz fakat bunun sonunda seçtiğiniz bu satırı değiştiremezsiniz.
+!!!Satır seçimi konusunda dikkatli olabilirsiniz, bu yüzden doğru olduğunu gerçekten düşündüğünüz bir satırı seçebilirsiniz veya bazen kendinize ait yeni bir satırdan başlayabilirsiniz fakat bunun sonunda seçtiğiniz bu satırı değiştiremezsiniz.!!!
 
-Yeni bir satır oluşturmak da bir performans ve kaynak cezasıyla ilişkilidir, bu yüzden daha küçük satır sayılarının ötesinde ölçeklenebilir değildir. Dolayısıyla bu da mükemmel bir çözüm değildir.
+Yeni bir satır oluşturmak da bir performans ve kaynak cezasıyla ilişkilidir, bu yüzden daha küçük satır sayılarının ötesinde ölçeklenebilir değildir. Bunun için mükemmel bir çözüm yoktur.
 
-Bugün bile(2015), çoğu masaüstü web tarayıcısında varsayılan olarak HTTP boru hattı devre dışı bırakılmıştır.
+Bugün bile, 2015, çoğu masaüstü web tarayıcısında varsayılan olarak HTTP boru hattı devre dışı bırakılmıştır.
 
-Ek olarak bu konu ile ilgili örnekler Firefox'un adresinde bulunur[bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+Bu konuyla ilgili ekler Firefox'un [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354) adresinde bulunur.
