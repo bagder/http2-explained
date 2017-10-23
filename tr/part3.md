@@ -5,9 +5,9 @@ Her zaman olduğu gibi sorunlarla karşı karşıya kaldıklarında, insanlar ge
 ## 3.1 Birleştirme
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/spriting.jpg" />
 
-Birleştirme, çok sayıda küçük görüntüyü tek bir büyük görüntü olması için bir araya getirdiğinizde bu durumu tanımlamak için sıklıkla kullanılan bir terimdir. Daha sonra javascript ve css gibi daha küçük parçalara kesmek için bu birleşim daha küçük parçalara bölünür, bu da kesme olarak ifade edilir.
+Birleştirme, çok sayıda küçük görüntüyü tek bir büyük görüntü olması için bir araya getirdiğinizde bu durumu tanımlamak için sıklıkla kullanılan bir terimdir. Ardından daha küçük olanlarını göstermek adına büyük resmin parçalarını kesmek için javascript'i veya CSS'yi kullanırsınız.
 
-Bir site bu hileyi hız için kullanır. HTTP 1.1'de Tek bir büyük görüntü elde etmek, 100 küçük görüntüyü tek tek bir araya getirmekten daha hızlıdır.
+Bir site bu hileyi hız için kullanır. HTTP 1.1'de tek bir büyük görüntü elde etmek, 100 küçük görüntüyü tek tek bir araya getirmekten daha hızlıdır.
 
 Tabi ki bu, sitenin yalnızca bir veya iki küçük resmi ve benzerlerini göstermek isteyen site sayfaları için dezavantajlara sahiptir. Aynı zamanda, muhtemelen en çok kullanılan resimlerin kalmasına izin vermek yerine, tüm resimleri aynı anda önbellekten çıkarılabilecek hale getirir.
 
