@@ -1,4 +1,4 @@
-# 11. http2 in curl
+# 11. curl içerisinde http2
 
 [curl projesi](http://curl.haxx.se/), Eylül 2013'ten beri deneysel http2 desteği sağlıyor.
 
@@ -8,7 +8,7 @@ curl, http2 çerçeve katmanı işlevselliği için ayrı kütüphane [nghttp2](
 
 Şu anda linux'da curl ve libcurl her zaman HTTP / 2 protokol desteği etkin değildir.
 
-## 11.1. HTTP 1.x look-alike
+## 11.1. HTTP 1.x benzerlikleri
 
 Dahili olarak, curl gelen HTTP2 üstbilgilerini HTTP 1.x stil üstbilgilerine dönüştürür ve kullanıcıya sunar; böylece mevcut HTTP'ye çok benzer görünürler. Bu, curl ve HTTP'yi bugün kullananlar için daha kolay bir geçiş sağlar. Benzer şekilde curl, giden üstbilgileri aynı stilde dönüştürür. Onları HTTP 1.x tarzında curl'e verin ve http2 sunucularıyla konuşurken bunları anında dönüştüreceksiniz. Böylece, kullanıcıların hat(wire) üzerinde gerçekten kullanılan belirli HTTP sürümleriyle uğraşmasına veya bakım yapmasına gerek kalmamaktadır.
 
