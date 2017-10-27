@@ -8,7 +8,6 @@ SPDY desteği sonunda ortadan kaldırılacaktır. Bir blog yazısında, şu şek
 
 ## 10.1. İlk olarak, etkinleştirildiğinden emin olun
 
-Enter “chrome://flags/#enable-spdy4" in your browser's address bar and click “enable” if it isn't already showing it as enabled.
 Tarayıcınızın adres çubuğuna “chrome://flags/#enable-spdy4" yazın ve etkinleştirilmiş olarak göstermiyorsa "etkinleştir" seçeneğini tıklayın.
 
 ## 10.2. TLS-only(Sadece-TLS)
