@@ -51,4 +51,4 @@ Yeni bir satır oluşturmak da bir performans ve kaynak cezasıyla ilişkilidir,
 
 Bugün bile(2015), çoğu masaüstü web tarayıcısında varsayılan olarak HTTP boru hattı devre dışı bırakılmıştır.
 
-Ek olarak bu konu ile ilgili örnekler Firefox'un adresinde bulunur[bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+Ek olarak bu konu ile ilgili örnekler Firefox'un adresinde bulunur [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
