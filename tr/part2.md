@@ -1,4 +1,4 @@
-# 2. Günümüzde HTTP 
+# 2. HTTP'nin Bugünü
 
 HTTP 1.1, İnternet'teki neredeyse her şey için kullanılan bir protokoldür. Bunun avantajlarından yararlanan protokollerde ve altyapıda büyük yatırımlar yapılmıştır, çünkü bugün kendiliğinden yeni şeyler yapmaktan çok, HTTP'nin üstünde çalışmak daha kolay olmaktadır.
 
