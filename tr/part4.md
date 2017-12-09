@@ -29,4 +29,3 @@ Grup, HTTPbis olarak adlandırıldı ve burada "bis" kısmı iki Latin alfabesin
 [SPDY](http://en.wikipedia.org/wiki/SPDY) Google tarafından geliştirilen ve öncülük eden bir protokoldür. Kesinlikle bunu açık alanda geliştirdiler ve herkesi katılmaya davet ettiler, ancak hem popüler bir tarayıcı uygulaması hem de iyi kullanılan servislere sahip önemli bir sunucu popülasyonu üzerinde kontrol sahibi olduklarından yararlandıkları açıktır.
 
 HTTPbis grubu http2 üzerinde çalışmaya başlamanın zamanı olduğuna karar verdiklerinde, SPDY zaten bir çalışma konsepti olduğunu kanıtlamıştı. İnternette konuşlandırmanın mümkün olduğunu göstermiş ve ne kadar iyi performansı olduğunu gösteren yayınlanmış rakamlar bulunmaktadır.  Http2 çalışması, temelde http2 taslak-00'a küçük bir arama ve değiştirme ile yapılan SPDY/3 taslağı ile başladı.
-  

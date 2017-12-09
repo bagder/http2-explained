@@ -2,7 +2,7 @@
 
 Firefox, taslakları yakından takip ediyor ve aylardır http2 test uygulamalarını sağlamıştır. Http2 protokolünün geliştirilmesi sırasında, istemciler ve sunucular, protokolün hangi taslak sürümü için testlerin uyguladıkları ile ilgili biraz can sıkıcı oldugu konusunda anlaşmıslardır.
 
-## 9.1. First, make sure it is enabled
+## 9.1. Öncelikle açık olduğuna emin olun.
 
 13 Ocak 2015 tarihinden itibaren piyasaya sürülen 35 sürümünden bu yana tüm Firefox sürümlerinde http2 desteği varsayılan olarak etkinleştirilmiştir.
 
@@ -12,7 +12,7 @@ Adres çubuğuna 'about: config' yazın ve "network.http.spdy.enabled.http2draft
 
 Firefox'un yalnızca TLS üzerinden http2 uyguladığını unutmayın. Firefox'da yalnızca https: // sitelerine giderken http2'yi göreceksiniz.
 
-## 9.3. Transparent!
+## 9.3. Şeffaf!
 
 ![transparent http2 use](https://raw.githubusercontent.com/bagder/http2-explained/master/images/firefox-screenshot.png)
 

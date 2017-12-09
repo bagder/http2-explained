@@ -38,9 +38,7 @@ Benzer şekilde, http2'nin TLS kullanırken zorunlu olması gereken şifrelerin 
 
 Next Protocol Negotiation (NPN), SPDY'yi TLS sunucularıyla pazarlık etmesi için kullanımış protokoldür. Uygun bir standart olmadığı için, IETF aracılığıyla oluşturuldu ve sonuç ALPN oldu: Application Layer Protocol Negotiation. SPDY istemcileri ve sunucuları hala NPN kullanırken, ALPN http2 tarafından kullanılmak üzere yükseltilmektedir. 
 
-The fact that NPN existed first and ALPN has taken a while to go through standardization has led to many early http2 clients and http2 servers implementing and using both these extensions when negotiating http2. Ayrıca SPDY için NPN kullanılır ve birçok sunucu hem SPDY hem de http2 sunar, bu nedenle bu sunucularda hem NPN hem de ALPN'yi desteklemek mantıklıdır.
-
-ALPN, öncelikle kimin hangi protokolü kullanacağına karar vermesinde NPN'den farklıdır. ALPN ile istemci sunucuya kendi tercih sırasına göre bir protokol listesi verir ve sunucu, NPN ile istemci son seçim yaparken, istediği protokolü tercih eder.
+NPN'nin önce varolduğu ve ALPN'nin standardizasyona geçmesi biraz zaman aldığından, http2 müzakere ederken çok erken http2 istemcileri ve http2 sunucuları uygulamakta ve bu uzantıları kullanmaya başlamıştır. Ayrıca SPDY için NPN kullanılır ve birçok sunucu hem SPDY hem de http2 sunar, bu nedenle bu sunucularda hem NPN hem de ALPN'yi desteklemek mantıklıdır.
 
 ## 5.4. http:// için http2
 

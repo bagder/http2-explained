@@ -12,11 +12,7 @@ http2, çerçevelemeyi çok daha kolay hale getirmek için ikilidir. Çerçevele
 
 Ayrıca, gerçek protokol bölümlerini çerçeveden ayırmak daha kolaydır, ki HTTP1 karmaşıktır.
 
-The fact that the protocol features compression and will often run over TLS also diminishes the value of text, since you won't see text over the wire anyway. We simply have to get used to the idea of using something like a Wireshark inspector to figure out exactly what's going on at the protocol level in http2.
-
 Protokolün sıkıştırma özelliğine sahip olması ve genellikle TLS ile çalışması da, metnin önemini düşürür; zira yine de hat üzerinde metin görmezsiniz. Http2'deki protokol seviyesinde neler olduğunu tam olarak anlamak için bir Wireshark gibi ağdaki paketler inceleyebileceğiniz bir ygulama kullanma fikrine alışmamız yeterlidir.
-
-Debugging this protocol will probably have to be done with tools like curl, or by analyzing the network stream with Wireshark's http2 dissector and similar.
 
 Bu protokolün hata ayıklamasının muhtemelen curl gibi araçlarla veya ağ akışının Wireshark ve benzerleriyle analiz ederek yapılması gerekecektir.
 
@@ -26,8 +22,6 @@ Bu protokolün hata ayıklamasının muhtemelen curl gibi araçlarla veya ağ ak
 
 http2, ikili çerçeveler gönderir. Gönderilebilen farklı çerçeve türleri de vardır ve hepsi aynı ayarlara sahiptir: Uzunluk, Tip, Bayraklar, Akış Tanımlayıcı ve çerçeve yükü.
 
-There are ten different frame types defined in the http2 spec and perhaps the two most fundamental ones that map to HTTP 1.1 features are DATA and HEADERS. I'll describe some of the frames in more detail further on.
-
 Http2 beyannamesinde tanımlanan on farklı çerçeve türü vardır ve HTTP 1.1 özelliklerine eşleyen iki temel çerçeve VERİ ve BAŞLIK'tır. Çerçevelerin bazılarını daha ayrıntılı olarak açıklayacağım.
 
 ## 6.3. Çoklu akışlar
@@ -35,8 +29,6 @@ Http2 beyannamesinde tanımlanan on farklı çerçeve türü vardır ve HTTP 1.1
 Önceki bölümde bahsedilen Akım Tanımlayıcı, http2 üzerinden gönderilen her kareyi bir "akış" ile ilişkilendirir. Akış, http2 bağlantısı içinde istemci ve sunucu arasında değiştirilen bağımsız, çift yönlü bir çerçeve dizisidir.
 
 Tek bir http2 bağlantısı,eşzamanlı birden fazla açık akış içerebilir; bu uç noktalarda çoklu akışlardan çerçeveler araya girebilir. Akışlar kurulabilir ve tek taraflı olarak kullanılabilir veya istemci veya sunucu tarafından paylaşılabilir ve iki uç nokta tarafından da kapatılabilir. Çerçevelerin bir akış içinde gönderilme sırası önemlidir. Alıcılar, çerçeveleri aldığı sıraya göre işlerler.
-
-Multiplexing the streams means that packages from many streams are mixed over the same connection. Two (or more) individual trains of data are made into a single one and then split up again on the other side. Here are two trains:
 
 Akışların çoğullaması, birçok akıştan gelen paketlerin aynı bağlantı üzerinden karışabilmesi anlamına gelir. İki bireysel tren tek bir tren haline gelebilir ve daha sonra diğer tarafta tekrar ayrılabilir.
 
@@ -69,8 +61,6 @@ HTTP 1.1 istek boyutları o kadar büyük oluyor ki bazen ilk TCP penceresinden 
 
 HTTPS ve SPDY sıkıştırmasının [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) ve [CRIME](http://en.wikipedia.org/wiki/CRIME) saldırılarına karşı savunmasız olduğu tespit edildi. Bilinen metni akışa çıktıyı ekleyerek, nasıl değiştirdiğini öğrenebilir, böylece saldırgan şifreli bir yükte gönderileni anlamaya çalışabilir.
 
-Doing compression on dynamic content for a protocol - without becoming vulnerable to one of these attacks - requires some thought and careful consideration. This is what the HTTPbis team tried to do.
-
 Bir protokol için dinamik içeriğe sıkıştırma yapmak biraz düşünülmesi ve dikkatli olması gereken bir konudur(saldırılardan birine karşı savunmasız hale gelmeden yapılır). HTTPbis ekibi bunu yapmaya çalıştı.
 
 [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK(adından da anlaşılacağı gibi), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. Yeni format, diğer karşı ölçümlerle(belirli bir üstbilgiyi ve çerçevelerin dolgusunu(adding) sıkıştırmamasını sağlayan bir bit gibi), sıkıştırmanın kullanılmasını zorlaştırır.
@@ -98,7 +88,5 @@ Sunucu itme, istemcinin sunucuya açıkça izin vermesi gereken bir özelliktir.
 ## 6.8. Akış kontrolü
 
 Her bir http2 akışının kendi akış penceresi vardır, bu pencerede diğer ucun veri göndermesine izin verilir. SSH'ın nasıl çalıştığını biliyorsanız, çok benzerolduğunu göreceksiniz.
-
-For every stream, both ends have to tell the peer that it has enough room to handle incoming data, and the other end is only allowed to send that much data until the window is extended. Only DATA frames are flow controlled.
 
 Her bir akış için, iki uçun da gelen veriyi işlemek için yeterli alana sahip olup omadığı veya diğer uçta yalnızca pencere genişletilinceye kadar belirli miktarda veri gönderilmesine izin verilebileceği gibi durumları bildirmeye hakları vardır. Sadece VERİ çerçeveleri akış kontrollüdür.

@@ -44,7 +44,7 @@ HTTP Boru Hattı, bir önceki isteğe yanıt beklerken başka bir istek gönderm
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 
-!!!Satır seçimi konusunda dikkatli olabilirsiniz, bu yüzden doğru olduğunu gerçekten düşündüğünüz bir satırı seçebilirsiniz veya bazen kendinize ait yeni bir satırdan başlayabilirsiniz fakat bunun sonunda seçtiğiniz bu satırı değiştiremezsiniz.!!!
+Satır seçimi konusunda dikkatli olabilirsiniz, bu yüzden doğru olduğunu gerçekten düşündüğünüz bir satırı seçebilirsiniz veya bazen kendinize ait yeni bir satırdan başlayabilirsiniz fakat bunun sonunda seçtiğiniz bu satırı değiştiremezsiniz.
 
 Yeni bir satır oluşturmak da bir performans ve kaynak cezasıyla ilişkilidir, bu yüzden daha küçük satır sayılarının ötesinde ölçeklenebilir değildir. Bunun için mükemmel bir çözüm yoktur.
 

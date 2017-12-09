@@ -15,6 +15,7 @@ Tabi ki bu, sitenin yalnızca bir veya iki küçük resmi ve benzerlerini göste
 
 İçerilme, resimleri tek tek göndermekten kaçınmanın diğer bir hilesidir ve bu verileri kullanarak yapılır. Kaynak Konumlandırıcılar(URLs) css dosyalarında gömülmüştür. Bu birleştirme olayında olduğu gibi benzer faydalara ve zararlara sahiptir.
 
+
     .icon1 {
         background: url(data:image/png;base64,<data>) no-repeat;
     }
