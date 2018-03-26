@@ -29,4 +29,3 @@ Bu tür bir çerçeve, gönderilecek veriler olduğunda ancak akış denetimi he
 Çerçeve bir uzantı haline gelmeden önce taslak-12'den bir alıntı:
 
 > “Deneyi kolaylaştırmak için BLOKELİ çerçeve bu taslak sürüme dahil edilmiştir. Deney sonuçları olumlu geri bildirim sağlamıyorsa kaldırılabilir.”
-

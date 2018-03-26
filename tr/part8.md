@@ -140,4 +140,3 @@ Google, Twitter ve Facebook dahil olmak üzere yakında http2 sunacak pek çok b
 HAProxy, Squid ve Varnish de dahil olmak üzere en büyük proxy sunucularından bazıları, http2'yi destekleme niyetlerini ifade ettiler.
 
 2015 yılına kadar, http2 olan trafik miktarı artıyor. Google, yaklaşık% 18 oranında gelen HTTP / 2'yi görürken, Eylül ayının başında Firefox 40'ın kullanımı tüm HTTP trafiğinin% 13'ünde, tüm HTTPS trafiğinin% 27'sinde gerçekleşti. Google'ın, http2 kullanım düzeylerini başka türlü olabildiğince düşük kılan diğer yeni protokol deneylerini de çalıştırdığı unutulmamalıdır (bkz. QUIC 12.1).
-
