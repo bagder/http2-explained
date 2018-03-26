@@ -27,7 +27,7 @@ http2 в Chrome в действии только зайдя на https:// сай
 
 ## 10.3. Визуализируйте HTTP/2
 
-Существует плагины для Chrome, которые  помогает отобразить то, что сайт
+Существуют плагины для Chrome, которые помогают отобразить то, что сайт
 использует HTTP/2. Один из них называется [«Индикатор
 SPDY»](https://chrome.google.com/webstore/detail/spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin).
 
