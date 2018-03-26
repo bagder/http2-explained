@@ -2,7 +2,7 @@
 
 Inspiração e imagem de pacote no formato de Lego de Mark Nottingham.
 
-Dados de tendência HTTP vêm do http://httparchive.org.
+Dados de tendência HTTP vêm do https://httparchive.org/.
 
 O gráfico RTT vem de apresentações feitas por Mike Belshe.
 

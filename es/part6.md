@@ -60,11 +60,11 @@ El tamaño en la peticiones HTTP 1.1 ha ido haciéndose tan grande en los últim
 
 ### 6.5.1. La compresión tiene truco
 
-Las compresiones HTTPS y SPDY han resultado ser vulnerables a ataques [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) y [CRIME](http://en.wikipedia.org/wiki/CRIME). Insertando texto conocido en el flujo, y averiguando que es lo que cambio en el resultado comprimido, un atacante puede averiguar que se está enviando.
+Las compresiones HTTPS y SPDY han resultado ser vulnerables a ataques [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) y [CRIME](https://en.wikipedia.org/wiki/CRIME). Insertando texto conocido en el flujo, y averiguando que es lo que cambio en el resultado comprimido, un atacante puede averiguar que se está enviando.
 
 Hacer compresión en contenido dinámico para un protocolo evitando las vulnerabilidades de estos dos ataques, requiere reflexiones y consideraciones cuidadosas. Esto es lo que el grupo HTTPbis intenta hacer.
 
-Se introduce [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2, que – como sugiere adecuadamente su nombre – es un formato de compresión especialmente diseñado para cabeceras http2 y estrictamente hablando, está siendo especificado en otro borrador separado de Internet. El nuevo formato, junto con otras contra-medidas como un bit que solicita a los intermediarios no comprimir una cabecera específica o el desplazamiento opcional de tramas deberían hacer mucho más difícil llegar a romper esta compresión.
+Se introduce [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2, que – como sugiere adecuadamente su nombre – es un formato de compresión especialmente diseñado para cabeceras http2 y estrictamente hablando, está siendo especificado en otro borrador separado de Internet. El nuevo formato, junto con otras contra-medidas como un bit que solicita a los intermediarios no comprimir una cabecera específica o el desplazamiento opcional de tramas deberían hacer mucho más difícil llegar a romper esta compresión.
 
 En palabras de Roberto Peon (uno de los creadores de HPACK):
 

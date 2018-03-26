@@ -12,7 +12,7 @@ Avec http2 adopté, on peut suspecter que les connexions TCP seront plus longues
 
 Cela affectera comment les load balancers HTTP réagissent quand un site voudra que les utilisateurs se connectent sur un autre host, pour des raisons de performance ou pour réaliser une maintenance.
 
-Le serveur enverra alors [l'en-tête Alt-Svc:](http://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07) (ou la trame http2 ALTSVC) pour indiquer au client un service alternatif. Une autre route pour le même contenu, utilisant un autre service, host et numéro de port.
+Le serveur enverra alors [l'en-tête Alt-Svc:](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07) (ou la trame http2 ALTSVC) pour indiquer au client un service alternatif. Une autre route pour le même contenu, utilisant un autre service, host et numéro de port.
 
 Un client est alors susceptible d'essayer de se connecter à ce service de manière asynchrone et n'utiliser que celui-ci s'il fonctionne.
 

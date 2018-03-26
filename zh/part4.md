@@ -22,11 +22,11 @@ HTTPbis工作组（我们待会儿再解释这个名字）在2007年夏天成立
 
 ### 4.1.1. 名字中的“bis”
 
-工作组名字中的“bis”来自拉丁语中表示[“二”](http://en.wiktionary.org/wiki/bis#Latin)的副词，Bis通常被IETF用作名字的后缀来以表示标准的升级或者一些二次工作，比如这里是针对HTTP1.1。
+工作组名字中的“bis”来自拉丁语中表示[“二”](https://en.wiktionary.org/wiki/bis#Latin)的副词，Bis通常被IETF用作名字的后缀来以表示标准的升级或者一些二次工作，比如这里是针对HTTP1.1。
 
 ## 4.2. 起源于SPDY的http2
 
-[SPDY](http://en.wikipedia.org/wiki/SPDY)是由Google牵头开发的协议。他们将其开源，使得每个人都可以参与开发。但很明显，他们通过控制浏览器的实现和享用着优质服务的大量用户来获益。<!-- 这一句段翻译的怪怪的 -->
+[SPDY](https://en.wikipedia.org/wiki/SPDY)是由Google牵头开发的协议。他们将其开源，使得每个人都可以参与开发。但很明显，他们通过控制浏览器的实现和享用着优质服务的大量用户来获益。<!-- 这一句段翻译的怪怪的 -->
 
 当HTTPbis小组决定开始制定http2的时候，SPDY已经充分证实了它是一个非常好用的方案。当时已经有人在互联网上成功部署SPDY，并且也有一些文章讨论他的性能。因此，http2便基于SPDY/3草案进行一些修改之后发布了http2的draft-00。
 

@@ -2,7 +2,7 @@
 
 발상과 패키지 형식의 레고 이미지는 Mark Nottingham.
 
-HTTP 트렌드 데이터는 http://httparchive.org 에서 참고하였습니다.
+HTTP 트렌드 데이터는 https://httparchive.org/ 에서 참고하였습니다.
 
 RTT 그래프는 Mike Belshe의 프레젠테이션에서 참고하였습니다.
 

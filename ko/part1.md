@@ -4,7 +4,7 @@
 2014년 4월 스톡홀롬에서 Daniel이 제출하며 시작되고 이후 세밀하고 정확한 설명으로 가득찬 문서로 전환되고 확장되었습니다.
 
 2015년 5월 발행된 http2의 최종명세의 정식 명칭은 RFC 7540 입니다.
-http://www.rfc-editor.org/rfc/rfc7540.txt
+https://www.rfc-editor.org/rfc/rfc7540.txt
 
 이 문서에 있는 잘못된 내용들은 모두 나의 결점에서 나온것입니다. 따라서 잘못된 부분은 언제든지 지적해주시기 바라며, 지속적으로 갱신되고 수정될 것입니다.
 
@@ -20,21 +20,21 @@ http://www.rfc-editor.org/rfc/rfc7540.txt
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 도와주세요!
 
 만약 이 문서를 보고 있는 당신이 잘못 된 정보나 누락, 주제넘은 내용을 찾는다면 저에게 해당 문맥을 수정, 최신화 하여 보내주신다면 저는 해당 버젼으로 반영하겠습니다. 저는 이 프로젝트를 돕는 모두에게 적당한 명예적인 보상을 드리겠습니다. 저는 오랜 시간동안 이 문서가 더 나아지길 바랍니다.
 
-이 문서는 이 사이트에서 보실 수 있습니다. [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+이 문서는 이 사이트에서 보실 수 있습니다. [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 ## 1.3 라이센스
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-이 문서는 Creative commons Attribution 4.0에 해당하고 해당 라이센스는 http://creativecommons.org/licenses/by/4.0/ 여기서 확인하실 수 있습니다.
+이 문서는 Creative commons Attribution 4.0에 해당하고 해당 라이센스는 https://creativecommons.org/licenses/by/4.0/ 여기서 확인하실 수 있습니다.
 
 ## 1.4 이 문서의 역사
 

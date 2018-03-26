@@ -12,7 +12,7 @@ Http2'nin kabulüyle, TCP bağlantılarının çok daha uzun olacağından ve HT
 
 Bir site müşterisinin başka bir barındırıcıya bağlanmasını önerdiğinde bu durum HTTP yük dengeleyicilerin çalışmasının etkilenmesine yol acabilir. Bu durum, performans nedenleriyle veya bakım vb. için olabilir.
 
-Sunucu, müşteriye alternatif bir servis[Alt-Svc: header](http://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-10) (yada http2 ile birlikte ALTSVC çerçevesi) hakkında bilgi vererek gönderir: aynı içeriğe başka bir rota, başka bir servis, ana makine ve port numarası kullanarak.
+Sunucu, müşteriye alternatif bir servis[Alt-Svc: header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-10) (yada http2 ile birlikte ALTSVC çerçevesi) hakkında bilgi vererek gönderir: aynı içeriğe başka bir rota, başka bir servis, ana makine ve port numarası kullanarak.
 
 Bir istemci daha sonra bu hizmete eşzamansız olarak bağlanmaya çalışmalı ve yeni bağlantı başarılı olursa alternatifi kullanmalıdır.
 

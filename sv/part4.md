@@ -49,7 +49,7 @@ som i fallet för HTTP 1.1.
 
 ## 4.2. http2 började från SPDY
 
-[SPDY](http://en.wikipedia.org/wiki/SPDY) är ett protokoll som utvecklades och
+[SPDY](https://en.wikipedia.org/wiki/SPDY) är ett protokoll som utvecklades och
 togs fram av Google. De utvecklade det visserligen öppet och bjöd in alla som
 vill att delta, men det var tydligt att de utnyttjade sin situation med att
 kontrollera både en populär webbläsare och ett signifikant server-bestånd med

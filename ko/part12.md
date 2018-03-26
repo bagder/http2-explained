@@ -20,4 +20,4 @@ QUIC은 연결을 빠르게 할 수 있습니다.  HTTP/2는 패킷 손실에 �
 다른 네트워크 인터페이스를 동시에 연결 유지도 가능합니다. 즉 MPTCP이 해결 하려고 하는 문제의 영역까지 커버하려 합니다.
 
 QUIC은 현재 Google이 Chrome과 Google 서버에만 구현 되어 있습니다. 코드는 쉽게 재사용 할 수 있는 형태가 되어 있지 않습니다.
-libquic라는 프로젝트가 그것을 실현 하려고 하고 있습니다. 프로토콜은 초안으로 [libquic](https://github.com/devsisters/libquic) 전송 워킹 그룹에 [제출](http://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) 되었습니다 .
+libquic라는 프로젝트가 그것을 실현 하려고 하고 있습니다. 프로토콜은 초안으로 [libquic](https://github.com/devsisters/libquic) 전송 워킹 그룹에 [제출](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) 되었습니다 .

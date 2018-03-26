@@ -2,7 +2,7 @@
 
 Mark Nottingham'dan ilham ve paket formatı Lego görüntüsü.
 
-HTTP eğilim verileri http://httparchive.org'dan gelir.
+HTTP eğilim verileri https://httparchive.org/'dan gelir.
 
 RTT grafiği, Mike Belshe tarafından yapılan sunumlardan geliyor.
 

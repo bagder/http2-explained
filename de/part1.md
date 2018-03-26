@@ -5,7 +5,7 @@ Dieses Dokument beschreibt den technischen Aufbau und das Protokoll http2.
 Was als Präsentation im April 2014 in Stockholm anfing wurde daraufhin zu einer detaillierten Dokumentation und fügte einige sachgerechte Erklärungen hinzu
 
 RFC 7540 ist der offizielle Standard der letzten Spezifikation von http2. Am 15. Mai 2015 wurde diese veröffentlicht.
-URL: http://www.rfc-editor.org/rfc/rfc7540.txt
+URL: https://www.rfc-editor.org/rfc/rfc7540.txt
 
 Jegliche Fehler in diesem Dokument basieren auf meinem Verständnis der Materie. Ich bin offen für jede Korrektur welche beim update auf eine neue Version behoben wird.
 
@@ -20,21 +20,21 @@ Der Name des original Autors ist Daniel Stenberg welcher für Mozilla arbeitet. 
 
  Twitter: [@bagder](https://twitter.com/bagder)
 
- Web: [daniel.haxx.se](http://daniel.haxx.se/)
+ Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
- Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+ Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 Hilfe!
 
 Falls du Fehler, Missverständnisse oder offensichtliche Lügen in diesem Dokument findest sende mir bitte eine verbesserte Version des betroffene Paragrafen und Ich erstelle eine novelliert Version des Dokumentes. Du wirst natürlich als Autor ordnungsgemäß als Mitautor aufgelistet. Ich hoffe damit dieses Dokument mit der Zeit immer wieder zu verbessern.
 
-Dieses Dokument ist unter der folgenden URL verfügbar. [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+Dieses Dokument ist unter der folgenden URL verfügbar. [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 ## 1.3 Lizenz
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-Dieses Dokument ist unter der „Creative Commons Attribution 4.0“ Lizenz veröffentlicht: http://creativecommons.org/licenses/by/4.0/
+Dieses Dokument ist unter der „Creative Commons Attribution 4.0“ Lizenz veröffentlicht: https://creativecommons.org/licenses/by/4.0/
 
 ## 1.4 Dokument Historie 
 

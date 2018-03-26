@@ -1,6 +1,6 @@
 # 11. curl içerisinde http2
 
-[curl projesi](http://curl.haxx.se/), Eylül 2013'ten beri deneysel http2 desteği sağlıyor.
+[curl projesi](https://curl.haxx.se/), Eylül 2013'ten beri deneysel http2 desteği sağlıyor.
 
 curl ruhu içinde, mümkün olduğunca http2'nin her yönünü desteklemeyi düşünüyoruz. curl sıklıkla bir test aracı ve web sitelerinde takla(poke on) atmanın yolu olarak kullanılır ve bunu http2 için de tutmak niyetindeyiz.
 
@@ -34,18 +34,18 @@ Uygulamanız normal gibi https: // veya http: // URL'leri kullanıyor ancak libc
 
 ### 11.5.2 Çoğullama
 
-Libcurl mevcut davranışları büyük ölçüde korumaya çalıştığından, uygulamanız için [CURLMOPT_PIPELINING](http://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html) seçeneği ile HTTP / 2 çoğullama özelliğini etkinleştirmeniz gerekir. Aksi takdirde, her bağlantı için bir defada bir istek kullanmaya devam edecektir.
+Libcurl mevcut davranışları büyük ölçüde korumaya çalıştığından, uygulamanız için [CURLMOPT_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html) seçeneği ile HTTP / 2 çoğullama özelliğini etkinleştirmeniz gerekir. Aksi takdirde, her bağlantı için bir defada bir istek kullanmaya devam edecektir.
 
 Another little detail to keep in mind is that if you ask for several transfers
 at once with libcurl, using its multi interface, an applicaton can very well
 start any number of transfers at once and if you then rather have libcurl wait
 a little to add them all over the same connection rather than opening new
 connections for all of them at once, you use the
-[CURLOPT_PIPEWAIT](http://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) option
+[CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) option
 for each individual transfer you rather wait.
 
-Akılda tutulması gereken diğer bir küçük ayrıntı da, bir seferde libcurl ile çoklu aktarım isterseniz, çoklu arayüzü kullanmak, bir uygulama aynı anda herhangi bir sayıda aktarmaya başlayabilir ve daha sonra libcurl'yı eklemek için biraz beklemek zorunda kalırsanız hepsinin aynı anda birden fazla bağlantı kurmasına değil, aynı bağlantıya her seferinde beklediğiniz her bir aktarım için [CURLOPT_PIPEWAIT] [CURLOPT_PIPEWAIT](http://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) seçeneğini kullanabilirsiniz.
+Akılda tutulması gereken diğer bir küçük ayrıntı da, bir seferde libcurl ile çoklu aktarım isterseniz, çoklu arayüzü kullanmak, bir uygulama aynı anda herhangi bir sayıda aktarmaya başlayabilir ve daha sonra libcurl'yı eklemek için biraz beklemek zorunda kalırsanız hepsinin aynı anda birden fazla bağlantı kurmasına değil, aynı bağlantıya her seferinde beklediğiniz her bir aktarım için [CURLOPT_PIPEWAIT] [CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) seçeneğini kullanabilirsiniz.
 
 ### 11.5.3 Sunucu itme
 
-libcurl 7.44.0 ve sonrası, HTTP / 2 sunucu itme özelliğini destekler. [CURLMOPT_PUSHFUNCTION](http://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html) seçeneği ile bir geri arama geri alma kurarak bu özelliğin avantajından yararlanabilirsiniz. Baskı uygulama tarafından kabul edilirse, başka herhangi bir aktarımda olduğu gibi, CURL kolay işleyici olarak yeni bir aktarım oluşturacak ve içeriği teslim edecektir.
+libcurl 7.44.0 ve sonrası, HTTP / 2 sunucu itme özelliğini destekler. [CURLMOPT_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html) seçeneği ile bir geri arama geri alma kurarak bu özelliğin avantajından yararlanabilirsiniz. Baskı uygulama tarafından kabul edilirse, başka herhangi bir aktarımda olduğu gibi, CURL kolay işleyici olarak yeni bir aktarım oluşturacak ve içeriği teslim edecektir.

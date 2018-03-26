@@ -76,7 +76,7 @@ curl и libcurl поддерживают как незащищённый http2, 
 одну из нескольких TLS-библиотек.
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
-Server](http://trafficserver.apache.org/) и [nghttp2](https://nghttp2.org/)
+Server](https://trafficserver.apache.org/) и [nghttp2](https://nghttp2.org/)
 выпустили сервера с открытым исходным кодом с поддержкой http2.
 
 ### 8.3.1. Отсутствующие реализации
@@ -142,7 +142,7 @@ Google публично
 как один из источников по теме.
 
 Телекомы и другие сетевые операторы, например ATIS Open Web Alliance,
-утверждают, что им [нужен нешифрованный трафик](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf), чтобы осуществлять кэширование,
+утверждают, что им [нужен нешифрованный трафик](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf), чтобы осуществлять кэширование,
 сжатие и другие технологии, требуемые для быстрой работы через спутники, в
 самолётах и подобных системах.
 
@@ -180,11 +180,11 @@ http2 не обязывает использовать TLS, поэтому мы 
 SPDY?»](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)
 людьми из университета Вашингтона и [«Оценка производительности веб-серверов с
 поддержкой
-SPDY»](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers)
+SPDY»](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers)
 Херва Серви) и подобные эксперименты был повторены также и для http2. Ждём
 дальнейших публикаций подобных тестов и экспериментов. [Первый базовый тест,
 проведёный в
-httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2),
+httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2),
 обнадёживает, что HTTP/2 сдерживает свои обещания.
 
 ### 8.4.7. “Он содержит нарушения независимости слоёв”

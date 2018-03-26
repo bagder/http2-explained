@@ -44,7 +44,7 @@ Firefox一直紧跟最新的协议，Twitter也紧追不舍提供了基于http2�
 
 而Apache HTTPD服务器也实现了一个名为[mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html)的http2模块，并与2015年10月9号在2.4.17的版本中发布。
 
-此外，[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/), [Caddy](http://caddyserver.com/) 以及 [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview) 也都发布了可以工作于http2下的服务器。
+此外，[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/), [Caddy](https://caddyserver.com/) 以及 [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview) 也都发布了可以工作于http2下的服务器。
 
 ### 8.3.3 其他
 
@@ -76,9 +76,9 @@ Wireshark同样支持了http2, 所以用它来分析http2网络数据流着实�
 
 ### 8.4.4. “TLS让速度变得更慢”
 
-这个评价在某种程度上是对的。虽然TLS的握手确实增加了额外的开销，但也有越来越多的方案提出来减少TLS往返的时间。使用TLS而不是纯文本带来的开销是显著的，有可观证据表明，和传输同样的流量相比，TLS会消耗更多的CPU和其他资源。具体影响有多大以及怎么影响是一个和具体测量有关的课题。更多的例子可以参看[istlsfastyet.com](http://istlsfastyet.com)。
+这个评价在某种程度上是对的。虽然TLS的握手确实增加了额外的开销，但也有越来越多的方案提出来减少TLS往返的时间。使用TLS而不是纯文本带来的开销是显著的，有可观证据表明，和传输同样的流量相比，TLS会消耗更多的CPU和其他资源。具体影响有多大以及怎么影响是一个和具体测量有关的课题。更多的例子可以参看[istlsfastyet.com](https://istlsfastyet.com/)。
 
-Telecom和一些其他网络服务商，例如ATIS开放网络联盟，表示为了为卫星、飞机等提供的快速网络体验，他们需要一些[不加密的流量](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf )来提供caching，压缩和其他技术。
+Telecom和一些其他网络服务商，例如ATIS开放网络联盟，表示为了为卫星、飞机等提供的快速网络体验，他们需要一些[不加密的流量](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf )来提供caching，压缩和其他技术。
 
 由于http2并不强制要求使用TLS，所以我们不应该为此担心。
 
@@ -96,7 +96,7 @@ Telecom和一些其他网络服务商，例如ATIS开放网络联盟，表示为
 
 ### 8.4.6. “它根本没有比HTTP/1.1快”
 
-当然，到底该如何定义和衡量“快”就是另外一个话题了，但在SPDY的时代，已经有很多实验证明了该协议会让浏览器载入页面变得更快（例如华盛顿大学的[“SPDY有多快？”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)和Hervé Servy的[“评估启用SPDY后的Web服务器的性能”](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers/)），同样这些实验也可以被用来证明http2。我期待能有越来越多的诸如此类的测试实验结果发布。而这篇文章[httpwatch.com的一个简单测试](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2/)亦能证明HTTP/2名副其实。<!-- 那一句“我也期待XX”放在那怪怪的 -->
+当然，到底该如何定义和衡量“快”就是另外一个话题了，但在SPDY的时代，已经有很多实验证明了该协议会让浏览器载入页面变得更快（例如华盛顿大学的[“SPDY有多快？”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)和Hervé Servy的[“评估启用SPDY后的Web服务器的性能”](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers/)），同样这些实验也可以被用来证明http2。我期待能有越来越多的诸如此类的测试实验结果发布。而这篇文章[httpwatch.com的一个简单测试](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2/)亦能证明HTTP/2名副其实。<!-- 那一句“我也期待XX”放在那怪怪的 -->
 
 
 ### 8.4.7. “它违反了网络分层”

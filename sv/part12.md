@@ -31,5 +31,5 @@ QUIC är än så länge bara implementerat av Google i Chrome och deras servrar,
 och den koden är inte lätt att återanvända på andra ställen, även om det finns
 ett [libquic](https://github.com/devsisters/libquic) som försöker precis det.
 Protokollet har skrivits ner som en [internet
-draft](http://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) inom IETFs
+draft](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) inom IETFs
 transportarbetsgrupp.

@@ -26,12 +26,12 @@ Alguns dos agentes principais no ramo de HTTP não estiveram nos debates e reuni
 
 ### 4.1.1. A parte "bis" do nome
 
-O grupo chama-se HTTPbis de onde a parte "bis" vem do [advérbio de Latim dois ](http://en.wiktionary.org/wiki/bis#Latin). Bis é usado vulgarmente como sufixo ou parte do nome no IETF para uma actualização ou uma segunda revisão da especificação. Tal como no caso do HTTP 1.1.
+O grupo chama-se HTTPbis de onde a parte "bis" vem do [advérbio de Latim dois ](https://en.wiktionary.org/wiki/bis#Latin). Bis é usado vulgarmente como sufixo ou parte do nome no IETF para uma actualização ou uma segunda revisão da especificação. Tal como no caso do HTTP 1.1.
 
 
 ## 4.2. http2 começou com o SPDY
 
-[SPDY](http://en.wikipedia.org/wiki/SPDY) é um protocolo encabeçado e desenvolvido pela Google. Eles certamente que o desenvolveram abertamente ao mundo e convidaram toda a gente a participar mas era obvio que iriam beneficiar se fosse controlado por ambas implementações nos browsers e uma população significante de servidores que sejam muito utilizados.
+[SPDY](https://en.wikipedia.org/wiki/SPDY) é um protocolo encabeçado e desenvolvido pela Google. Eles certamente que o desenvolveram abertamente ao mundo e convidaram toda a gente a participar mas era obvio que iriam beneficiar se fosse controlado por ambas implementações nos browsers e uma população significante de servidores que sejam muito utilizados.
 
 Quando o grupo HTTPbis decidiu que era tempo de começar a trabalhar no http2, o SPDY ja tinha demonstrado que era um conceito que funcionava. Mostrou que era possível implementar na Internet e havia números publicados que provavam a sua performance. O trabalho http2 começou subsequentemente depois do rascunho do SPDY/3 que era basicamente o rascunho http2 draft-00 com um pouco de mudanças. 
   

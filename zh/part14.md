@@ -2,7 +2,7 @@
 
 介绍数据包格式的乐高图片来自于Mark Nottingham，感谢他给我提供的灵感。
 
-HTTP趋势数据来自http://httparchive.org。
+HTTP趋势数据来自https://httparchive.org/。
 
 RTT图来自Mike Belshe的演讲。
 

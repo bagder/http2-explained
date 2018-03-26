@@ -61,11 +61,11 @@ As requisições HTTP 1.1 tem realmente crescido tanto de tamanho que às vezes 
 
 ### 6.5.1. Compressão é um assunto complicado
 
-A compressão de HTTPS e SPDY foi descoberta vulnerável aos ataques [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) e [CRIME](http://en.wikipedia.org/wiki/CRIME). Inserindo um texto conhecido no fluxo e descobrindo como isso altera a saída, um invasor pode descobrir o que está sendo enviado em uma carga criptografada.
+A compressão de HTTPS e SPDY foi descoberta vulnerável aos ataques [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) e [CRIME](https://en.wikipedia.org/wiki/CRIME). Inserindo um texto conhecido no fluxo e descobrindo como isso altera a saída, um invasor pode descobrir o que está sendo enviado em uma carga criptografada.
 
 Realizando compressão em conteúdo dinâmico para um protocolo - sem se tornar vulnerável a um destes ataques - exige um pouco de reflexão e análise cuidadosa. Isto é o que o time HTTPbis tentou fazer.
 
-Entra o [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), compressão de cabeçalho para HTTP/2, que - como o nome sugere - é um formato de compressão especialmente concebido para cabeçalhos http2, e está sendo especificado em um projeto separado. O novo formato, juntamente com outras medidas (como alguns pedem a intermediários que não comprimam cabeçalhos específicos e preenchimento opcional de quadros), deve torná-lo mais difícil de explorar a compressão.
+Entra o [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), compressão de cabeçalho para HTTP/2, que - como o nome sugere - é um formato de compressão especialmente concebido para cabeçalhos http2, e está sendo especificado em um projeto separado. O novo formato, juntamente com outras medidas (como alguns pedem a intermediários que não comprimam cabeçalhos específicos e preenchimento opcional de quadros), deve torná-lo mais difícil de explorar a compressão.
 
 Nas palavras de Roberto Peon (um dos criadores do HPACK):
 
