@@ -9,7 +9,7 @@ Es beschreibt das Konzept, das Protokoll einige Implementierungen und über die 
 
 Die Original-Seite zu diesem Projekt findest du unter folgender URL.
 
-http://daniel.haxx.se/http2/
+https://daniel.haxx.se/http2/
 
 Unter https://github.com/bagder/http2-explained ist der Quelltext
 zum ganzen Buch mit allen Übersetzungen zu finden.

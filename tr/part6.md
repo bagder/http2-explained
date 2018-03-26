@@ -59,11 +59,11 @@ HTTP 1.1 istek boyutları o kadar büyük oluyor ki bazen ilk TCP penceresinden 
 
 ### 6.5.1. Sıkıştırma hileli bir konudur
 
-HTTPS ve SPDY sıkıştırmasının [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) ve [CRIME](http://en.wikipedia.org/wiki/CRIME) saldırılarına karşı savunmasız olduğu tespit edildi. Bilinen metni akışa çıktıyı ekleyerek, nasıl değiştirdiğini öğrenebilir, böylece saldırgan şifreli bir yükte gönderileni anlamaya çalışabilir.
+HTTPS ve SPDY sıkıştırmasının [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) ve [CRIME](https://en.wikipedia.org/wiki/CRIME) saldırılarına karşı savunmasız olduğu tespit edildi. Bilinen metni akışa çıktıyı ekleyerek, nasıl değiştirdiğini öğrenebilir, böylece saldırgan şifreli bir yükte gönderileni anlamaya çalışabilir.
 
 Bir protokol için dinamik içeriğe sıkıştırma yapmak biraz düşünülmesi ve dikkatli olması gereken bir konudur(saldırılardan birine karşı savunmasız hale gelmeden yapılır). HTTPbis ekibi bunu yapmaya çalıştı.
 
-[HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK(adından da anlaşılacağı gibi), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. Yeni format, diğer karşı ölçümlerle(belirli bir üstbilgiyi ve çerçevelerin dolgusunu(adding) sıkıştırmamasını sağlayan bir bit gibi), sıkıştırmanın kullanılmasını zorlaştırır.
+[HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK(adından da anlaşılacağı gibi), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. Yeni format, diğer karşı ölçümlerle(belirli bir üstbilgiyi ve çerçevelerin dolgusunu(adding) sıkıştırmamasını sağlayan bir bit gibi), sıkıştırmanın kullanılmasını zorlaştırır.
 
 Roberto Peon'un (HPACK'in yaratıcılarından biri) sözleriyle:
 

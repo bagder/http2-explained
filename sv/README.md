@@ -6,7 +6,7 @@ Det här är ett detaljerat dokument som beskriver HTTP/2 ([RFC
 protokollen och lite om existerande implementationer och vad framtiden kanske
 erbjuder.
 
-Se http://daniel.haxx.se/http2/ för projektets hemsida.
+Se https://daniel.haxx.se/http2/ för projektets hemsida.
 
 Se https://github.com/bagder/http2-explained för källkoden till allt innehåll
 i boken.

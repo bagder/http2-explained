@@ -47,7 +47,7 @@ O popular servidor Nginx oferece suporte http2 desde a versão [1.9.5](https://w
 
 O servidor httpd Apache tem um módulo http2 [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) desde a versão 2.4.17 que foi lançada em 9 de Outubro de 2015.
 
-[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/), [Caddy](http://caddyserver.com/) e [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview) lançaram suas versões compatíveis com http2.
+[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/), [Caddy](https://caddyserver.com/) e [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview) lançaram suas versões compatíveis com http2.
 
 ### 8.3.3 Outros
 
@@ -81,7 +81,7 @@ De forma alguma. A capacidade de multiplexação certamente ajudará a melhorar 
 
 Isto pode ser verdade, de certa forma. O “handshake” TLS adiciona um pequeno tempo extra, mas existem esforços em andamento para reduzir o número de viagens (“round-trips”) necessárias. A sobrecarga para fazer TLS por meio da conexão, ao invés de texto puro, não é insignificante e claramente consome mais CPU e energia será gasta da mesma forma que um tráfego não seguro. O quanto e o que isso impactará está sujeito a opiniões e medições. Veja, por exemplo, [istlsfastyet.com](https://istlsfastyet.com/) para mais informações.
 
-Telecomunicações e outros operadores de rede, por exemplo o ATIS Open Web Alliance, dizem que eles [precisam de tráfego não criptografado](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) para oferecer cachê, compressão e outras técnicas necessárias para prover uma rápida experiência _web_ via satélite, para aviões e similares. http2 não torna o uso de TLS obrigatório, portanto não devemos ter problemas com os termos.
+Telecomunicações e outros operadores de rede, por exemplo o ATIS Open Web Alliance, dizem que eles [precisam de tráfego não criptografado](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) para oferecer cachê, compressão e outras técnicas necessárias para prover uma rápida experiência _web_ via satélite, para aviões e similares. http2 não torna o uso de TLS obrigatório, portanto não devemos ter problemas com os termos.
 
 Muitos usuários da Internet expressaram uma preferência por utilizar TLS de forma mais ampla e nós devemos ajudar a proteger a privacidade dos usuários.
 
@@ -97,7 +97,7 @@ Se você realmente não suporta um protocolo binário, então você também não
 
 ### 8.4.6. “Não é mais rápido do que HTTP/1.1”
 
-Naturalmente é um tema sujeito a debate e discussões sobre como medir o que é mais rápido, mas, nos cenários do SPDY, muitos testes foram realizados e o tempo de carga de uma página foi mais rápido (por exemplo ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) pela University of Washington e ["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) por Hervé Servy) e tais experiências também foram feitas com o http2. Estou ansioso para ver mais testes e experiências sendo publicadas. Um [primeiro teste básico feito pelo httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) pode indicar que o HTTP/2 cumpre o que promete.
+Naturalmente é um tema sujeito a debate e discussões sobre como medir o que é mais rápido, mas, nos cenários do SPDY, muitos testes foram realizados e o tempo de carga de uma página foi mais rápido (por exemplo ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) pela University of Washington e ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) por Hervé Servy) e tais experiências também foram feitas com o http2. Estou ansioso para ver mais testes e experiências sendo publicadas. Um [primeiro teste básico feito pelo httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) pode indicar que o HTTP/2 cumpre o que promete.
 
 ### 8.4.7. “Não respeita camadas”
 

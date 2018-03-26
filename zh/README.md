@@ -4,7 +4,7 @@ http2讲解
 这是一篇详细讲解HTTP/2（[RFC
 7540](https://httpwg.github.io/specs/rfc7540.html)）的文档，主要内容包括该协议的背景、思想、协议本身的内容、对一些现有实现的探讨与对协议未来的展望。
 
-若想访问该文档官方主页，请至http://daniel.haxx.se/http2/
+若想访问该文档官方主页，请至https://daniel.haxx.se/http2/
 
 若想获取本书源码，请至https://github.com/bagder/http2-explained
 

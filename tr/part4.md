@@ -22,10 +22,10 @@ HTTP sahasındaki daha büyük oyuncuların bazıları çalışma grubu tartış
 
 ### 4.1.1. İsmin "bis" bölümü
 
-Grup, HTTPbis olarak adlandırıldı ve burada "bis" kısmı iki Latin alfabesinden [Latin adverb for two](http://en.wiktionary.org/wiki/bis#Latin) geliyor. Bis genellikle bir güncelleme için IETF içindeki adın bir sonek veya bir parçası olarak kullanılır veya ikinci bir beyanname'ye geçmek;bu durumda HTTP 1.1 güncellemesi.
+Grup, HTTPbis olarak adlandırıldı ve burada "bis" kısmı iki Latin alfabesinden [Latin adverb for two](https://en.wiktionary.org/wiki/bis#Latin) geliyor. Bis genellikle bir güncelleme için IETF içindeki adın bir sonek veya bir parçası olarak kullanılır veya ikinci bir beyanname'ye geçmek;bu durumda HTTP 1.1 güncellemesi.
 
 ## 4.2. http2 SPDY'den başladı
 
-[SPDY](http://en.wikipedia.org/wiki/SPDY) Google tarafından geliştirilen ve öncülük eden bir protokoldür. Kesinlikle bunu açık alanda geliştirdiler ve herkesi katılmaya davet ettiler, ancak hem popüler bir tarayıcı uygulaması hem de iyi kullanılan servislere sahip önemli bir sunucu popülasyonu üzerinde kontrol sahibi olduklarından yararlandıkları açıktır.
+[SPDY](https://en.wikipedia.org/wiki/SPDY) Google tarafından geliştirilen ve öncülük eden bir protokoldür. Kesinlikle bunu açık alanda geliştirdiler ve herkesi katılmaya davet ettiler, ancak hem popüler bir tarayıcı uygulaması hem de iyi kullanılan servislere sahip önemli bir sunucu popülasyonu üzerinde kontrol sahibi olduklarından yararlandıkları açıktır.
 
 HTTPbis grubu http2 üzerinde çalışmaya başlamanın zamanı olduğuna karar verdiklerinde, SPDY zaten bir çalışma konsepti olduğunu kanıtlamıştı. İnternette konuşlandırmanın mümkün olduğunu göstermiş ve ne kadar iyi performansı olduğunu gösteren yayınlanmış rakamlar bulunmaktadır.  Http2 çalışması, temelde http2 taslak-00'a küçük bir arama ve değiştirme ile yapılan SPDY/3 taslağı ile başladı.

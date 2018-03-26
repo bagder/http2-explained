@@ -2,7 +2,7 @@
 
 这篇文档会从技术和协议层面来介绍http2。文档起源于2014年4月我在斯德哥尔摩做了一次相关的演讲，在那之后我对演讲内容的细节进行了一些解释和补充，从而写出了这篇文档。
 
-正式版http2规格标准叫做RFC 7540，发布于2015年5月15日：http://www.rfc-editor.org/rfc/rfc7540.txt
+正式版http2规格标准叫做RFC 7540，发布于2015年5月15日：https://www.rfc-editor.org/rfc/rfc7540.txt
 
 如果你有在这篇文章中发现任何我的失误造成的错误或疏漏，请帮我指正。我会在后续版本中修改。
 
@@ -16,21 +16,21 @@
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 帮助我！
 
 如果你在该文档里面发现任何错误、疏漏，请发送给我一份相关段落更改后的版本，我会进行修正并且注明所有对文档有贡献的人！希望能将这份文档变得越来越好。
 
-这篇文档可以在[http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)下载。
+这篇文档可以在[https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)下载。
 
 ## 1.3 许可证
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-这篇文档基于Createive Commons Attribution 4.0发布： [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/)
+这篇文档基于Createive Commons Attribution 4.0发布： [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
 
 ## 1.4 文档历史
 

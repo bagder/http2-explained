@@ -5,7 +5,7 @@ out as a presentation Daniel did in Stockholm in April 2014 that was
 subsequently converted and extended into a full-blown document with all
 details and proper explanations.
 
-RFC 7540 is the official name of the final http2 specification and it was published on May 15th 2015: http://www.rfc-editor.org/rfc/rfc7540.txt
+RFC 7540 is the official name of the final http2 specification and it was published on May 15th 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
 
 All and any errors in this document are my own and the results of my
 shortcomings. Please point them out and they will be fixed in updated
@@ -37,13 +37,13 @@ the http2 standardization work.
 
 If you find mistakes, omissions, errors or blatant lies in this document, please send me a refreshed version of the affected paragraph and I'll make amended versions. I will give proper credits to everyone who helps out! I hope to make this document better over time.
 
-This document is available at [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+This document is available at [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 ## 1.3 License
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-This document is licensed under the Creative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/
+This document is licensed under the Creative Commons Attribution 4.0 license: https://creativecommons.org/licenses/by/4.0/
 
 ## 1.4 Document history
 

@@ -2,7 +2,7 @@
 
 Bu belge http2'yi teknik açıdan ve protokol düzeyinde açıklamaktadır. Daniel'in Nisan 2014'de Stokholm'de yaptığı bir sunum ile başladı ve bütün detayları ve tüm açıklamaları ile birlikte tam bir dokümana dönüştü.
 
-RFC 7540 son http2 şartnamesinin resmi adıdır ve 15 Mayıs 2015'de yayınlanmıştır(http://www.rfc-editor.org/rfc/rfc7540.txt).
+RFC 7540 son http2 şartnamesinin resmi adıdır ve 15 Mayıs 2015'de yayınlanmıştır(https://www.rfc-editor.org/rfc/rfc7540.txt).
 
 Bu dokümanda bulunan tüm hatalar bana aittir ve kendi ihmalimin sonucudur. Lütfen güncellenen sürümlerde düzeltilmesi için  hataları belirtin.
 
@@ -25,13 +25,13 @@ Benim adım Daniel Stenberg ve Mozilla'da çalışıyorum. Açık kaynak ve ağ 
 Eğer bu dokümanda hatalar, eksiklikler ve bariz yalanlar bulursanız lütfen bu bölümlerin yenilenen halini bana gönderin ve ben de versyonlarda bu hataları düzelteceğim. Yardımcı olan herkese tesekkür ederim. Bu belgeyi zamanla daha iyi hale getirmeyi umuyorum.
 
 
-Bu doküman http://daniel.haxx.se/http2 adresinde mevcuttur.
+Bu doküman https://daniel.haxx.se/http2 adresinde mevcuttur.
 
 ## 1.3 Lisans
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-Bu doküman Creative Commons Attribution 4.0 license altında yayınlanmaktadır (http://creativecommons.org/licenses/by/4.0/).
+Bu doküman Creative Commons Attribution 4.0 license altında yayınlanmaktadır (https://creativecommons.org/licenses/by/4.0/).
 
 ## 1.4 Doküman tarihçesi
 

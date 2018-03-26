@@ -12,7 +12,7 @@ Com a adoção do http2, existem razões para suspeitar que as conexões TCP ser
 
 Isso afetará o trabalho de balanceamento de carga e podem surgir situações onde uma página queira sugerir ao cliente se conectar a outro servidor. Isto poderia acontecer por questões de desempenho (performance) ou se a página está em manutenção, etc.
 
-O servidor enviará o cabeçalho [Alt-Svc: header](http://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07) (ou o quadro ALTSVC com http2) dizendo ao cliente sobre um serviço alternativo: outra rota para o mesmo conteúdo, utilizando outro serviço, servidor e porta.
+O servidor enviará o cabeçalho [Alt-Svc: header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07) (ou o quadro ALTSVC com http2) dizendo ao cliente sobre um serviço alternativo: outra rota para o mesmo conteúdo, utilizando outro serviço, servidor e porta.
 
 Um cliente tentará se conectar ao serviço assincronamente e somente utilizar esta alternativa se a nova conexão for realizada com sucesso.
 

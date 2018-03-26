@@ -30,7 +30,7 @@
 обслуживания или подобных целей.
 
 Сервер отправляет заголовок
-[Alt-Svc](http://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07) (или
+[Alt-Svc](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07) (или
 ALTSVC-фрейм в http2), сообщая клиенту о наличии альтернативного сервиса.
 Дополнительный маршрут к такому же контенту, используя другой сервис, хост и
 номер порта.

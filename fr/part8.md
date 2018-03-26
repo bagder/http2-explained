@@ -66,7 +66,7 @@ Les gros sites ont déjà une présence mondiale et du coup des aller-retours mo
 
 Cela peut se révéler vrai. La négociation TLS ajoute un peu de latence, mais il existe des projets pour réduire encore les aller-retours en TLS. La surcharge du TLS par rapport à du texte en clair n'est pas neutre et a un impact CPU. L'impact en lui-même est sujet à discussions et mesures. Voir par exemple [istlsfastyet.com](https://istlsfastyet.com/) pour avoir une source d'information.
 
-Les opérateurs télécom et réseaux, par exemple l'ATIS Open Web Alliance, indiquent qu'ils nécessitent du [trafic non chiffré](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) pour permettre au cache et à la compression de fonctionner, notamment pour une expérience web rapide par satellite.
+Les opérateurs télécom et réseaux, par exemple l'ATIS Open Web Alliance, indiquent qu'ils nécessitent du [trafic non chiffré](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) pour permettre au cache et à la compression de fonctionner, notamment pour une expérience web rapide par satellite.
 http2 n'oblige pas à utiliser TLS, on ne devrait donc pas mélanger les deux.
 
 De nombreux utilisateurs ont indiqué leur préférence à utiliser TLS et nous devrions respecter ce droit à la vie privée.
@@ -83,7 +83,7 @@ Si vous ne pouvez pas vous faire à un protocole binaire, alors vous ne pouviez 
 
 ### 8.4.6. "Ce n'est pas plus rapide que HTTP/1.1"
 
-Cela est bien sûr sujet à débat sur comment qualifier "plus rapide"; les tests menés lors des expérimentations SPDY montraient des temps de chargement de pages web plus rapides (voir [“How Speedy is SPDY?”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) par University of Washington et [“Evaluating the Performance of SPDY-enabled Web Servers”](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) par Hervé Servy). Idem en http2 avec d'autres tests. Je souhaite voir davantage de tests publiés. Un [premier essai réalisé par httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) a tendance à montrer que HTTP/2 répond aux promesses.
+Cela est bien sûr sujet à débat sur comment qualifier "plus rapide"; les tests menés lors des expérimentations SPDY montraient des temps de chargement de pages web plus rapides (voir [“How Speedy is SPDY?”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) par University of Washington et [“Evaluating the Performance of SPDY-enabled Web Servers”](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) par Hervé Servy). Idem en http2 avec d'autres tests. Je souhaite voir davantage de tests publiés. Un [premier essai réalisé par httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) a tendance à montrer que HTTP/2 répond aux promesses.
 
 http2 est clairement plus rapide dans certains scénarios, en particulier avec les scénarios où une connexion à latence importante est utilisée avec un site comportant beaucoup de ressources à charger, ce nombre ayant tendance à augmenter.
 

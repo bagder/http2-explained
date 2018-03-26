@@ -6,7 +6,7 @@ Este é um documento detalhado descrevendo HTTP/2 ([RFC
 protocolo e algo sobre implementações existentes e o que o futuro
 pode trazer.
 
-Veja http://daniel.haxx.se/http2/ para a casa canônica deste projeto.
+Veja https://daniel.haxx.se/http2/ para a casa canônica deste projeto.
 
 Veja https://github.com/bagder/http2-explained para o código fonte de todos os conteúdos do
 livro.

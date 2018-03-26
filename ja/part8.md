@@ -43,7 +43,7 @@ Firefoxは最新ドラフトにもっとも速く追随してきたブラウザ�
 
 Apacheのhttpdサーバは2015年10月9日にリリースされた2.4.17からhttp2モジュール [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) が提供されています。
 
-[H2O](https://h2o.examp1e.net/)、[Apache Traffic Server](http://trafficserver.apache.org/)、[nghttp2](https://nghttp2.org/)、[Caddy](http://caddyserver.com/)、[LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)は全てhttp2が使用できます。
+[H2O](https://h2o.examp1e.net/)、[Apache Traffic Server](https://trafficserver.apache.org/)、[nghttp2](https://nghttp2.org/)、[Caddy](https://caddyserver.com/)、[LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)は全てhttp2が使用できます。
 
 ### 8.3.3. その他
 
@@ -77,7 +77,7 @@ Googleが公式に[発表](https://blog.chromium.org/2015/02/hello-http2-goodbye
 
 これはある程度真実だといえます。TLSハンドシェイクは少し余計に時間がかかります。しかしTLSにおいて必要なラウンドトリップを削減する試みが今までもありましたし、現在も進行中です。通信路上で平文ではなくTLSを使うことによるオーバーヘッドは無視できないし、より多くのCPUと電力が同じトラッフィクパターンの平文に比較して使われることになります。それがどのくらいでどの程度の影響力を持つのかについては意見や測定結果次第です。有用な情報源の例として[istlsfastyet.com](https://istlsfastyet.com/)を参照してください。
 
-電話会社や他のネットワーク事業者、例えばATISオープンWebアライアンス、は、サテライトや機内のようなところでの高速なwebエクスペリエンスを提供するためにキャッシング、圧縮、その他諸々の技術が必要であり、それには[平文のトラッフィクが必要](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)だと言っています。http2はTLSを必須としているわけではありませんのでこれ以上議論を複雑にすべきではありません。
+電話会社や他のネットワーク事業者、例えばATISオープンWebアライアンス、は、サテライトや機内のようなところでの高速なwebエクスペリエンスを提供するためにキャッシング、圧縮、その他諸々の技術が必要であり、それには[平文のトラッフィクが必要](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)だと言っています。http2はTLSを必須としているわけではありませんのでこれ以上議論を複雑にすべきではありません。
 
 多くのインターネットユーザーはTLSが広く使われることを望んでいますし、我々はユーザーのプライバシー保護を促進すべきです。
 
@@ -93,7 +93,7 @@ Googleが公式に[発表](https://blog.chromium.org/2015/02/hello-http2-goodbye
 
 ### 8.4.6. ”HTTP 1.1よりも速くない”
 
-これについては、もちろん速いというのが何を意味してどうやって計測するのか議論しなければなりませんが、SPDYの頃から多くのテストが行われていて速いページロードを証明しています（例えば、ワシントン大学の人々による["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)、Hervé Servyによる["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers)）。このような実験はhttp2でも同様に繰り返されてきました。私はより多くのこのようなテストや実験が公開されることを楽しみにしています。[httpwatch.comによる最初の基本的なテスト](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2)はHTTP/2がその約束を果たしていることを示唆しています。
+これについては、もちろん速いというのが何を意味してどうやって計測するのか議論しなければなりませんが、SPDYの頃から多くのテストが行われていて速いページロードを証明しています（例えば、ワシントン大学の人々による["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)、Hervé Servyによる["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers)）。このような実験はhttp2でも同様に繰り返されてきました。私はより多くのこのようなテストや実験が公開されることを楽しみにしています。[httpwatch.comによる最初の基本的なテスト](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2)はHTTP/2がその約束を果たしていることを示唆しています。
 
 ### 8.4.7. ”これは階層侵害だ”
 

@@ -44,14 +44,14 @@ Popüler Nginx sunucusu 22 Eylül 2015'te piyasaya sürülen [1.9.5](https://www
 Apache'nin httpd sunucusu, 9 Ekim 2015'te çıkan 2.4.17'den bu yana http2 modülü [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) içeriyor.
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
-Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
-[Caddy](http://caddyserver.com/) and
+Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
+[Caddy](https://caddyserver.com/) and
 [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)
 have all released http2 capable servers.
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
-Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
-[Caddy](http://caddyserver.com/) ve
+Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
+[Caddy](https://caddyserver.com/) ve
 [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview); bu yetenekli sunucuları hepsi http2'yi destekledi.
 
 ### 8.3.3 Diğerleri
@@ -93,7 +93,7 @@ Hepsi değil. Çoklama yetenekleri, geniş coğrafi dağılımlara sahip olmayan
 Bu, bir dereceye kadar doğru olabilir. TLS el sıkışması biraz ekstra para harcatabilir, ancak TLS için gereken gidişatları azaltmaya yönelik mevcut ve devam eden çabalar vardır. Düz metin yerine wire-hat? üzerinde TLS yapmak için yapılan ek yük çaba önemsiz değildir, daha fazla CPU ve güç, güvenli olmayan bir protokol ile aynı trafik modelinde harcanır. Ne kadar ve ne gibi bir etkiye sahip olacağı düşünülür. Bir bilgi kaynağı için [istlsfastyet.com](https://istlsfastyet.com/)'a bakın.
 
 Telekom ve diğer ağ operatörleri, örneğin ATIS Open Web Alliance'da, uydu, uçak ve benzeri ortamlarda hızlı bir web deneyimi sağlamak için önbellek, sıkıştırma ve diğer teknikler sunacaklarını söylüyorlar[need unencrypted
-traffic](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf). http2, TLS kullanımını zorunlu kılmaz, bu nedenle şartları birleştirmemeliyiz.
+traffic](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf). http2, TLS kullanımını zorunlu kılmaz, bu nedenle şartları birleştirmemeliyiz.
 
 Pek çok İnternet kullanıcısı, kullanıcıların gizliliğinin korunması gerekçesiyle TLS'in daha yaygın kullanılmasını tercih ettiğini belirtti.
 
@@ -113,7 +113,7 @@ If you really can't take a binary protocol, then you couldn't handle TLS and com
 
 ### 8.4.6. "HTTP / 1.1'den daha hızlı değil"
 
-Bu tabi ki daha hızlı olanı ölçmenin nasıl yapıldığı üzerine tartışmalara tabidir, ancak daha önce SPDY günlerinde daha fazla tarayıcı sayfası yüklendiğini kanıtlayan birçok test yapıldı (like ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) by people at University of Washington and ["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) by Hervé Servy) ve bu tür denemeler de http2 ile tekrarlandı. Bu tür testlerin ve deneylerin yayınlanmaya başlaması için sabırsızlıkla bekliyorum. [basic first test made by httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2), HTTP / 2'nin sözlerini tuttuğunu ima edebilir.
+Bu tabi ki daha hızlı olanı ölçmenin nasıl yapıldığı üzerine tartışmalara tabidir, ancak daha önce SPDY günlerinde daha fazla tarayıcı sayfası yüklendiğini kanıtlayan birçok test yapıldı (like ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) by people at University of Washington and ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) by Hervé Servy) ve bu tür denemeler de http2 ile tekrarlandı. Bu tür testlerin ve deneylerin yayınlanmaya başlaması için sabırsızlıkla bekliyorum. [basic first test made by httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2), HTTP / 2'nin sözlerini tuttuğunu ima edebilir.
 
 ### 8.4.7. "Katman ihlalleri var"
 

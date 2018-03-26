@@ -1,6 +1,6 @@
 # 11. http2 в curl
 
-[Проект curl](http://curl.haxx.se/) начал эксперименты с поддержкой http2,
+[Проект curl](https://curl.haxx.se/) начал эксперименты с поддержкой http2,
 начиная с сентября 2013 года.
 
 В духе curl, мы намереваемся поддерживать все аспекты http2, которые сможем.
@@ -62,7 +62,7 @@ Curl по прежнему по умолчанию использует HTTP/1.1
 Поскольку lubcurl стремится сохранять своё привычное поведение, вам
 потребуется включить в вашем приложении HTTP/2 мультиплексирования с помощью
 опции
-[CURLMOPT_PIPELINING](http://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html).
+[CURLMOPT_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html).
 В противном случае он продолжит использовать по одному одновременному запросу
 на соединение.
 
@@ -72,7 +72,7 @@ Curl по прежнему по умолчанию использует HTTP/1.1
 libcurl немного подождал перед запуском следующей передачи по существующему
 соединению вместо открытия нового соединения для всех их сразу, вы можете
 использовать опцию
-[CURLOPT_PIPEWAIT](http://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) для
+[CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) для
 каждой индивидуальной передачи.
 
 ### 11.5.3 Посылка сервера
@@ -80,7 +80,7 @@ libcurl немного подождал перед запуском следую
 libcurl версии 7.44.0 и более поздних поддерживает HTTP/2 посылку сервера. Вы
 можете получить эту возможность установив функцию обратного вызова с помощью
 опции
-[CURLMOPT_PUSHFUNCTION](http://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html).
+[CURLMOPT_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html).
 Если посылка поддерживается приложением, то будет создана новая передача
 данных, которую CURL легко запустит и получит содержимое так же, как и при
 любой другой передаче данных.

@@ -59,11 +59,11 @@ HTTP 1.1请求的大小正变得越来越大，有时甚至会大于TCP窗口的
 
 ### 6.5.1. 压缩是非常棘手的课题
 
-HTTPS和SPDY的压缩机制被发现有受[BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29)和[CRIME](http://en.wikipedia.org/wiki/CRIME)攻击的隐患。通过向流中注入一些已知的文本来观察输出的变化，攻击者可以从加密的载荷中推导出原始发送的数据。
+HTTPS和SPDY的压缩机制被发现有受[BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29)和[CRIME](https://en.wikipedia.org/wiki/CRIME)攻击的隐患。通过向流中注入一些已知的文本来观察输出的变化，攻击者可以从加密的载荷中推导出原始发送的数据。
 
 为协议的动态内容进行压缩并使其免于被攻击，需要仔细且全面的考虑，而这也正是HTTPbis小组尝试去做的。
 
-[HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt)，HTTP/2头部压缩，顾名思义它是一个专为http2头部设计的压缩格式。确切的讲，它甚至被制定写入在另外一个单独的草案里。新的格式同时引入了一些其他对策让破解压缩变得困难，例如采用帧的可选填充和用一个bit作为标记，来让中间人不压缩指定的头部。<!-- 最后这句不太好 --> <!--这里中间人翻译成代理会不会更好，中间人一般都会自然联想到MITM攻击（比如我...）-->
+[HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt)，HTTP/2头部压缩，顾名思义它是一个专为http2头部设计的压缩格式。确切的讲，它甚至被制定写入在另外一个单独的草案里。新的格式同时引入了一些其他对策让破解压缩变得困难，例如采用帧的可选填充和用一个bit作为标记，来让中间人不压缩指定的头部。<!-- 最后这句不太好 --> <!--这里中间人翻译成代理会不会更好，中间人一般都会自然联想到MITM攻击（比如我...）-->
 
 用Roberto Peon（HPACK的设计者之一）的话说
 

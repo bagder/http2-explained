@@ -12,6 +12,6 @@ Google的[QUIC](https://www.chromium.org/quic) （快速UDP互联网连接）协
 
 QUIC可以创建更低延迟的连接，并且也像HTTP/2一样，通过仅仅阻塞部分流解决了包裹丢失这个问题，让连接在不同网络上建立变得更简单 － 这其实正是MPTCP想去解决的问题。
 
-QUIC现在还只有Google的Chrome和它后台服务器上的实现，虽然有第三方库[libquic](https://github.com/devsisters/libquic)，但这些代码仍然很难在其他地方被复用。该协议也被IETF通信工作组引入了[草案](http://tools.ietf.org/html/draft-tsvwg-quic-protocol-01)。
+QUIC现在还只有Google的Chrome和它后台服务器上的实现，虽然有第三方库[libquic](https://github.com/devsisters/libquic)，但这些代码仍然很难在其他地方被复用。该协议也被IETF通信工作组引入了[草案](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01)。
 
 <!-- 后一个section需要review -->

@@ -53,8 +53,8 @@ server instance).
 Apache's httpd server has a http2 module [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) since 2.4.17 which was released on October 9, 2015.
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
-Server](http://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
-[Caddy](http://caddyserver.com/) and
+Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
+[Caddy](https://caddyserver.com/) and
 [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)
 have all released http2 capable servers.
 
@@ -101,7 +101,7 @@ for one source of info.
 
 Telecom and other network operators, for example in the ATIS Open Web
 Alliance, say that they [need unencrypted
-traffic](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
+traffic](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
 to offer caching, compression and other techniques necessary to provide a fast
 web experience over satellite, in airplanes and similar.  http2 does not make
 TLS use mandatory so we shouldn't conflate the terms.
@@ -120,7 +120,7 @@ If you really can't take a binary protocol, then you couldn't handle TLS and com
 
 ### 8.4.6. “It isn't any faster than HTTP/1.1”
 
-This is of course subject to debate and discussions on how to measure what faster means, but already in the SPDY days many tests were performed that proved browser page loads were faster (like ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) by people at University of Washington and ["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) by Hervé Servy) and such experiments have been repeated with http2 as well. I'm looking forward to seeing more such tests and experiments getting published. A [basic first test made by httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) might imply that HTTP/2 holds its promises.
+This is of course subject to debate and discussions on how to measure what faster means, but already in the SPDY days many tests were performed that proved browser page loads were faster (like ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) by people at University of Washington and ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) by Hervé Servy) and such experiments have been repeated with http2 as well. I'm looking forward to seeing more such tests and experiments getting published. A [basic first test made by httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) might imply that HTTP/2 holds its promises.
 
 ### 8.4.7. “It has layering violations”
 

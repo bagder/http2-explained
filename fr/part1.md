@@ -2,7 +2,7 @@
 
 Ce document décrit http2 d'un point de vue technique et protocolaire. Il a commencé par une présentation à Stockholm réalisée par Daniel en avril 2014, présentation qui a été par la suite convertie et étoffée dans un document complet avec des explications détaillées.
 
-La RFC 7540 est le nom officiel de la spécification http2 finale, elle a été publiée le 15 mai 2015 : http://www.rfc-editor.org/rfc/rfc7540.txt
+La RFC 7540 est le nom officiel de la spécification http2 finale, elle a été publiée le 15 mai 2015 : https://www.rfc-editor.org/rfc/rfc7540.txt
 
 Toute erreur dans ce document est mienne et le résultat de mes approximations. Merci de me les indiquer afin que je les corrige pour les prochaines versions.
 
@@ -16,21 +16,21 @@ Mon nom est Daniel Stenberg et je travaille chez Mozilla. J'ai travaillé dans l
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 Aide!
 
 Si vous trouvez des erreurs, oublis, fautes ou mensonges éhontés dans ce document, je vous prierais de bien vouloir m'envoyer une version corrigée que je publierai dans une édition révisée. Je mentionnerai clairement les noms des contributeurs! J'espère améliorer ce document avec le temps.
 
-Ce document est disponible ici: [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+Ce document est disponible ici: [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 ## 1.3 License
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-Ce document est couvert par la licence Creative Commons Attribution 4.0 : http://creativecommons.org/licenses/by/4.0/
+Ce document est couvert par la licence Creative Commons Attribution 4.0 : https://creativecommons.org/licenses/by/4.0/
 
 ## 1.4 Historique du document
 

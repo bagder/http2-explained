@@ -47,15 +47,15 @@ curl은 아직 기본이 HTTP1.1이고 http2를 사용하는 경우에는 추가
 
 
 ### 11.5.2 다중화
-libcurl은 기존의 행동을 유지하려고 하기 때문에 HTTP/2의 다중화 응용 프로그램에서 사용하려면 [CURLMOPT_PIPELINING](http://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html) 옵션을 사용합니다.
+libcurl은 기존의 행동을 유지하려고 하기 때문에 HTTP/2의 다중화 응용 프로그램에서 사용하려면 [CURLMOPT_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html) 옵션을 사용합니다.
 이 옵션을 사용하지 않는 경우 지금까지와 같이 연결 당 동시 요청 수는 1이 됩니다.
 
 또 하나 주의해야 할 것은 multi 인터페이스를 사용하여 여러 전송을 동시에 libcurl로 할 경우 다중 연결을 사용하는 것입니다.
-libcurl을 동일한 연결에 모든 전송을 다중화 하려면 전송시 [CURLOPT_PIPEWAIT](http://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) 옵션을 사용합니다.
+libcurl을 동일한 연결에 모든 전송을 다중화 하려면 전송시 [CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) 옵션을 사용합니다.
 
 
 ### 11.5.3 서버 푸시
 libcurl 7.44.0 이후는 HTTP/2 서버 푸시를 지원하고 있습니다.
-이 기능을 사용하려면 [CURLMOPT_PUSHFUNCTION](http://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html) 옵션을 사용하여 푸시 콜백을 설정합니다.
+이 기능을 사용하려면 [CURLMOPT_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html) 옵션을 사용하여 푸시 콜백을 설정합니다.
 
 푸시가 응용 프로그램에 의해 받아 들여진 경우 새로운 CURL easy handle이 생성되어 다른 전송 뿐만 아니라 컨텐츠를 수신합니다.
