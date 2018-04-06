@@ -1,22 +1,19 @@
 ﻿# 1. Hintergrund
 
-Dieses Dokument beschreibt den technischen Aufbau und das Protokoll http2.
+Diese Dokumentation beschreibt http2 auf technischer und Protokoll-Ebene. Was als Präsentation im April 2014 in Stockholm anfing, wurde in Folge zu einer umfassenden und detaillierten Dokumentation ausgebaut. Des Weiteren wurden einige sachgerechte Erklärungen hinzugefügt.
 
-Was als Präsentation im April 2014 in Stockholm anfing wurde daraufhin zu einer detaillierten Dokumentation und fügte einige sachgerechte Erklärungen hinzu
+RFC 7540 ist der offizielle Name der finalen Spezifikation von http2, welche am 15. Mai 2015 veröffentlicht wurde: https://www.rfc-editor.org/rfc/rfc7540.txt
 
-RFC 7540 ist der offizielle Standard der letzten Spezifikation von http2. Am 15. Mai 2015 wurde diese veröffentlicht.
-URL: https://www.rfc-editor.org/rfc/rfc7540.txt
-
-Jegliche Fehler in diesem Dokument basieren auf meinem Verständnis der Materie. Ich bin offen für jede Korrektur welche beim update auf eine neue Version behoben wird.
+Jegliche Fehler in dieser Dokumentation sind meine eigenen und Resultat meines Verständnisses der Materie. Ich bin offen für jede Korrektur, welche in überarbeiteten Versionen übernommen werden.
 
 Ich nutze in diesem Dokument konsequent "http2" um das neue Protokoll zu beschreiben. Der technisch korrekte Name ist HTTP/2. Dies hab ich gemacht um die Lesbarkeit des Dokumentes zu gewährleisten.
 
 
 ## 1.1 Autor
 
-Der Name des original Autors ist Daniel Stenberg welcher für Mozilla arbeitet. Er arbeitet seit über 20 Jahren in verschiedenen Opern-Source Projekten mit. Das wohl bekannteste ist curl und libcurl wo er der leitende Entwickler ist. Daniel arbeitet auch seit Jahren in der Arbeitsgruppe der IETF HTTPbis welche HTTP 1.1 aktualisiert hat und war auch in der Entwicklung des http2 Standards involviert.
+Mein Name ist Daniel Stenberg und ich arbeite bei Mozilla. Schon seit über 20 Jahren arbeite ich bei verschiedenen Opern-Source Projekten mit. Die wohl bekanntesten Projekte sind curl und libcurl, bei denen ich leitender Entwickler bin. Ich arbeite auch seit Jahren in der Arbeitsgruppe der IETF HTTPbis mit, in welcher ich bei der Aktualisierung von HTTP 1.1 sowie Entwicklung von http2 involviert war.
 
- Email: daniel@haxx.se
+ E-Mail: daniel@haxx.se
 
  Twitter: [@bagder](https://twitter.com/bagder)
 
@@ -26,9 +23,9 @@ Der Name des original Autors ist Daniel Stenberg welcher für Mozilla arbeitet. 
 
 ## 1.2 Hilfe!
 
-Falls du Fehler, Missverständnisse oder offensichtliche Lügen in diesem Dokument findest sende mir bitte eine verbesserte Version des betroffene Paragrafen und Ich erstelle eine novelliert Version des Dokumentes. Du wirst natürlich als Autor ordnungsgemäß als Mitautor aufgelistet. Ich hoffe damit dieses Dokument mit der Zeit immer wieder zu verbessern.
+Falls du Fehler, Missverständnisse oder offensichtliche Lügen in diesem Dokument findest, sende mir bitte eine verbesserte Version des betroffene Paragrafen und Ich erstelle eine überarbeitete Version des Dokumentes. Du wirst natürlich ordnungsgemäß als Mitautor aufgelistet. Ich hoffe diese Dokumentation laufend verbessern zu können.
 
-Dieses Dokument ist unter der folgenden URL verfügbar. [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
+Dieses Dokument ist unter der folgenden URL verfügbar: [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 ## 1.3 Lizenz
 
@@ -36,11 +33,9 @@ Dieses Dokument ist unter der folgenden URL verfügbar. [https://daniel.haxx.se/
 
 Dieses Dokument ist unter der „Creative Commons Attribution 4.0“ Lizenz veröffentlicht: https://creativecommons.org/licenses/by/4.0/
 
-## 1.4 Dokument Historie 
+## 1.4 Historische Entwicklung der Dokumentation
 
-Die Historie lasse ich in Englisch um die Wartung dieser einfach zu ermöglichen.
-
-The first version of this document was published on April 25th 2014. Here follows the largest changes in the most recent document versions.
+Die erste Version dieses Dokumentes wurde am 25. April 2014 veröffentlicht. Die folgende Auflistung beschreibt die historische Entwicklung der Dokumentation. Um die Wartung dieser zu erleichtern, wird sie direkt aus dem Englischen übernommen.
 
 ### Version 1.13
 
