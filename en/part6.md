@@ -80,7 +80,7 @@ off with a Content-Length of a certain size, you can't easily just stop
 it. Sure, you can often (but not always) disconnect the TCP connection, but that
 comes at the cost of having to negotiate a new TCP handshake again.
 
-A better solution would be to just stop the message and start a new. This can be done with http2's RST_STREAM frame which will help prevent wasted bandwidth and the need to tear down connections.
+A better solution would be to just stop the message and start anew. This can be done with http2's RST_STREAM frame which will help prevent wasted bandwidth and the need to tear down connections.
 
 ## 6.7. Server push
 
