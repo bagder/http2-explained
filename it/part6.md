@@ -1,41 +1,41 @@
-# 6. The http2 protocol
+# 6. Il protocollo http2
 
-Enough about the background, the history and politics behind what got us here. Let's dive into the specifics of the protocol: the bits and the concepts that make up http2.
+Si è detto abbastanza della storia e delle ragioni politiche che ci hanno accompagnati fin qui. Passiamo ad una analisi delle specifiche del protocollo: i fondamenti e i concetti di cui http2 si nutre.
 
-## 6.1. Binary
+## 6.1. Binario
 
-http2 is a binary protocol.
+http2 è un protocollo binario.
 
-Just let that sink in for a minute. If you've been involved in internet protocols before, chances are that you will now be instinctively reacting against this choice, marshaling your arguments that spell out how protocols based on text/ascii are superior because humans can handcraft requests over telnet and so on...
+Lasciamo questo concetto da parte per qualche minuto. Se sei stato coinvolto in protocolli internet prima d'ora, ci sono probabilità che reagirai istintivamente a questa scelta, argomentando con fervore quanto un protocollo text/ascii sia migliore (più adatto, più versatile) visto che possiamo instaurare richieste e sessioni via telnet e strumenti simili...
 
-http2 is binary to make the framing much easier. Figuring out the start and the end of frames is one of the really complicated things in HTTP 1.1 and, actually, in text-based protocols in general. By moving away from optional white space and different ways to write the same thing, implementation becomes simpler.
+http2 è binario per permettere un incapsulamento più dinamico. Trovare inizio e fine di un frame è uno dei compiti più complessi in HTTP 1.1, e per tutti i protocolli text-based in generale. L'implementazione si rende più semplice allontanandosi da "spazi opzionali" e modi diversi di scrivere la stessa cosa.
 
-Also, it makes it much easier to separate the actual protocol parts from the framing - which in HTTP1 is confusingly intermixed.
+Allo stesso tempo, rende più semplice separare protocollo e incapsulamento - cosa che in HTTP 1.1 è completamente interdipendente.
 
-The fact that the protocol features compression and will often run over TLS also diminishes the value of text, since you won't see text over the wire anyway. We simply have to get used to the idea of using something like a Wireshark inspector to figure out exactly what's going on at the protocol level in http2.
+Il supporto nativo per compression, assime all'omnipresente TLS, diminuisce il valore di un protocollo puramente testuale, dato che non vedresti alcun testo in una capture on-the-wire. Dobbiamo semplicemente abituarci all'idea di usare uno strumento di cattura tipo Wireshark, al fine di comprendere cosa succeda a livello di http2.
 
-Debugging this protocol will probably have to be done with tools like curl, or by analyzing the network stream with Wireshark's http2 dissector and similar.
+Fare buon debug su questo protocollo necessiterà probabilmente di strumenti quali curl, o analisi di traffico IP con dissector http2 tipo Wireshark e similia.
 
-## 6.2. The binary format
+## 6.2. Il formato binario
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png" />
 
-http2 sends binary frames. There are different frame types that can be sent and they all have the same setup: Length, Type, Flags, Stream Identifier, and frame payload.
+https spedisce frame binari. Diversi tipi di frame possono essere spediti, e condividono la stessa fase di inizializzazione: Length, Type, Flags, Stream Identifier, e payloaddel frame.
 
-There are ten different frame types defined in the http2 spec and perhaps the two most fundamental ones that map to HTTP 1.1 features are DATA and HEADERS. I'll describe some of the frames in more detail further on.
+Esistono dieci tipi diversi di frame, definiti dalla specifica http2. Probabilmente due dei più fondamentali che possono essere ricondotti facilmente a HTTP 1.1 sono DATA e HEADERS. Li descriverò in dettaglio successivamente.
 
-## 6.3. Multiplexed streams
+## 6.3. Flussi multiplexati
 
-The Stream Identifier mentioned in the previous section associates each frame sent over http2 with a “stream”. A stream is an independent, bi-directional sequence of frames exchanged between the client and server within an http2 connection.
+L'ID dello Stream menzionato nella sezione precedente associa ogni frame inviato via http2 ad uno "stream". Durante una connessione http2, ogni stream è indipendente, dunque una sequenza bidirezionale di frame viene scambiata fra client e server.
 
-A single http2 connection can contain multiple concurrently-open streams, with either endpoint interleaving frames from multiple streams. Streams can be established and used unilaterally or shared by either the client or server and they can be closed by either endpoint. The order in which frames are sent within a stream is significant. Recipients process frames in the order they are received. 
+Una sola connessione http2 può contenere molteplici stream -aperti allo stesso tempo- all'interno dei quali ogni endpoint accavalla frame provenienti da streams differenti. Gli streams possono essere aperti ed utilizzati unilateralmente oppure essere condivisi sia dal sia dal server, e possono essere chiusi da entrambi gli endpoint. L'ordine in cui i frames sono inviati nel contesto dello stream è importante, caratteristico. I destinatari elaborano i frame nell'ordine in cui essi sono ricevuti.
 
-Multiplexing the streams means that packages from many streams are mixed over the same connection. Two (or more) individual trains of data are made into a single one and then split up again on the other side. Here are two trains:
+"Multiplexare" gli streams significa che i contenuti di diversi streams sono mescolati nella stessa connessione. Due (o più) flussi di dati sono riuniti in un singolo, per poi essere nuovamente divisi e riassemblati (individualmente) all'altro estremo della connessione. Ecco due flussi (treni di dati, NdR):
 
 ![one train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-justin.jpg)
 ![another train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-ikea.jpg)
 
-The two trains multiplexed over the same connection:
+Ecco due "treni" multiplexati all'interno di una sola connessione:
 
 ![multiplexed train](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
 
