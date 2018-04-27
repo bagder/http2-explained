@@ -15,23 +15,23 @@ Visto tutto ciò, direi che beneficieremo di siti più  reattivi che si caricano
 
 Quanto rapido sarà questo miglioramento, vedremo, non penso si possa ancora dire. Per prima cosa, la tecnologia è ancora in una fase di lancio e non si sono ancora visti client/server che implementino a dovere questa tecnologia per sfruttarne tutte le potenzialità.
 
-## 8.2. Come http2 influenzera lo sviluppo web?
+## 8.2. Come http2 influenzerà lo sviluppo web?
 
 Nel corso degli anni, gli sviluppatori e gli IDE si sono riuniti a formare una immensa cassetta degli attrezzi piena di utensili e trucchi per circuire HTTP 1.1; come ricorderete, ne ho menzionati alcuni all'inizio di questo documento come giustificazioni per passare a http2.
 
-Lots of those workarounds that tools and developers now use by default and without thinking, will probably hurt http2 performance or at least not really take advantage of http2's new super powers. Spriting and inlining should most likely not be done with http2. Sharding will probably be detrimental to http2 as it will probably benefit from using fewer connections.
+Molti workaround oggi utilizzati da tool e sviluppatori in maniera automagica, avranno probabilmente effetti negativi sulle performance di http2, o perlomeno non aiuteranno a sfuttare i superpoteri di http2. Spriting e inlining non dovrebbero più essere utilizzati in http2. Anche lo sharding a suo modo dovra essere abbandonato in favore di un minor numero di singole connessioni.
 
-A problem here is of course that web sites and web developers need to develop and deploy for a world that in the short term at least, will have both HTTP1.1 and http2 clients as users and to get maximum performance for all users can be challenging without having to offer two different front-ends.
+Il problema risiede nel fatto che i siti web devono essere mantenuti ed evoluti di continuo, a breve termine; garantire performance adeguate per entrambi gli utilizzatori di HTTP 1.1 e http2 sarà una grande sfida per gli sviluppatori che vorranno evitare di offrire due frontend separati.
 
-For these reasons alone, I suspect there will be some time before we will see the full potential of http2 being reached.
+Anche solo per questi motivi, sospetto che passerà un pò di tempo prima che tutti possiamo apprezzare il pieno potenziale di http2, dappertutto.
 
-## 8.3. http2 implementations
+## 8.3. Implementazioni di http2
 
-Trying to document specific implementations in a document such as this is of course completely futile and doomed to fail and only feel outdated within a really short period of time. Instead I'll explain the situation in broader terms and refer readers to the [list of implementations](https://github.com/http2/http2-spec/wiki/Implementations) on the http2 web site.
+Provare a documentare le implementazioni specifiche in un documento come questo sarebbe un impresa futile e prona al fallimento, tale documento diventerebbe desueto in breve tempo. Cercherò piuttosto di spiegare la situazione in termini più ampii, oltre ad indirizzare i lettori verso il sito di http2, [list of implementations](https://github.com/http2/http2-spec/wiki/Implementations).
 
-There were a large number of implementations early on, and the amount has increased over time during the http2 work. At the time of  writing this there are over 40 implementations listed, and most of them implement the final version.
+Un grande numero di implementazioni hanno preso vita fin dall'inizio, ed altre si sono aggiunte durante il lavoro sulla definizione di http2. Al momento attuale, pià di 40 implementazioni sono citate, di cui la maggior parte rispetta la versione finale delle specifiche.
 
-### 8.3.1 Browsers
+### 8.3.1 Navigatori
 
 Firefox has been the browser that's been on top of the bleeding edge drafts,
 Twitter has kept up and offered its services over http2. Google started during
@@ -142,9 +142,9 @@ http2, based on the same basic paradigms as SPDY, I would say is likely to be de
 
 There are several big browsers behind the roll-out. Representatives from Firefox, Chrome, Safari, Internet Explorer and Opera have expressed they will ship http2 capable browsers and they have shown working implementations.
 
-There are several big server operators that are likely to offer http2 soon, including Google, Twitter and Facebook and we hope to see http2 support soon get added to popular server implementations such as the Apache HTTP Server and nginx. H2o is a new blazingly fast HTTP server with http2 support that shows potential.
+I più grandi portali e operatori del web -fra cui Google, Twitter e Facebook- sono interessati ad offrire http2 quanto prima. Speriamo di vedere questo supporto arrivare anche alle piattaforme server tipo Apache e nginx. Un nuovo velocissimo server HTTP con supporto http2 che mostra un enorme potenziale è H2o.
 
-Some of the biggest proxy vendors, including HAProxy, Squid and Varnish have expressed their intentions to support http2.
+Molte delle più famose case produttrici di proxy hanno annunciato di voler supportare http2, fra cui HAProxy, Squid e Varnish.
 
-All throughout 2015, the amount of http2 traffic has been increasing. In early September, Firefox 40 usage was at 13% out of all HTTP traffic and 27% out of all HTTPS traffic, while Google sees roughly 18% of incoming request as HTTP/2. It should be noted that Google runs other new protocol experiments as well (see QUIC in 12.1) which makes the http2 usage levels lower than it could otherwise be.
+Durante i corso del 2015, il traffico http2 è aumentato. A inizio Settembre, il tasso di utilizzazione di Firefox 40 era al 13% su tutto il traffico HTTP e 27% su tutto il traffico HTTPS, mentre verso Google circa il 18% di richieste entranti sono in HTTP/2. Bisogna notare che allo stesso tempo Google è in procinto di sperimentare altri protocolli (vedi QUIC in 12.1) il che abbassa in qualche modo il tasso di connessioni http2 globali.
 

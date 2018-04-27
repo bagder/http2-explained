@@ -1,25 +1,25 @@
 # 9. http2 in Firefox
 
-Firefox has been tracking the drafts very closely and has provided http2 test implementations for many months. During the development of the http2 protocol, clients and servers have to agree on what draft version of the protocol they implement which makes it slightly annoying to run tests. Just be aware so that your client and server agree on what protocol draft they implement.
+Firefox ha seguito l'evolversi delle draft da vicino, ha reso disponibili test sulle implementazioni http2 per lunghi mesi. Durante lo sviluppo del protocollo http2, client e server devono mettersi d'accordo su quale versione della draft usare, cosa perarltro abbastanza fastidiosa in tempo di test. Giusto per essere sicuri che client e server siano allineati su quale versione della draft implementino.
 
-## 9.1. First, make sure it is enabled
+## 9.1. Primo passo, essere sicuro di averlo abilitato
 
-In all Firefox versions since version 35, released January 13th 2015, http2 support is enabled by default.
+In tutte le versioni di Firefox a partire dalla 35, rilasciata il 13 Gennaio 2015, il supporto nativo http2 è abilitato.
 
-Enter 'about:config' in the address bar and search for the option named “network.http.spdy.enabled.http2draft”. Make sure it is set to *true*. Firefox 36 added another config switch named “network.http.spdy.enabled.http2” which is set *true* by default. The latter one controls the “plain” http2 version while the first one enables and disables negotiation of http2-draft versions. Both are true by default since Firefox 36.
+Digita 'about:config' nella barra dell'indirizzo e cerca l'opzione “network.http.spdy.enabled.http2draft”. Assicurati che sia impostata a *true*. In Firefox 36 esiste un'altra voce di configurazione chiamata “network.http.spdy.enabled.http2” che è impostata su *true* per default. Quest'ultima controlla la versione “plain” di http2, mentre la prima abilita o disabilita la negoziazione della versione http2-draft. Entrambe sono abilitate a partire da Fierfox 36.
 
-## 9.2. TLS-only
+## 9.2. Solo TLS
 
-Remember that Firefox only implements http2 over TLS. You will only ever see http2 in action with Firefox when going to https:// sites that offer http2 support.
+Ricordatevi che Firefox implementa https solo su TLS. Vedrete http2 in azione se e solo se state utilizzando un sito https:// che offre supporto per http2.
 
-## 9.3. Transparent!
+## 9.3. Trasparente!
 
 ![transparent http2 use](https://raw.githubusercontent.com/bagder/http2-explained/master/images/firefox-screenshot.png)
 
-There is no UI element anywhere that tells that you're talking http2. You just can't tell that easily. One way to figure it out, is to enable “Web developer->Network” and check the response headers and see what you got back from the server. The response is then “HTTP/2.0” something and Firefox inserts its own header called “X-Firefox-Spdy:” as shown in the screenshot above.
+Non esiste alcun element della UI (User Interface) che indichi quando si stia parlando http2. Non è facile da dire. Un modo relativamente facile di farlo è abilitare la parte “Web developer->Network” e verificare negli header di risposta quanto ottenuto dal server. La risposta è dunque “HTTP/2.0” qualcosa, quindi Firefox inserisce il proprio header “X-Firefox-Spdy:” come possbile osservare sopra nello screenshot.
 
-The headers you see in the Network tool when talking http2 have been converted from http2's binary format into the old-style HTTP 1.x look-alike headers.
+Gli headers che vedete nel tool Network durante un dialogo http2 sono stati convertiti a partire dal formato http2 binario verso il vecchio stile di headers HTTP 1.x
 
-## 9.4. Visualize http2 use
+## 9.4. Visualizzare l'utilizzo di http2
 
-There are Firefox plugins available that help visualize if a site is using http2. One of them is [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+Esistono plugins Firefox che aiutano a capire se un sito utilizza http2. Uno di questi è [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
