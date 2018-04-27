@@ -12,19 +12,19 @@ Alla luce della vastità di dettagli ed opzioni disponibili per estensioni futur
 
 In seguito ciò ha causato problemi di inter-operabilità, al momento in cui clients e servers hanno cominciato ad utilizzare sempre più estensivamente tali suddette caratteristiche ed estensioni. Il pipelining HTTP è un primo esempio di tale feature 
 
-## 2.3 Inadequate use of TCP
+## 2.3 Uso inappropriato del TCP
 
-HTTP 1.1 has a hard time really taking full advantage of all the power and performance that TCP offers. HTTP clients and browsers have to be very creative to find solutions that decrease page load times.
+Per HTTP 1.1 non è stato facile arrivare a trarre pieno beneficio della potenza e delle performances che TCP mette a disposizione. Client e server HTTP devono essere creativi per riuscire a diminuire il tempo di caricamento delle pagine.
 
-Other attempts that have been going on in parallel over the years have also confirmed that TCP is not that easy to replace, and thus we keep working on improving both TCP and the protocols on top of it.
+Altri tentativi proseguiti in parallelo nel corso degli anni hanno confermato quanto il TCP non sia facilmente rimpiazzabile; si continua perciò a lavorare sul miglioramento del TCP e dei protocolli su esso costruiti.
 
-Simply put, TCP can be utilized better to avoid pauses or wasted intervals that could have been used to send or receive more data. The following sections will highlight some of these shortcomings.
+Mettiamola in termini semplici, il TCP può essere impiegato per evitare pause, intervalli o tempi morti in genere che potrebbero altrimenti essere utilizzati per spedire e ricevere quantità di dati. Le sezioni seguenti evidenzieranno alcuni di questi prevedibili effetti.
 
-## 2.4 Transfer sizes and number of objects
+## 2.4 Dimensione dei trasferimenti e numero di oggetti
 
-When looking at the trend for some of the most popular sites on the web today and what it takes to download their front pages, a clear pattern emerges. Over the years, the amount of data that needs to be retrieved has gradually risen up to and above 1.9MB. What is more important in this context is that, on average, over 100 individual resources are required to display each page.
+Se osserviamo i trend per alcuni dei più popolari siti web odierni e quanto tempo prenda il download di tali welcome pages, emerge chiaramente un pattern. Nel corso degli anni, la quantità di dati di cui necessitiamo non ha fatto che aumentare verso e oltre gli 1.9MB. Cosa ancora più importante che emerge da questo contesto, in media, più di 100 risorse individuali sono necessarie per visualizzare una determinata pagina.
 
-As the graph below shows, the trend has been going on for a while, and there is little to no indication that it will change anytime soon. It shows the growth of the total transfer size (in green) and the total number of requests used on average (in red) to serve the most popular web sites in the world, and how they have changed over the last four years.
+Come mostra il grafico sotto, il trend è in corso da un pò di tempo e non mostra alcun segno di arresto o inversione, nel breve periodo. Il grafico mostra la crescita della dimensione del trasferimento (in verde) e il numero totale di richieste/risposte usate in media (in rosso) per servire il contenuto web dei siti più popolari al mondo, e come essi si siano evoluti nel corso degli ultimi quattro anni.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
