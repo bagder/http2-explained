@@ -1,39 +1,39 @@
 # 11. http2 in curl
 
-The [curl project](https://curl.haxx.se/) has been providing experimental http2
-support since September 2013.
+Il [curl project](https://curl.haxx.se/) ha fornito supporto sperimentale ad 
+http2 a partire da Settembre 2013.
 
-In the spirit of curl, we intend to support just about every aspect of http2 that we possibly can. curl is often used as a test tool and tinkerer's way to poke on web sites and we intend to keep that up for http2 as well.
+Nello spirito di curl, abbiamo intenzione di supportare praticamente ogni singolo aspetto di http2. curl è spesso usato come tool di test per interagire in maniera flessibile con i siti web, dunque vogliamo mantenere lo stesso per http2.
 
-curl uses the separate library [nghttp2](https://nghttp2.org/) for the http2
-frame layer functionality. curl requires nghttp2 1.0 or later.
+curl utilizza la libreria separata [nghttp2](https://nghttp2.org/) per poter 
+offrire funzionalità a livello di frame. curl necessita di nghttp2 1.0 o superiore.
 
-Note that currently on linux curl and libcurl are not always delivered with
-HTTP/2 protocol support enabled.
+Notate che al momento su linux, curl e libcurl non sono sempre distribuiti con il
+supporto HTTP/2 abilitato.
 
-## 11.1. HTTP 1.x look-alike
+## 11.1. Sembra HTTP 1.x
 
-Internally, curl will convert incoming http2 headers to HTTP 1.x style headers and provide them to the user, so that they will appear very similar to existing HTTP. This allows for an easier transition for whatever is using curl and HTTP today. Similarly curl will convert outgoing headers in the same style. Give them to curl in HTTP 1.x style and it will convert them on the fly when talking to http2 servers. This also allows users to not have to bother or care very much with which particular HTTP version that is actually used on the wire.
+Al suo interno, curl converte gli headers entranti http2 in headers stile HTTP 1.x presentandoli all'utente e facendoli apparire molto simili ai pre-esistenti HTTP. Ciò permette una transizione facilitata per tutti gli strumenti che usano curl e HTTP oggi. In modo simile curl convertirà gli header uscenti con lo stesso stile. Passateli a curl in stile HTTP 1.x e lui si occuperà di convertirli al volo durante il dialogo con server http2. Questo permette agli utenti di non doversi occupare troppo di quale particolare versione di headers HTTP si stia usando.
 
-## 11.2. Plain text, insecure
+## 11.2. Plain text, non sicuro
 
-curl supports http2 over standard TCP via the Upgrade: header. If you do an
-HTTP request and ask for HTTP 2, curl will ask the server to update the
-connection to http2 if possible.
+curl supporta http2 su TCP standard attraverso l'header "Upgrade:". Se si 
+esegue una richesta HTTP e si richiede HTTP 2, curl chiederà al server di 
+aggiornare la connessione a http2 ove possibile.
 
-## 11.3. TLS and what libraries
+## 11.3. TLS, quali librerie
 
-curl supports a wide range of different TLS libraries for its TLS back-end, and that is still valid for http2 support. The challenge with TLS for http2's sake is the ALPN support and to some extent NPN support.
+curl supporta un vasto numero di librerie TLS per il proprio back-end TLS, ed è ancora il caso con http2. La difficoltà per http2 utilizzando TLS è offirre buon supporto ALPN e talvolta NPN.
 
-Build curl against modern versions of OpenSSL or NSS to get both ALPN and NPN support. Using GnuTLS or PolarSSL you will get ALPN support but not NPN.
+Lancia una build di curl con moderne version di OpenSSL o NSS per assicurare il support di ALPN e NPN. Se utilizzi GnuTLS o PolarSSL, avrai ALPN ma non NPN.
 
-## 11.4. Command line use
+## 11.4. Utilizzo in linea di comando
 
-To tell curl to use http2, either plain text or over TLS, you use the
-`--http2` option (that is “dash dash http2”). curl still defaults to HTTP/1.1
-so the extra option is necessary when you want http2.
+Per istruire curl ad utilizzare http2 -via plain-text o su TLS- utilizzare la 
+opzione `--http2` (meno meno http2). curl è ancora impostato per utilizzare 
+HTTP/1.1 per default, quindi l'opzione è necessaria se desideriamo http2.
 
-## 11.5. libcurl options
+## 11.5. Opzioni di libcurl
 
 ### 11.5.1 Enable HTTP/2
 
