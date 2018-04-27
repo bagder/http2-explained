@@ -14,7 +14,7 @@ I confini sono abbastanza limitati e pongono al team molte restrizioni sull'abil
 
 - Rimuovere o ridurre parti opzionali del protocollo. Non era esattamente un requisito ma piuttosto un mantra proveniente dalla filosofia SPDY e dal team Google. Se si fa in modo che tutto sia obbligatorio fin da subito, non ci sarà mai modo di implementare qualcosa oggi senza cadere in una trappola un domani.
 
-- Basta versioni minori. E' stato deciso che i client e i server o sono compatibili con http2, oppure no, in maniera assoluta. Se ci sarà bisogno di estendere il protocollo o modificare le cose, http3 prenderà forma. Non ci sono più versioni intermedie in http2.
+- Basta versioni minori. È stato deciso che i client e i server o sono compatibili con http2, oppure no, in maniera assoluta. Se ci sarà bisogno di estendere il protocollo o modificare le cose, http3 prenderà forma. Non ci sono più versioni intermedie in http2.
 
 ## 5.1. http2 for existing URI schemes
 

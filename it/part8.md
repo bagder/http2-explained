@@ -77,7 +77,7 @@ It also has variations implying that the world gets even further dependent or co
 
 Google has publicly [announced](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) that they will remove support for SPDY and NPN in Chrome in 2016 and they urge servers to migrate to HTTP/2 instead.
 
-### 8.4.2. “E' un protocollo utile soltanto ai browser”
+### 8.4.2. “È un protocollo utile soltanto ai browser”
 
 This is sort of true. One of the primary drivers behind the http2 development is the fixing of HTTP pipelining. If your use case originally didn't have any need for pipelining then chances are http2 won't do a lot of good for you. It certainly isn't the only improvement in the protocol but a big one.
 
@@ -123,7 +123,7 @@ If you really can't take a binary protocol, then you couldn't handle TLS and com
 
 This is of course subject to debate and discussions on how to measure what faster means, but already in the SPDY days many tests were performed that proved browser page loads were faster (like ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) by people at University of Washington and ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) by Hervé Servy) and such experiments have been repeated with http2 as well. I'm looking forward to seeing more such tests and experiments getting published. A [basic first test made by httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) might imply that HTTP/2 holds its promises.
 
-### 8.4.7. “E' sviluppato attorno una statificazione di violazioni”
+### 8.4.7. “È sviluppato attorno una statificazione di violazioni”
 
 Davvero, questa la vostra critica ? Gli strati non sono sacri e intoccabili pilastri di una religione globale. Se ci siamo trovati a passare per zone d'ombra durante lo sviluppo di http2, è sempre stato nell'interesse e allo scopo di creare un protocollo efficace e stabile, a partire dai vinvoli iniziali.
 
@@ -133,9 +133,9 @@ Vero. Con l'obiettivo preciso di mantenere i paradigmi HTTP/1.1 molte delle anti
 
 ## 8.5. Sarà http2 massivamente adottato?
 
-E' troppo presto per dirlo con certezza, ma posso indovinare e stimare che è quello che succederà.
+È troppo presto per dirlo con certezza, ma posso indovinare e stimare che è quello che succederà.
 
-I detrattori diranno “guarda quanto bene ha fatto IPv6” portandolo come esempio di un nuovo protocollo per il quale ci sono voluti decenni prima che si iniziasse a vederlo implementato massivamente. Ebbene, http2 non è un nuovo IPv6. E' un protocollo basato su TCP che fa leva sullo straodinario meccanismo di Update HTTP, sui numeri di porta, su TLS, etc. Non necessiterà di alcuna modifica a router o firewall.
+I detrattori diranno “guarda quanto bene ha fatto IPv6” portandolo come esempio di un nuovo protocollo per il quale ci sono voluti decenni prima che si iniziasse a vederlo implementato massivamente. Ebbene, http2 non è un nuovo IPv6. È un protocollo basato su TCP che fa leva sullo straodinario meccanismo di Update HTTP, sui numeri di porta, su TLS, etc. Non necessiterà di alcuna modifica a router o firewall.
 
 Con il suo SPDY, Google ha dimostrato al mondo come un nuovo protocollo possa essere sviluppato e distribuito a browser e webservices attraverso implementazioni multiple, in un tempo tutto sommato breve. Mentre l'ammontare di server che offrono SPDY su Internet è nel range dell'1%, l'ammontare di dati con i quali questi server hanno a che fare è ben maggiore. Alcuni dei più popolari e visitati siti propongono SPDY gia ad oggi.
 
