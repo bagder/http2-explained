@@ -1,17 +1,17 @@
-# 8. An http2 world
+# 8. Un mondo http2
 
-So what will things look like when http2 gets adopted? Will it get adopted?
+Quindi, come appariranno le cose quando http2 sarà adottato ? Sarà mai usato ?
 
-## 8.1. How will http2 affect ordinary humans?
+## 8.1. Come http2 influenzerà l'uomo tipo?
 
-http2 is not yet widely deployed nor used. We can't tell for sure exactly how things will turn out. We have seen how SPDY has been used and we can make some guesses and calculations based on that and other past and current experiments.
+http2 non è ancora ne distribuito ne adodatto. Non possiamo ancora dire come le cose evolveranno. Abbiamo visto come SPDY sia stato messo in campo; possiamo solo fare qualche ipotesi basata su quella ed altre esperienze passate, ed sugli esperimenti in corso.
 
-http2 reduces the number of necessary network round-trips and it avoids the head of line blocking dilemma completely with multiplexing and fast discarding of unwanted streams.
+http2 riduce il numero di round-trip ed evita definitivamente l'eterno dilemma del "blocco a fine linea" attraverso l'utilizzo di multiplexing e fast-discarding degli stream non necessari.
 
-It allows a large amount of parallel streams that go way over even the most sharded sites of today.
+Permette un vasto ammontare di streams paralleli, numero ampiamente sufficiente anche per il sito più "sharded" (parallelizzato) del momento.
 
-With priorities used properly on the streams, chances are much better that clients will actually get the important data before the less important data.
-All this taken together, I'd say that the chances are very good that this will lead to faster page loads and to more responsive web sites. Shortly put: a better web experience.
+Utilizzando correttamente le priorità sugli streams, il client sarà in grado di scaricare i dati importanti prima di quelli meno utili.
+Visto tutto ciò, direi che beneficieremo di siti più  reattivi che si caricano in minor tempo. Mettiamola così: una miglior esperienza del web.
 
 How much faster and how much improvement we will see, I don't think we can say yet. First, the technology is still very early and then we haven't even started to see clients and servers trim implementations to really take advantage of all the powers this new protocol offers.
 

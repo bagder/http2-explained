@@ -1,39 +1,39 @@
-# 7. Extensions
+# 7. Estensioni
 
-The http2 protocol mandates that a receiver must read and ignore all unknown frames (those with an unknown frame type). Two parties can negotiate the use of new frame types on a hop-by-hop basis, but those frames aren't allowed to change state and they will not be flow controlled.
+Il protocollo http2 impone che un ricevente sia obbligato a leggere e ignorare tutti i frame sconosciuti (riportanti un tipo di frame sconosciuto). Due estremi possono negoziare l'uso di nuovi tipi di frame su base hop-by-hop, ma tali frame non hanno il permesso di cambiare stato e il loro flusso non beneficerà di flow-control.
 
-The subject of whether http2 should allow extensions at all was debated at length during the protocol's development with opinions swinging for and against. After draft-12 the pendulum swung back one last time and extensions were ultimately allowed.
+Il fatto che http2 debba poter supportare alucna estensione fu dibattuto a lungo durante lo sviluppo del protocollo, con opinioni variabili, pro e contro. Dopo la draft-12 il pendolo ha ocillato un ultima volta, in favore delle estensioni.
 
-Extensions are not part of the actual protocol but will be documented outside of the core protocol spec. There are already two frame types that have been discussed for inclusion in the protocol that will probably be the first frames sent as extensions. I'll describe them here because of their popularity and previous state as “native” frames:
+Le estensioni non sono parte integrante del protocollo ma saranno documentate all'esterno del documento che specifica i fondamenti del protocollo. Ci sono gia due nuovi tipi di frame per i quali se ne discute l'inclusione ufficiale, i primi frame ad essere spediti come estensioni. Li descriverò vista la loro popolarità e il loro precedente stato di frame "nativi":
 
-## 7.1. Alternative Services
+## 7.1. Servizi Alternativi
 
-With the adoption of http2, there are reasons to suspect that TCP connections will be much lengthier and be kept alive much longer than HTTP 1.x connections have been. A client should be able to do a lot of what it wants with a single connection to each host/site, and that connection could potentially be open for quite some time.
+Con l'adozione di http2, abbiamo ragione di sospettare che le connessioni TCP siano ben più lunghe, durevoli, e che saranno mantenute ben più a lungo rispetto alla durata media delle anziane connessioni HTTP 1.x. Un client dovrebbe essere in grado di fare praticamente tutto con una sola connessione per ogni host/sito; tale connessione potrebbe potenzialmente rimanere aperta a lungo.
 
-This will affect how HTTP load balancers work and there may arise situations when a site wants to suggest that the client connect to another host. It could be for performance reasons, or if a site is being taken down for maintenance, etc.
+Questo fattore influenzerà il funzionamento dei load-balancers HTTP, fino ad arrivare ad una situazione in cui sarà lo stesso sito a consigliare al client di riconnettersi attraverso un altro host, per motivi di performance, maintenance, etc.
 
-The server will send the [Alt-Svc:
-header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-10) (or ALTSVC
-frame with http2) telling the client about an alternative service: another
-route to the same content, using another service, host, and port number.
+Il server manderà un header [Alt-Svc:
+header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-10) (o un frame 
+ALTSVC in http2) instruendo il client a proposito di un servizio alternativo:
+un'altra rotta verso lo stesso contenuto, utilizzando un servizio ed un numero
+di porta diversi.
 
-A client should then attempt to connect to that service asynchronously and only use the alternative if the new connection succeeds.
+Un client dovrebbe dunque provare a connettersi a tale servizio in maniera asincrona, ed utilizzare tale alternativa solo in caso che la connessione abbia successo.
 
-### 7.1.1. Opportunistic TLS
+### 7.1.1. TLS opportunistico
 
-The Alt-Svc header allows a server that provides content over http:// to inform the client that the same content is also available over a TLS connection.
+L'header Alt-Svc permette ad un server di contenuti via http:// di informare il client che lo stesso contenuto è anche disponibile attraverso una connessione TLS.
 
-This is a somewhat debatable feature. Such a connection would do unauthenticated TLS and wouldn't be advertized as “secure” anywhere, wouldn't use any padlock in the UI, and in fact there is no way to tell the user that it isn't plain old HTTP, but this is still opportunistic TLS and some people are very firmly against this concept.
+Questa è in qualche modo una feature discutibile. Tale connessione utilizzerebbe TLS non-autenticato e non sarebbe ritenuta "sicura" comunque, non essendo predisposta per avvertire in alcun modo l'interfaccia utente (UI) della disponibilità di una connessione cifrata, ed oltretutto non avremmo modo di distinguere ove l'utente stia utilizzando il caro vecchio HTTP. In effetti, molti esperti sono ancora fermamente contrati a tale opportunismo in TLS.
 
-## 7.2. Blocked
+## 7.2. Bloccato
 
-A frame of this type is meant to be sent exactly once by an http2 party when
-it has data to send off but flow control forbids it to send any data. The idea
-is that if your implementation receives this frame you know you
-have messed up something and/or you're getting less than perfect
-transfer speeds.
+Si suppone che un frame di questo tipo sia inviato esattamente una sola volta
+da parte di un peer http2 quando esso avesse dei dati da spedire, ma il flow-
+control glielo impedisse. In pratica, se la tua implementazione riceve un frame
+di questo tipo, evidenzierebbe un problema a livelo di configurazione oppure
+transfer-rate non ottimale.
 
-A quote from draft-12, before this frame was moved out to become an extension:
+Una citazione dalla draft-12, prima che questo frame diventasse una estensione a parte:
 
-> “The BLOCKED frame is included in this draft version to facilitate experimentation.  If the results of the experiment do not provide positive feedback, it could be removed”
-
+> "Il frame BLOCKED è incluso in questa draft per facilitare la sperimentazione. Se i risultati non dovessero mostrare un vantaggio o miglioramento, tale frame potrà essere rimosso"
