@@ -28,26 +28,26 @@ Come mostra il grafico sotto, il trend è in corso da un pò di tempo e non most
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
-## 2.5 Latency kills
+## 2.5 La latenza uccide
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
-HTTP 1.1 is very latency sensitive, partly because HTTP pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
+HTTP 1.1 è molto sensibile alla latenza, in parte perchè il pipelining HTTP non ha mai sufficientemente risolto i propri problemi tanto da meritare di essere disattivato presso la maggior parte dell'utenza.
 
-While we've seen a great increase in available bandwidth to people over the last few years, we have not seen the same level of improvements in reducing latency. High-latency links, like many of the current mobile technologies, make it hard to get a good and fast web experience even if you have a really high bandwidth connection.
+Mentre abbiamo potuto osservare un enorme incremento di larghezza di banda disponibile per utente durante il corso degli ultimi anni, non abbiamo potuto osservare lo stesso incremento (o decremento piuttosto) di prestazioni volto ridurre la latenza. Su link ad elevata latenza, come la maggior parte delle tecnologie mobili, è difficile dunque godere di buone prestazioni web pur avendo una connessione a banda larga.
 
-Another use case requiring low latency is certain kinds of video, like video conferencing, gaming and similar where there's not just a pre-generated stream to send out.
+Un altro use-case che richiede bassa latenza è ad esempio il video, video conferencing, gaming e simili, la dove non vi è la necessità di inviare uno stream pregenerato e quindi "ordinato".
 
-## 2.6. Head-of-line blocking
+## 2.6. Bloccaggio "head-of-line" (ad inizio della coda)
 
-HTTP pipelining is a way to send another request while waiting for the response to a previous request. It is very similar to queuing at a counter at the bank or in a supermarket: you just don't know if the person in front of you is a quick customer or that annoying one that will take forever before he/she is done. This is known as head-of-line blocking.
+Il pipelining HTTP è uno dei modi per mandare un'altra richiesta mentre stiamo ancora aspettando la risposta alla domanda precendente. In un certo senso è come fare la coda alla banca o al supermarket: non sai in anticipo se la persona davanti a te sarà un cliente veloce o uno di quei/quelle fastidiosi/e che ci mettono un'eternità a finire. Questo problema è noto come "head-of-line", inizio della coda.
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 
-Sure, you can attempt to pick the line you believe is the correct one, and at times you can even start a new line of your own. But in the end, you can't avoid making a decision. And once it is made, you cannot switch lines.
+Certo, puoi provare a scegliere la fila che pensi essere la più svelta, o potresti addirittura iniziarne una tua. Alla fine, non possiamo evitare di prendere decisioni. Una volta compiuta la scelta, non si puè più cambiare.
 
-Creating a new line is also associated with a performance and resource penalty, so that's not scalable beyond a smaller number of lines. There's just no perfect solution to this.
+Creare una nuova fila è allo stesso tempo associato ad una penalità in termini di risorse e performance; non è dunque scalabile oltre un piccolo numero di file. Non esiste soluzione ideale a questo problema.
 
 Even today, most desktop web browsers ship with HTTP pipelining disabled by default.
 
-Additional reading on this subject can be found in the Firefox [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354).
+Ulteriori risorse sull'argomento si trovano ad esempio nella [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354) di Firefox.
