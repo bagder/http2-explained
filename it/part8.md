@@ -2,7 +2,7 @@
 
 Quindi, come appariranno le cose quando http2 sarà adottato ? Sarà mai usato ?
 
-## 8.1. Come http2 influenzerà l'uomo tipo?
+## 8.1. Come http2 influenzerà l'utente tipo?
 
 http2 non è ancora ne distribuito ne adodatto. Non possiamo ancora dire come le cose evolveranno. Abbiamo visto come SPDY sia stato messo in campo; possiamo solo fare qualche ipotesi basata su quella ed altre esperienze passate, ed sugli esperimenti in corso.
 
@@ -13,11 +13,11 @@ Permette un vasto ammontare di streams paralleli, numero ampiamente sufficiente 
 Utilizzando correttamente le priorità sugli streams, il client sarà in grado di scaricare i dati importanti prima di quelli meno utili.
 Visto tutto ciò, direi che beneficieremo di siti più  reattivi che si caricano in minor tempo. Mettiamola così: una miglior esperienza del web.
 
-How much faster and how much improvement we will see, I don't think we can say yet. First, the technology is still very early and then we haven't even started to see clients and servers trim implementations to really take advantage of all the powers this new protocol offers.
+Quanto rapido sarà questo miglioramento, vedremo, non penso si possa ancora dire. Per prima cosa, la tecnologia è ancora in una fase di lancio e non si sono ancora visti client/server che implementino a dovere questa tecnologia per sfruttarne tutte le potenzialità.
 
-## 8.2. How will http2 affect web development?
+## 8.2. Come http2 influenzera lo sviluppo web?
 
-Over the years web developers and web development environments have gathered a full toolbox of tricks and tools to work around problems with HTTP 1.1, recall that I outlined  some of them in the beginning of this document as a justification for http2.
+Nel corso degli anni, gli sviluppatori e gli IDE si sono riuniti a formare una immensa cassetta degli attrezzi piena di utensili e trucchi per circuire HTTP 1.1; come ricorderete, ne ho menzionati alcuni all'inizio di questo documento come giustificazioni per passare a http2.
 
 Lots of those workarounds that tools and developers now use by default and without thinking, will probably hurt http2 performance or at least not really take advantage of http2's new super powers. Spriting and inlining should most likely not be done with http2. Sharding will probably be detrimental to http2 as it will probably benefit from using fewer connections.
 

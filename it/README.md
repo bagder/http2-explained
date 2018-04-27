@@ -1,4 +1,4 @@
-http2 spigato
+http2 spiegato
 =============
 
 Questo documento descrive il HTTP/2 ([RFC
