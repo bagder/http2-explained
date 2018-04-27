@@ -16,7 +16,7 @@ per desrcivere il nuovo protocollo, quando invece in pura termininologia tecnica
 il vero nome è HTTP/2. Ho fatto questa scelta per migliorare la leggibilità e 
 per favorive una migliore scorrevolezza del linguaggio.
 
-## 1.1 Author
+## 1.1 L'autore
 
 Il mio nome è Daniel Stenberg e lavoro per Mozilla. Ho lavorato in ambito open
 source e networking per più di vent'anni in svariati progetti. Molto probabilmente
@@ -33,62 +33,62 @@ alla standardizzazione di http2.
 
   Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
-## 1.2 Help!
+## 1.2 Aiuto!
 
-Se trovassi errori, omissioni, sbagli o falsità in questo documento, ti pregherei di mandarmi una versione corretta del paragrafo in questione e mi occuperò di redigere la versione corretto. Darò tutto il credito a chiunque aiuti concretamente! Spero di rendere questo documento sempre meglio col passare del tempo.
+Se dovessi trovare errori, omissioni, sbagli o falsità in questo documento, ti pregherei di mandarmi una versione corretta del paragrafo in questione e mi occuperò di redigere la versione corretto. Darò tutto il credito a chiunque aiuti concretamente! Spero di rendere questo documento sempre più completo col passare del tempo.
 
 This document is available at [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
-## 1.3 License
+## 1.3 Licenza
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
 Questo documento è rilasciato sotto licenza Creative Commons Attribution 4.0: https://creativecommons.org/licenses/by/4.0/
 
-## 1.4 Document history
+## 1.4 Storia del documento
 
-The first version of this document was published on April 25th 2014. Here follows the largest changes in the most recent document versions.
+La prima versione del presente documento fu pubblicata il 25 Aprile 2014. Di seguito i maggiori cambiamenti attraverso le più recenti versioni.
 
-### Version 1.13
+### Versione 1.13
 
-- Converted the master version of this document to Markdown syntax
-- 13: Mention more resources, updated links and descriptions 
-- 12: Updated the QUIC description with reference to draft 
-- 8.5: Refreshed with current numbers 
-- 3.4: The average is now 40 TCP connections 
-- 6.4: Updated to reflect what the spec says 
+- Convertita la sezione principale del documento a sintassi Markdown 
+- 13: Citare più risorse, link e descrizioni aggiornate 
+- 12: Aggiornata la descrizione di QUIC con riferimento alla draft 
+- 8.5: Aggiornata alla numerazione attuale 
+- 3.4: La media è adesso 40 connessioni TCP 
+- 6.4: Aggiornato per aderire a quanto affermato nella specifica 
 
-### Version 1.12
+### Versione 1.12
 
-- 1.1: HTTP/2 is now in an official RFC 
-- 6.5.1: Link to the HPACK RFC 
-- 9.1: Mention the Firefox 36+ config switch for http2 
-- 12.1: Added section about QUIC 
+- 1.1: HTTP/2 è oramai una RFC ufficiale 
+- 6.5.1: Collegamento alla RFC su HPACK 
+- 9.1: Menzionare come Firefox 36+ configuri http2 "on by default" 
+- 12.1: Aggiunta sezione a proposito di QUIC 
 
-### Version 1.11
+### Versione 1.11
 
-- Lots of language improvements mostly pointed out by friendly contributors 
-- 8.3.1: Mention nginx and Apache httpd specific acitivities 
+- Molti miglioramenti dal punto di vista del linguaggio, grazie a molti contributi amichevoli 
+- 8.3.1: Citare le attività specifiche di nginx e Apache httpd 
 
-### Version 1.10
+### Versione 1.10
 
-- 1: The protocol has been “okayed” 
-- 4.1: Refreshed the wording since 2014 is last year 
-- Front: Added image and call it “http2 explained” there, fixed link 
-- 1.4: Added document history section 
-- Many spelling and grammar mistakes corrected 
-- 14: Added thanks to bug reporters 
-- 2.4: Better labels for the HTTP growth graph 
-- 6.3: Corrected the wagon order in the multiplexed train 
-- 6.5.1: HPACK draft-12 
+- 1: Il protocollo ha ricevuto l'OK 
+- 4.1: Accordare i tempi passati rispetto al fatto che 2014 è l'anno scorso 
+- Front: Aggiunta immagine con nome “http2 explained”, link corretto 
+- 1.4: Aggiunta sezione "Storia del documento" 
+- Molti errori grammaticali e di spelling corretti 
+- 14: Aggiunto rinraziamento ai bug reporters 
+- 2.4: Migliori etichette per il grafico sulla evoluzione di HTTP 
+- 6.3: Corretto l'ordine dei vagoni nel treno multiplexato 
+- 6.5.1: draft-12 HPACK 
 
 ### Version 1.9
 
-- Updated to HTTP/2 draft-17 and HPACK draft-11  
-- Added section "10. http2 in Chromium" (== one page longer now)  
-- Lots of spell fixes  
-- At 30 implementations now  
-- 8.5: Added some current usage numbers  
-- 8.3: Mention internet explorer too  
-- 8.3.1 Added "missing implementations"  
-- 8.4.3: Mention that TLS also increases success rate
+- Aggiornato alla draft-17 HTTP/2 e draft-11 HPACK  
+- Aggiunta sezione "10. http2 in Chromium" (== più lungo di una pagina)  
+- Un sacco di fix spelling  
+- A quota 30 implementazioni ad oggi
+- 8.5: Aggiunti alcune cifre relative all'utilizzo
+- 8.3: Citare anche internet explorer  
+- 8.3.1 Aggiunto "implementazioni mancanti"  
+- 8.4.3: Menzionare come TLS incrementi anche il tasso di successo  
