@@ -14,7 +14,7 @@ Allo stesso tempo, rende più semplice separare protocollo e incapsulamento - co
 
 Il supporto nativo per compression, assime all'omnipresente TLS, diminuisce il valore di un protocollo puramente testuale, dato che non vedresti alcun testo in una capture on-the-wire. Dobbiamo semplicemente abituarci all'idea di usare uno strumento di cattura tipo Wireshark, al fine di comprendere cosa succeda a livello di http2.
 
-Fare buon debug su questo protocollo necessiterà probabilmente di strumenti quali curl, o analisi di traffico IP con dissector http2 tipo Wireshark e similia.
+Per operare un buon debug su questo protocollo si avrà probabilmente bisogno di strumenti quali curl, analisi di traffico IP con dissector http2 tipo Wireshark e simili.
 
 ## 6.2. Il formato binario
 
@@ -88,9 +88,9 @@ This is the feature also known as “cache push”. The idea is that if the clie
 
 Server push is something a client must explicitly allow the server to do. Even then, the client can swiftly terminate a pushed stream at any time with RST_STREAM should it not want a particular resource.
 
-## 6.8. Flow Control
+## 6.8. Controllo di Flusso
 
-Each individual http2 stream has its own advertised flow window that the other end is allowed to send data for. If you happen to know how SSH works, this is very similar in style and spirit.
+Ogni singolo stream http2 possiede e pubblicizza la propria "finestra di flusso", verso la quale l'altro estremo è autorizzato ad inviare dati. Se conoscete il funzionamento di SSH, questo è in linea con lo stesso spirito e principio.
 
-For every stream, both ends have to tell the peer that it has enough room to handle incoming data, and the other end is only allowed to send that much data until the window is extended. Only DATA frames are flow controlled.
+Per ogni singolo stream, i due estremi devono avvertirsi l'un l'altro quando ci dovesse essere abbastanza spazio per accogliere dati in entrata; allo stesso tempo un è abilitato a spedire tanti dati quanti sono ammessi dalla finestra di scambio. Solo i frame DATA sono sottoposti a flow-control (controllo di flusso).
 

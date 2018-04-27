@@ -14,9 +14,9 @@ Questo fattore influenzerà il funzionamento dei load-balancers HTTP, fino ad ar
 
 Il server manderà un header [Alt-Svc:
 header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-10) (o un frame 
-ALTSVC in http2) instruendo il client a proposito di un servizio alternativo:
-un'altra rotta verso lo stesso contenuto, utilizzando un servizio ed un numero
-di porta diversi.
+ALTSVC in http2) istruendo il client a proposito del servizio alternativo:
+un'altra rotta verso lo stesso contenuto, utilizzando però un servizio ed un 
+numero di porta differenti.
 
 Un client dovrebbe dunque provare a connettersi a tale servizio in maniera asincrona, ed utilizzare tale alternativa solo in caso che la connessione abbia successo.
 
