@@ -1,14 +1,14 @@
-# 14. Thanks
+# 14. Ringraziamenti
 
-Inspiration and the package format Lego image from Mark Nottingham.
+Mark Nottingham per l'ispirazione e l'immagine formato lego dei pacchetti.
 
-HTTP trend data comes from https://httparchive.org/.
+I dati sui trend HTTP provenienti da https://httparchive.org/.
 
-The RTT graph comes from presentations done by Mike Belshe.
+I grafici RTT provengono dalle presentazioni di Mike Belshe.
 
-My kids Agnes and Rex for letting me borrow their Lego figures for the head of line picture.
+I miei figli Agnes e Rex per avermi prestato i loro personaggi Lego per l'immagine "head of line".
 
-Thanks to the following friends for reviews and feedback: Kjell Ericson, Bjorn Reese, Linus Swälas and Anthony Bryan. Your help is greatly appreciated and has really improved the document!
+Grazie agli amici per riletture e ritorni: Kjell Ericson, Bjorn Reese, Linus Swälas e Anthony Bryan. Il vostro aiuto è immensamente apprezzato e ha davvero migliorato questo documento!
 
-During the various iterations, the following friendly people have provided bug reports and improvements to the document: Mikael Olsson, Remi Gacogne, Benjamin Kircher, saivlis, florin-andrei-tp, Brett Anthoine, Nick Parlante, Matthew King, Nicolas Peels, Jon Forrest, sbrickey, Marcin Olak, Gary Rowe, Ben Frain, Mats Linander, Raul Siles, Alex Lee, Richard Moore
+Nel corso delle varie iterazioni, le persone seguenti hanno amicalmente inviato bug-report e migliorie a questo documento: Mikael Olsson, Remi Gacogne, Benjamin Kircher, saivlis, florin-andrei-tp, Brett Anthoine, Nick Parlante, Matthew King, Nicolas Peels, Jon Forrest, sbrickey, Marcin Olak, Gary Rowe, Ben Frain, Mats Linander, Raul Siles, Alex Lee, Richard Moore
 

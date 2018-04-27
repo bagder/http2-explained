@@ -1,15 +1,15 @@
-# 13. Further reading
+# 13. Altre letture
 
-If you think this document was a bit light on content or technical details, here are additional resources to help you satisfy your curiosity:
+Se pensate che questo documento sia ancora troppo poco tecnico, qui troverete altre risorse per soddisfare la vostra curiosità:
 
-- The HTTPbis mailing list and its archives: https://lists.w3.org/Archives/Public/ietf-http-wg/
+- La mailing list e gli archivi di HTTPbis: https://lists.w3.org/Archives/Public/ietf-http-wg/
 
-- The actual http2 specification in a HTMLified version: https://httpwg.github.io/specs/rfc7540.html
+- La specifica http2 odierna in una versione HTMLified: https://httpwg.github.io/specs/rfc7540.html
 
-- Firefox http2 networking details: https://wiki.mozilla.org/Networking/http2
+- Dettagli sul networking http2 di Firefox http2: https://wiki.mozilla.org/Networking/http2
 
-- curl http2 implementation details: https://curl.haxx.se/docs/http2.html
+- Dettagli sulla implementazione di http2 in curl: https://curl.haxx.se/docs/http2.html
 
-- The http2 web site: https://http2.github.io/ and perhaps in particular the FAQ: https://http2.github.io/faq/
+- Il sito di http2: https://http2.github.io/ e più in particolare la FAQ: https://http2.github.io/faq/
 
-- Ilya Grigorik's HTTP/2 chapter in his book “High Performance Browser Networking”: https://hpbn.co/http2/
+- Il capitolo di Ilya Grigorik's su HTTP/2 nel suo libro “High Performance Browser Networking”: https://hpbn.co/http2/
