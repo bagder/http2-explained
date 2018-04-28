@@ -1,7 +1,7 @@
 * [English](en/)
 * [Español](es/)
 * [Français](fr/)
-* [Ialiano](it/)
+* [Italiano](it/)
 * [日本語](ja/)
 * [Portuguese](pt/)
 * [Русский](ru/)
