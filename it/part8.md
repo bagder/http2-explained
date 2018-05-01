@@ -29,7 +29,7 @@ Anche solo per questi motivi, sospetto che passerà un pò di tempo prima che tu
 
 Provare a documentare le implementazioni specifiche in un documento come questo sarebbe un impresa futile e prona al fallimento, tale documento diventerebbe desueto in breve tempo. Cercherò piuttosto di spiegare la situazione in termini più ampii, oltre ad indirizzare i lettori verso il sito di http2, [list of implementations](https://github.com/http2/http2-spec/wiki/Implementations).
 
-Un grande numero di implementazioni hanno preso vita fin dall'inizio, ed altre si sono aggiunte durante il lavoro sulla definizione di http2. Al momento attuale, pià di 40 implementazioni sono citate, di cui la maggior parte rispetta la versione finale delle specifiche.
+Un grande numero di implementazioni hanno preso vita fin dall'inizio ed altre si sono aggiunte durante il lavoro di definizione di http2. Al momento attuale, sono citate più di 40 implementazioni, la maggior parte delle quali rispetta la versione finale delle specifiche.
 
 ### 8.3.1 Navigatori
 
@@ -46,10 +46,9 @@ supporto a http2 in future versioni.
 
 Esistono gia molte implementazioni di server http2.
 
-The popular Nginx server offers http2 support with since
-[1.9.5](https://www.nginx.com/blog/nginx-1-9-5/) released on September 22,
-2015 (where it replaces the SPDY module, so they cannot both run in the same
-server instance).
+Il popolare Nginx offre supporto per http2 gia dalla [1.9.5](https://www.nginx.com/blog/nginx-1-9-5/)
+rilasciata il 22 Settembre 2015 (dove rimpiazza il modulo SPDY, impedendo
+l'utilizzo contemporaneo di entrambi all'interno della stessa istanza.
 
 Apache's httpd server has a http2 module [mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html) since 2.4.17 which was released on October 9, 2015.
 
@@ -61,15 +60,15 @@ have all released http2 capable servers.
 
 ### 8.3.3 Altri
 
-curl and libcurl support insecure http2 as well as the TLS based one using one
-out of several different TLS libraries.
+curl e libcurl supportano http2 non-sicuro (testuale) e la versione TLS
+servendosi di una delle svrariate librerie TLS disponibili.
 
-Wireshark supports http2. The perfect tool for analyzing http2 network
-traffic.
+Wireshark supporta http2. Il tool perfetto per l'analisi del traffico 
+di rete http2.
 
 ## 8.4. Critiche comuni a http2
 
-During the development of this protocol the debate has been going back and forth and of course there is a certain amount of people who believe this protocol ended up completely wrong. I wanted to mention a few of the more common complaints and mention the arguments against them:
+Durante lo sviluppo di questo protocollo, il dibattito ha preso pieghe diverse, avanti e indietro rispetto a determinate posizioni intellettuali, è ovvio che a detta di alcune persone questo protocollo abbia fatto davvero una brutta fine. Vorrei citare alcune delle critiche più frequenti e rispondere tono su tono:
 
 ### 8.4.1. “The protocol is designed or made by Google”
 
@@ -129,7 +128,7 @@ Davvero, questa la vostra critica ? Gli strati non sono sacri e intoccabili pila
 
 ### 8.4.8. “Non rimedia a svariati limiti intrinsechi a HTTP/1.1”
 
-Vero. Con l'obiettivo preciso di mantenere i paradigmi HTTP/1.1 molte delle antiche features dovevano rimanere inclusi, tali quali gli header più comuni i quali spesso includono fantomatici cookies, autorizzazioni e tanto altro. Il vantaggio nel mantenere questi paradigmi è che abbiamo ora un protocollo che è possibile distribuire e integrare senza bisogno di un eccessivo ammontare di lavoro di aggiornamento, nessun bisogno di riscrivere le parti fondamentali o di rimpiazzarle ex-novo. http2 è di fatto solo un nuovo strato di incapsulazione, di framing.
+Vero. Con l'obiettivo preciso di mantenere i paradigmi HTTP/1.1 molte delle antiche features dovevano rimanere incluse, tali quali gli header più comuni, che a loro volta spesso includono fantomatici cookies, autorizzazioni e tanto altro. Il vantaggio nel mantenere questi paradigmi è che ora abbiamo un protocollo che distribuibile e integrabile senza bisogno di un eccessivo ammontare di aggiornamenti, evitando di riscrivere le parti fondamentali o di rimpiazzarle ex-novo. http2 è di fatto solo un nuovo strato di incapsulazione, di framing.
 
 ## 8.5. Sarà http2 massivamente adottato?
 
@@ -147,5 +146,5 @@ I più grandi portali e operatori del web -fra cui Google, Twitter e Facebook- s
 
 Molte delle più famose case produttrici di proxy hanno annunciato di voler supportare http2, fra cui HAProxy, Squid e Varnish.
 
-Durante i corso del 2015, il traffico http2 è aumentato. A inizio Settembre, il tasso di utilizzazione di Firefox 40 era al 13% su tutto il traffico HTTP e 27% su tutto il traffico HTTPS, mentre verso Google circa il 18% di richieste entranti sono in HTTP/2. Bisogna notare che allo stesso tempo Google è in procinto di sperimentare altri protocolli (vedi QUIC in 12.1) il che abbassa in qualche modo il tasso di connessioni http2 globali.
+Durante il corso del 2015, il traffico http2 è aumentato. A inizio Settembre il tasso di utilizzazione di Firefox 40 era al 13% su tutto il traffico HTTP e 27% su tutto il traffico HTTPS, mentre verso Google circa il 18% di richieste entranti sono in HTTP/2. Bisogna notare che allo stesso tempo Google è in procinto di sperimentare altri protocolli (vedi QUIC in 12.1) il che abbassa in qualche modo il tasso di connessioni http2 globali.
 

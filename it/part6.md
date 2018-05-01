@@ -59,34 +59,35 @@ Le richeste HTTP 1.1 sono al momento diventate così voluminose da eccedere la d
 
 ### 6.5.1. Parlare di compressione è un argomento spinoso
 
-HTTPS and SPDY compression were found to be vulnerable to the [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) and [CRIME](https://en.wikipedia.org/wiki/CRIME) attacks. By inserting known text into the stream and figuring out how that changes the output, an attacker can figure out what's being sent in an encrypted payload.
+HTTPS e SPDY hanno sofferto a causa di vulnerabilità [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) e attacchi [CRIME](https://en.wikipedia.org/wiki/CRIME). Inserendo un testo noto nello stream ed osservandone i mutamenti in funzione dell'operazione richiesta, un attaccante può scoprire il contenuto del payload.
 
-Doing compression on dynamic content for a protocol - without becoming vulnerable to one of these attacks - requires some thought and careful consideration. This is what the HTTPbis team tried to do.
+Creare un meccanismo di compressione dinamica per un protocollo - senza renderlo vulnerabile ad uno di questi attachi- richiede molta cura e considerazione. Proprio quello che HTTPbis ha cercato di fare.
 
-Enter [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2, which – as the name suggests - is a compression format especially crafted for http2 headers, and it is being specified in a separate internet draft. The new format, together with other counter-measures (such as a bit that asks intermediaries to not compress a specific header and optional padding of frames), should make it harder to exploit compression.
+Parliamo quindi di [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2, che – come il nome suggerisce - è un formato di compressione creato su misura per gli headers http2, descritto e specificato in una internet draft separata. Il nuovo formato, cosi come le contromisure adottabili (quali un bit che richiede agli intermediari di non comprimere un header specifico ne padding opzionale), dovrebbe rendere più difficile lo sfruttamento della vulnerabilità nel contesto di un attacco.
 
-In the words of Roberto Peon (one of the creators of HPACK):
+Nelle parole di Roberto Peon (uno dei creatori di HPACK):
 
-> “HPACK was designed to make it difficult for a conforming implementation to
-> leak information, to make encoding and decoding very fast/cheap, to provide
-> for receiver control over compression context size, to allow for proxy
-> re-indexing (i.e., shared state between frontend and backend within a proxy),
-> and for quick comparisons of Huffman-encoded strings”.
+> “HPACK è stato concepito per impedire ad una implementazione non-conforme
+> di facilitare la fuga di informazioni, per rendere ecoding e decoding rapidi
+> e semplici, per permettere al ricevente di controllare la compressione sulla
+> base delle dimensioni del contesto, per permettere ad un proxy di poter
+> re-indicizzare (i.e. condivisione dello stato della sessione fra backend e
+> frontend proxies) e per facilitare la comparazione di stringhe Huffman-encoded.
 
 ## 6.6. Reset - change your mind
 
-One of the drawbacks with HTTP 1.1 is that when an HTTP message has been sent
-off with a Content-Length of a certain size, you can't easily just stop
-it. Sure, you can often (but not always) disconnect the TCP connection, but that
-comes at the cost of having to negotiate a new TCP handshake again.
+Uno degli svantaggi di HTTP 1.1 è che, una volta che un messaggio HTTP è stato
+inviato con un determinato Content-Length associato, non è possibile fermarlo.
+Certo, puoi spesso disconnetter la sessione TCP (non sempre), ma tale pratica
+implica il costo di una nuova negoziazione TCP (handshake).
 
-A better solution would be to just stop the message and start anew. This can be done with http2's RST_STREAM frame which will help prevent wasted bandwidth and the need to tear down connections.
+Una soluzione più intelligente consisterebbe nel poter fermare il messaggio ed inviarne uno nuovo, correto. Ciò potrà essere realizzato con il nuovo frame http2 RST_STREAM che aiuterà a risparmiare banda ed evitare di interrompere la connessione a livello TCP.
 
-## 6.7. Server push
+## 6.7. Push da parte del server
 
-This is the feature also known as “cache push”. The idea is that if the client asks for resource X, the server may know that the client will probably want resource Z as well, and sends it to the client without being asked. It helps the client by putting Z into its cache so that it will be there when it wants it.
+Questa funzione è nota come “cache push”. In pratica, quando un client richiedesse una risorsa X, il server potrebbe voler proporre anche una risorsa Z e mandarla al client senza avenre ricevuto domanda. Ciò aiuta il client ad inserire la risorsa Z in cache, così da averla a disposizione in caso di bisogno.
 
-Server push is something a client must explicitly allow the server to do. Even then, the client can swiftly terminate a pushed stream at any time with RST_STREAM should it not want a particular resource.
+Il server push deve essere cocesso esplicitamente per volontà del client. Anche a quel punto, il client può terminare istantaneamente la ricezione di uno stream in ogni momento, tramite il messaggio RST_STREAM in caso non dovesse desiderare una determinata risorza Z.
 
 ## 6.8. Controllo di Flusso
 
