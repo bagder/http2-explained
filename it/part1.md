@@ -1,4 +1,4 @@
-# 1. Panoramica
+# 1. Background
 
 Questo documento descrive http2 ad un livello di tecnicismo e protocollo. Tale 
 documento è nato a partire da una presentazione di Daniel a Stoccolma in Aprile 2014,

@@ -1,4 +1,4 @@
-# 8. Un mondo http2
+# 8. Un mondo di http2
 
 Quindi, come appariranno le cose quando http2 sarà adottato ? Sarà mai usato ?
 
