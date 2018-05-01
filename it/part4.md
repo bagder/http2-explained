@@ -18,7 +18,7 @@ Il gruppo di lavoro HTTPbis (vedi più avanti per la spiegazione del nome) è
 stato formato durante l'estate 2007 ed incaricato di creare un aggiornamento 
 delle specifiche HTTP 1.1. All'interno del gruppo la discusssione a proposito
 di una futura versione è iniziata in tardo 2012. Il lavoro di aggiornamento su
-HTTP 1.1 è stato completato nel 2014 ed è risultato nella serie di RFC 
+HTTP 1.1 è stato completato nel 2014 ed ha prodotto come risultato la serie di
 [RFC 7230](https://tools.ietf.org/html/rfc7230)
 
 Il meeting finale per il GdL HTTPbis inter-op si è tenuto a New York City ad inizio Giugno 2014. Le restanti discussioni e le procedure IETF svolte per pubblicare definitivamente la RFC si sono svolte fino all'anno successivo.

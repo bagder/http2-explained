@@ -6,14 +6,14 @@ Quindi, come appariranno le cose quando http2 sarà adottato ? Sarà mai usato ?
 
 http2 non è ancora ne distribuito ne adodatto. Non possiamo ancora dire come le cose evolveranno. Abbiamo visto come SPDY sia stato messo in campo; possiamo solo fare qualche ipotesi basata su quella ed altre esperienze passate, ed sugli esperimenti in corso.
 
-http2 riduce il numero di round-trip ed evita definitivamente l'eterno dilemma del "blocco a fine linea" attraverso l'utilizzo di multiplexing e fast-discarding degli stream non necessari.
+http2 riduce il numero di round-trip ed evita definitivamente l'eterno dilemma del "head-of-line blocking" attraverso l'utilizzo di multiplexing e fast-discarding degli stream non necessari.
 
 Permette un vasto ammontare di streams paralleli, numero ampiamente sufficiente anche per il sito più "sharded" (parallelizzato) del momento.
 
-Utilizzando correttamente le priorità sugli streams, il client sarà in grado di scaricare i dati importanti prima di quelli meno utili.
-Visto tutto ciò, direi che beneficieremo di siti più  reattivi che si caricano in minor tempo. Mettiamola così: una miglior esperienza del web.
+Utilizzando correttamente le priorità sugli streams il client sarà in grado di scaricare i dati importanti prima dei dati quelli meno utili.
+Visto tutto ciò, sono sicuro che beneficieremo di siti più reattivi, che si caricano in tempi più rapidi. Mettiamola così: una miglior esperienza del web.
 
-Quanto rapido sarà questo miglioramento, vedremo, non penso si possa ancora dire. Per prima cosa, la tecnologia è ancora in una fase di lancio e non si sono ancora visti client/server che implementino a dovere questa tecnologia per sfruttarne tutte le potenzialità.
+Quanto celere sarà questo miglioramento, staremo a vedere, non penso si possa ancora dire. Per prima cosa, la tecnologia è ancora in fase di lancio e non si sono ancora visti client/server che implementino a dovere questa tecnologia per sfruttarne tutte le potenzialità.
 
 ## 8.2. Come http2 influenzerà lo sviluppo web?
 
@@ -34,13 +34,13 @@ Un grande numero di implementazioni hanno preso vita fin dall'inizio ed altre si
 ### 8.3.1 Navigatori
 
 Firefox è il browser che più di altri ha seguito da vicino i rapidi sviluppi 
-delle ultimissime drafts, Twitter è rimasta al passo offrendo i suoi servizi su
-http2. Google ha iniziato verso Aprile 2014 ad offrire il supporto per http2 su
-un numero limitato di server di test, e a partire da Maggio 2014 ha fornito
+delle ultimissime drafts, Twitter è rimasta al passo offrendo i suoi servizi
+su http2. Google ha iniziato verso Aprile 2014 ad offrire supporto per http2
+su un numero limitato di server di test e a partire da Maggio 2014 ha fornito
 supporto per http2 nelle versioni per sviluppatori Chrome. Microsoft da parte 
 sua ha dato una dimostrazione del supporto http2 in Internet Explorer. Safari
-(su iOS 9 e Mac OS X El Capitan) e Opera hanno entrambi annunciato che daranno
-supporto a http2 in future versioni.
+(su iOS 9 e Mac OS X El Capitan) e Opera hanno entrambi annunciato supporto
+per http2 in future versioni.
 
 ### 8.3.2 Servers
 
@@ -54,27 +54,27 @@ Apache's httpd server has a http2 module [mod_http2](https://httpd.apache.org/do
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
 Server](https://trafficserver.apache.org/), [nghttp2](https://nghttp2.org/),
-[Caddy](https://caddyserver.com/) and
+[Caddy](https://caddyserver.com/) e
 [LiteSpeed](https://www.litespeedtech.com/products/litespeed-web-server/overview)
-have all released http2 capable servers.
+hanno tutti dimostrato di essere capaci di gestire richieste http2.
 
 ### 8.3.3 Altri
 
 curl e libcurl supportano http2 non-sicuro (testuale) e la versione TLS
 servendosi di una delle svrariate librerie TLS disponibili.
 
-Wireshark supporta http2. Il tool perfetto per l'analisi del traffico 
-di rete http2.
+Anche Wireshark supporta http2; strumento professionale per l'analisi
+del traffico di rete http2.
 
 ## 8.4. Critiche comuni a http2
 
 Durante lo sviluppo di questo protocollo, il dibattito ha preso pieghe diverse, avanti e indietro rispetto a determinate posizioni intellettuali, è ovvio che a detta di alcune persone questo protocollo abbia fatto davvero una brutta fine. Vorrei citare alcune delle critiche più frequenti e rispondere tono su tono:
 
-### 8.4.1. “The protocol is designed or made by Google”
+### 8.4.1. “Il protocollo è progettato o prodotto da Google”
 
-It also has variations implying that the world gets even further dependent or controlled by Google by this. This isn't true. The protocol was developed within the IETF in the same manner that protocols have been developed for over 30 years. However, we all recognize and acknowledge Google's impressive work with SPDY that not only proved that it is possible to deploy a new protocol this way but also provided numbers illustrating what gains could be made.
+Vi sono anche varianti in cui si afferma che il mondo diventa sempre più incline al controllo globale di Google. Ciò non è assolutamente vero. Il protocollo è stato sviluppato in seno alla IETF nello stesso modo in cui altri protocolli hanno visto luce durante gli ultimi 30 anni. Ciononostante, riconosciamo e prendiamo atto che l'incredibile lavoro di Google su SPDY non solo ha dimostrato come sia possible diffondere un nuovo protocollo in maniera "non-standard" ma ha anche fornito i numeri per valutarne futuri guadagni in prestazioni.
 
-Google has publicly [announced](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) that they will remove support for SPDY and NPN in Chrome in 2016 and they urge servers to migrate to HTTP/2 instead.
+Google ha pubblicamente [annunciato](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) che rimuoverà il supporto per SPDY e NPN su Chrome nel 2016, incoraggiando la migrazione a http2.
 
 ### 8.4.2. “È un protocollo utile soltanto ai browser”
 
@@ -114,15 +114,17 @@ Finally, thanks to http2's multiplexed streams over a single connection, normal 
 
 ### 8.4.5. “Il fatto che non sia ASCII è un grosso svantaggio”
 
-Yes, we like being able to see protocols in the clear since it makes debugging and tracing easier. But text based protocols are also more error prone and open up for much more parsing and parsing problems.
+Si, amiamo poter vedere i protocolli cleartext in azione, rende più facile la diagnostica. Però tali protocolli sono più proni all'errore, oltre ad aprire le porte ad errori di parsing.
 
-If you really can't take a binary protocol, then you couldn't handle TLS and compression in HTTP 1.x either and its been there and used for a very long time.
+Se davvero non sopporti i protocolli binarii, allora non hai mai interagito con TLS e compressione in HTTP 1.x, pratica che peraltro è in atto da lunghissimo tempo.
 
-### 8.4.6. “Non è più veloci di alcun HTTP/1.1”
+### 8.4.6. “Non è più veloce di nessun HTTP/1.1”
 
-This is of course subject to debate and discussions on how to measure what faster means, but already in the SPDY days many tests were performed that proved browser page loads were faster (like ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) by people at University of Washington and ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) by Hervé Servy) and such experiments have been repeated with http2 as well. I'm looking forward to seeing more such tests and experiments getting published. A [basic first test made by httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) might imply that HTTP/2 holds its promises.
+Questo è ovviamente oggetto di dibattiti e discussioni animate riguardo la definizione di "velocità", benchè svariati test eseguiti al tempo di SPDY abbiano gia mostrato che il tempo di "page load" sia deavvero minore (per esempio ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) dell'Università di Washington e ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) di Hervé Servy) e chiaramente tali esperimenti sono stati ripetuti su http2.
 
-### 8.4.7. “È sviluppato attorno una statificazione di violazioni”
+Aspetto con ansia che altri risultati ed esperimenti simili vengano pubblicati. Un [primo semplice test eseguito da httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) sembra indicare che HTTP/2 stia mantenendo le proprie promesse.
+
+### 8.4.7. “È sviluppato attorno ad una statificazione di violazioni”
 
 Davvero, questa la vostra critica ? Gli strati non sono sacri e intoccabili pilastri di una religione globale. Se ci siamo trovati a passare per zone d'ombra durante lo sviluppo di http2, è sempre stato nell'interesse e allo scopo di creare un protocollo efficace e stabile, a partire dai vinvoli iniziali.
 
