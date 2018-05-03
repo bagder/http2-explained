@@ -35,6 +35,7 @@ HTTP/1.1 per default, quindi l'opzione è necessaria se desideriamo http2.
 
 ## 11.5. Opzioni di libcurl
 
+<<<<<<< HEAD
 ### 11.5.1 Abilitare HTTP/2
 
 La tua applicazione continuerà ad utilizzare URL di tipo https:// o http:// 
@@ -66,3 +67,35 @@ vantaggio impostando un callback tramite l'opzione
 Se l'applicazione accettase il push, utilizzerebbe un handler di tipo CURL easy
 per trasmettere il contenuto del trasferimento, così come avverrebbe in ogni
 altro caso.
+=======
+### 11.5.1 Enable HTTP/2
+
+Your application would use https:// or http:// URLs like normal, but you set
+curl_easy_setopt's `CURLOPT_HTTP_VERSION` option to `CURL_HTTP_VERSION_2` to
+make libcurl attempt to use http2. It will then do a best effort and do http2
+if it can, but otherwise continue to operate with HTTP 1.1.
+
+### 11.5.2 Multiplexing
+
+As libcurl tries to maintain existing behaviors to a far extent, you need to
+enable HTTP/2 multiplexing for your application with the
+[CURLMOPT_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html)
+option. Otherwise it will continue using one request at a time per connection.
+
+Another little detail to keep in mind is that if you ask for several transfers
+at once with libcurl, using its multi interface, an applicaton can very well
+start any number of transfers at once and if you then rather have libcurl wait
+a little to add them all over the same connection rather than opening new
+connections for all of them at once, you use the
+[CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html) option
+for each individual transfer you rather wait.
+
+### 11.5.3 Server push
+
+libcurl 7.44.0 and later supports HTTP/2 server push. You can take advantage
+of this feature by setting up a push callback with the
+[CURLMOPT_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html)
+option. If the push is accepted by the application, it'll create a new
+transfer as an CURL easy handle and deliver content on it, just like any other
+transfer.
+>>>>>>> 37f9b9095c52ae58e06202c5b11babd5e7250b27

@@ -1,6 +1,10 @@
 # 10. http2 in Chromium
 
+<<<<<<< HEAD
 Il team di Chromium ha implementato http2 e ha anche fornito supporto sui canali dev e beta per lungo tempo. A partire da Chrome 40, rilasciato il 27 Gennaio 2015, http2 è abilitato per default per un determinato numero di utenti. Hanno iniziato supportando una utenza ristretta per poi aumentare gradualmente nel tempo.
+=======
+Il team di Chromium ha implementato http2 e ha anche fornito supporto sui canali dev e beta per lungo tempo. A partire da Chrome 40, rilasciato il 27 Gennaio 2015, http2 è abilitato per default per un determinato numero di utenti. Hanno iniziato da un ristretto numero per poi aumentare gradualmente nel tempo.
+>>>>>>> 37f9b9095c52ae58e06202c5b11babd5e7250b27
 
 Il supporto nativo per SPDY verrà eventualmente eliminato. Il progetto ha comunicato tale notizia in un post [February 2015](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html):
 
@@ -12,7 +16,11 @@ Digitare “chrome://flags/#enable-spdy4" nella barra indirizzi e cliccare su �
 
 ## 10.2. Solo TLS
 
+<<<<<<< HEAD
 Ricordate che Chrome implementa http2 solo attraverso TLS. Vedrete http2 in azione solamente quando Chrome verrà utilizzato su un sito https:// che offra supporto nativo http2.
+=======
+Ricordate che Chrome implementa http2 solo attraverso TLS. Vedrete http2 in azione solamente quando Chrome è utilizzato con un sito https:// che offra supporto nativo http2.
+>>>>>>> 37f9b9095c52ae58e06202c5b11babd5e7250b27
 
 ## 10.3. Visualizzare l'impiego di HTTP/2
 
@@ -20,4 +28,8 @@ Sono disponibili plugin per Chrome che aiutano a visualizzare se un sito stia ut
 
 ## 10.4. QUIC
 
+<<<<<<< HEAD
 Gli attuali esperimenti di Chrome e l'impiego di QUIC (vedi sezione 12.1) fanno sì che il numero di connessioni HTTP/2 sia in diminuzione.
+=======
+Gli attuali esperimenti di Chrome e l'impiego di QUIC (vedi sezione 12.1) fanno sì che il numero di connessioni HTTP/2 diminuisca.
+>>>>>>> 37f9b9095c52ae58e06202c5b11babd5e7250b27
