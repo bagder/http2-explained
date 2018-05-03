@@ -35,6 +35,39 @@ HTTP/1.1 per default, quindi l'opzione è necessaria se desideriamo http2.
 
 ## 11.5. Opzioni di libcurl
 
+<<<<<<< HEAD
+### 11.5.1 Abilitare HTTP/2
+
+La tua applicazione continuerà ad utilizzare URL di tipo https:// o http:// 
+ma dovrai anche settare la voce curl_easy_setopt `CURLOPT_HTTP_VERSION` a
+`CURL_HTTP_VERSION_2` per far sì che libcurl provi ad utilizzare http2. Su 
+base best-effort proverà ad utilizzare http2 altrimenti continuerà su HTTP 1.1.
+
+### 11.5.2 Multiplexing
+
+Dato che libcurl prova a mantenere gli stessi comportamenti di sempre, dovrai
+abilitare il multiplexing HTTP/2 nella tua applicazione tramite l'opzione 
+[CURLMOPT_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html).
+In caso contrario, continuerai ad utilizzare una richiesta per volta per ogni 
+connessione disponibile.
+
+Altro piccolo dettaglio da tenere a mente quando si richiedono trasferimenti
+multipli via libcurl tramite la sua interfacia "multi", una applicazione 
+potrebbe decidere di iniziare un numero infinito di trasferimenti simultanei;
+se desideriamo veicolarli tutti tramite la stessa connessione piuttosto che
+utilizzarne una moltitudine, possiamo istruire libcurl affinchè aspetti un 
+determinato lasso di tempo utilizzando l'opzione
+[CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html).
+
+### 11.5.3 Server push
+
+libcurl 7.44.0 e successivi supportano la server push HTTP/2. Potrete trarne 
+vantaggio impostando un callback tramite l'opzione
+[CURLMOPT_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html)
+Se l'applicazione accettase il push, utilizzerebbe un handler di tipo CURL easy
+per trasmettere il contenuto del trasferimento, così come avverrebbe in ogni
+altro caso.
+=======
 ### 11.5.1 Enable HTTP/2
 
 Your application would use https:// or http:// URLs like normal, but you set
@@ -65,3 +98,4 @@ of this feature by setting up a push callback with the
 option. If the push is accepted by the application, it'll create a new
 transfer as an CURL easy handle and deliver content on it, just like any other
 transfer.
+>>>>>>> 37f9b9095c52ae58e06202c5b11babd5e7250b27
