@@ -1,0 +1,6 @@
+html[lang=fa] {
+	direction: rtl !important;
+}
+code, pre {
+	direction: ltr !important;
+}
