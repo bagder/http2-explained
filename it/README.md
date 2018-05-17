@@ -17,7 +17,7 @@ CONTRIBUTING
 Incoraggio ed accolgo aiuti e contributi da parte di chiunque abbia migliorie
 da proporre. Accetto [pull
 requests](https://github.com/bagder/http2-explained/pulls), altrimenti puoi aprire
-una [issues](https://github.com/bagder/http2-explained/issues) or mandare una email
+una [issue](https://github.com/bagder/http2-explained/issues) o mandare una email
 a daniel-http2@haxx.se con i tuoi suggerimenti!
 
  / Daniel Stenberg
