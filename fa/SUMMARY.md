@@ -6,7 +6,7 @@
 * [کارهایی که برای غلبه بر تأخیرها انجام شده](part3.md)
 * [آپدیت‌کردن HTTP](part4.md)
 * [مفاهیم http2](part5.md)
-* [پرتکول http2](part6.md)
+* [پرتکل http2](part6.md)
 * [افزونه‌ها](part7.md)
 * [دنیایی با http2](part8.md)
 * [http2 در فایرفاکس](part9.md)

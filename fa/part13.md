@@ -10,6 +10,6 @@
 
 - جزئيات پیاده‌سازی http2 توسط curl: https://curl.haxx.se/docs/http2.html
 
-- وب‌سایت http2: https://http2.github.io/ و سؤالات متداول مربوط به پرتکول: https://http2.github.io/faq/
+- وب‌سایت http2: https://http2.github.io/ و سؤالات متداول مربوط به پرتکل: https://http2.github.io/faq/
 
 - فصل HTTP/2 در کتاب “High Performance Browser Networking” ایلیا کریگورک: https://hpbn.co/http2/
