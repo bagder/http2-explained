@@ -1,12 +1,12 @@
-# 14. Ringraziamenti
+# 14. Riconoscimenti, Ringraziamenti
 
-Mark Nottingham per l'ispirazione e l'immagine formato lego dei pacchetti.
+Mark Nottingham per l'ispirazione e l'immagine formato Lego dei pacchetti.
 
 I dati sui trend HTTP provenienti da https://httparchive.org/.
 
 I grafici RTT provengono dalle presentazioni di Mike Belshe.
 
-I miei figli Agnes e Rex per avermi prestato i loro personaggi Lego per l'immagine "head of line".
+I miei figli Agnes e Rex per avermi prestato i loro personaggi Lego per l'immagine "inizio della fila".
 
 Grazie agli amici per riletture e ritorni: Kjell Ericson, Bjorn Reese, Linus Swälas e Anthony Bryan. Il vostro aiuto è immensamente apprezzato e ha davvero migliorato questo documento!
 
