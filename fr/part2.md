@@ -2,9 +2,9 @@
 
 Le protocole HTTP 1.1 est omniprésent sur Internet. De nombreux investissements ont été réalisés sur des protocoles et infrastructures tirant profit de celui-ci. À tel point que lors de l'implémentation d'un nouveau projet, il est souvent plus facile d'utiliser HTTP plutôt que de développer un nouveau protocole.
 
-## 2.1 HTTP 1.1 est dense
+## 2.1 HTTP 1.1 est très dense
 
-Lors de la création de HTTP, il fut probablement perçu comme un protocole plutôt simple et évident, ce qui, avec le temps, s'est révélé faux. HTTP 1.0 spécifié dans la RFC 1945 est une spécification de 60 pages datant de 1996. La RFC 2616 qui décrit HTTP 1.1 a été publiée trois ans plus tard en 1999 et comprend 176 pages. Puis, quand nous, à l'IETF, avons mis à jour cette spécification, elle a été répartie en six documents, avec davantage de pages au total (RFC 7230 et associées). Tout compte fait, HTTP 1.1 est dense car comportant une multitude de détails, subtilités et, non dans une moindre mesure, de très nombreux points optionnels.
+Lors de la création de HTTP, il fut probablement perçu comme un protocole plutôt simple et évident, ce qui, avec le temps, s'est révélé faux. HTTP 1.0 spécifié dans la RFC 1945 est une spécification de 60 pages datant de 1996. La RFC 2616 qui décrit HTTP 1.1 a été publiée trois ans plus tard en 1999 et comprend 176 pages. Puis, quand nous, à l'IETF, avons mis à jour cette spécification, elle a été répartie en six documents, avec davantage de pages au total (RFC 7230 et associées). Tout bien considéré, HTTP 1.1 est dense et comporte une multitude de détails, subtilités et, non dans une moindre mesure, de très nombreux points optionnels.
 
 ## 2.2 Une flopée d'options
 
