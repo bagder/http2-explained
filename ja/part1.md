@@ -2,7 +2,7 @@
 
 この文書はhttp2を技術的にプロトコルレベルで記述したものです。始まりはDanielが2014年4月にストックホルムで行ったプレゼンテーションでした。後に拡張され、全ての詳細や丁寧な説明を含む立派な文書になりました。
 
-RFC 7540は公式なhttp2仕様書で、2015年5月15日に発行されました: http://www.rfc-editor.org/rfc/rfc7540.txt
+RFC 7540は公式なhttp2仕様書で、2015年5月15日に発行されました: https://www.rfc-editor.org/rfc/rfc7540.txt
 
 この文書におけるすべての誤りは私自身のものであり、私の至らなさの致すところです。指摘していただければ次のバージョンで修正します。
 
@@ -16,21 +16,21 @@ RFC 7540は公式なhttp2仕様書で、2015年5月15日に発行されました
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 ご協力をお願い致します
 
 間違いや脱字、エラー、明らかな嘘をこの文書に見つけた場合、修正した段落を私に送ってください。修正を取り込みます。私はもちろん助けてくれた人全てに適切な名誉を与えるつもりです。私はこの文書が時とともに改善されていくことを望んでいます。
 
-この文書は[http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)で利用可能です。
+この文書は[https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)で利用可能です。
 
 ## 1.3 ライセンス
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-この文書はCreative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/ でライセンスされています。
+この文書はCreative Commons Attribution 4.0 license: https://creativecommons.org/licenses/by/4.0/ でライセンスされています。
 
 ## 1.4 履歴
 

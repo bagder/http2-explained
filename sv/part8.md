@@ -53,7 +53,7 @@ http2s fulla potential.
 Att försöka dokumentera specifika implementationer i ett dokument som det här
 är förstås helt futilt och dömt at misslyckas och kommer endast kännas gammalt
 redan inom kort. Istället kommer jag förklara situationen i bredare termer och
-hänvisa läsare till [lisan med
+hänvisa läsare till [listan med
 implementationer](https://github.com/http2/http2-spec/wiki/Implementations) på
 http2-sajten.
 
@@ -64,7 +64,7 @@ versionen.
 
 Firefox har varit webbläsaren som varit först med support för de allra senaste
 versionerna av specen. Twitter har hängt med och erbjuder sina tjänster över
-htp2. Google började under april 2014 att erbjudera http2-support på en del
+http2. Google började under april 2014 att erbjudera http2-support på en del
 test servrar som kör deras tjänster och sedan maj 2014 har de erbjudit http2
 support för deras utvecklingsversion av Chrome. Microsoft har visat en "tech
 preview" med http2 support i deras nästa Internet Explorer-version. Safari och
@@ -74,7 +74,7 @@ curl och libcurl stöder osäker http2 likväl som TLS-baserad, användades en a
 flera olika TLS-bibliotek.
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
-Server](http://trafficserver.apache.org/) och [nghttp2](https://nghttp2.org/)
+Server](https://trafficserver.apache.org/) och [nghttp2](https://nghttp2.org/)
 har alla släppt http2-kapabla open source-servrar.
 
 ### 8.3.1. Saknade implementationer
@@ -104,7 +104,7 @@ på det här sättet utan också tillhandahöll siffror som visade vilka vinster
 som kunde göras.
 
 Google har
-[annonserat](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html)
+[annonserat](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html)
 att de kommer ta bort support för SPDY och NPN i Chrom under 2016 och de
 uppmanar servrar att migrera till http2 istället.
 
@@ -143,7 +143,7 @@ en källa till sådan info.
 
 Telecom och andra nätverskoperatörer, till exempel inom ATIS Open Web
 Alliance, säger att [de behöver okrypterad
-trafik](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
+trafik](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
 för att erbjuder cache, komprimering och andra tekniker som är nödvändiga för
 att tillhandahålla en snabb webbupplevelse över satelit, i flygplan och
 liknande. http2 gör inte TLS obligatoriskt så vi ska inte blanda ihop
@@ -180,11 +180,11 @@ bevisade snabbare sidladdningar (som ["How Speedy is
 SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf)
 av folk vid University of Washington och ["Evaluating the Performance of
 SPDY-enabled Web
-Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers)
+Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers)
 av Hervé Servy) och såna experiment har repeterats med http2 också. Jag ser
 fram emot att få se fler såna tester och experiment publicerade. Ett
 [grundläggande första test av
-httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2)
+httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2)
 kan indikera att http2 håller sina löften.
 
 ### 8.4.7. “Den bryter mot lager-principer"

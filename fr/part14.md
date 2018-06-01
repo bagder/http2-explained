@@ -2,7 +2,7 @@
 
 L'inspiration et l'assemblage Lego : Mark Nottingham
 
-Les tendances HTTP : http://httparchive.org
+Les tendances HTTP : https://httparchive.org/
 
 Le graphique RTT (Aller-Retour) vient des présentations de Mike Belshe.
 

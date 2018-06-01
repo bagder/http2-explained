@@ -30,7 +30,7 @@ annan host. Det kan vara för prestandans skull men även om en sajt håller på
 att tas ner för underhåll och liknande.
 
 Servern kommer då skicka
-[Alt-Svc:-headern](http://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07)
+[Alt-Svc:-headern](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07)
 (eller ALTSVC-paketet över http2) och berätta för klienten om en alternativ
 tjänst. En annan rutt till samma innehåll erbjudet av en annan tjänst, host
 och portnummer.

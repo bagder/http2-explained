@@ -2,7 +2,7 @@
 
 Inspiration and the package format Lego image from Mark Nottingham.
 
-HTTP trend data comes from http://httparchive.org.
+HTTP trend data comes from https://httparchive.org/.
 
 The RTT graph comes from presentations done by Mike Belshe.
 

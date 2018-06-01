@@ -36,7 +36,7 @@ Firefox ha sido el navegador que ha estado encabezando los borradores más nuevo
 
 Tanto curl como libcurl soportan http2 inseguro así como basado en TLS utilizando una de las distintas bibliotecas TLS.
 
-[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](http://trafficserver.apache.org/) y [nghttp2](https://nghttp2.org/) han publicado todos ellos servidores con soporte para http2.
+[H2O](https://h2o.examp1e.net/), [Apache Traffic Server](https://trafficserver.apache.org/) y [nghttp2](https://nghttp2.org/) han publicado todos ellos servidores con soporte para http2.
 
 ### 8.3.1. Implementaciones pendientes
 
@@ -50,7 +50,7 @@ Durante el desarrollo de este protocolo ha existido cierto debate en determinado
 
 Existen variaciones que implican un mundo todavía más dependiente o controlado por Google. No es cierto. El protocolo ha sido desarrollado desde el IETF de la misma manera en la que se han venido desarrollando protocolos en los últimos 30 años. De cualquier manera, todo reconocemos el impresionante trabajo hecho por Google con SDPY que no solo demostró que era posible desplegar un nuevo protocolo sino que también aportó los números que indicaban que se podrían conseguir mejoras.
 
-Google ha [anunciado](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html) públicamente1 que van a retirar el soporte para SPDY y NPN en Chrome a partir de 2016, y que aconsejan a los servidores utilizar HTTP/2 en su lugar.
+Google ha [anunciado](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) públicamente1 que van a retirar el soporte para SPDY y NPN en Chrome a partir de 2016, y que aconsejan a los servidores utilizar HTTP/2 en su lugar.
 
 ### 8.4.2. “El protocolo solo es útil para navegadores”
 
@@ -85,9 +85,9 @@ Si no soportas un protocolo binario, entonces estas descartando TLS o la compres
 
 ### 8.4.6. “No es más rápido que HTTP/1.1”
 
-Por supuesto que es algo sujeto a debate y a discusión en cómo se mide que significa más rápido, pero ya en los días de SPDY, se realizaron multitud de pruebas que demostraban que la página cargaba más rápido (por ejemplo ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) de la gente de la Univesidad de Washington y ["Evaluating the Performance of SPDY-enabled Web Servers"](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) por Hervé Servy) y dichos experimentos se han repetido también con http2. Tengo ganas de ver publicados los resultados de esas pruebas y experimentos. 
+Por supuesto que es algo sujeto a debate y a discusión en cómo se mide que significa más rápido, pero ya en los días de SPDY, se realizaron multitud de pruebas que demostraban que la página cargaba más rápido (por ejemplo ["How Speedy is SPDY?"](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) de la gente de la Univesidad de Washington y ["Evaluating the Performance of SPDY-enabled Web Servers"](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) por Hervé Servy) y dichos experimentos se han repetido también con http2. Tengo ganas de ver publicados los resultados de esas pruebas y experimentos. 
 
-Una primera prueba básica realizada por [httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) podría implicar que HTTP/2 cumple sus promesas.
+Una primera prueba básica realizada por [httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) podría implicar que HTTP/2 cumple sus promesas.
 
 ### 8.4.7. “No respeta las capas”
 

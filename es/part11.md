@@ -1,6 +1,6 @@
 # 11. http2 en curl
 
-El [proyecto curl](http://curl.haxx.se/) ha estado ofreciendo soporte experimental para http2 desde septiembre de 2013.
+El [proyecto curl](https://curl.haxx.se/) ha estado ofreciendo soporte experimental para http2 desde septiembre de 2013.
 
 Siguiendo el espíritu de curl, pretendemos ofrecer todos los aspectos de http2 en la medida de nuestras posibilidades. Es un uso común de curl se usado como una herramienta de testeo, y una manera de “pingar” manualmente sitios web, y es nuestra intención mantenerlo igualmente para http2.
 
@@ -35,12 +35,12 @@ Tu aplicación utilizará URLs normales con https:// o http://, pero habrá que 
 ### 11.5.2 Multiplexación
 
 libcurl intenta mantener comportamientos existentes, por lo que se hace necesario que se active la multiplexación HTTP/2 en tu aplicación mediante la opción 
-[CURLMOPT_PIPELINING](http://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html). De lo contrario se seguirá utilizando una petición en cada momento por conexión.
+[CURLMOPT_PIPELINING](https://curl.haxx.se/libcurl/c/CURLMOPT_PIPELINING.html). De lo contrario se seguirá utilizando una petición en cada momento por conexión.
 
-Otro pequeño detalle a tener en cuenta es que al solicitar varias transferencias al mismo tiempo con libcurl, usando su interfaz multiple, una aplicación puede empezar varias transferencias al mismo tiempo, y que si se pretende que libcurl espere e introduzca todas ellas por la misma conexión en lugar de abrir nuevas conexiones, existe la opción [CURLOPT_PIPEWAIT](http://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html).
+Otro pequeño detalle a tener en cuenta es que al solicitar varias transferencias al mismo tiempo con libcurl, usando su interfaz multiple, una aplicación puede empezar varias transferencias al mismo tiempo, y que si se pretende que libcurl espere e introduzca todas ellas por la misma conexión en lugar de abrir nuevas conexiones, existe la opción [CURLOPT_PIPEWAIT](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html).
 
 ### 11.5.3 Server push
 
-A partir de la versión libcurl 7.44.0 se da soporte para la funcionalidad HTTP/2 server push. Puedes utilizarla indicando un callback con la opción [CURLMOPT_PUSHFUNCTION](http://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html).
+A partir de la versión libcurl 7.44.0 se da soporte para la funcionalidad HTTP/2 server push. Puedes utilizarla indicando un callback con la opción [CURLMOPT_PUSHFUNCTION](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html).
 
 Si la aplicación acepta el push, se creará una nueva transferencia con un manejador fácil CURL, y se enviará contenido, como cualquier otra transferencia.

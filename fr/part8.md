@@ -46,7 +46,7 @@ Pendant le développement de ce protocole, les débats n'ont jamais cessé et pl
 
 Cela implique aussi que le monde devient davantage dépendant de Google. Ce n'est pas vrai. Le protocole a été développé à l'IETF de la même manière que tous les autres protocoles depuis 30 ans. Cela dit, nous reconnaissons tous le travail impressionnant réalisé par Google sur SPDY qui a permis de montrer qu'on pouvait déployer un nouveau protocole avec, de plus, des données chiffrées sur les gains obtenus.
 
-Google a publiquement [annoncé](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html) qu'ils retireraient le support de SPDY et NPN de Chrome en 2016 et qu'ils poussaient les serveurs à migrer vers HTTP/2 à la place.
+Google a publiquement [annoncé](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) qu'ils retireraient le support de SPDY et NPN de Chrome en 2016 et qu'ils poussaient les serveurs à migrer vers HTTP/2 à la place.
 
 ### 8.4.2. "Ce protocole est seulement utile aux navigateurs"
 
@@ -66,7 +66,7 @@ Les gros sites ont déjà une présence mondiale et du coup des aller-retours mo
 
 Cela peut se révéler vrai. La négociation TLS ajoute un peu de latence, mais il existe des projets pour réduire encore les aller-retours en TLS. La surcharge du TLS par rapport à du texte en clair n'est pas neutre et a un impact CPU. L'impact en lui-même est sujet à discussions et mesures. Voir par exemple [istlsfastyet.com](https://istlsfastyet.com/) pour avoir une source d'information.
 
-Les opérateurs télécom et réseaux, par exemple l'ATIS Open Web Alliance, indiquent qu'ils nécessitent du [trafic non chiffré](http://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) pour permettre au cache et à la compression de fonctionner, notamment pour une expérience web rapide par satellite.
+Les opérateurs télécom et réseaux, par exemple l'ATIS Open Web Alliance, indiquent qu'ils nécessitent du [trafic non chiffré](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf) pour permettre au cache et à la compression de fonctionner, notamment pour une expérience web rapide par satellite.
 http2 n'oblige pas à utiliser TLS, on ne devrait donc pas mélanger les deux.
 
 De nombreux utilisateurs ont indiqué leur préférence à utiliser TLS et nous devrions respecter ce droit à la vie privée.
@@ -83,7 +83,7 @@ Si vous ne pouvez pas vous faire à un protocole binaire, alors vous ne pouviez 
 
 ### 8.4.6. "Ce n'est pas plus rapide que HTTP/1.1"
 
-Cela est bien sûr sujet à débat sur comment qualifier "plus rapide"; les tests menés lors des expérimentations SPDY montraient des temps de chargement de pages web plus rapides (voir [“How Speedy is SPDY?”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) par University of Washington et [“Evaluating the Performance of SPDY-enabled Web Servers”](http://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) par Hervé Servy). Idem en http2 avec d'autres tests. Je souhaite voir davantage de tests publiés. Un [premier essai réalisé par httpwatch.com](http://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) a tendance à montrer que HTTP/2 répond aux promesses.
+Cela est bien sûr sujet à débat sur comment qualifier "plus rapide"; les tests menés lors des expérimentations SPDY montraient des temps de chargement de pages web plus rapides (voir [“How Speedy is SPDY?”](https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-wang_xiao_sophia.pdf) par University of Washington et [“Evaluating the Performance of SPDY-enabled Web Servers”](https://www.neotys.com/blog/performance-of-spdy-enabled-web-servers) par Hervé Servy). Idem en http2 avec d'autres tests. Je souhaite voir davantage de tests publiés. Un [premier essai réalisé par httpwatch.com](https://blog.httpwatch.com/2015/01/16/a-simple-performance-comparison-of-https-spdy-and-http2) a tendance à montrer que HTTP/2 répond aux promesses.
 
 http2 est clairement plus rapide dans certains scénarios, en particulier avec les scénarios où une connexion à latence importante est utilisée avec un site comportant beaucoup de ressources à charger, ce nombre ayant tendance à augmenter.
 
@@ -103,7 +103,7 @@ Les esprits négatifs montreront "regardez comme IPv6 a marché" comme un exempl
 
 Avec SPDY, Google a prouvé au monde que l'on pouvait déployer et utiliser un nouveau protocole en peu de temps. Même si la somme des serveurs SPDY avoisine les 1% aujourd'hui, le volume de données est plus important. Certains des plus gros sites utilisent SPDY.
 
-http2, basé sur les même principes que SPDY et ratifié par l'IETF, devrait être encore plus largement déployé. Les déploiements SPDY ont toujours été limités par le syndrome "inventé par Google"
+http2, basé sur les mêmes principes que SPDY et ratifié par l'IETF, devrait être encore plus largement déployé. Les déploiements SPDY ont toujours été limités par le syndrome "inventé par Google"
 
 Il y a plusieurs navigateurs importants derrière http2. Des représentants de Firefox, Chrome, Safari, Internet Explorer et Opera ont tous indiqué leur intention de livrer des navigateurs avec http2 et ont montré des implémentations fonctionnelles.
 
@@ -113,4 +113,4 @@ Les plus gros proxy, HAProxy, Squid et Varnish ont mentionné leur intention de 
 
 Je pense qu'il y aura davantage d'implémentations quand la RFC sera ratifiée.
 
-Durant tout 2015, la quantité de trafic en http2 n'a cessé d'augmenter. Au début Septembre, sur Firefox 40, il génère 13% de tout le trafic HTTP, et 27% du trafic HTTPS, tandis que Google voit 18% de HTTP/2. Il faut noter que Google déroule d'autres expérimentation en parallèle (voir QUIC en 12.1), ce qui rend la quantité de trafic http2 plus basse que ce qu'elle aurait pu être.
+Durant tout 2015, la quantité de trafic en http2 n'a cessé d'augmenter. Au début Septembre, sur Firefox 40, il génère 13% de tout le trafic HTTP, et 27% du trafic HTTPS, tandis que Google voit 18% de HTTP/2. Il faut noter que Google déroule d'autres expérimentations en parallèle (voir QUIC en 12.1), ce qui rend la quantité de trafic http2 plus basse que ce qu'elle aurait pu être.

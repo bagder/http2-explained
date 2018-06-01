@@ -12,7 +12,7 @@ Durante la adopción de http2, existen razones para sospechar que las conexiones
 
 Esto afectará a como funcionan lo balanceadores HTTP y se generarán situaciones en las cuales un sitio querrá anunciar y sugerir que el cliente se conecte a otro host, tanto por razones de rendimiento, como porque el sitio puede necesitar mantenimiento u otra razón similar.
 
-El servidor enviará entonces la cabecera [Alt-Svc: header](http://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07) (o la trama ALTSVC en http2) que indicará al cliente el servidor alternativo. Otra ruta al mismo contenido, utilizando otro servicio, dominio y número de puerto.
+El servidor enviará entonces la cabecera [Alt-Svc: header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-07) (o la trama ALTSVC en http2) que indicará al cliente el servidor alternativo. Otra ruta al mismo contenido, utilizando otro servicio, dominio y número de puerto.
 
 El cliente intentará conectarse a ese servicio asíncronamente, y utilizará ese servicio alternativo si éste funciona correctamente.
 
