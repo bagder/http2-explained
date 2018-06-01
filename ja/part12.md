@@ -12,4 +12,4 @@ Googleの[QUIC](https://www.chromium.org/quic)(Quick UDP Internet Connections)�
 
 QUICは接続の作成を遥かに少ない遅延で行えます。HTTP/2ではパケットロスにより全ストリームがブロックされましたが、QUICでは対象のストリームだけがブロックされるだけですみます。別のネットワークインターフェースをまたいだ接続の維持も可能にします。つまりMPTCPが解決しようとしている問題の領域までカバーしているのです。
 
-QUICは現時点ではGoogleによってChromeとGoogleサーバーにだけ実装されています。コードは簡単に再利用できる形にはなっていません。[libquic](https://github.com/devsisters/libquic)というプロジェクトがそれを実現しようとしています。プロトコルは[ドラフト](http://tools.ietf.org/html/draft-tsvwg-quic-protocol-01)としてIETFトランスポートワーキンググループへ提出されました。
+QUICは現時点ではGoogleによってChromeとGoogleサーバーにだけ実装されています。コードは簡単に再利用できる形にはなっていません。[libquic](https://github.com/devsisters/libquic)というプロジェクトがそれを実現しようとしています。プロトコルは[ドラフト](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01)としてIETFトランスポートワーキンググループへ提出されました。

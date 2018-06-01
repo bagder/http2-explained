@@ -6,7 +6,7 @@
 документ с деталями и надлежащими пояснениями.
 
 RFC 7540 – это официальное имя финальной спецификации http2 и она была
-опубликована 15 мая 2015: http://www.rfc-editor.org/rfc/rfc7540.txt
+опубликована 15 мая 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
 
 Все ошибки в данном документе – мои собственные, появившиеся по моей вине.
 Пожалуйста сообщите мне о них и я выпущу обновление с исправлениями.
@@ -29,9 +29,9 @@ HTTP 1.1, для соответствия новейшим требования�
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2. Помогите!
 
@@ -41,14 +41,14 @@ HTTP 1.1, для соответствия новейшим требования�
 получиться сделать текст лучше.
 
 Этот документ доступен по ссылке
-[http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+[https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 ## 1.3. Лицензия
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
 Этот документ лицензируется под лицензией Creative Commons Attribution 4.0:
-http://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/licenses/by/4.0/
 
 ## 1.4. История документа
 

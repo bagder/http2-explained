@@ -2,7 +2,7 @@
 
 El equipo de Chromium ha implementado y soportado http2 en sus canales dev y beta desde hace bastante tiempo. Desde Chrome 40, publicado el 27 de enero de 2015, http2 está activado por defecto para algunos usuarios. El número de estos, comenzó muy pequeño, y ha ido aumentado a lo largo del tiempo.
 
-El soporte para SPDY será cancelado próximamente. En una entrada de blog, el proyecto anunció lo siguiente en [febrero de 2015](http://blog.chromium.org/2015/02/hello-http2-goodbye-spdy-http-is_9.html):
+El soporte para SPDY será cancelado próximamente. En una entrada de blog, el proyecto anunció lo siguiente en [febrero de 2015](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html):
 
 > “Chrome ha soportado SPDY desde Chrome 6, pero al tener la mayor parte de las ventajas presentes en HTTP/2, es hora de decir adiós. Hemos planificado quitar el soporte para SPDY a comienzos de 2016”
 

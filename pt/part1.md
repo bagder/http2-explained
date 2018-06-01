@@ -5,7 +5,7 @@ como uma apresentação que Daniel fez em Estocolmo em Abril 2014 que foi
 subsequentemente convertido e alargado para um documento com todos os 
 detalhes e explicações adequadas.
 
-RFC 7540 é o nome oficial da especificação final do HTTP2 e que foi publicado em 15 de maio de 2015: http://www.rfc-editor.org/rfc/rfc7540.txt
+RFC 7540 é o nome oficial da especificação final do HTTP2 e que foi publicado em 15 de maio de 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
 
 Todos e quaisquer erros neste documento são da minha autoria e os resultados da minha 
 falha. Por favor indique-nos para que possam ser corrigidos numa versão actualizada.
@@ -31,9 +31,9 @@ do HTTP 1.1 assim bem como no envolvimento do processo de estandardização do h
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 Ajuda!
 
@@ -41,14 +41,14 @@ do HTTP 1.1 assim bem como no envolvimento do processo de estandardização do h
 Se encontrar problemas, omissões, erros ou mentiras descaradas neste documento, por favor envie-me uma versão corrigida do parágrafo e eu farei versões corrigidas. Eu darei
 os merecidos créditos a todas as pessoas que ajudarem! Eu espero fazer este documento melhor ao longo do tempo.
 
-Este documento está disponível em [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+Este documento está disponível em [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 
 ## 1.3 Licença
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-Este documento está licenciado sob a licença Creative Commons Attribution 4.0: http://creativecommons.org/licenses/by/4.0/
+Este documento está licenciado sob a licença Creative Commons Attribution 4.0: https://creativecommons.org/licenses/by/4.0/
 
 ## 1.4 História do documento
 

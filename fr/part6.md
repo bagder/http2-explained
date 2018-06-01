@@ -63,12 +63,12 @@ Les tailles de requêtes HTTP 1.1 sont devenues tellement importantes qu'elles d
 
 ### 6.5.1. La compression est un sujet délicat
 
-Les compressions HTTPS et SPDY ont été vulnérables aux attaques [BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29)
- et [CRIME](http://en.wikipedia.org/wiki/CRIME). En insérant un texte connu dans le flux et en analysant les changements résultant, l'attaquant peut déduire ce qui a été envoyé.
+Les compressions HTTPS et SPDY ont été vulnérables aux attaques [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29)
+ et [CRIME](https://en.wikipedia.org/wiki/CRIME). En insérant un texte connu dans le flux et en analysant les changements résultant, l'attaquant peut déduire ce qui a été envoyé.
 
 Compresser du contenu dynamique sans devenir vulnérable à une de ces attaques requiert de la réflexion. L'équipe HTTPbis s'y attelle.
 
-Voici [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2 (compression d'en-tête pour HTTP/2), qui, comme son nom l'indique, est un format de compression spécialement créé pour les entêtes http2 et spécifié dans un draft IETF distinct. Le nouveau format, avec d'autres contre-mesures comme un bit qui interdit aux intermédiaires de compresser un en-tête spécifique ou du remplissage de trames (padding), devrait rendre plus compliqué l'exploitation de cette compression.
+Voici [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2 (compression d'en-tête pour HTTP/2), qui, comme son nom l'indique, est un format de compression spécialement créé pour les entêtes http2 et spécifié dans un draft IETF distinct. Le nouveau format, avec d'autres contre-mesures comme un bit qui interdit aux intermédiaires de compresser un en-tête spécifique ou du remplissage de trames (padding), devrait rendre plus compliqué l'exploitation de cette compression.
 
 Voici les les mots de Roberto Peon (l'un des créateurs de HPACK):
 

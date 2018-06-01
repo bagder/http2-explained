@@ -32,7 +32,7 @@ Como o gráfico abaixo mostra, a tendência já se arrasta por um tempo e há po
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
-## 2.5 Latencia mata
+## 2.5 Latência mata
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 

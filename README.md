@@ -8,7 +8,7 @@ might hold.
 
 The contents are translated into several different languages.
 
-See http://daniel.haxx.se/http2/ for the canonical home for this project.
+See https://daniel.haxx.se/http2/ for the canonical home for this project.
 
 See https://github.com/bagder/http2-explained for the source code of all book
 contents.
@@ -17,7 +17,7 @@ LICENSE
 -------
 
 The document is distributed under the Creative Commons Attribution 4.0
-license: http://creativecommons.org/licenses/by/4.0/
+license: https://creativecommons.org/licenses/by/4.0/
 
 CONTRIBUTING
 ------------
