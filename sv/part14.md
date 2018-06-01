@@ -2,7 +2,7 @@
 
 Inspiration och paketformatbilden i Lego kommer från Mark Nottingham. 
 
-HTTP trenddata kommer från http://httparchive.org.
+HTTP trenddata kommer från https://httparchive.org/.
 
 RTT-graferna kommer från presentationer av Mike Belshe.
 

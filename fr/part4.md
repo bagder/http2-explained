@@ -22,10 +22,10 @@ Des acteurs importants de HTTP ont manqué à l'appel du groupe de travail penda
 
 ### 4.1.1. Le "bis" dans HTTPbis
 
-Le groupe est appelé HTTPbis, le "bis" faisant référence au [latin "bis"](http://fr.wiktionary.org/wiki/bis#Latin). Bis est souvent utilisé comme suffixe ou partie d'un nom à l'IETF lors d'une mise à jour ou addendum d'une spécification. Comme ici avec HTTP 1.1, donc.
+Le groupe est appelé HTTPbis, le "bis" faisant référence au [latin "bis"](https://fr.wiktionary.org/wiki/bis#Latin). Bis est souvent utilisé comme suffixe ou partie d'un nom à l'IETF lors d'une mise à jour ou addendum d'une spécification. Comme ici avec HTTP 1.1, donc.
 
 ## 4.2. http2 provient de SPDY
 
-[SPDY](http://en.wikipedia.org/wiki/SPDY) est un protocole développé par Google. Ils l'ont clairement créé dans un esprit d'ouverture et ont invité tout le monde à participer, mais il était évident qu'ils bénéficiaient d'une position de contrôle avec à la fois un navigateur populaire et un nombre significatif de serveurs très utilisés pour leurs services.
+[SPDY](https://en.wikipedia.org/wiki/SPDY) est un protocole développé par Google. Ils l'ont clairement créé dans un esprit d'ouverture et ont invité tout le monde à participer, mais il était évident qu'ils bénéficiaient d'une position de contrôle avec à la fois un navigateur populaire et un nombre significatif de serveurs très utilisés pour leurs services.
 
 Quand le groupe HTTPbis décida de travailler sur http2, SPDY avait déjà prouvé que le concept fonctionnait. Il avait montré qu'il était possible de le déployer sur Internet et des mesures publiées montraient sa meilleure performance. Le travail sur http2 a donc démarré depuis le draft SPDY/3, rapidement transcrit dans un draft-00 de http2 grâce à quelques remplacements.

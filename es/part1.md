@@ -2,7 +2,7 @@
 
 Este es un documento que describe http2 desde un nivel técnico y de protocolo. Comenzó como una presentación, que hice en Estocolmo en abril de 2014, para más tarde extender y convertirse en un documento completo con todo detalle y explicaciones concisas.
 
-RFC 7540 es el nombre oficial de la especificación final de http2 que ha sido publicada el 15 de Mayo de 2015: http://www.rfc-editor.org/rfc/rfc7540.txt
+RFC 7540 es el nombre oficial de la especificación final de http2 que ha sido publicada el 15 de Mayo de 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
 
 Todos los errores encontrados en este documento son míos propios (y del traducción), resultado de mis propios defectos. Por favor, reportarlos y haré las actualizaciones con sus correcciones.
 
@@ -18,22 +18,22 @@ Mi nombre es Daniel Stenberg y trabajo en Mozilla. Llevo trabajando con open sou
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 ¡Ayuda!
 
 Si encuentras errores, omisiones o mentiras descaradas en este documento, por favor envíame un versión actualizada del párrafo afectado y haré versiones modificadas. ¡Se mencionará en los créditos a todo aquel que eche una mano!. Espero ir mejorando este documento a lo largo del tiempo.
 
-El documento está disponible en [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+El documento está disponible en [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 
 ## 1.3 Licencia
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-Este documento está licenciado bajo Creative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/
+Este documento está licenciado bajo Creative Commons Attribution 4.0 license: https://creativecommons.org/licenses/by/4.0/
 
 ## 1.4 Historial del documento
 

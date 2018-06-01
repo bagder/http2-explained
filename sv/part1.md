@@ -6,7 +6,7 @@ sedemera gjordes om och breddades till ett fullt utvecklat dokument med alla
 detaljer och riktiga förklaringar.
 
 RFC 7540 är det officiella namnet på den slutliga http2-specifikationen och den
-blev publicerad den 15:e maj 2015: http://www.rfc-editor.org/rfc/rfc7540.txt
+blev publicerad den 15:e maj 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
 
 Alla misstag i det är dokumentet är mina egna och resultatet av mina fel. Peka
 gärna ut dem så åtgärdar vi dem till en kommande uppdatering.
@@ -29,9 +29,9 @@ arbetet med standardisering av http2.
 
   Twitter: [@bagder](https://twitter.com/bagder)
 
-  Web: [daniel.haxx.se](http://daniel.haxx.se/)
+  Web: [daniel.haxx.se](https://daniel.haxx.se/)
 
-  Blog: [daniel.haxx.se/blog](http://daniel.haxx.se/blog/)
+  Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
 ## 1.2 Hjälp!
 
@@ -41,13 +41,13 @@ kommer jag snart publicera en uppdated version. Jag ger ordentliga omnämnanden
 och tack till alla som hjälper till! Jag ämnar göra dokumentet bättre över
 tid.
 
-Det här dokumentet finns tillgängligt på [http://daniel.haxx.se/http2](http://daniel.haxx.se/http2)
+Det här dokumentet finns tillgängligt på [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
 ## 1.3 Licens
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/creative-commons.png" />
 
-Det här dokumentet är licenserat under Creative Commons Attribution 4.0 license: http://creativecommons.org/licenses/by/4.0/
+Det här dokumentet är licenserat under Creative Commons Attribution 4.0 license: https://creativecommons.org/licenses/by/4.0/
 
 ## 1.4 Dokumenthistoria
 

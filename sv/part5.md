@@ -109,5 +109,8 @@ fördel är att ett http2-koppel bör vara möjligt att hålla levande och
 återanvända i mycket högre grad än HTTP1-koppel generellt är.
 
 Medan vissa webbläsares talespersoner har sagt att de inte kommer implementera
-det här sättet att prata http2, så har Internet Explorer-teamet sagt att de
-kommer att göra det, och curl stöder det redan.
+det här sättet att prata http2, så sade Internet Explorer-teamet en gång i
+tiden att de skulle göra det - även om de sedan aldrig leverat det. curl och
+en del andra icke-webbläsarklienter stöder http2 i klartext.
+
+Idag stöder ingen av de stora webbläsarna http2 utan TLS.

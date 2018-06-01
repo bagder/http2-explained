@@ -1,4 +1,4 @@
-# 5. Conceitos http2
+# 5. Conceitos de http2
 
 Afinal o que o http2 consegue fazer? Onde está o limite que o grupo HTTPbis se encarregou de fazer?
 

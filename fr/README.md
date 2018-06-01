@@ -5,7 +5,7 @@ Ceci est un document détaillé décrivant HTTP/2 ([RFC
 7540](https://httpwg.github.io/specs/rfc7540.html)), les prémices, concepts,
 protocole, les implémentations existantes et ce que le futur pourrait nous réserver.
 
-Référez-vous à http://daniel.haxx.se/http2/ pour tout ce qui concerne ce projet.
+Référez-vous à https://daniel.haxx.se/http2/ pour tout ce qui concerne ce projet.
 
 Référez-vous à https://github.com/bagder/http2-explained pour le code source de ce livre.
 

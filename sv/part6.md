@@ -113,8 +113,8 @@ argument för komprimering.
 ### 6.5.1. Komprimering är ett lurigt ämne
 
 HTTPS- och SPDY-komprimering befanns vara känsliga för
-[BREACH](http://en.wikipedia.org/wiki/BREACH_%28security_exploit%29)- och
-[CRIME](http://en.wikipedia.org/wiki/CRIME)-attackerna. Genom att infoga känd
+[BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29)- och
+[CRIME](https://en.wikipedia.org/wiki/CRIME)-attackerna. Genom att infoga känd
 text i strömmarna och se hur det förändrade utdatan, kunde en attackerare
 lista ut vad som skickades.
 
@@ -122,7 +122,7 @@ Att komprimera dynamiskt innehåll för ett protokoll utan att bli sårbar för
 dessa attacker kräver lite omtanke och försiktiga övervägningnar. Det är vad
 HTTPbis-teamet försökte sig på.
 
-In kommer då [HPACK](http://www.rfc-editor.org/rfc/rfc7541.txt), Header-
+In kommer då [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), Header-
 komprimering för http2, vilket – som namnet lämpligt indikerar - är ett
 komprimeringsformat speciellt framtaget för http2-headers och det är strikt
 talat specificerat i en egen specifikation. Det nya formatet, tillsammans med
