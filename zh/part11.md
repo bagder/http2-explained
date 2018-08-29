@@ -18,7 +18,7 @@ curl通过升级头部支持基于标准TCP的http2. 当发起一个使用http2�
 
 ## 11.3. TLS和相关库
 
-curl可以使用许多不同TLS的底层库来提供TLS支持，http2也得这样。TLS兼容http2的挑战来自于对APLN以及一些NPN扩展的支持。
+curl可以使用许多不同TLS的底层库来提供TLS支持，http2也得这样。TLS兼容http2的挑战来自于对ALPN以及一些NPN扩展的支持。
 
 基于最新版本的OpenSSL或NSS编译curl可以同时获得ALPN和NPN支持。而使用GnuTLS或PolarSSL只能得到ALPN。
 
