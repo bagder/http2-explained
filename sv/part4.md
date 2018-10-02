@@ -51,7 +51,7 @@ som i fallet för HTTP 1.1.
 
 [SPDY](https://en.wikipedia.org/wiki/SPDY) är ett protokoll som utvecklades och
 togs fram av Google. De utvecklade det visserligen öppet och bjöd in alla som
-vill att delta, men det var tydligt att de utnyttjade sin situation med att
+ville att delta, men det var tydligt att de utnyttjade sin situation med att
 kontrollera både en populär webbläsare och ett signifikant server-bestånd med
 välanvända tjänster.
 
