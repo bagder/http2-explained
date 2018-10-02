@@ -8,7 +8,7 @@ används ofta som ett testverktyg och en utforskares sätt att peka på
 webbsajter och vi tänker fortsätta med det för http2 också.
 
 curl använder det separata biblioteket [nghttp2](https://nghttp2.org/) för all
-funktionalitet i http2-lagret. curl kräver nghttp2 1.0 är senare.
+funktionalitet i http2-lagret. curl kräver nghttp2 1.0 eller senare.
 
 Notera att just nu skippas curl på linux inte alltid med http2-support
 påslaget.
@@ -16,17 +16,17 @@ påslaget.
 ## 11.1. HTTP 1.x-liknande
 
 curl konverterar inkommande http2-headrar till HTTP 1.x-liknande headers och
-skicka dem till användaren, så att de kommer vara väldigt lika de i
+skickar dem till användaren, så att de kommer vara väldigt lika de i
 existerande HTTP. Det skapar en enkel övergång för vadsomhelst som använder
 curl och HTTP idag. På sammas sätt konverterar curl utgående headrar. Ge dem
 till curl i HTTP 1.x-stil och den gör om dem automatiskt när den pratar med
-http2-servrar. Det låter också använder att inte behöva bry sig så mycket om
+http2-servrar. Det låter också användare att inte behöva bry sig så mycket om
 vilken specifik HTTP version som faktiskt används över kabeln.
 
 ## 11.2. Klartext, osäkert
 
 curl stöder http2 över vanlig TCP mha Upgrade:-headern. Om du gör en
-HTTP-request och ber om http2, kommer curl be server att uppdatera kopplet
+HTTP-request och ber om http2, kommer curl be servern att uppdatera kopplet
 till http2 om det är möjligt.
 
 ## 11.3. TLS och vilka bibliotek
@@ -67,7 +67,7 @@ applikation kan mycket väl starta ett antal överföringar samtidigt och ifall
 du då hellre vill att libcurl ska vänta lite för att köra alla över samma
 koppel istället för att starta nya koppel för alla, så använder du
 [CURLOPT_PIPEWAIT-optionen](https://curl.haxx.se/libcurl/c/CURLOPT_PIPEWAIT.html)
-för varje individuell överföringing du hellre vill ska vänta.
+för varje individuell överföring du hellre vill ska vänta.
 
 ### 11.5.3 Server push
 
@@ -75,5 +75,5 @@ libcurl 7.44.0 och senare stöder HTTP/2 server push. Du kan dra nytta av den
 funktionen genom att sätta upp en push callback med
 [CURLMOPT_PUSHFUNCTION-optionen](https://curl.haxx.se/libcurl/c/CURLMOPT_PUSHFUNCTION.html). Om
 "pushen" accepteras av applikationen kommer den skapa en ny överföring som en
-CURL easy handle och leverera data över den, precis som vilken annan
+curl easy handle och leverera data över den, precis som vilken annan
 överföring som helst.
