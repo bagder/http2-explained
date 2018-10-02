@@ -1,6 +1,6 @@
 # 13. Fortsatt läsning
 
-Om du tycker att det här dokumentet var lite tunt på innehåll eller tekniska 
+Om du tycker att det här dokumentet var lite tunt på innehåll eller tekniska
 detaljer så finner du ytterligare resurser att främja din nyfikenhet här nedan:
 
 - HTTPbis-arbetsgruppens e-postlista samt dess arkiv: https://lists.w3.org/Archives/Public/ietf-http-wg/
