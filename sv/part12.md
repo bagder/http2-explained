@@ -4,7 +4,7 @@ En hel del tuffa beslut och kompromisser gjordes för http2. När http2
 driftsätts finns det ett etablerat sätt att uppgradera till andra
 protokoll-versioner och det arbetet är ett fundament för att göra fler
 protokollrevisioner framöver. Det tar också in ett medvetande och en
-infrastruktur som kan hantera flera olika versioner parallelt. Kanske behöver
+infrastruktur som kan hantera flera olika versioner parallellt. Kanske behöver
 vi inte fasa ut det gamla helt när vi introducerar nytt?
 
 http2 har fortfarnade en massa gammal HTTP 1-"legacy" med sig i bagaget som
@@ -30,6 +30,6 @@ att lösa.
 QUIC är än så länge bara implementerat av Google i Chrome och deras servrar,
 och den koden är inte lätt att återanvända på andra ställen, även om det finns
 ett [libquic](https://github.com/devsisters/libquic) som försöker precis det.
-Protokollet har skrivits ner som en [internet
+Protokollet har skrivits ner som en [Internet
 draft](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) inom IETFs
 transportarbetsgrupp.
