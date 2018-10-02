@@ -2,10 +2,10 @@
 
 Firefox har varit hack-i-häl med draftarna och har erbjudit
 http2-testimplemenationer under många månader. Under utvecklingen av
-http2-protkollet har klienter och servrar måste komma överrens om vilken
-draft-version av prokollet de implementerat vilket har gjort det lite lätt
-irriterande att köra tester. Vara bara medveten och kontrollera att din klient
-och server är överrens om vilken protokoll-draft de implementerar.
+http2-protkollet har klienter och servrar måste komma överens om vilken
+draft-version av protokollet de implementerat vilket har gjort det lite lätt
+irriterande att köra tester. Var bara medveten och kontrollera att din klient
+och server är överens om vilken protokoll-draft de implementerar.
 
 ## 9.1. Först, se till att det är påslaget
 
@@ -28,7 +28,7 @@ http2 i aktion när du går till https://-sajter som erbjuder http2.
 
 ![transparant http2-användning](https://raw.githubusercontent.com/bagder/http2-explained/master/images/firefox-screenshot.png)
 
-Det finns inget gränssnitselement någonstans som berättar att du pratar
+Det finns inget gränssnittselement någonstans som berättar att du pratar
 http2. Du kan helt enkelt inte enkelt se det. Ett sätt att lista ut det är att
 välja “Web developer->Network” och kontrollera svars-headrar och se vad du
 fick tillbaks från servern. Svaret är “HTTP/2.0”-någonting och Firefox stoppar
