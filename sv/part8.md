@@ -12,7 +12,7 @@ http2 minskar antalet turer fram och tillbaks över nätverket och det undviker
 först-i-kön-blockeringsproblemen genom att multiplexa och att kunna avsluta
 oönskad strömmar snabbt.
 
-Det tillåter ett stort antal paralella strömmar som i antal vida överstiger
+Det tillåter ett stort antal parallella strömmar som i antal vida överstiger
 antal koppel host även de mest shardade sajterna av idag.
 
 Med prioriteter använda ordentligt på strömmarna finns chansen att klient
@@ -79,7 +79,7 @@ har alla släppt http2-kapabla open source-servrar.
 
 ### 8.3.1. Saknade implementationer
 
-De två otroligt populära servrarna Apache HTTPD och Nnginx har båda erbjudit
+De två otroligt populära servrarna Apache HTTPD och Nginx har båda erbjudit
 SPDY support. Den 22:a september 2015 kom så Nginx med sin första version med
 officiell support för http2. Nginx har släppt
 ["nginx-1.9.5"](https://www.nginx.com/blog/nginx-1-9-5/) och http2-modulen för
@@ -105,7 +105,7 @@ som kunde göras.
 
 Google har
 [annonserat](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html)
-att de kommer ta bort support för SPDY och NPN i Chrom under 2016 och de
+att de kommer ta bort support för SPDY och NPN i Chrome under 2016 och de
 uppmanar servrar att migrera till http2 istället.
 
 ### 8.4.2. “Protokollet är endast användbart för webbläsare"
@@ -166,7 +166,7 @@ TLS-handskakningar och därmed prestera bättre än HTTPS skulle göra för HTTP
 
 Ja, vi gillar att se protokoll i klartext eftersom det gör debuggning och
 spårning enklare. Men text-baserade protokoll är också mer felbenägna och
-öppar upp för mycket mer parsning och fler parsningsproblem.
+öppnar upp för mycket mer parsning och fler parsningsproblem.
 
 Om du verkligen inte kan hantera ett binärt protokoll, så kan du inte hantera
 TLS och komprimering i HTTP 1.1 heller och det har funnits där och används
@@ -191,7 +191,7 @@ kan indikera att http2 håller sina löften.
 
 Seriöst, är det ditt argument? Lager är inte heliga oberörbara pelare i en
 global religion och om vi har klivit över inpå en del gråzoner när vi gjorde
-http2 så har det varit med avsikten att göra ett bra och effektivt protikoll
+http2 så har det varit med avsikten att göra ett bra och effektivt protokoll
 inom de givna ramarna.
 
 ### 8.4.8. “Det fixar inte flera av HTTP 1.1s problem"
@@ -201,7 +201,7 @@ det flera gamla HTTP funktioner som var tvugna att finnas kvar. Som t.ex
 headers och därmed också de ofta ogillade cookiesarna, authorization-headrar
 och mer. Men med fördelen att genom att behålla dessa paradigmer fick vi ett
 protokoll som det är möjligt att driftssätta utan att kräva en helt otänkbar
-mängd uppgraderingsarbete där fundamentala deras måste ersättas eller skrivas
+mängd uppgraderingsarbete där fundamentala delar måste ersättas eller skrivas
 om. http2 är i grund och botten bara ett ny inramning ("framing layer").
 
 ## 8.5. Kommer http2 att driftssättas vitt och brett?
@@ -209,8 +209,8 @@ om. http2 är i grund och botten bara ett ny inramning ("framing layer").
 Det är för tidigt att säga säkert, men jag kan ändå gissa och estimera och det
 är vad jag kommer göra här.
 
-Nejsägarna kommer säga "kolla hur bra IPv6 har gjort ifrån sig" som ett
-exempel på ett protokoll som det tagit decenier bara för att böra bli
+Nej-sägarna kommer säga "kolla hur bra IPv6 har gjort ifrån sig" som ett
+exempel på ett protokoll som det tagit decennier bara för att börja bli
 driftsatt brett. http2 är inte en IPv6 dock. Det här är ett protokoll ovanpå
 TCP som använder vanliga HTTP-uppgraderingsmekanismer, portnummer och TLS
 etc. Det kommer inte kräva att de flesta routers eller brandväggar ändras
@@ -225,7 +225,7 @@ idag använder SPDY.
 
 http2, baserat på samma principer som SPDY, skulle jag säga kommer sannolikt
 driftsättas ännu mer eftersom det är ett IETF-protokoll. SPDY-användningen hölls
-alltid tillbaks en del av dess "det är ett Google-protkoll"-stigma.
+alltid tillbaks en del av dess "det är ett Google-protokoll"-stigma.
 
 Det finns flera stora webbläsare bakom utrullningen. Representanter från
 Firefox, Chrome, Safari, Internet Explorer och Opera har sagt att de kommer
@@ -234,14 +234,14 @@ skeppa http2-kapabla webbläsare och de har visat fungerande implementaitoner.
 Det finns flera stora server-operatörer som är sannolika att erbjuda http2
 snart, inklusive Google, Twitter och Facebook och vi hoppas få se att
 http2-support snart läggs till i populära server-implementationer som Apache
-HTTPD och nginx. H2o är en ny vrålsnabb HTTP-server med http2-stöd som visar
+HTTPD och Nginx. H2o är en ny vrålsnabb HTTP-server med http2-stöd som visar
 potential.
 
-Några av de störa proxy-tillverkarna, inklusive HAProxy, Squid och Varnish har
+Några av de största proxy-tillverkarna, inklusive HAProxy, Squid och Varnish har
 uttalat sina intentioner att stödja http2.
 
 Allt igenom 2015 har mängden http2-trafik ökat. I början av September visade
 användningen av Firefox 40 http2 i 13% av all HTTP-trafik och 27% av all
-HTTPS-trafik, medan Google ser HTTP/2 i ungefär 18% av sin inkommande
+HTTPS-trafik, medan Google ser http2 i ungefär 18% av sin inkommande
 trafik. Det kan noteras att Google driver andra experiment med nya protokoll
 (Se QUIC i 12.1) vilket ger lägre http2-nivåer än det annars kunde vara.
