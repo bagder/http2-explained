@@ -66,7 +66,7 @@ uppfattningen att allt som går över port 80 är HTTP 1.1 och det får en del
 mellan-boxar att blanda sig i och förstöra trafik när det faktiskt är något
 annat protokoll som pratas där.
 
-Obligatorisk TLS är ett ämne som orsakat en mycket handviftande och upprörda
+Obligatorisk TLS är ett ämne som orsakat mycket handviftande och upprörda
 röster på mailinglistor och möten - är det bra eller är det ondska? Det är ett
 infekterat ämne - var medveten om detta när du kastar den här frågan i
 ansiktet på en HTTPbis-deltagare!
@@ -81,7 +81,7 @@ finns krav på vilka chiffer som måste användas.
 ## 5.3. http2-förhandling över TLS
 
 Next Protocol Negotiation (NPN), är tillägget som användes i SPDY för att
-förhandla med TLS-servrar.  Eftersom det inte var en riktig standard så togs
+förhandla med TLS-servrar. Eftersom det inte var en riktig standard så togs
 det till IETF och igenom och det som kom ut blev ALPN: Application Layer
 Protocol Negotiation. ALPN är det som nu lyfts upp för att användas i http2,
 medan SPDY-klienter och -servrar fortsätter använda NPN.
