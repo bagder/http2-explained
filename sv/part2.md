@@ -31,7 +31,7 @@ Senare skapade detta interoperabilitetsproblem när klienter och servrar väl
 började använda såna funktioner. HTTP pipelining är kanske det främsta exempel
 på en sådan funktion.
 
-## 2.3 Otillräcklig nyttjande av TCP
+## 2.3 Otillräckligt nyttjande av TCP
 
 HTTP 1.1 har svårt att verkligen till fullo nyttja all kraft och den prestanda
 som TCP erbjuder. HTTP-klienter och webbläsare måste vara väldigt kreativa för
@@ -57,7 +57,7 @@ varje sida.
 Som diagramet nedan visar, så har trenden pågått ett tag och det finns inga
 indikationer på att den kommer ändras inom kort. Den visar tillväxten av
 överföringsstorlek (i grönt) och det totala antalet förfrågningar som använts
-i genomsnit (i rött) för att visa de mest populära webbsajterna i världen, och
+i genomsnitt (i rött) för att visa de mest populära webbsajterna i världen, och
 hur det har förändrats de senaste fyra åren.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
@@ -72,7 +72,7 @@ stor andel av användarna.
 
 Medan vi sett en rejäl ökning i tillgänglig bandbredd hos människor över de
 senaste åren, så har vi inte sett samma förbättring i att minska
-fördröjningar.  Länkar med stora fördröjningar, som många nuvarande mobila
+fördröjningar. Länkar med stora fördröjningar, som många nuvarande mobila
 teknologier, gör det riktigt svårt att få en bra och snabb upplevelse av
 webben, även om du har en riktigt hög bandbredd på uppkopplingen.
 
@@ -83,7 +83,7 @@ inte bara är en på förhand genererad ström att skicka ut.
 ## 2.6. Först-i-kön-blockering
 
 HTTP Pipelining är ett sätt att skicka en till förfrågan till servern medan
-klienten fortfarande väntar på svaret till den förra frågningen. Det är
+klienten fortfarande väntar på svaret på den förra frågan. Det är
 väldigt likt en kö på banken eller till kassan i en mataffär. Du vet helt
 enkelt inte om personen framför dig i kön är en snabb kund eller den där
 irriterande personen som kommer ta en evighet innan hon/han är klar:
@@ -97,7 +97,7 @@ gör så kan du inte undvika att ta ett beslut och när det väl är taget kan d
 inte byta kö.
 
 Skapa nya köer är också belagt med prestanda- och resurs-förluster så det
-skalar inte bra upp till mer än ett ganska lågt antal köer. Det finns helt
+skalar inte upp bra till mer än ett ganska lågt antal köer. Det finns helt
 enkelt ingen perfekt lösning för detta.
 
 Även idag, 2015, så har de flesta desktop-webbläsare HTTP pipelining avslaget
