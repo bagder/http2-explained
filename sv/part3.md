@@ -21,7 +21,7 @@ där.
 
 ## 3.2 Inlining
 
-Inlining är ett annat trick där man underviker skicka enskilda bilder, och det
+Inlining är ett annat trick där man underviker att skicka enskilda bilder, och det
 gör man genom att använda data: URLer inbäddade i CSS-filen. Det har liknande
 nackdelar som i spriting-fallet ovan.
 
@@ -36,10 +36,10 @@ nackdelar som i spriting-fallet ovan.
 ## 3.3 Concatenation
 
 En stor sajt kan lätt hamna i en situation med väldigt många olika
-javascriptfiler.  Frontendverktyg kan hjälpa utvecklarna att slå ihop varenda
+javascriptfiler. Frontendverktyg kan hjälpa utvecklarna att slå ihop varenda
 en av dem till en enda stor klump så att webbläsaren hämtar en enda stor fil
 istället för dussintals mindre filer. För mycket data skickas därmed när
-enbart lite behvös. För mycket data laddas om när en enda ändring behövs.
+enbart lite behövs. För mycket data laddas om när en enda ändring behövs.
 
 Den här övningen är förstås mest besvärlig för de involverade utvecklarna.
 
@@ -59,7 +59,7 @@ många fler koppel till din sajt och minska sidladdningstider.
 koppel per hostnamn, men de behöver fortfarande ha någon gräns så sajter
 fortsätter att använda den här tekniken för att öka antalet koppel. Med ett
 ständigt ökande antal objekt (som jag visade tidigare) så måste ett än större
-antalet koppel användas för att få HTTP att prestera bra och göra din sajt
+antal koppel användas för att få HTTP att prestera bra och göra din sajt
 snabb. Det är inte ovanligt att enskilda sajter använder långt över 50 eller
 upp och förbi 100 koppel tack vare den här tekniken. Färsk statistik från
 httparchive.org visar att av de 300 000 mest populära URLerna i världen så
