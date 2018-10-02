@@ -16,9 +16,9 @@ diskuterats för att inkluderas i protokollet och som troligen tillhör de
 första typerna att skickas som utökningar. Jag beskriver dem här bara på grund
 deras popularitet och deras tidigare roll som "inhemska" typer.
 
-## 7.1. Alternativa Tjänster
+## 7.1. Alternativa tjänster
 
-När http2 antas, finns det anledning att misstänk att TCP-koppel kommer bli
+När http2 antas, finns det anledning att misstänka att TCP-koppel kommer bli
 mycket långvariga och hållas levande mycket längre än vad HTTP 1.x-kopper
 någonsin hållits. En klient bör kunna göra mycket av vad den vill över ett
 enda koppel per varje host/sajt och det enda kopplet kan då potentiellt hållas
