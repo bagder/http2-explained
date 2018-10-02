@@ -22,7 +22,7 @@ implementationer mycket enklare.
 Dessutom gör det det mycket lättare att separera själva protokolldelarna från
 inramningen - vilket var förvirrande blandat i HTTP1.
 
-Det faktum att protokollet har komprimering och ofta kommer körs över TLS
+Det faktum att protokollet har komprimering och ofta kommer köras över TLS
 minskar också värdet av text eftersom man inte skulle se text över kabeln i
 alla fall. Vi måste helt enkelt vänja oss vid tanken på att använda en
 Wireshark-inspector eller liknande för att lista ut exakt vad som pågår på
@@ -48,7 +48,7 @@ HEADERS. Jag kommer beskriva några av paket-typerna i närmare detaljer nedan.
 ## 6.3. Multiplexade strömmar
 
 Ström-id som nämndes i stycket ovan om det binära formatet, gör att varje
-paket som kommer över http2 är associerad med en "ström". En ström är en
+paket som kommer över http2 är associerat med en "ström". En ström är en
 logisk förbindelse. En oberoende, bi-direktionell sekvens av paket som utbytes
 mellan klienten och servern inom ett http2-koppel.
 
@@ -69,7 +69,7 @@ De två tågen multiplexade över samma koppel:
 
 ![multiplexat tåg](https://raw.githubusercontent.com/bagder/http2-explained/master/images/train-multiplexed.jpg)
 
-## 6.4. Prioriteter och beroendeen
+## 6.4. Prioriteter och beroenden
 
 Varje ström har också en prioritet (även känd som "vikt"), vilken används för
 att berätta för andra sidan vilka strömmar som skall anses viktigast ifall
@@ -94,7 +94,7 @@ den frågan utan att servern ska behöva mellanlagra info eller meta-data från
 tidigare förfrågningar. Eftersom http2 inte ändra några sådana paradigmer så
 måste det också fungera så.
 
-Detta gör HTTP repetitivt. När en klient frågar efter många resurser från
+Detta gör HTTP repetativt. När en klient frågar efter många resurser från
 samma server, typ bilder på en webbsida, så kommer det göras en lång serie med
 förfrågningar som ser nästan identiska ut. En serie med nästan identiska
 någonting ber om komprimering.
