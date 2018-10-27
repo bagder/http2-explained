@@ -10,7 +10,7 @@ Sınırlar aslında oldukça katıydı ve ekibin yenilik yapma kabiliyetine çok
 
 - HTTP1 sunucuları ve istemcileri onlarca yıldır dolaşıyorlar, onları http2 sunucularına proxyleştirebilmeliyiz.
 
-- Daha sonra, proxy'ler http2 özelliklerini HTTP 1.1 istemcilerine bire bir eşleyemez olmalıdır.
+- Daha sonra, proxy'ler http2 özelliklerini HTTP 1.1 istemcilerine birebir eşleyemez olmalıdır.
 
 - Protokoldeki isteğe bağlı parçaları çıkarın veya azaltın. Bu gerçekten bir şart değil, SPDY ve Google ekibinden gelen daha mantra idi. Her şeyin gerekli olduğu düşünüldüğünde, şimdi hiçbir şeyin uygulanamayacağı tuzağına düşürebilir.
 
@@ -26,17 +26,17 @@ Bu gidiş dönüş cezası, SPDY ekibinin kabul etmeyeceği bir şey değildi ve
 
 ## 5.2. https:// için http2
 
-Http2'nin odak noktası, TLS üzerinde düzgün davranmasını sağlamak olmuştur. SPDY TLS gerektirir ve http2'de TLS'i zorunlu hale getirmek için güçlü bir itme olmuştur, ancak http2 isteğe bağlı olarak TLS ile birlikte gönderildiği için fikir birliğine varılamamıştır. Bununla birlikte, iki önde gelen uygulayıcı, http2'yi TLS üzerinden uygulayacaklarını açıkça belirtti: Mozilla Firefox lideri ve günümüzün önde gelen web tarayıcılarından ikisi olan Google Chrome lideri.
+Http2'nin odak noktası, TLS üzerinde düzgün davranmasını sağlamak olmuştur. SPDY TLS gerektirir ve http2'de TLS'i zorunlu hale getirmek için güçlü bir itme olmuştur, ancak http2 isteğe bağlı olarak TLS ile birlikte gönderildiği için fikir birliğine varılamamıştır. Bununla birlikte, iki önde gelen uygulayıcı, http2'yi TLS üzerinden uygulayacaklarını açıkça belirtti: günümüzün önde gelen web tarayıcılarından ikisi olan Mozilla Firefox ve Google Chrome liderleri.
 
 Yalnızca TLS'yi seçme nedenleri, kullanıcıların gizliliği konusundaki çekinceleri ve TLS ile yapılan yeni protokollerin daha yüksek başarı oranına sahip olduğunu gösteren  erken ölçümlere saygıyı içerir. Bunun nedeni 80 numaralı bağlantı noktasını aşan HTTP 1.1 olmasıdır ve bu bağlantı noktasında diğer tüm protokoller kullanıldığında bazı -orta kutularla- etkileşime giren veya trafiği yok eden yaygın varsayım olmasıdır.
 
-Zorunlu TLS konusu, e-posta listelerinde ve toplantılada titrek sesler çıkardı -iyi mi yoksa kötü mü- gibi. Bu sorunu bir HTTPbis katılımcısının karşısına çıkardığınızda bunun farkında olun!
+Zorunlu TLS konusu, e-posta listelerinde ve toplantılarda titrek sesler çıkardı -iyi mi yoksa kötü mü- gibi. Bu sorunu bir HTTPbis katılımcısının karşısına çıkardığınızda bunun farkında olun!
 
-Benzer şekilde, http2'nin TLS kullanırken zorunlu olması gereken şifrelerin bir listesini mi yoksa belki de bir seti kara listeye alması mı gerektiği konusunda veya TLS'den hiç bir şey talep etmemesi gerekip gerekmediğine ilişkin uzun süreli tartışmalar sürüyor, ya da belki de kara listeye alınmalı ya da TLS "katmanı" ndan hiçbir şey talep etmemeli, TLS çalışma grubuna bırakılmalıdır. Beyanname, TLS'nin en azından sürüm 1.2 olması gerektiğini ve şifre paketi kısıtlamaları olduğunu belirtti.
+Benzer şekilde, http2'nin TLS kullanırken zorunlu olması gereken şifrelerin bir listesini mi yoksa belki de bir seti kara listeye alması mı gerektiği konusunda veya TLS'den hiçbir şey talep etmemesi gerekip gerekmediğine ilişkin uzun süreli tartışmalar sürüyor, ya da belki de kara listeye alınmalı ya da TLS "katmanı" ndan hiçbir şey talep etmemeli, TLS çalışma grubuna bırakılmalıdır. Beyanname, TLS'nin en azından sürüm 1.2 olması gerektiğini ve şifre paketi kısıtlamaları olduğunu belirtti.
 
 ## 5.3. TLS üzerinden http2 anlaşması
 
-Next Protocol Negotiation (NPN), SPDY'yi TLS sunucularıyla pazarlık etmesi için kullanımış protokoldür. Uygun bir standart olmadığı için, IETF aracılığıyla oluşturuldu ve sonuç ALPN oldu: Application Layer Protocol Negotiation. SPDY istemcileri ve sunucuları hala NPN kullanırken, ALPN http2 tarafından kullanılmak üzere yükseltilmektedir. 
+Next Protocol Negotiation (NPN), SPDY'yi TLS sunucularıyla pazarlık etmesi için kullanılmış protokoldür. Uygun bir standart olmadığı için, IETF aracılığıyla oluşturuldu ve sonuç ALPN oldu: Application Layer Protocol Negotiation. SPDY istemcileri ve sunucuları hala NPN kullanırken, ALPN http2 tarafından kullanılmak üzere yükseltilmektedir. 
 
 NPN'nin önce varolduğu ve ALPN'nin standardizasyona geçmesi biraz zaman aldığından, http2 müzakere ederken çok erken http2 istemcileri ve http2 sunucuları uygulamakta ve bu uzantıları kullanmaya başlamıştır. Ayrıca SPDY için NPN kullanılır ve birçok sunucu hem SPDY hem de http2 sunar, bu nedenle bu sunucularda hem NPN hem de ALPN'yi desteklemek mantıklıdır.
 
