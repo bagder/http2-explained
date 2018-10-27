@@ -4,11 +4,11 @@ HTTP 1.1, İnternet'teki neredeyse her şey için kullanılan bir protokoldür. 
 
 ## 2.1 HTTP 1.1 devasadır
 
-HTTP oluşturulduğunda ve dünyaya yayıldığında, muhtemelen basit ve anlaşılır bir protokol olarak algılanıyordu, fakat zaman bunun yanlış olduğunu kanıtladı. RFC 1945'de HTTP 1.0, 1996'da yayınlanan 60 sayfalık bir beyannamedir. HTTP 1.1'i açıklayan RFC 2616, yalnızca 3 sene sonra 1999'da yayınlanmıştır ve önemli ölçüde artış göstererek 176 sayfaya yükselmiştir. Bununla birlikte, IETF(İnternet Mühendisliği Görev Grubu) bu beyannamenin güncellemesi üzerinde çalışırken, bu beyanname bölünmüş ve toplamda daha büyük sayfa sayısı ile altı dokümana dönüştürülmüş(RFC7230 ve ailesi ile sonuçlanır). Herhangi bir sayımla, HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve en azından çok sayıda isteğe bağlı parça içermektedir.
+HTTP oluşturulduğunda ve dünyaya yayıldığında, muhtemelen basit ve anlaşılır bir protokol olarak algılanıyordu, fakat zaman bunun yanlış olduğunu kanıtladı. RFC 1945'de HTTP 1.0, 1996'da yayınlanan 60 sayfalık bir beyannamedir. HTTP 1.1'i açıklayan RFC 2616, yalnızca 3 sene sonra 1999'da yayınlanmıştır ve önemli ölçüde artış göstererek 176 sayfaya yükselmiştir. Bununla birlikte, IETF bu beyannamenin güncellemesi üzerinde çalışırken, bu beyanname bölünmüş ve toplamda daha büyük sayfa sayısı ile altı dokümana dönüştürülmüş(RFC7230 ve ailesi ile sonuçlanır). Herhangi bir sayımla, HTTP 1.1 büyüktür ve sayısız ayrıntı, incelik ve en azından çok sayıda isteğe bağlı parça içermektedir.
 
 ## 2.2 Seçenekler dünyası
 
-HTTP 1.1'in daha sonraki uzantılar için kullanılabilecek çok sayıda minik ayrıntı ve seçeneğe sahip olma özelliği, neredeyse hiçbir uygulamanın hiçbir zaman hiçbir yerde uygulayamayacağı bir yazılım ekosistemi geliştirmiştir ve "hiçbir şey" kavramının tam olarak ne olduğunu söylemek mümkün değildir. Bu başlangıçta az kullanılan özelliklerin, çok az sayıda uygulamanın yapıldığı ve özelliklerini uygulayanlardan çok az yararlanıldığı bir duruma neden oldu.
+HTTP 1.1'in daha sonraki uzantılar için kullanılabilecek çok sayıda minik ayrıntı ve seçeneğe sahip olma özelliği, neredeyse hiçbir uygulamanın hiçbir zaman hiçbir yerde uygulayamayacağı bir yazılım ekosistemi geliştirmiştir ve "hiçbir şey" kavramının tam olarak ne olduğunu söylemek mümkün değildir. Bu başlangıçta az kullanılan özelliklerin çok az sayıda uygulamanın yapıldığına ve özelliklerini uygulayanlardan çok az yararlanıldığı bir duruma neden oldu.
 
 Daha sonraları, sunucu ve istemciler bu tür özelliklerin kullanımını arttırmaya başladığında, bu "birlikte çalışabilirlik" sorununa neden oldu. HTTP boruhattı, böyle bir özelliğin temel bir örneğidir. 
 
@@ -18,7 +18,7 @@ HTTP 1.1, TCP'nin sunduğu tüm gücü ve performanstan tam anlamıyla yararlana
 
 Yıllar boyunca paralel olarak devam eden diğer girişimler TCP’nin bu kadar kolay değiştirilmediğini doğruladı ve bu nedenle hem TCP hem de protokolleri iyileştirmeye çalışıyoruz.
 
-Basitçe söylemek gerekirse, TCP daha fazla veri göndermek veya almak adına oluşabilecek duraklamalar ve boş sürelerden kaçınmak için daha iyi kullanılabilir. Sıradaki bölümlerde bu eksikliklerin bazıları vurgulanacaktır. 
+Basitce söylemek gerekirse, TCP daha fazla veri göndermek veya almak adına oluşabilecek duraklamalar ve boş sürelerden kaçınmak için daha iyi kullanılabilir. Sıradaki bölümlerde bu eksikliklerin bazıları vurgulanacaktır. 
 
 ## 2.4 Aktarım boyutları ve nesne sayısı
 
@@ -48,6 +48,6 @@ Satır seçimi konusunda dikkatli olabilirsiniz, bu yüzden doğru olduğunu ger
 
 Yeni bir satır oluşturmak da bir performans ve kaynak cezasıyla ilişkilidir, bu yüzden daha küçük satır sayılarının ötesinde ölçeklenebilir değildir. Bunun için mükemmel bir çözüm yoktur.
 
-Bugün bile, 2015, çoğu masaüstü web tarayıcısında varsayılan olarak HTTP boruhattı devre dışı bırakılmıştır.
+Bugün bile, 2015, çoğu masaüstü web tarayıcısında varsayılan olarak HTTP boru hattı devre dışı bırakılmıştır.
 
 Bu konuyla ilgili ekler Firefox'un [bugzilla entry 264354](https://bugzilla.mozilla.org/show_bug.cgi?id=264354) adresinde bulunur.
