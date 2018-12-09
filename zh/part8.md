@@ -40,7 +40,7 @@ Firefox一直紧跟最新的协议，Twitter也紧追不舍提供了基于http2�
 
 事实上，已经有不少的服务器实现了http2。
 
-时下最流行的Nginx自1.9.5(发布于2015年9月22号)版本后提供了对http2的支持并且取缔了原来的SPYD模块(因此SPYD和http2无法同时运行在同一个Nginx服务器实例中)。
+时下最流行的Nginx自1.9.5(发布于2015年9月22号)版本后提供了对http2的支持并且取缔了原来的SPDY模块(因此SPDY和http2无法同时运行在同一个Nginx服务器实例中)。
 
 而Apache HTTPD服务器也实现了一个名为[mod_http2](https://httpd.apache.org/docs/2.4/mod/mod_http2.html)的http2模块，并与2015年10月9号在2.4.17的版本中发布。
 
