@@ -132,6 +132,8 @@ That's true. With the specific goal of maintaining HTTP/1.1 paradigms there were
 
 ## 8.5. Will http2 become widely deployed?
 
+(This section was written in 2015 and shows the state of affairs back then. Things have moved and developed significantly since.)
+
 It is too early to tell for sure, but I can still guess and estimate and that's what I'll do here.
 
 The naysayers will say “look at how good IPv6 has done” as an example of a new protocol that's taken decades to just start to get widely deployed. http2 is not an IPv6 though. This is a protocol on top of TCP using the ordinary HTTP update mechanisms and port numbers and TLS etc. It will not require most routers or firewalls to change at all.
