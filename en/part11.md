@@ -30,8 +30,9 @@ Build curl against modern versions of OpenSSL or NSS to get both ALPN and NPN su
 ## 11.4. Command line use
 
 To tell curl to use http2, either plain text or over TLS, you use the
-`--http2` option (that is “dash dash http2”). curl still defaults to HTTP/1.1
-so the extra option is necessary when you want http2.
+`--http2` option (that is “dash dash http2”). curl defaults to HTTP/1.1 for
+HTTP: URLs so the extra option is necessary when you want http2 for that. For
+HTTPS URLs, curl will attempt to use http2.
 
 ## 11.5. libcurl options
 
