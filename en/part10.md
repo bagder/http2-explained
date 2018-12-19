@@ -8,7 +8,9 @@ SPDY support was removed in Chrome 51 in favor or http2. In a blog post, the pro
 
 ## 10.1. First, make sure it is enabled
 
-Enter “chrome://flags/#enable-spdy4" in your browser's address bar and click “enable” if it isn't already showing it as enabled.
+If you use a very old Chrome version you may want to check if the support is there.
+
+Enter “chrome://flags/#enable-spdy4" in your browser's address bar and click “enable” if it isn't already showing it as enabled. This flag has been removed in recent version and the support is now always implied.
 
 ## 10.2. TLS-only
 
