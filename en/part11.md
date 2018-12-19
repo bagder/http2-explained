@@ -50,7 +50,7 @@ enable HTTP/2 multiplexing for your application with the
 option. Otherwise it will continue using one request at a time per connection.
 
 Another little detail to keep in mind is that if you ask for several transfers
-at once with libcurl, using its multi interface, an applicaton can very well
+at once with libcurl, using its multi interface, an application can very well
 start any number of transfers at once and if you then rather have libcurl wait
 a little to add them all over the same connection rather than opening new
 connections for all of them at once, you use the
