@@ -18,12 +18,12 @@ language.
 
 ## 1.1 Author
 
-My name is Daniel Stenberg and I work for Mozilla. I've been working with open
-source and networking for over twenty years in numerous projects. Possibly I'm
-best known for being the lead developer of curl and libcurl. I've been
-involved in the IETF HTTPbis working group for several years and there I've
-kept up-to-date with the refreshed HTTP 1.1 work as well as being involved in
-the http2 standardization work.
+My name is Daniel Stenberg. I've been working with open source and networking
+for over twenty years in numerous projects. Possibly I'm best known for being
+the lead developer of curl and libcurl. I've been involved in the IETF HTTPbis
+working group for several years and there I've kept up-to-date with the
+refreshed HTTP 1.1 work as well as being involved in the http2 standardization
+work.
 
   Email: daniel@haxx.se
 
