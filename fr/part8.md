@@ -62,7 +62,7 @@ Pas du tout. Les capacités de multiplexage vont énormément améliorer l'expé
 
 Les gros sites ont déjà une présence mondiale et du coup des aller-retours moins longs vers la plupart des utilisateurs.
 
-### 8.4.4. “Its use of TLS makes it slower”
+### 8.4.4. “Son utilisation de TLS le rend plus lent”
 
 Cela peut se révéler vrai. La négociation TLS ajoute un peu de latence, mais il existe des projets pour réduire encore les aller-retours en TLS. La surcharge du TLS par rapport à du texte en clair n'est pas neutre et a un impact CPU. L'impact en lui-même est sujet à discussions et mesures. Voir par exemple [istlsfastyet.com](https://istlsfastyet.com/) pour avoir une source d'information.
 
