@@ -22,4 +22,4 @@ Gli headers che vedete nel tool Network durante un dialogo http2 sono stati conv
 
 ## 9.4. Visualizzare l'utilizzo di http2
 
-Esistono plugins Firefox che aiutano a capire se un sito utilizzi http2. Uno di questi è [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+Esistono plugins Firefox che aiutano a capire se un sito utilizzi http2. Uno di questi è [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).

@@ -22,4 +22,4 @@
 
 ## ۹.۴. نشان‌دادن استفاده از http2
 
-پلاگین‌هایی برای فایرفاکس وجود دارند که نشان می‌دهند که یک سایت از http2 استفاده می‌کند یا نه. یکی از آن‌ها [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/) است.
+پلاگین‌هایی برای فایرفاکس وجود دارند که نشان می‌دهند که یک سایت از http2 استفاده می‌کند یا نه. یکی از آن‌ها [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/) است.

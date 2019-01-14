@@ -22,4 +22,4 @@ Les en-têtes que vous voyez dans l'outil ont été convertis du format binaire 
 
 ## 9.4. Voir l'utilisation http2
 
-Il existe des plug-ins Firefox permettant de visualiser si un site utilise http2. En voici un [“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+Il existe des plug-ins Firefox permettant de visualiser si un site utilise http2. En voici un [“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).

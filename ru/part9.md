@@ -45,4 +45,4 @@ http2.
 
 Существуют плагины для Firefox, которые помогает отобразить то, что сайт
 использует http2. Один из них называется [«Индикатор
-SPDY»](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+SPDY»](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).

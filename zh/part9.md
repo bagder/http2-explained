@@ -22,4 +22,4 @@ Firefox紧跟着草案，并且很早之前就实现了http2的测试实现。�
 
 ## 9.4. 图形化HTTP/2
 
-有一些Firefox的插件可以图形化HTTP/2，比如[“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/)。
+有一些Firefox的插件可以图形化HTTP/2，比如[“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/)。

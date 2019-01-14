@@ -23,4 +23,4 @@ Las cabeceras que se ven en la herramienta de red al utilizar http2 han sido con
 
 ## 9.4. Visualizar el uso de http2
 
-Existen plugins de Firefox disponibles que ayudan a visualizar si un sitio está usando HTTP/2. Uno de ellos es [“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+Existen plugins de Firefox disponibles que ayudan a visualizar si un sitio está usando HTTP/2. Uno de ellos es [“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).
