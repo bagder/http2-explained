@@ -1,6 +1,6 @@
 # 6. Http2 protokolü
 
-Arkaplan hakkında, bizi ilgilendiren tarih ve siyaset hakkında yeterince bilgi bulunuyor. Protokolün özelliklerine, http2'yi oluşturan bitler ve kavramlara bakalım.
+Arkaplan hakkında, bizi ilgilendiren tarih ve siyaset hakkında yeterince bilgi bulunuyor. Protokolün özelliklerine, http2'yi oluşturan ikili sayılar ve kavramlara bakalım.
 
 ## 6.1. İkili protokol
 
@@ -8,11 +8,11 @@ http2, ikili bir protokoldür.
 
 Bir dakika izin ver yeter. Daha önce internet protokolleri ile ilgilendiyseniz, bu değişime bir şekilde tepki göstereceksiniz, çünkü insanlar telnet ve benzeri yollarla istekte bulunabileceğinden metin / ascii tabanlı protokollerin nasıl daha üstün olduğunu argümanlarınızı sıralayarak ispatlamaya çalışacaktır...
 
-http2, çerçevelemeyi çok daha kolay hale getirmek için ikilidir. Çerçevelerin başlangıcını ve bitişini bulmak HTTP 1.1'de ve aslında genel olarak metin tabanlı diğer protokollerde de karmaşık durumlardan biridir. İsteğe bağlı beyaz boşluğun dışına ve aynı şey için farklı yollarla ilerleyerek uygulama daha basit hale gelir.?
+http2, çerçevelemeyi çok daha kolay hale getirmek için ikilidir. Çerçevelerin başlangıcını ve bitişini bulmak HTTP 1.1'de ve aslında genel olarak metin tabanlı diğer protokollerde de karmaşık durumlardan biridir. İsteğe bağlı beyaz boşluğun dışına ve aynı şey için farklı yollarla ilerleyerek uygulama daha basit hale gelir?
 
 Ayrıca, gerçek protokol bölümlerini çerçeveden ayırmak daha kolaydır, ki HTTP1 karmaşıktır.
 
-Protokolün sıkıştırma özelliğine sahip olması ve genellikle TLS ile çalışması da, metnin önemini düşürür; zira yine de hat üzerinde metin görmezsiniz. Http2'deki protokol seviyesinde neler olduğunu tam olarak anlamak için bir Wireshark gibi ağdaki paketler inceleyebileceğiniz bir ygulama kullanma fikrine alışmamız yeterlidir.
+Protokolün sıkıştırma özelliğine sahip olması ve genellikle TLS ile çalışması da, metnin önemini düşürür; zira yine de hat üzerinde metin görmezsiniz. Http2'deki protokol seviyesinde neler olduğunu tam olarak anlamak için bir Wireshark gibi ağdaki paketleri inceleyebileceğiniz bir uygulama kullanma fikrine alışmamız yeterlidir.
 
 Bu protokolün hata ayıklamasının muhtemelen curl gibi araçlarla veya ağ akışının Wireshark ve benzerleriyle analiz ederek yapılması gerekecektir.
 
@@ -28,7 +28,7 @@ Http2 beyannamesinde tanımlanan on farklı çerçeve türü vardır ve HTTP 1.1
 
 Önceki bölümde bahsedilen Akım Tanımlayıcı, http2 üzerinden gönderilen her kareyi bir "akış" ile ilişkilendirir. Akış, http2 bağlantısı içinde istemci ve sunucu arasında değiştirilen bağımsız, çift yönlü bir çerçeve dizisidir.
 
-Tek bir http2 bağlantısı,eşzamanlı birden fazla açık akış içerebilir; bu uç noktalarda çoklu akışlardan çerçeveler araya girebilir. Akışlar kurulabilir ve tek taraflı olarak kullanılabilir veya istemci veya sunucu tarafından paylaşılabilir ve iki uç nokta tarafından da kapatılabilir. Çerçevelerin bir akış içinde gönderilme sırası önemlidir. Alıcılar, çerçeveleri aldığı sıraya göre işlerler.
+Tek bir http2 bağlantısı, eş zamanlı birden fazla açık akış içerebilir; bu uç noktalarda çoklu akışlardan çerçeveler araya girebilir. Akışlar kurulabilir ve tek taraflı olarak kullanılabilir veya istemci veya sunucu tarafından paylaşılabilir ve iki uç nokta tarafından da kapatılabilir. Çerçevelerin bir akış içinde gönderilme sırası önemlidir. Alıcılar, çerçeveleri aldığı sıraya göre işlerler.
 
 Akışların çoğullaması, birçok akıştan gelen paketlerin aynı bağlantı üzerinden karışabilmesi anlamına gelir. İki bireysel tren tek bir tren haline gelebilir ve daha sonra diğer tarafta tekrar ayrılabilir.
 
@@ -45,7 +45,7 @@ Her bir akış, sunucuyu öncelikle hangi akışların gönderileceğini seçmey
 
 ÖNCELİK çerçevesini kullanarak bir istemci, sunucuya bir akışın bağlı olduğu diğer bir akışı da söyleyebilir. Bu istemciye öncelik agacı oluşturmasına izin verir  ki bu ağacda "cocuk akışlar" bircok "ebeveyn akışa" bağlı olabilir.
 
-Öncelik ağırlıkları ve bağımlılıkları çalışma zamanında dinamik olarak değiştirilebilir, ki bu da, kullanıcılar görüntülerin bulunduğu bir sayfayı aşağıya kaydırdığında, tarayıcıların hangi görüntülerin en önemli olduğunu belirleyebilmsine veya sekmeleri değiştirirseniz, birdenbire odaklanacak yeni bir dizi akışın önceliğini oluşturabilmesine olanak tanır.
+Öncelik ağırlıkları ve bağımlılıkları çalışma zamanında etkin olarak değiştirilebilir, ki bu da, kullanıcılar görüntülerin bulunduğu bir sayfayı aşağıya kaydırdığında, tarayıcıların hangi görüntülerin en önemli olduğunu belirleyebilmesine veya sekmeleri değiştirirseniz, birdenbire odaklanacak yeni bir dizi akışın önceliğini oluşturabilmesine olanak tanır.
 
 ## 6.5. Başlık sıkıştırma
 
@@ -61,15 +61,15 @@ HTTP 1.1 istek boyutları o kadar büyük oluyor ki bazen ilk TCP penceresinden 
 
 HTTPS ve SPDY sıkıştırmasının [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29) ve [CRIME](https://en.wikipedia.org/wiki/CRIME) saldırılarına karşı savunmasız olduğu tespit edildi. Bilinen metni akışa çıktıyı ekleyerek, nasıl değiştirdiğini öğrenebilir, böylece saldırgan şifreli bir yükte gönderileni anlamaya çalışabilir.
 
-Bir protokol için dinamik içeriğe sıkıştırma yapmak biraz düşünülmesi ve dikkatli olması gereken bir konudur(saldırılardan birine karşı savunmasız hale gelmeden yapılır). HTTPbis ekibi bunu yapmaya çalıştı.
+Bir protokol için etkin içeriğe sıkıştırma yapmak biraz düşünülmesi ve dikkatli olması gereken bir konudur(saldırılardan birine karşı savunmasız hale gelmeden yapılır). HTTPbis ekibi bunu yapmaya çalıştı.
 
 [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt) bakın, HPACK(adından da anlaşılacağı gibi), HTTP/2 için Başlık Sıkıştırmasıdır. Bu sıkıştırma biçimi özellikle http2 başlıkları için hazırlanmış olup, ayrı bir internet taslağında belirtilmektedir. Yeni format, diğer karşı ölçümlerle(belirli bir üstbilgiyi ve çerçevelerin dolgusunu(adding) sıkıştırmamasını sağlayan bir bit gibi), sıkıştırmanın kullanılmasını zorlaştırır.
 
 Roberto Peon'un (HPACK'in yaratıcılarından biri) sözleriyle:
 
 > HPACK sızan bilgiyi önlemek,
-> kodlama ve kod çözme işlemini hem hızlandırmak hem ucuzlaştirmak,
-> sıkıştırılan içrik boyutu üzerinde alıcı adına kontrol sağlamak,
+> kodlama ve kod çözme işlemini hem hızlandırmak hem ucuzlaştırmak,
+> sıkıştırılan içerik boyutu üzerinde alıcı adına kontrol sağlamak,
 > proxy'nin yeniden indexlenmesine izin vermek(yani, bir proxy içindeki ön uç ve arka uç arasında paylaşılan durum)
 > ve Huffman kodlu dizelerin çabuk karşılaştırmaları için tasarlandı.
 
@@ -87,6 +87,6 @@ Sunucu itme, istemcinin sunucuya açıkça izin vermesi gereken bir özelliktir.
 
 ## 6.8. Akış kontrolü
 
-Her bir http2 akışının kendi akış penceresi vardır, bu pencerede diğer ucun veri göndermesine izin verilir. SSH'ın nasıl çalıştığını biliyorsanız, çok benzerolduğunu göreceksiniz.
+Her bir http2 akışının kendi akış penceresi vardır, bu pencerede diğer ucun veri göndermesine izin verilir. SSH'ın nasıl çalıştığını biliyorsanız, çok benzer  olduğunu göreceksiniz.
 
-Her bir akış için, iki uçun da gelen veriyi işlemek için yeterli alana sahip olup omadığı veya diğer uçta yalnızca pencere genişletilinceye kadar belirli miktarda veri gönderilmesine izin verilebileceği gibi durumları bildirmeye hakları vardır. Sadece VERİ çerçeveleri akış kontrollüdür.
+Her bir akış için, iki uçun da gelen veriyi işlemek için yeterli alana sahip olup olmadığı veya diğer uçta yalnızca pencere genişletilinceye kadar belirli miktarda veri gönderilmesine izin verilebileceği gibi durumları bildirmeye hakları vardır. Sadece VERİ çerçeveleri akış kontrollüdür.

@@ -27,13 +27,13 @@ Tabi ki bu, sitenin yalnızca bir veya iki küçük resmi ve benzerlerini göste
 
 ## 3.3 Bitiştirme
 
-Büyük bir site, bir sürü farklı javascript dosyası ıle sonuçlanabilir. Kullanıcı arayüzünü kontrol eden araçlar, geliştiricilerin hepsini bir araya getirmelerine yardım ederek tarayıcının onlarca küçük dosya yerine tek bir büyük dosyaya ulaşmasını sağlar. Çok az veri gerektiğinde çok fazla veri gönderilir. Bir değişiklik yapılması gerektiğinde çok fazla veri yeniden yüklenmelidir.
+Büyük bir site, bir sürü farklı javascript dosyası ile sonuçlanabilir. Kullanıcı arayüzünü kontrol eden araçlar, geliştiricilerin hepsini bir araya getirmelerine yardım ederek tarayıcının onlarca küçük dosya yerine tek bir büyük dosyaya ulaşmasını sağlar. Çok az veri gerektiğinde çok fazla veri gönderilir. Bir değişiklik yapılması gerektiğinde çok fazla veri yeniden yüklenmelidir.
 
 Bu uygulama tabi ki çoğunlukla söz konusu geliştiricilere rahatsızlık veriyor.
 
 ## 3.4 Püskürtme
 
-Soz edecegım nihai performans hilesi sıklıkla "püskürtme" olarak adlandırılır. Temel olarak hizmetinizin mümkün olabildiğince çok sayıda farklı barındırıcıya hizmet etmesi anlamına geliyor. İlk bakışta bu garip gözükse de bunun arkasında bır mantık vardır.
+Söz edeceğim nihai performans hilesi sıklıkla "püskürtme" olarak adlandırılır. Temel olarak hizmetinizin mümkün olabildiğince çok sayıda farklı barındırıcıya hizmet etmesi anlamına geliyor. İlk bakışta bu garip gözükse de bunun arkasında bır mantık vardır.
 
 Başlangıçta HTTP 1.1 beyannamesi, bir istemcinin her bir ana bilgisayar için en fazla iki TCP bağlantısı kullanmasına izin verdiğini belirtti. Dolayısıyla, akıllı siteleri ihlal etmemek için, yeni barındırıcı adları keşfedildi ve sitenize daha fazla bağlantı kurabilir – voilà - ve sayfa yükleme sürelerini azaltabilirsiniz.
 
