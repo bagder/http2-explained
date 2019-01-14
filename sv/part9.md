@@ -40,4 +40,4 @@ från https binära format till gammaldags HTTP-1.x-liknande headers.
 
 ## 9.4. Se http2-användning
 
-Det finns Firefox-tillägg som hjälper till att visualisera om en sajt använder http2. En av dem är [“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+Det finns Firefox-tillägg som hjälper till att visualisera om en sajt använder http2. En av dem är [“SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).

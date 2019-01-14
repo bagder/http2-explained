@@ -22,4 +22,4 @@ Os cabeçalhos que você vê na aba de rede ao utilizar http2 foram convertidos 
 
 ## 9.4. Visualizar o uso do http2
 
-Existem plugins do Firefox disponíveis que ajudam a visualizar se um _site_ está utilizando http2. Um deles é o [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+Existem plugins do Firefox disponíveis que ajudam a visualizar se um _site_ está utilizando http2. Um deles é o [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).

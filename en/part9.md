@@ -22,4 +22,4 @@ The headers you see in the Network tool when talking http2 have been converted f
 
 ## 9.4. Visualize http2 use
 
-There are Firefox plugins available that help visualize if a site is using http2. One of them is [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+There are Firefox plugins available that help visualize if a site is using http2. One of them is [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).

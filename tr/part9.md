@@ -22,4 +22,4 @@ Http2 konuşurken Ağ aracında gördüğünüz başlıklar, http2'nin ikili bi�
 
 ## 9.4. Http2 kullanımını görselleştir
 
-Bir site http2 kullanıyorsa görselleştirmeye yardımcı olan Firefox eklentileri bulunur. Bunlardan biri [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/spdy-indicator/).
+Bir site http2 kullanıyorsa görselleştirmeye yardımcı olan Firefox eklentileri bulunur. Bunlardan biri [“HTTP/2 and SPDY Indicator”](https://addons.mozilla.org/en-US/firefox/addon/http2-indicator/).
