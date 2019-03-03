@@ -2,6 +2,7 @@
 * [Español](es/)
 * [فارسی](fa/)
 * [Français](fr/)
+* [한국어](ko/)
 * [Italiano](it/)
 * [日本語](ja/)
 * [Portuguese](pt/)
