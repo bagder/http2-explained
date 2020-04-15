@@ -112,7 +112,7 @@
   * [참조](ko/part13.md)
   * [감사의 말](ko/part14.md)
 
-* [Português](README.md)
+* [Português](pt/README.md)
   * [Antecedentes](pt/part1.md)
   * [HTTP Hoje](pt/part2.md)
   * [Estratégias para evitar as dores da latência](pt/part3.md)
