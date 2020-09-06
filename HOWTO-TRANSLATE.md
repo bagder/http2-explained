@@ -5,8 +5,7 @@ document.
 
 ## Format
 
-We only use the markdown version these days. The old FODT files that can be
-found are only kept for historic references.
+All files are formatted in Markdown.
 
 The images used in the document are all used for all translations so use the
 same URL reference to get them into your translated version, use no local
@@ -21,8 +20,8 @@ over time. Keep that in mind when working on the translation.
 
 All translated contents live in sub-directories named after the specific
 language. "en" for English, "fr" for French etc. If you make a new
-translation, create a new directory and add your language to LANGS.md in the
-root dir.
+translation, create a new directory and add your language's files to the
+table of contents in SUMMARY.md.
 
 ## Keeping it up to date
 
