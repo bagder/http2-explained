@@ -37,7 +37,7 @@ work.
 
 If you find mistakes, omissions, errors or blatant lies in this document, please send me a refreshed version of the affected paragraph and I'll make amended versions. I will give proper credits to everyone who helps out! I hope to make this document better over time.
 
-This document is available at [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
+This document is available at https://daniel.haxx.se/http2
 
 ## 1.3 License
 
