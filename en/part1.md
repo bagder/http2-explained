@@ -5,14 +5,14 @@ out as a presentation Daniel did in Stockholm in April 2014 that was
 subsequently converted and extended into a full-blown document with all
 details and proper explanations.
 
-RFC 7540 is the official name of the final http2 specification and it was published on May 15th 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
+RFC 7540 is the official name of the final http2 specification and it was published on May 15th, 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
 
 All and any errors in this document are my own and the results of my
-shortcomings. Please point them out and they will be fixed in updated
+shortcomings. Please point them out, and they will be fixed in updated
 versions.
 
-In this document I've tried to consistently use the word "http2" to describe
-the new protocol while in pure technical terms, the proper name is HTTP/2. I
+In this document, I've tried to consistently use the word "http2" to describe
+the new protocol while in purely technical terms, the proper name is HTTP/2. I
 made this choice for the sake of readability and to get a better flow in the
 language.
 
@@ -47,7 +47,7 @@ This document is licensed under the Creative Commons Attribution 4.0 license: ht
 
 ## 1.4 Document history
 
-The first version of this document was published on April 25th 2014. Here follows the largest changes in the most recent document versions.
+The first version of this document was published on April 25th, 2014. Here follows the largest changes in the most recent document versions.
 
 ### Version 1.13
 
@@ -91,4 +91,4 @@ The first version of this document was published on April 25th 2014. Here follow
 - 8.5: Added some current usage numbers
 - 8.3.1: Mention Internet Explorer too
 - 8.3.2: Added "missing implementations"
-- 8.4.4: Mention that TLS also increases success rate
+- 8.4.4: Mention that TLS also increases the success rate
