@@ -68,7 +68,7 @@ The first version of this document was published on April 25th 2014. Here follow
 ### Version 1.11
 
 - Lots of language improvements mostly pointed out by friendly contributors 
-- 8.3.2: Mention nginx and Apache httpd specific acitivities 
+- 8.3.2: Mention nginx and Apache httpd specific activities 
 
 ### Version 1.10
 
@@ -89,6 +89,6 @@ The first version of this document was published on April 25th 2014. Here follow
 - Lots of spell fixes  
 - At 30 implementations now  
 - 8.5: Added some current usage numbers  
-- 8.3.1: Mention internet explorer too  
+- 8.3.1: Mention Internet Explorer too  
 - 8.3.2: Added "missing implementations"  
 - 8.4.4: Mention that TLS also increases success rate
