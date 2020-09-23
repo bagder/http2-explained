@@ -1,10 +1,10 @@
 # 2. HTTP today
 
-HTTP 1.1 has turned into a protocol used for virtually everything on the Internet. Huge investments have been made in protocols and infrastructure that take advantage of this, to the extent that it is often easier today to make things run on top of HTTP rather than building something new on its own.
+HTTP 1.1 has turned into a protocol used for virtually everything on the Internet. Huge investments have been made in protocols and infrastructure that takes advantage of this, to the extent that it is often easier today to make things run on top of HTTP rather than building something new on its own.
 
 ## 2.1 HTTP 1.1 is huge
 
-When HTTP was created and thrown out into the world, it was probably perceived as a rather simple and straightforward protocol, but time has proved that to be false. HTTP 1.0 in RFC 1945 is a 60-page specification released in 1996. RFC 2616 that describes HTTP 1.1 was released only three years later in 1999 and had grown significantly to 176 pages. Yet when we within IETF worked on the update to that spec, it was split up and converted into six documents with a much larger page count in total (resulting in RFC 7230 and family). By any count, HTTP 1.1 is big and includes a myriad of details, subtleties and, not the least, a lot of optional parts.
+When HTTP was created and thrown out into the world, it was probably perceived as a rather simple and straightforward protocol, but time has proved that to be false. HTTP 1.0 in RFC 1945 is a 60-page specification released in 1996. RFC 2616 that describes HTTP 1.1 was released only three years later in 1999 and had grown significantly to 176 pages. Yet when we within IETF worked on the update to that spec, it was split up and converted into six documents with a much larger page count in total (resulting in RFC 7230 and family). By any count, HTTP 1.1 is big and includes a myriad of details, subtleties, and not the least, a lot of optional parts.
 
 ## 2.2 A world of options
 
@@ -22,9 +22,9 @@ Simply put, TCP can be utilized better to avoid pauses or wasted intervals that 
 
 ## 2.4 Transfer sizes and number of objects
 
-When looking at the trend for some of the most popular sites on the web today and what it takes to download their front pages, a clear pattern emerges. Over the years, the amount of data that needs to be retrieved has gradually risen up to and above 1.9MB. What is more important in this context is that, on average, over 100 individual resources are required to display each page.
+When looking at the trend for some of the most popular sites on the web today and what it takes to download their front pages, a clear pattern emerges. Over the years, the amount of data that needs to be retrieved has gradually risen up to and above 1.9 MB. What is more important in this context is that, on average, over 100 individual resources are required to display each page.
 
-As the graph below shows, the trend has been going on for a while, and there is little to no indication that it will change anytime soon. It shows the growth of the total transfer size (in green) and the total number of requests used on average (in red) to serve the most popular web sites in the world, and how they have changed over the last four years.
+As the graph below shows, the trend has been going on for a while, and there is little to no indication that it will change anytime soon. It shows the growth of the total transfer size (in green) and the total number of requests used on average (in red) to serve the most popular websites in the world, and how they have changed over the last four years.
 
 ![transfer size growth](https://raw.githubusercontent.com/bagder/http2-explained/master/images/transfer-size-growth.png)
 
@@ -32,11 +32,11 @@ As the graph below shows, the trend has been going on for a while, and there is 
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/page-load-time-rtt-decreases.png" />
 
-HTTP 1.1 is very latency sensitive, partly because HTTP pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
+HTTP 1.1 is very latency-sensitive, partly because HTTP pipelining is still riddled with enough problems to remain switched off to a large percentage of users.
 
 While we've seen a great increase in available bandwidth to people over the last few years, we have not seen the same level of improvements in reducing latency. High-latency links, like many of the current mobile technologies, make it hard to get a good and fast web experience even if you have a really high bandwidth connection.
 
-Another use case requiring low latency is certain kinds of video, like video conferencing, gaming and similar where there's not just a pre-generated stream to send out.
+Another use case requiring low latency is certain kinds of video, like video conferencing, gaming, and similar where there's not just a pre-generated stream to send out.
 
 ## 2.6. Head-of-line blocking
 
