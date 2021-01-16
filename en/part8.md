@@ -45,7 +45,7 @@ Opera have both said they will support http2.
 
 There are already many server implementations of http2.
 
-The popular Nginx server offers http2 support with since
+The popular Nginx server offers http2 support since
 [1.9.5](https://www.nginx.com/blog/nginx-1-9-5/) released on September 22,
 2015 (where it replaces the SPDY module, so they cannot both run in the same
 server instance).
@@ -74,7 +74,7 @@ During the development of this protocol the debate has been going back and forth
 
 It also has variations implying that the world gets even further dependent or controlled by Google by this. This isn't true. The protocol was developed within the IETF in the same manner that protocols have been developed for over 30 years. However, we all recognize and acknowledge Google's impressive work with SPDY that not only proved that it is possible to deploy a new protocol this way but also provided numbers illustrating what gains could be made.
 
-Google publicly [announced](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) that they would remove support for SPDY and NPN from Chrome in 2016 and urged servers to migrate to HTTP/2 instead. In Feburary of 2016 they [announced](https://blog.chromium.org/2016/02/transitioning-from-spdy-to-http2.html) that SPDY and NPN would finally be removed in Chrome 51. Since Chrome 51, it has shipped without SPDY and NPN support.
+Google publicly [announced](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html) that they would remove support for SPDY and NPN from Chrome in 2016 and urged servers to migrate to HTTP/2 instead. In February of 2016 they [announced](https://blog.chromium.org/2016/02/transitioning-from-spdy-to-http2.html) that SPDY and NPN would finally be removed in Chrome 51. Since Chrome 51, it has shipped without SPDY and NPN support.
 
 ### 8.4.2. “The protocol is only useful for browsers”
 
