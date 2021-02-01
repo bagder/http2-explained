@@ -13,9 +13,9 @@ With the adoption of http2, there are reasons to suspect that TCP connections wi
 This will affect how HTTP load balancers work and there may arise situations when a site wants to suggest that the client connect to another host. It could be for performance reasons, or if a site is being taken down for maintenance, etc.
 
 The server will send the [Alt-Svc:
-header](https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-10) (or ALTSVC
-frame with http2) telling the client about an alternative service: another
-route to the same content, using another service, host, and port number.
+header](https://tools.ietf.org/html/rfc7838) (or ALTSVC frame with http2)
+telling the client about an alternative service: another route to the same
+content, using another service, host, and port number.
 
 A client should then attempt to connect to that service asynchronously and only use the alternative if the new connection succeeds.
 
