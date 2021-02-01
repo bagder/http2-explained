@@ -4,9 +4,7 @@ Firefox has been tracking the drafts very closely and has provided http2 test im
 
 ## 9.1. First, make sure it is enabled
 
-In all Firefox versions since version 35, released January 13th 2015, http2 support is enabled by default.
-
-Enter 'about:config' in the address bar and search for the option named “network.http.spdy.enabled.http2draft”. Make sure it is set to *true*. Firefox 36 added another config switch named “network.http.spdy.enabled.http2” which is set *true* by default. The latter one controls the “plain” http2 version while the first one enables and disables negotiation of http2-draft versions. Both are true by default since Firefox 36.
+In all Firefox versions starting with version 36, released Februrary 24th 2015, http2 is enabled by default.
 
 ## 9.2. TLS-only
 
