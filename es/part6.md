@@ -7,13 +7,13 @@ Suficiente sobre antecedentes, historia y asuntos políticos que nos han traído
 http2 es un protocolo binario.
 
 Déjame asentar esto un minuto. Si eres una persona que ha estado involucrada en protocolos de Internet, las posibilidades de que reacciones instintivamente contra esta opción y de que calcules argumentos que expliquen como los protocolos de texto/ascii son superiores por permitir a los humanos hacer consultas a mano con telnet.
-http2 es en binario para conseguir hacer el entramado (framing) mucho más sencillo. Determinar el comienzo y el final de cada trama es una de las cosas realmente complicadas en HTTP 1.1 así como en todos los protocoles en texto en general. Eliminando espacios en blanco opcionales y distintas formas de escribir la misma cosa, las implementaciones serán mucho más simples.
+http2 es en binario para conseguir hacer el entramado (framing) mucho más sencillo. Determinar el comienzo y el final de cada trama es una de las cosas realmente complicadas en HTTP 1.1 así como en todos los protocolos de texto en general. Eliminando espacios en blanco opcionales y distintas formas de escribir la misma cosa, las implementaciones serán mucho más simples.
 
-Igualmente  hace mucho más fácil separar las partes de protocolo de las tramas en si, lo que en HTTP1 está confusamente entremezclado.
+Igualmente hace mucho más fácil separar las partes de protocolo de las tramas en si, lo que en HTTP1 está confusamente entremezclado.
 
 El hecho de las funcionalidades de compresión del protocolo y de que casi siempre correrá sobre TLS, restan importancia a que el protocolo no sea en texto plano, ya que la información tampoco viajaría en texto de cualquier manera. Simplemente tendremos que acostumbrarnos a utilizar el inspector de Wireshark o algo similar para determinar que está pasando a nivel de protocolo con http2.
 
-El Debugging en este protocolo deberá hacerse utilizando herramientas como curl o analizando el tráfico de red con el disector de tráfico http2 de  Wireshark u otra herramienta similar.
+La depuración en este protocolo deberá hacerse utilizando herramientas como curl o analizando el tráfico de red con el disector de tráfico http2 de  Wireshark u otra herramienta similar.
 
 ## 6.2. El formato binario
 
@@ -54,7 +54,7 @@ HTTP es un protocolo sin estado. De manera resumida significa que cada petición
 
 Esto convierte el HTTP en repetitivo. Cuando un cliente solicita muchos recursos de un mismo servidor, como imágenes para una página web, habrán una gran serie de solicitudes que parecerán prácticamente idénticas. Una serie de algo casi idéntico, está pidiendo compresión a gritos.
 
-Mientras el número de objetos sigue en aumento, como ya se ha comentado con anterioridad, el uso y el tamaño de las cookies ha seguido creciendo igualmente durante este tiempo. Esta cookies deben ser incluidas en todas las peticiones. Mayormente las misma cookies en cada petición.
+Mientras el número de objetos sigue en aumento, como ya se ha comentado con anterioridad, el uso y el tamaño de las cookies ha seguido creciendo igualmente durante este tiempo. Estas cookies deben ser incluidas en todas las peticiones. Mayormente las mismas cookies en cada petición.
 
 El tamaño en la peticiones HTTP 1.1 ha ido haciéndose tan grande en los últimos tiempos que han terminado siendo más grandes que la ventana TCP inicial, lo que hace que el envío de la petición sea muy lento al necesitar recibir un ACK de vuelta del servidor antes de completar la petición por completo. Este sería otro argumento más para la compresión.
 
