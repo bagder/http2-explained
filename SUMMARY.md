@@ -102,7 +102,7 @@
   * [대기시간의 고통을 극복하기 위해 한일](ko/part3.md)
   * [HTTP 업데이팅](ko/part4.md)
   * [http2 컨셉](ko/part5.md)
-  * [http2 프로토콜 (번역되지 않은)](ko/part6.md)
+  * [http2 프로토콜](ko/part6.md)
   * [연장선 (번역되지 않은)](ko/part7.md)
   * [http2 세계 (번역되지 않은)](ko/part8.md)
   * [Firefox에서의 http2](ko/part9.md)
