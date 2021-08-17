@@ -4,9 +4,7 @@ Firefox a suivi les drafts de près et fourni des protocoles de test de http2 de
 
 ## 9.1. Assurez-vous de l'activer
 
-Toute version de Firefox 35 et ultérieure, depuis le 13 janvier 2015, a le support http2 activé par défaut.
-
-Allez dans "about:config" depuis la barre d'URL et cherchez l'option appelée "network.http.spdy.enabled.http2draft". Assurez-vous qu'elle est à "true". Firefox 36 ajouta une option activée par défaut "network.http.spdy.enabled.http2". Cette dernière contrôle la version finale de http2 tandis que la première active ou non la négociation des versions drafts de http2. Les deux sont activées depuis Firefox 36.
+Toutes les versions de Firefox à partir de la 36, du 24 février 2015, ont le support http2 activé par défaut.
 
 ## 9.2. TLS uniquement
 

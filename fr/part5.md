@@ -30,7 +30,7 @@ Une attention particulière a été portée au bon fonctionnement du protocole h
 
 Les motivations pour imposer TLS impliquent le respect de la vie privée et les mesures montrant que le nouveau protocole avait plus de chances de succès avec TLS. En effet, il est couramment répandu que tout ce qui passe sur le port TCP 80 est du HTTP 1.1 et pas mal d'intermédiaires réseau interfèrent ou cassent le trafic quand d'autres protocoles sont utilisés.
 
-Le sujet TLS obligatoire a causé pas mal d'agitation dans les meetings et mailing-list, est-ce bien ou mal ? C'est une question typiquement empoisonnée, attention quand vous abordez ce sujet avec un membre du groupe!
+Le sujet TLS obligatoire a causé pas mal d'agitation dans les meetings et mailing-list, est-ce bien ou mal ? C'est une question très controversée, attention quand vous abordez ce sujet avec un membre du groupe!
 
 De même, il y eut un long débat pour savoir si http2 devrait forcer une liste obligatoire d'algorithmes de chiffrement (ciphers en anglais) avec TLS, ou en bloquer certains ou encore laisser cette tâche au groupe de travail TLS. La spécification indique finalement la version minimale TLS à utiliser, 1.2, et une restriction sur les algorithmes à utiliser.
 
@@ -46,4 +46,6 @@ ALPN diffère de NPN sur qui décide du protocole à utiliser. Avec ALPN, le cli
 
 Comme indiqué précédemment, en HTTP 1.1 et en clair, la façon de négocier du http2 est de le demander au serveur avec l'en-tête Upgrade:. Si le serveur parle http2, il répond avec le code "101 Switching" et passe en http2 pour cette connexion. Bien que cette procédure d'upgrade coûte un aller-retour réseau, elle peut être conservée et réutilisée de manière bien plus efficace qu'une connexion HTTP1, amortissant ainsi le coût initial.
 
-Même si certains porte-paroles de navigateurs ont indiqué qu'ils n'implémenteraient pas cette méthode, l'équipe d'Internet Explorer le fera, et curl la supporte déjà.
+Même si certains porte-paroles de navigateurs ont indiqué qu'ils n'implémenteraient pas cette méthode, l'équipe d'Internet Explorer a indiqué qu'elle le ferait -- mais ne l'a jamais fait.  curl et quelques autres clients savent gèrer http2 en clair.
+
+Aujourd'hui, aucun des navigateurs majeurs ne gère http2 sans TLS.

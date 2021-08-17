@@ -2,14 +2,15 @@
 
 L'équipe Chromium a implémenté http2 depuis un certain temps via les canaux beta et dev. Depuis Chrome 40, sorti le 27 janvier 2015, http2 est activé par défaut pour un certain nombre d'utilisateurs. Ce nombre a commencé petit pour devenir important au fil du temps.
 
-Le support SPDY sera retiré. Dans un blog, il est annoncé en [février 2015](https://blog.chromium.org/2015/02/hello-http2-goodbye-spdy.html):
+Le support de SPDY a été retiré dans Chrome 51, au profit de http2. Dans un blog, il est annoncé en [février 2016](https://blog.chromium.org/2016/02/transitioning-from-spdy-to-http2.html):
 
-> “Chrome supporte SPDY depuis Chrome 6, mais comme les bénéfices sont présents
-dans HTTP/2, il est temps de lui dire au revoir. Le support SPDY sera retiré début 2016.”
+> “Plus de 25% des ressources dans Chrome sont actuellement délivrées en HTTP/2, contre moins de 5% pour SPDY. Vu ces chiffres, Chrome ne supportera plus SPDY à partir du 15 mai, date anniversaire du RFC HTTP/2.”
 
 ## 10.1. Assurez-vous de l'activer
 
-Allez sur "chrome://flags/#enable-spdy4" dans la barre d'URL et cliquez sur "enable" si ce n'est déjà fait.
+Si vous utilisez une version de Chrome très ancienne, vous pouvez vérifier si http2 est géré.
+
+Allez sur "chrome://flags/#enable-spdy4" dans la barre d'URL et cliquez sur "enable" si ce n'est déjà fait.  Dans les versions récentes http2 est activé d'office et ce réglage a été retiré.
 
 ## 10.2. TLS uniquement
 

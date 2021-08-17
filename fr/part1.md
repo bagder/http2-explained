@@ -10,7 +10,7 @@ Dans ce document, j'ai essayé d'utiliser le terme "http2" pour décrire le nouv
 
 ## 1.1 Auteur
 
-Mon nom est Daniel Stenberg et je travaille chez Mozilla. J'ai travaillé dans l'open source et la réseautique, depuis plus de 20 ans, sur de nombreux projets. Je suis plus connu peut-être en tant que développeur principal de curl et libcurl. J'ai été impliqué dans le groupe de travail de l'IETF HTTPbis pendant plusieurs années où j'ai maintenu à jour les spécifications HTTP 1.1 et participé à la standardisation de http2.
+Mon nom est Daniel Stenberg. J'ai travaillé dans l'open source et la réseautique, depuis plus de 20 ans, sur de nombreux projets. Je suis plus connu peut-être en tant que développeur principal de curl et libcurl. J'ai été impliqué dans le groupe de travail de l'IETF HTTPbis pendant plusieurs années où j'ai maintenu à jour les spécifications HTTP 1.1 et participé à la standardisation de http2.
 
   Email: daniel@haxx.se
 

@@ -24,7 +24,7 @@ Compilez curl avec des versions récentes d'OpenSSL ou NSS pour avoir ALPN et NP
 
 ## 11.4. Ligne de commande à utiliser
 
-Pour indiquer à curl d'utiliser http2, en clair ou TLS, utilisez l'option `--http2` ("tiret tiret http2"). curl utilise HTTP/1.1 par défaut, d'où cette option nécessaire pour http2.
+Pour indiquer à curl d'utiliser http2, en clair ou TLS, utilisez l'option `--http2` ("tiret tiret http2"). curl utilise HTTP/1.1 par défaut pour les URL en HTTP: donc cette option est nécessaire si vous voulez utiliser http2 en clair.  Pour les URL en HTTPS:, curl essaiera http2.
 
 ## 11.5. Options libcurl
 
