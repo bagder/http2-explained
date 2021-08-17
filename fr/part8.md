@@ -97,6 +97,8 @@ C'est vrai. L'objectif de conserver certains paradigmes HTTP/1.1 font que certai
 
 ## 8.5. http2 sera-t-il largement déployé ?
 
+(Cette section a été écrite en 2015 et discute l'état des choses à ce moment.  Les choses ont beaucoup évolué depuis.)
+
 Il est encore trop tôt pour le dire, mais je peux le deviner et l'estimer, voici comment.
 
 Les esprits négatifs montreront "regardez comme IPv6 a marché" comme un exemple qui a pris des décennies pour juste commencer à être largement déployé. http2 n'est pas IPv6. C'est un protocole au-dessus de TCP utilisant les mécanismes d'upgrade HTTP, un port standard, TLS, etc. Il ne requiert pas un changement de la plupart des routeurs et firewalls.
