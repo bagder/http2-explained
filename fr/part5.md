@@ -30,13 +30,13 @@ Une attention particulière a été portée au bon fonctionnement du protocole h
 
 Les motivations pour imposer TLS impliquent le respect de la vie privée et les mesures montrant que le nouveau protocole avait plus de chances de succès avec TLS. En effet, il est couramment répandu que tout ce qui passe sur le port TCP 80 est du HTTP 1.1 et pas mal d'intermédiaires réseau interfèrent ou cassent le trafic quand d'autres protocoles sont utilisés.
 
-Le sujet TLS obligatoire a causé pas mal d'agitation dans les meetings et mailing-list, est-ce bien ou mal ? C'est une question très controversée, attention quand vous abordez ce sujet avec un membre du groupe!
+Le sujet TLS obligatoire a causé pas mal d'agitation dans les meetings et mailing-list, est-ce bien ou mal ? C'est une question très controversée, attention quand vous abordez ce sujet avec un membre du groupe !
 
 De même, il y eut un long débat pour savoir si http2 devrait forcer une liste obligatoire d'algorithmes de chiffrement (ciphers en anglais) avec TLS, ou en bloquer certains ou encore laisser cette tâche au groupe de travail TLS. La spécification indique finalement la version minimale TLS à utiliser, 1.2, et une restriction sur les algorithmes à utiliser.
 
 ## 5.3. Négociation http2 en TLS
 
-Next Protocol Negotiation (NPN) est le protocole utilisé pour négocier l'usage de SPDY avec les serveurs TLS. Ce n'était pas un protocole standardisé, après passage à l'IETF, il devint ALPN: Application Layer Protocol Negotiation. ALPN est promu pour son utilisation en http2, tandis que les clients et serveurs SPDY continuent d'utiliser NPN.
+Next Protocol Negotiation (NPN) est le protocole utilisé pour négocier l'usage de SPDY avec les serveurs TLS. Ce n'était pas un protocole standardisé, après passage à l'IETF, il devint ALPN : Application Layer Protocol Negotiation. ALPN est promu pour son utilisation en http2, tandis que les clients et serveurs SPDY continuent d'utiliser NPN.
 
 Le fait que NPN arriva en premier et que la standardisation d'ALPN prit du temps, eut la conséquence d'avoir des clients et serveurs http2 implémentant les deux extensions pour négocier http2. Puisque NPN est utilisé dans SPDY et que de nombreux serveurs offrant SPDY et http2, supporter à la fois NPN et ALPN fait sens.
 

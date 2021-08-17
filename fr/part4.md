@@ -1,6 +1,6 @@
 # 4. Mettre à jour HTTP
 
-Ce serait sympa d'améliorer ce protocole, n'est-ce pas ? Notamment:
+Ce serait sympa d'améliorer ce protocole, n'est-ce pas ? Notamment :
 
 1. Un protocole moins sensible au RTT (Round Trip Time, Aller-Retours)
 2. En corrigeant le pipelining et le head of line blocking

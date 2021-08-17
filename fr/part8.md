@@ -10,7 +10,7 @@ http2 réduit le nombre d'aller-retours nécessaires et évite le head of line b
 
 Il permet un nombre important de flux parallèles, plus important que ce qui est requis par les sites utilisant massivement le sharding aujourd'hui.
 
-Si les priorités de flux sont utilisées correctement, on a une chance que les clients obtiennent les données les plus importantes avant les moins importantes. Tout compris, je dirais qu'il y de très bonnes chances pour que cela mène à un meilleur temps de chargement des pages et à des sites web plus réactifs. En résumé: une meilleure expérience web.
+Si les priorités de flux sont utilisées correctement, on a une chance que les clients obtiennent les données les plus importantes avant les moins importantes. Tout compris, je dirais qu'il y de très bonnes chances pour que cela mène à un meilleur temps de chargement des pages et à des sites web plus réactifs. En résumé : une meilleure expérience web.
 
 Dans quelle mesure cela sera plus rapide, je ne pense pas qu'on puisse y répondre pour l'instant. La technologie est encore très jeune et nous n'avons pas encore vu d'implémentations client et serveur tirer parti de toutes les possibilités que le protocole offre.
 
@@ -105,7 +105,7 @@ Les esprits négatifs montreront "regardez comme IPv6 a marché" comme un exempl
 
 Avec SPDY, Google a prouvé au monde que l'on pouvait déployer et utiliser un nouveau protocole en peu de temps. Même si la somme des serveurs SPDY avoisine les 1% aujourd'hui, le volume de données est plus important. Certains des plus gros sites utilisent SPDY.
 
-http2, basé sur les mêmes principes que SPDY et ratifié par l'IETF, devrait être encore plus largement déployé. Les déploiements SPDY ont toujours été limités par le syndrome "inventé par Google"
+http2, basé sur les mêmes principes que SPDY et ratifié par l'IETF, devrait être encore plus largement déployé. Les déploiements SPDY ont toujours été limités par le syndrome "inventé par Google".
 
 Il y a plusieurs navigateurs importants derrière http2. Des représentants de Firefox, Chrome, Safari, Internet Explorer et Opera ont tous indiqué leur intention de livrer des navigateurs avec http2 et ont montré des implémentations fonctionnelles.
 

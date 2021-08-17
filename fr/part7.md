@@ -2,9 +2,9 @@
 
 Le protocole oblige le destinataire à lire et ignorer toutes les trames inconnues utilisant un type de trame inconnu. Les deux parties peuvent ainsi négocier l'utilisation d'un nouveau type de trame de manière unitaire; ces trames ne seront pas autorisées à changer d'état et ne bénéficieront pas de contrôle de flux.
 
-Le fait d'autoriser ou non les extensions dans http2 a été débattu pendant le développement du protocole avec des opinions pour et contre. Depuis le draft-12, la balance a penché en faveur du pour: les extensions sont autorisées.
+Le fait d'autoriser ou non les extensions dans http2 a été débattu pendant le développement du protocole avec des opinions pour et contre. Depuis le draft-12, la balance a penché en faveur du pour : les extensions sont autorisées.
 
-Les extensions ne font pas partie du protocole actuel mais seront documentées en dehors de la spécification principale. En l'état, il existe deux types de trames qui pouvaient faire partie du protocole et qui seront probablement les premières trames définies comme extensions. Je les décris ici car elles sont populaires et étaient considérées auparavant comme des trames "natives":
+Les extensions ne font pas partie du protocole lui même mais seront documentées en dehors de la spécification principale. En l'état, il existe deux types de trames qui pouvaient faire partie du protocole et qui seront probablement les premières trames définies comme extensions. Je les décris ici car elles sont populaires et étaient considérées auparavant comme des trames "natives" :
 
 ## 7.1. Services Alternatifs
 
@@ -26,7 +26,7 @@ Cette fonctionnalité est débattue. Cette connexion serait du TLS non authentif
 
 Ce type de trame doit être envoyée une seule fois par un client http2 quand des données doivent être envoyées alors que le contrôle de flux l'interdit. L'idée est que si votre implémentation reçoit une telle trame, cela vous indique que quelque chose cloche dans votre implémentation et que vous avez une performance suboptimale.
 
-Une citation du draft-12, avant que cette trame ne soit retirée pour devenir une extension:
+Une citation du draft-12, avant que cette trame ne soit retirée pour devenir une extension :
 
 > “La trame BLOCKED est incluse dans ce draft pour en faciliter son expérimentation. Si les resultats de cette expérimentation ne donnent pas de feedback positif, elle pourra être retirée”
 

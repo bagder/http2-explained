@@ -20,9 +20,9 @@ Mon nom est Daniel Stenberg. J'ai travaillé dans l'open source et la réseautiq
 
   Blog: [daniel.haxx.se/blog](https://daniel.haxx.se/blog/)
 
-## 1.2 Aide!
+## 1.2 Aide !
 
-Si vous trouvez des erreurs, oublis, fautes ou mensonges éhontés dans ce document, je vous prierais de bien vouloir m'envoyer une version corrigée que je publierai dans une édition révisée. Je mentionnerai clairement les noms des contributeurs! J'espère améliorer ce document avec le temps.
+Si vous trouvez des erreurs, oublis, fautes ou mensonges éhontés dans ce document, je vous prierais de bien vouloir m'envoyer une version corrigée que je publierai dans une édition révisée. Je mentionnerai clairement les noms des contributeurs ! J'espère améliorer ce document avec le temps.
 
 Ce document est disponible ici: [https://daniel.haxx.se/http2](https://daniel.haxx.se/http2)
 
@@ -54,14 +54,14 @@ La première édition de ce document fut publiée le 25 avril 2014. Voici les ch
 
 ### Version 1.11 :
 
-- Nombreuses améliorations de style linguistique (Note du traducteur: en anglais)
+- Nombreuses améliorations de style linguistique (Note du traducteur : en anglais)
 - 8.3.1: Mention des développements spécifiques nginx et Apache httpd
 
 ### Version 1.10 :
  
 - 1: Le protocole est "presque approuvé"
-- 4.1: Rafraîchissement du style linguistique (Note traducteur: en anglais)
-- Converture: ajout de l'image et légende "http2 explained", lien corrigé
+- 4.1: Rafraîchissement du style linguistique (Note traducteur : en anglais)
+- Converture : ajout de l'image et légende "http2 explained", lien corrigé
 - 1.4: Ajout de la section "Historique"
 - Diverses corrections orthographiques
 - 14: Ajout de remerciements pour les contributeurs
