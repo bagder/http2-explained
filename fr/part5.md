@@ -20,7 +20,7 @@ Elles sont plutôt strictes avec des contraintes.
 
 Comme mentionné, les formats d'URL existants ne peuvent pas être modifiées, http2 doit donc gérer les URI actuelles. Comme elles sont déjà utilisées en HTTP 1.x, on doit pouvoir mettre à niveau (“upgrader”) le protocole vers http2 ou demander au serveur d'utiliser http2 plutôt que les anciens protocoles.
 
-HTTP 1.1 a défini un moyen de le faire, l'en-tête Upgrade:, qui permet au serveur de renvoyer une réponse avec le nouveau protocole quand la requête était envoyée avec un protocole plus ancien. Au prix d'un aller-retour (round-trip).
+HTTP 1.1 a un moyen de le faire, l'en-tête Upgrade:, qui permet au serveur de renvoyer une réponse avec le nouveau protocole quand la requête était envoyée avec un protocole plus ancien, au prix d'un aller-retour (round-trip) supplémentaire.
 
 Le coût de cet aller-retour n'est pas quelque chose que l'équipe SPDY allait tolérer. Comme ils n'implémentaient SPDY qu'au dessus de TLS, ils ont développé une extension TLS permettant de raccourcir la négociation de façon drastique. Cette extension, appelée NPN pour Next Protocol Negotiation, permet au serveur d'indiquer au client quels protocoles il connaît, celui-ci choisissant alors d'utiliser celui qu'il préfère.
 
@@ -38,7 +38,7 @@ De même, il y eut un long débat pour savoir si http2 devrait forcer une liste 
 
 Next Protocol Negotiation (NPN) est le protocole utilisé pour négocier l'usage de SPDY avec les serveurs TLS. Ce n'était pas un protocole standardisé, après passage à l'IETF, il devint ALPN : Application Layer Protocol Negotiation. ALPN est promu pour son utilisation en http2, tandis que les clients et serveurs SPDY continuent d'utiliser NPN.
 
-Le fait que NPN arriva en premier et que la standardisation d'ALPN prit du temps, eut la conséquence d'avoir des clients et serveurs http2 implémentant les deux extensions pour négocier http2. Puisque NPN est utilisé dans SPDY et que de nombreux serveurs offrant SPDY et http2, supporter à la fois NPN et ALPN fait sens.
+Le fait que NPN arriva en premier et que la standardisation d'ALPN prit du temps eut la conséquence d'avoir des clients et serveurs http2 implémentant les deux extensions pour négocier http2. Puisque NPN est utilisé dans SPDY et que de nombreux serveurs offrent SPDY et http2, supporter à la fois NPN et ALPN fait sens.
 
 ALPN diffère de NPN sur qui décide du protocole à utiliser. Avec ALPN, le client indique au serveur la liste des protocoles et ses préférences, le serveur obtient le dernier mot. Au contraire avec NPN, c'est le client qui impose son choix.
 

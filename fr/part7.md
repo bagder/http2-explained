@@ -1,6 +1,6 @@
 # 7. Extensions
 
-Le protocole oblige le destinataire à lire et ignorer toutes les trames inconnues utilisant un type de trame inconnu. Les deux parties peuvent ainsi négocier l'utilisation d'un nouveau type de trame de manière unitaire; ces trames ne seront pas autorisées à changer d'état et ne bénéficieront pas de contrôle de flux.
+Le protocole oblige le destinataire à lire et ignorer toutes les trames inconnues (c'est à dire celles dont le type est inconnu). Deux parties peuvent négocier l'utilisation d'un nouveau type de trame en "hop-by-hop" ; ces trames ne seront pas autorisées à changer l'état et ne seront pas soumises au contrôle de flux.
 
 Le fait d'autoriser ou non les extensions dans http2 a été débattu pendant le développement du protocole avec des opinions pour et contre. Depuis le draft-12, la balance a penché en faveur du pour : les extensions sont autorisées.
 
@@ -12,7 +12,7 @@ Avec http2 adopté, on peut suspecter que les connexions TCP seront plus longues
 
 Cela affectera comment les load balancers HTTP réagissent quand un site voudra que les utilisateurs se connectent sur un autre host, pour des raisons de performance ou pour réaliser une maintenance.
 
-Le serveur enverra alors [l'en-tête Alt-Svc:](https://tools.ietf.org/html/rfc7838) (ou la trame http2 ALTSVC) pour indiquer au client un service alternatif. Une autre route pour le même contenu, utilisant un autre service, host et numéro de port.
+Le serveur enverra alors [l'en-tête Alt-Svc:](https://tools.ietf.org/html/rfc7838) (ou la trame http2 ALTSVC) pour indiquer au client un service alternatif : une autre route pour le même contenu, utilisant un autre service, host et numéro de port.
 
 Un client est alors susceptible d'essayer de se connecter à ce service de manière asynchrone et n'utiliser que celui-ci s'il fonctionne.
 
@@ -28,5 +28,5 @@ Ce type de trame doit être envoyée une seule fois par un client http2 quand de
 
 Une citation du draft-12, avant que cette trame ne soit retirée pour devenir une extension :
 
-> “La trame BLOCKED est incluse dans ce draft pour en faciliter son expérimentation. Si les resultats de cette expérimentation ne donnent pas de feedback positif, elle pourra être retirée”
+> “La trame BLOCKED est incluse dans ce draft pour en faciliter son expérimentation. Si les resultats de cette expérimentation ne donnent pas de retour positif, elle pourra être retirée”
 

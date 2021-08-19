@@ -6,11 +6,11 @@ La RFC 7540 est le nom officiel de la spécification http2 finale, elle a été 
 
 Toute erreur dans ce document est mienne et le résultat de mes approximations. Merci de me les indiquer afin que je les corrige pour les prochaines versions.
 
-Dans ce document, j'ai essayé d'utiliser le terme "http2" pour décrire le nouveau protocole en termes purement techniques, le nom officiel est HTTP/2. J'ai fait ce choix pour améliorer la fluidité de lecture et obtenir une meilleure lisibilité.
+Dans ce document, j'ai essayé d'utiliser le terme "http2" pour décrire le nouveau protocole alors que techniquement le nom officiel est HTTP/2. J'ai fait ce choix pour améliorer la fluidité de lecture et obtenir une meilleure lisibilité.
 
 ## 1.1 Auteur
 
-Mon nom est Daniel Stenberg. J'ai travaillé dans l'open source et la réseautique, depuis plus de 20 ans, sur de nombreux projets. Je suis plus connu peut-être en tant que développeur principal de curl et libcurl. J'ai été impliqué dans le groupe de travail de l'IETF HTTPbis pendant plusieurs années où j'ai maintenu à jour les spécifications HTTP 1.1 et participé à la standardisation de http2.
+Mon nom est Daniel Stenberg. J'ai travaillé dans l'open source et la réseautique, depuis plus de 20 ans, sur de nombreux projets. Je suis peut-être surtout connu en tant que développeur principal de curl et libcurl. J'ai été impliqué dans le groupe de travail de l'IETF HTTPbis pendant plusieurs années où j'ai maintenu à jour les spécifications HTTP 1.1 et participé à la standardisation de http2.
 
   Email: daniel@haxx.se
 

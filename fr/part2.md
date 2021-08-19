@@ -40,7 +40,7 @@ D'autres usages qui nécessitent une latence faible sont certains types de vidé
 
 ## 2.6. Blocage en tête de file (Head-of-line blocking)
 
-Le pipelining HTTP est une manière d'envoyer une requête additionnelle sans attendre la réponse de la requête précédente. C'est semblable à la file d'attente d'une caisse à la banque ou au supermarché. Vous ne savez pas si le client vous précédant est rapide ou s'il s'agit d'une personne qui prendra son temps. Ce phénomène décrit parfaitement le : “head-of-line blocking”.
+Le pipelining HTTP est une manière d'envoyer une requête additionnelle sans attendre la réponse de la requête précédente. C'est semblable à la file d'attente d'une caisse à la banque ou au supermarché. Vous ne savez pas si le client vous précédant est rapide ou s'il s'agit d'une personne qui prendra son temps. Ce phénomène décrit parfaitement le “head-of-line blocking”.
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/head-of-line-blocking.jpg" />
 

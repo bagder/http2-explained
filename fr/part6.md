@@ -10,9 +10,9 @@ Posons-nous un moment. Si vous avez déjà travaillé sur des choix de protocole
 
 http2 est binaire pour rendre le découpage (framing en anglais) plus simple. Trouver le début et la fin d'une trame en HTTP 1.1 et dans les protocoles textuels en général est toujours très compliqué. En évitant les blancs optionnels et les diverses façons d'écrire la même chose, les implémentations sont plus simples.
 
-De plus, cela permet de séparer plus nettement les parties du protocole et le découpage. Ce manque de séparation nette a toujours été perturbant avec HTTP1.
+De plus, cela permet de séparer plus nettement le protocole proprement dit du découpage. Ce manque de séparation nette a toujours été perturbant avec HTTP1.
 
-Le fait que le protocole utilise la compression et TLS diminue la valeur ajoutée de garder du texte pur puisqu'on ne verra pas de texte en clair passer de tout façon. Nous devons simplement nous habituer à utiliser un analyseur de trafic type Wireshark pour comprendre exactement ce qu'il passe au niveau protocolaire http2.
+Le fait que le protocole utilise la compression et TLS diminue la valeur ajoutée de garder du texte pur puisqu'on ne verra pas de texte en clair passer de tout façon. Nous devons simplement nous habituer à utiliser un analyseur de trafic type Wireshark pour comprendre exactement ce qu'il se passe au niveau protocolaire http2.
 
 Débugger ce protocole se fera du coup probablement via des outils type curl ou le dissecteur http2 de Wireshark.
 
@@ -24,7 +24,7 @@ http2 envoie des trames binaires. Il y a différents types de trames envoyées e
 
 Longueur, Type, Flags, Identifiant de Flux (Stream ID) et contenu (payload).
 
-Il y a dix trames différentes définies dans la spec http2 et deux sont fondamentales car répliquent le fonctionnement HTTP 1.1 avec DATA (données ou contenu) et HEADERS (en-tête). Je décris ces trames plus en détail par la suite.
+Il y a dix trames différentes définies dans la spec http2 et deux sont fondamentales car elles répliquent le fonctionnement de HTTP 1.1 avec DATA (données ou contenu) et HEADERS (en-tête). Je décris ces trames plus en détail par la suite.
 
 ## 6.3. Multiplexage de flux
 
@@ -66,13 +66,13 @@ Les tailles de requêtes HTTP 1.1 sont devenues tellement importantes qu'elles d
 Les compressions HTTPS et SPDY ont été vulnérables aux attaques [BREACH](https://en.wikipedia.org/wiki/BREACH_%28security_exploit%29)
  et [CRIME](https://en.wikipedia.org/wiki/CRIME). En insérant un texte connu dans le flux et en analysant les changements résultant, l'attaquant peut déduire ce qui a été envoyé.
 
-Compresser du contenu dynamique sans devenir vulnérable à une de ces attaques requiert de la réflexion. L'équipe HTTPbis s'y attelle.
+Compresser du contenu dynamique sans devenir vulnérable à une de ces attaques requiert de la réflexion. L'équipe HTTPbis s'y est attelée.
 
-Voici [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2 (compression d'en-tête pour HTTP/2), qui, comme son nom l'indique, est un format de compression spécialement créé pour les entêtes http2 et spécifié dans un draft IETF distinct. Le nouveau format, avec d'autres contre-mesures comme un bit qui interdit aux intermédiaires de compresser un en-tête spécifique ou du remplissage de trames (padding), devrait rendre plus compliqué l'exploitation de cette compression.
+Voici [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), Header Compression for HTTP/2 (compression d'en-tête pour HTTP/2), qui, comme son nom l'indique, est un format de compression spécialement créé pour les en-têtes http2 et spécifié dans un draft IETF distinct. Le nouveau format, avec d'autres contre-mesures comme un bit qui interdit aux intermédiaires de compresser un en-tête spécifique ou du remplissage de trames (padding), devrait rendre plus compliqué l'exploitation de cette compression.
 
 Voici les mots de Roberto Peon (l'un des créateurs de HPACK) :
 
-> “HPACK a été conçu pour rendre difficile la fuite d'information avec une implémentation s'y conformant, rendre le codage et décodage très rapide et peu coûteux, fournir au destinataire un contrôle sur la taille du contexte de compression, permettre une réindexation par un proxy, et permettre une comparaison rapide avec des chaînes codées avec un algorithme Huffman.”.
+> “HPACK a été conçu pour rendre difficile la fuite d'information avec une implémentation s'y conformant, rendre le codage et décodage très rapide et peu coûteux, fournir au destinataire un contrôle sur la taille du contexte de compression, permettre une réindexation par un proxy, et permettre une comparaison rapide avec des chaînes codées avec l'algorithme de Huffman.”.
 
 ## 6.6. Reset - changez de perspective
 
@@ -82,9 +82,9 @@ Une meilleure solution serait simplement d'interrompre le message et en démarre
 
 ## 6.7. Server push
 
-Cette fonctionnalité est aussi connue comme "cache push". Cas typique: un client demande une ressource X au serveur, le serveur sait qu'en général ce client aura besoin de la ressource Z par la suite et la lui envoie sans que le client l'ait demandée. Cela aide le client à mettre Z dans son cache pour qu'elle soit disponible quand il en aura besoin.
+Cette fonctionnalité est aussi connue comme "cache push". Cas typique : un client demande une ressource X au serveur, le serveur sait qu'en général ce client aura besoin de la ressource Z par la suite et la lui envoie sans que le client l'ait demandée. Cela aide le client en mettant Z dans son cache pour qu'elle soit disponible quand il en aura besoin.
 
-Le Push Serveur (Server Push) doit être explicitement autorisée par le client et, quand bien même le client l'autorise, ce dernier se réserve le droit de terminer un flux "poussé" avec un RST_STREAM.
+Le Push Serveur (Server Push) doit être explicitement autorisé par le client et, quand bien même le client l'autorise, ce dernier se réserve le droit de terminer un flux "poussé" avec un RST_STREAM.
 
 ## 6.8. Contrôle de flux
 
