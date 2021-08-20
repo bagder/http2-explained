@@ -4,7 +4,7 @@ Le [projet curl](https://curl.haxx.se/) a fourni un support http2 expérimental 
 
 Dans l'esprit curl, nous voulons supporter toutes les fonctionnalités http2 possibles. curl est souvent utilisé comme outil de test et nous voulons que ce soit le cas pour http2 également.
 
-curl utilise une librairie distincte [nghttp2](https://nghttp2.org/) pour la couche http2. curl requiert nghttp2 1.0 ou plus.
+curl utilise une bibliothèque distincte [nghttp2](https://nghttp2.org/) pour la couche http2. curl requiert nghttp2 1.0 ou plus.
 
 Notez qu'actuellement, sous linux, curl et libcurl ne sont pas toujours délivrés avec le support du protocole HTTP/2 activé.
 
@@ -16,9 +16,9 @@ En interne, curl convertit les en-têtes entrant http2 en en-têtes du style HTT
 
 curl supporte http2 sur TCP via l'en-tête Upgrade:. Si vous initiez une requête HTTP en demandant HTTP 2, curl demandera au serveur de mettre à niveau (Upgrader) sa connexion en http2.
 
-## 11.3. Quelles librairies TLS ?
+## 11.3. Quelles bibliothèques TLS ?
 
-curl supporte différentes librairies TLS et c'est toujours valide pour http2. La difficulté avec TLS et http2 est le support de ALPN et potentiellement NPN.
+curl supporte différentes bibliothèques TLS et c'est toujours valide pour http2. La difficulté avec TLS et http2 est le support de ALPN et potentiellement NPN.
 
 Compilez curl avec des versions récentes d'OpenSSL ou NSS pour avoir ALPN et NPN. Avec GnuTLS et PolarSSL vous n'aurez que ALPN et pas NPN.
 

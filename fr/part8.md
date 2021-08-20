@@ -32,7 +32,7 @@ Il y avait déjà un certain nombre d'implémentations très tôt, et ce nombre 
 
 Firefox a été le navigateur le plus en avance, Twitter a suivi et propose ses services en http2. Google commença en avril 2014 à offrir ses services en http2 sur quelques serveurs et depuis mai 2014 via les versions de développement de Chrome. Microsoft a montré une préversion d'Internet Explorer supportant http2.
 
-curl et libcurl supportent http2 non-TLS et TLS à partir d'une des librairies TLS disponibles.
+curl et libcurl supportent http2 non-TLS et TLS à partir d'une des bibliothèques TLS disponibles.
 
 ### 8.3.1. Implémentations manquantes
 
