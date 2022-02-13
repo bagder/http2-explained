@@ -20,7 +20,7 @@ El cliente intentará conectarse a ese servicio asíncronamente, y utilizará es
 
 La cabecera Alt-Svc permite al servidor que proporciona el contenido por http://, informar al cliente que ese mismo contenido esta también disponible a través de una conexión TLS.
 
-Esta es una funcionalidad debatida en cierta manera. Una conexión de ese tipo, realizaría una conexión TLS sin autenticar que no sería advertida como “segura” en ningún sitio, ya que no usaría un candado en la Interfaz de Usuario o avisaría al usuario de cualquier manera que no se trata del viejo HTTP plano, sino de que se trata de TLS oportunista, concepto que en sí mismo, que encuentra firmes detractores.
+Esta es una funcionalidad debatida en cierta manera. Una conexión de ese tipo, realizaría una conexión TLS sin autenticar que no sería advertida como “segura” en ningún sitio, ya que no usaría un candado en la Interfaz de Usuario o avisaría al usuario de cualquier manera que no se trata del viejo HTTP plano, sino que se trata del TLS oportunista, concepto que en sí mismo, encuentra firmes detractores.
 
 ## 7.2. Blocked (Bloqueado)
 
