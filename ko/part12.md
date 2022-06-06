@@ -13,6 +13,7 @@ HTTP2는 HTTP1와 HTTP2 사이의 통신을 프록시 할 수 있도록 하기 �
 
 ## 12.1. QUIC
 
+(이 챕터는 2015년에 쓰여졌는데, 그때는 여전히 QUIC 은 초기 시절이었습니다. 저는 독자들에게 그 당시에 우리가 미래를 어떻게 보았는지 가늠할 수 있도록 이 챕터를 그대로 남기기로 결정했습니다. 2022년의 의견은 다음 챕터를 보시길 바랍니다.)
 Google의 [QUIC](https://www.chromium.org/quic)( Quick UDP Internet Connections )은 흥미로운 실험입니다. 그것은 SPDY 때와 유사한 스타일과 정신으로 이루어지고 있습니다.
 QUIC은 TCP + TLS + HTTP/2의 대안이며 UDP를 사용하여 구현되었습니다.
 
@@ -21,3 +22,11 @@ QUIC은 연결을 빠르게 할 수 있습니다.  HTTP/2는 패킷 손실에 �
 
 QUIC은 현재 Google이 Chrome과 Google 서버에만 구현 되어 있습니다. 코드는 쉽게 재사용 할 수 있는 형태가 되어 있지 않습니다.
 libquic라는 프로젝트가 그것을 실현 하려고 하고 있습니다. 프로토콜은 초안으로 [libquic](https://github.com/devsisters/libquic) 전송 워킹 그룹에 [제출](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-01) 되었습니다 .
+
+## 12.2 HTTP/3
+
+**QUIC** 은 더이상 두문자어가 아닙니다. 그것은 전송 프로토콜의 이름으로 UDP 위에 동작하며 네개의 명세 사항에 문서화되어 있습니다: RFC 8999 부터 RFC 9002 까지. 위 12.1 에서 기술된 것은 Google QUIC 프로토콜이고, 지금 스탠더드로 만들어진 것은 비록 이름은 그대로 유지되지만 다른 QUIC 프로토콜이라는 것을 알아두십시오.
+
+HTTP/3 는 진행 중인 새로운 HTTP 버전입니다. 그것은 QUIC 프로토콜 위에서 동작하도록 설계되어 있습니다.
+
+HTTP/3 와 QUIC 의 자세한 내용은 [HTTP/3 해설](https://http3-explained.haxx.se/)를 살펴보시길 바랍니다. 
