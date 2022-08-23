@@ -18,7 +18,7 @@ Skriv in “chrome://flags/#enable-spdy4" i din webbläsares adressfält och kli
 
 ## 10.2. Endast TLS
 
-Kom ihåg at Chrom bara implementerat http2 över TLS. Du kommer endast see
+Kom ihåg at Chrome bara implementerat http2 över TLS. Du kommer endast see
 http2 i aktion i Chrome när du går til https://-sajter som erbjuder http2-support.
 
 ## 10.3. Se HTTP/2-anvädning

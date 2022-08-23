@@ -6,18 +6,18 @@ satte sig för att göra?
 De var faktiskt ganska strikta och satte ett antal begränsningar för gruppens
 möjligheter att förnya protokollet.
 
-- Det måste behålla HTTP:s paradigmer. Det måste fortfarande ett protokoll där
-  klienten skickar förfrågningar till en server över TCP.
+- Det måste behålla HTTP:s paradigmer. Det måste fortfarande vara ett protokoll
+  där klienten skickar förfrågningar till en server över TCP.
 
-- http://- och https://-URLer kan inte ändras. Det kan inte göras ett nytt
+- http://- och https://-URLer får inte ändras. Det får inte göras ett nytt
   schema. Mängden innehåll som redan använder sådana URLer är helt enkelt för
   stor för att tro att de kan ändras.
 
 - HTTP1-servrar och klienter kommer finnas kvar i decennier, vi måste kunna
   erbjuda proxys för http2-servrar.
 
-- Därför måste proxys kunna mappa http2-funktioner till HTTP 1.1-klienter, ett
-  till ett.
+- Därför måste proxys kunna översätta http2-funktioner till HTTP 1.1-klienter,
+  en till en.
 
 - Ta bort eller minska antalet valbara delar i protokollet. Det var inte
   riktigt ett krav men mer som ett mantra som följde med från SPDY och
@@ -25,14 +25,14 @@ möjligheter att förnya protokollet.
   inte något sätt som man kan undvika att implementera allt nu och sedan
   upptäcka problemen i framtiden.
 
-- Ingen mera fraktionsdel i versionsnumret. Det beslöts att klienter och
+- Ingen mera decimaldel i versionsnumret. Det beslöts att klienter och
   servrar är antingen kompatibla med http2 eller så är de det inte. Om det
   kommer ett behov att utöka protokollet eller ändra saker så kommer http3 att
   skapas. Det finns inte något "minor version" i http2.
 
 ## 5.1. http2 för existerande URI-scheman
 
-Som tidigare nämnts så kan inte existerande URI-scheman ändras, så http2 var
+Som tidigare nämnts så får inte existerande URI-scheman ändras, så http2 var
 tvunget att göras med de redan existerande. Eftersom de används för HTTP 1.x
 idag så behövde vi förstås ett sätt att uppgradera protokollet till http2
 eller på något vis be servern använda http2 istället för äldre protokoll.
@@ -67,7 +67,7 @@ mellan-boxar att blanda sig i och förstöra trafik när det faktiskt är något
 annat protokoll som pratas där.
 
 Obligatorisk TLS är ett ämne som orsakat mycket handviftande och upprörda
-röster på mailinglistor och möten - är det bra eller är det ondska? Det är ett
+röster på mailinglistor och möten - är det gott eller är det ont? Det är ett
 infekterat ämne - var medveten om detta när du kastar den här frågan i
 ansiktet på en HTTPbis-deltagare!
 
@@ -82,7 +82,7 @@ finns krav på vilka chiffer som måste användas.
 
 Next Protocol Negotiation (NPN), är tillägget som användes i SPDY för att
 förhandla med TLS-servrar. Eftersom det inte var en riktig standard så togs
-det till IETF och igenom och det som kom ut blev ALPN: Application Layer
+det till och igenom IETF och det som kom ut blev ALPN: Application Layer
 Protocol Negotiation. ALPN är det som nu lyfts upp för att användas i http2,
 medan SPDY-klienter och -servrar fortsätter använda NPN.
 
@@ -92,7 +92,7 @@ servrar är gjorda att använda båda dessa tillägg när de förhandlar
 http2. Vidare, eftersom NPN används för SPDY och många servrar ju stöder både
 SPDY och http2 så är det vettigt att stödja både NPN och ALPN på sådana servrar.
 
-ALPN skiljer sig i huvudsak från NPN genom vet det är som bestämmer vilket
+ALPN skiljer sig i huvudsak från NPN genom vem det är som bestämmer vilket
 protokoll som pratas. Med ALPN är det klienten som ger servern en lista med
 protokoll i den ordningen den föredrar att använda dem, och servern väljer det
 protokoll den vill ha, medan för NPN så är det klienten som gör det slutliga
@@ -102,9 +102,9 @@ valet.
 
 Som tidigare nämnts i förbifarten, för klartext-HTTP 1.1 så är mekanismen att
 förhandla http2 att fråga servern med en Upgrade:-header. Om servern då pratar
-http2 svarar den med en "101 Byter" status och från då och framöver pratar den
-istället http2 på det kopplet. Du inser förstås att den
-uppgraderingsproceduren kostar en hel nätverks fram-och-tillbaka-tur men en
+http2 svarar den med en "101 Byter" status och från det och framöver pratar den
+istället http2 på det kopplet. Man inser förstås att den
+uppgraderingsproceduren kostar en hel fram-och-tillbaka-tur i nätverket men en
 fördel är att ett http2-koppel bör vara möjligt att hålla levande och
 återanvända i mycket högre grad än HTTP1-koppel generellt är.
 

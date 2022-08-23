@@ -6,9 +6,9 @@ sedemera gjordes om och breddades till ett fullt utvecklat dokument med alla
 detaljer och riktiga förklaringar.
 
 RFC 7540 är det officiella namnet på den slutliga http2-specifikationen och den
-blev publicerad den 15:e maj 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
+publicerades den 15:e maj 2015: https://www.rfc-editor.org/rfc/rfc7540.txt
 
-Alla misstag i det är dokumentet är mina egna och resultatet av mina fel. Peka
+Alla misstag i det här dokumentet är mina egna och resultatet av mina fel. Peka
 gärna ut dem så åtgärdar vi dem till en kommande uppdatering.
 
 I det här dokumentet har jag försökt att konsekvent använda ordet "http2" för
@@ -18,7 +18,7 @@ ett bättre flöde i texten.
 
 ## 1.1 Författaren
 
-Mitt namn är Daniel Stenberg och jag jobbar för Mozilla. Jag har arbetat med
+Mitt namn är Daniel Stenberg. Jag har arbetat med
 open source och nätverk i över tjugo år i otaliga projekt. Möjligvis är jag
 mest känd för att jag är huvudutvecklaren av curl och libcurl. Jag har varit
 involverad i IETF och dess HTTPbis arbetsgrupp under flera år och där har jag

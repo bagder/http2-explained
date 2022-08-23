@@ -1,9 +1,9 @@
 # 7. Utökningar
 
 Protokollet kräver att en mottagare måste ta emot och ignorera alla paket som
-innehåller okända paket-typer. Två parter kan därmed förhandla om en
-användning av nya paket-typer på hop-by-hop basis (dvs överenskommelsen
-gäller endast mellan dessa två ändpunkter och inte längre än så), och de paket
+innehåller okända pakettyper. Två parter kan därmed förhandla om en
+användning av nya pakettyper på hop-by-hop basis (dvs överenskommelsen
+gäller endast mellan dessa två ändpunkter och inte längre än så), och de paketen
 kan då inte ändra state och de kan inte flödeskontrolleras.
 
 Frågan huruvida http2 skulle tillåta utökningar eller inte debatterades länge
@@ -11,7 +11,7 @@ medan protokollet utvecklades med åsikter som svängde åt båda hållen. Efter
 draft-12 svängde pendeln tillbaks en sista gång och utökningar tilläts igen.
 
 Utökningar är därmed inte del av det egentliga protokollen utan kommer
-dokumenteras utanför huvudspecen. Redan nu finns det två paket-typer som har
+dokumenteras utanför huvudspecen. Redan nu finns det två pakettyper som har
 diskuterats för att inkluderas i protokollet och som troligen tillhör de
 första typerna att skickas som utökningar. Jag beskriver dem här bara på grund
 deras popularitet och deras tidigare roll som "inhemska" typer.
@@ -19,9 +19,9 @@ deras popularitet och deras tidigare roll som "inhemska" typer.
 ## 7.1. Alternativa tjänster
 
 När http2 antas, finns det anledning att misstänka att TCP-koppel kommer bli
-mycket långvariga och hållas levande mycket längre än vad HTTP 1.x-kopper
+mycket långvariga och hållas levande mycket längre än vad HTTP 1.x-koppel
 någonsin hållits. En klient bör kunna göra mycket av vad den vill över ett
-enda koppel per varje host/sajt och det enda kopplet kan då potentiellt hållas
+enda koppel per host/sajt och det enda kopplet kan då potentiellt hållas
 uppe riktigt länge.
 
 Detta påverkar hur HTTP-loadbalancerare arbetar och det kan komma situationer
@@ -54,12 +54,12 @@ TLS och en del människor är emot det konceptet väldigt starkt.
 
 Ett paket av den här typen är tänkt att skickas exakt en gång av en http2-part
 när denne har data att skicka men flödeskontroll förbjuder den att skicka
-data. Tanken är att ifall din implementation tar emot ett sådant paket så vet
-du att din implementation har strulat till någonting och/eller du får mindre
+data. Tanken är att ifall implementationen tar emot ett sådant paket så vet
+man att implementationen har strulat till någonting och/eller får mindre
 än optimal överföringshastighet på grund av det.
 
 Ett citat från draft-12, innan det här paketet togs ut och blev en utökning:
 
-> “Paket-typen BLOCKED är med i den här draft-versionen för att erbjuda
+> “Pakettypen BLOCKED är med i den här draft-versionen för att erbjuda
 > experimentering.  Om resultaten av experimenten inte resulterar i positiv
 > feedback kommer den tas bort.

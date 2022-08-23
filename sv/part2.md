@@ -8,7 +8,7 @@ saker att köra över HTTP hellre än att bygga något som är helt nytt och ege
 ## 2.1 HTTP 1.1 är stort
 
 När HTTP skapades och slängdes ut i världen ansågs det antagligen vara ett
-ganska enkelt och rakt-fram protokoll, men tiden har bevisat att detta inte är
+ganska enkelt och rättframt protokoll, men tiden har bevisat att detta inte är
 sant. HTTP 1.0 är RFC 1945 som är en 60 sidors specifikation släppt 1996. RFC
 2616, som beskriver HTTP 1.1, släpptes bara tre år senare 1999, och växte
 avsevärt till sina 176 sidor. Trots att den redan växt så, delade IETF senare
@@ -24,7 +24,7 @@ senare utökningar har lett till ett ekosystem av programvara där nästan ingen
 implementation någonsin implementerar allting - och det är inte ens möjligt
 att riktigt säga vad "allting" är. Det ledde till en situation där funktioner
 i protokollet som utnyttjades väldigt lite ofta inte alls implementerades - i
-början - och de fall när någon faktiskt implementerade dem såg de väldigt
+början - och i de fall när någon faktiskt implementerade dem såg de väldigt
 liten användning.
 
 Senare skapade detta interoperabilitetsproblem när klienter och servrar väl
@@ -50,7 +50,7 @@ avsnitten belyser några av de existerande bristerna.
 När man tittar på trenden för några av de mest populära sajterna på webben
 idag och vad det krävs för att ladda ner deras framsidor, så ser man ett
 tydligt mönster. Genom åren har mängden data som behöver laddas ner gradvis
-ökat till och förbi 2.1MB. Vad som är än viktigare i det här sammanhanget är
+ökat till och över 2,1 MB. Något som är än viktigare i det här sammanhanget är
 att i genomsnitt så behövs det över ett hundra enskilda objekt för att visa
 varje sida.
 
@@ -70,7 +70,7 @@ HTTP 1.1 är väldigt känsligt för fördröjningar (latency), delvis för att 
 Pipelining fortfarande är fyllt med problem och är avslaget per default hos en
 stor andel av användarna.
 
-Medan vi sett en rejäl ökning i tillgänglig bandbredd hos människor över de
+Medan vi sett en rejäl ökning i tillgänglig bandbredd för användare över de
 senaste åren, så har vi inte sett samma förbättring i att minska
 fördröjningar. Länkar med stora fördröjningar, som många nuvarande mobila
 teknologier, gör det riktigt svårt att få en bra och snabb upplevelse av
@@ -96,7 +96,7 @@ rätt kö, och ibland kan du till och med starta en ny, egen kö, men hur du än
 gör så kan du inte undvika att ta ett beslut och när det väl är taget kan du
 inte byta kö.
 
-Skapa nya köer är också belagt med prestanda- och resurs-förluster så det
+Skapa nya köer är också belagt med prestanda- och resursförluster så det
 skalar inte upp bra till mer än ett ganska lågt antal köer. Det finns helt
 enkelt ingen perfekt lösning för detta.
 
