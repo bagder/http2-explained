@@ -10,21 +10,22 @@ och räkna baserat på det och andra experiment som gjorts tidigare.
 
 http2 minskar antalet turer fram och tillbaks över nätverket och det undviker
 först-i-kön-blockeringsproblemen genom att multiplexa och att kunna avsluta
-oönskad strömmar snabbt.
+oönskade strömmar snabbt.
 
 Det tillåter ett stort antal parallella strömmar som i antal vida överstiger
-antal koppel host även de mest shardade sajterna av idag.
+antal koppel hos även de mest shardade sajterna av idag.
 
-Med prioriteter använda ordentligt på strömmarna finns chansen att klient
-mycket bättre kommer kunna få den viktiga datan före den mindre viktiga
+Med prioriteter använda ordentligt på strömmarna finns chansen att klienten
+på ett mycket bättre sätt kommer kunna få den viktiga datan före den mindre
+viktiga
 datan. Allt sammantaget, skulle jag säga att chanserna är väldigt goda att det
 kommer leda till snabbare sidladdning och mer responsiva webbsajter. Kort
 sagt: en bättre webbupplevelse.
 
 Hur mycket snabbare och hur mycket förbättringar vi kommer se tror jag inte vi
-kan säga ännu. Först och främst är ju teknologin fortfarnade väldigt ung och
+kan säga ännu. Först och främst är ju teknologin fortfarande väldigt ung och
 sen har vi knappt ens börjat se klienter och servrar trimma sina
-implementationer till att verkligen dra nytta av alla de krafter detta nya
+implementationer till att verkligen dra nytta av alla de möjligheter detta nya
 protokoll erbjuder.
 
 ## 8.2. Hur kommer http2 påverka webbutveckling?
@@ -65,12 +66,12 @@ versionen.
 Firefox har varit webbläsaren som varit först med support för de allra senaste
 versionerna av specen. Twitter har hängt med och erbjuder sina tjänster över
 http2. Google började under april 2014 att erbjudera http2-support på en del
-test servrar som kör deras tjänster och sedan maj 2014 har de erbjudit http2
-support för deras utvecklingsversion av Chrome. Microsoft har visat en "tech
-preview" med http2 support i deras nästa Internet Explorer-version. Safari och
+testservrar som kör deras tjänster och sedan maj 2014 har de erbjudit
+http2-support för sin utvecklingsversion av Chrome. Microsoft har visat en "tech
+preview" med http2-support i deras nästa Internet Explorer-version. Safari och
 Opera har båda sagt att de kommer stöda http2.
 
-curl och libcurl stöder osäker http2 likväl som TLS-baserad, användades en av
+curl och libcurl stöder osäker http2 likväl som TLS-baserad, användandes en av
 flera olika TLS-bibliotek.
 
 [H2O](https://h2o.examp1e.net/), [Apache Traffic
@@ -110,9 +111,11 @@ uppmanar servrar att migrera till http2 istället.
 
 ### 8.4.2. “Protokollet är endast användbart för webbläsare"
 
-Det här är typ sant. En av de primära drivarna bakom utvecklingen av http2 var
+Det här är typ sant. En av de primära drivkrafterna bakom utvecklingen av
+http2 var
 att fixa HTTP pipeliningen. Om ditt användningsfall inte har något behov av
-pipeliningen så finns det en sannolikhet att http2 inte kommer gör mycket bra
+pipeliningen så finns det en sannolikhet att http2 inte kommer vara till
+mycket nytta
 för dig. Det är inte den enda förbättringen i protokollet men en stor sådan.
 
 Så snart tjänster börjar använda den fulla kraften och möjligheterna med
@@ -136,7 +139,7 @@ Det kan vara sant till viss utsträckning. TLS-handskakningen lägger på lite
 extra men det finns redan pågående ansträngningar att reducera antalet
 tur-och-retur varv ännu mer för TLS. Den extra kostnaden för att använda TLS
 över kabeln istället för klartext är inte osignifikant och tydligt noterbar så
-mer CPU och kraft kommer användas för samma trafik mönster som ett osäkert
+mer CPU och kraft kommer användas för samma trafikmönster än för ett osäkert
 protokoll. Hur mycket och vilken effect det får är ett ämne för tyckande och
 mätningar. Se till exempel [istlsfastyet.com](https://istlsfastyet.com/) för
 en källa till sådan info.
@@ -145,7 +148,7 @@ Telecom och andra nätverskoperatörer, till exempel inom ATIS Open Web
 Alliance, säger att [de behöver okrypterad
 trafik](https://www.atis.org/openweballiance/docs/OWAKickoffSlides051414.pdf)
 för att erbjuder cache, komprimering och andra tekniker som är nödvändiga för
-att tillhandahålla en snabb webbupplevelse över satelit, i flygplan och
+att tillhandahålla en snabb webbupplevelse över satellit, i flygplan och
 liknande. http2 gör inte TLS obligatoriskt så vi ska inte blanda ihop
 termerna.
 
@@ -153,9 +156,9 @@ Många Internet-användare har uttalat sina preferenser för att TLS ska använd
 mer utbrett och vi borde hjälpa till att skydda användarnas integritet.
 
 Experiment har visat att genom att använda TLS så får man en högre grad av
-framgång än när man implementerar ny klartext-protokoll över port 80, eftersom
+framgång än när man implementerar nya klartextprotokoll över port 80, eftersom
 det finns lite för många mellan-boxar där ute i världen som ingriper i det som
-de tror är HTTP 1.1 om det kommer över port och ibland kan se ut som HTTP.
+de tror är HTTP 1.1 om det kommer över port 80 och ibland kan se ut som HTTP.
 
 Till slut, tack vare https multiplexande strömmar över ett fysikt koppel, så
 kommer vanliga användningsfall med webbläsare ändå göra väsentligt färre

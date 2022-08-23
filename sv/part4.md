@@ -17,8 +17,8 @@ practices", HTTP och mängder med protokollvarianter som aldrig kom någon vart.
 
 Inom IETF formas arbetetsgrupper (working groups) med ett avgränsat
 arbetsområde som jobbar mot ett mål. De etablerar en stadga med ett antal
-riktlinjer och begränsningar för vad de ska åstadkomma. Alla som vill är
-tillåtna att delta i diskussionerna och utvecklingen. Alla som deltar och
+riktlinjer och begränsningar för vad de ska åstadkomma. Alla som vill får
+lov att delta i diskussionerna och utvecklingen. Alla som deltar och
 säger något har samma vikt och chans att påverka utgången, och alla är där som
 enskilda individer. Det läggs väldigt liten vikt vid vilka företag individerna
 jobbar för.
@@ -52,7 +52,7 @@ som i fallet för HTTP 1.1.
 [SPDY](https://en.wikipedia.org/wiki/SPDY) är ett protokoll som utvecklades och
 togs fram av Google. De utvecklade det visserligen öppet och bjöd in alla som
 ville att delta, men det var tydligt att de utnyttjade sin situation med att
-kontrollera både en populär webbläsare och ett signifikant server-bestånd med
+kontrollera både en populär webbläsare och ett signifikant serverbestånd med
 välanvända tjänster.
 
 När HTTPbis-arbetsgruppen bestämde att det var dags att börja jobba på http2

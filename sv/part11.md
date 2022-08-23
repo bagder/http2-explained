@@ -10,7 +10,7 @@ webbsajter och vi tänker fortsätta med det för http2 också.
 curl använder det separata biblioteket [nghttp2](https://nghttp2.org/) för all
 funktionalitet i http2-lagret. curl kräver nghttp2 1.0 eller senare.
 
-Notera att just nu skippas curl på linux inte alltid med http2-support
+Notera att just nu skeppas curl på linux inte alltid med http2-support
 påslaget.
 
 ## 11.1. HTTP 1.x-liknande

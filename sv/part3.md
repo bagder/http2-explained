@@ -52,7 +52,7 @@ logiskt resonemang bakom.
 
 Från början sade HTTP 1.1-specifikationen att en klient endast var tillåten
 att använda maximalt två TCP-koppel till varje host. Så, för att inte bryta
-mot specen uppfann smarta sajter nya host namn och - voilá - så kunde du få
+mot specen uppfann smarta sajter nya hostnamn och - voilá - så kunde du få
 många fler koppel till din sajt och minska sidladdningstider.
 
 Över tid har den gränsen tagits bort och dagens klienter använder lätt 6-8
@@ -61,17 +61,17 @@ fortsätter att använda den här tekniken för att öka antalet koppel. Med ett
 ständigt ökande antal objekt (som jag visade tidigare) så måste ett än större
 antal koppel användas för att få HTTP att prestera bra och göra din sajt
 snabb. Det är inte ovanligt att enskilda sajter använder långt över 50 eller
-upp och förbi 100 koppel tack vare den här tekniken. Färsk statistik från
+upp till och över 100 koppel tack vare den här tekniken. Färsk statistik från
 httparchive.org visar att av de 300 000 mest populära URLerna i världen så
 behövs i genomsnitt 40(!) TCP-koppel för att visa sajten, och trendkurvan
 säger att det fortsätter växa.
 
 En annan anledning att också lägga bilder och liknande resurser på ett separat
 hostnamn som inte använder cookies, är att storleken på cookies idag kan bli
-betydande. Genom att använda cookie-lösa bild-värdar så kan du ibland öka
+betydande. Genom att använda cookie-lösa bildvärdar så kan man ibland öka
 prestandan enbart genom att HTTP-förfrågningarna blir så mycket mindre!
 
-Bilden nedan visar paket-spårning och hur det ser ut när en webbläsare besöker
+Bilden nedan visar paketspårning och hur det ser ut när en webbläsare besöker
 en av Sveriges toppsajter, och hur förfrågningarna är distribuerade över flera
 olika hostnamn.
 

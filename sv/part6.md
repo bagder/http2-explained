@@ -36,14 +36,14 @@ liknande.
 
 <img style="float: right;" src="https://raw.githubusercontent.com/bagder/http2-explained/master/images/frame-layout.png" />
 
-http2 skickar binära paket ("frames"). Det finns olika paket-typer som kan
+http2 skickar binära paket ("frames"). Det finns olika pakettyper som kan
 skickas och de har allihop samma upplägg:
 
-Längd, typ, flaggor, ström-id och paket-data ("payload").
+Längd, typ, flaggor, ström-id och paketdata ("payload").
 
-Det finns tio olika paket-typer definierade i http2-specen och de två kanske
+Det finns tio olika pakettyper definierade i http2-specen och de två kanske
 mest fundamentala som direkt mappar HTTP 1.1-funktioner är DATA och
-HEADERS. Jag kommer beskriva några av paket-typerna i närmare detaljer nedan.
+HEADERS. Jag kommer beskriva några av pakettyperna i närmare detaljer nedan.
 
 ## 6.3. Multiplexade strömmar
 
@@ -56,7 +56,7 @@ Ett enda http2-koppel kan överföra många samtidiga strömmar mellan
 ändpunkterna genom att skicka paket från olika strömmar över kopplet. Strömmar
 kan etableras och användas ensidigt eller delas av både klienten och servern
 och de kan stängas av endera sidan. Ordningen som paketen skickas inom
-strömmen behålls, så mottagaren tar emot de i samma ordning som de skickades.
+strömmen behålls, så mottagaren tar emot dem i samma ordning som de skickades.
 
 Multiplexande strömmar betyder att paket från många strömmar blandas och
 skickas över samma koppel. Två (eller fler) individuella tåg med data trycks
@@ -77,11 +77,11 @@ resursbrist tvingar servern att välja vilka strömmar som ska skickas först.
 
 Genom att använda ett PRIORITY-paket kan en klient också berätta för servern
 vilken annan ström den beror på. Detta möjliggör för en klient att bygga ett
-"träd" med prioriteter där flera "barn-strömmar" kan bero att
+"träd" med prioriteter där flera "barn-strömmar" kan bero på att
 "föräldra-strömmar" först avslutas.
 
 Prioritetsvikter och beroenden kan ändras dynamiskt under körning, vilket bör
-tillåta webbläsare att se till att när användare scrollar ner en sida full med
+göra att webbläsare kan se till att när användare scrollar ner en sida full med
 bilder så kan den berätta vilka bilder som är viktigast, eller om du byter
 tabbar så kan den prioritera en ny uppsättning strömmar som då plötsligt
 kommer i fokus.
@@ -91,10 +91,10 @@ kommer i fokus.
 HTTP är ett state-löst protokoll. I korthet betyder det att varje förfrågan
 måste ta med sig precis så mycket detaljer som servern behöver för att serva
 den frågan utan att servern ska behöva mellanlagra info eller meta-data från
-tidigare förfrågningar. Eftersom http2 inte ändra några sådana paradigmer så
-måste det också fungera så.
+tidigare förfrågningar. Eftersom http2 inte får ändra några sådana paradigmer
+så måste det också fungera så.
 
-Detta gör HTTP repetativt. När en klient frågar efter många resurser från
+Detta gör HTTP repetitivt. När en klient frågar efter många resurser från
 samma server, typ bilder på en webbsida, så kommer det göras en lång serie med
 förfrågningar som ser nästan identiska ut. En serie med nästan identiska
 någonting ber om komprimering.
@@ -122,8 +122,8 @@ Att komprimera dynamiskt innehåll för ett protokoll utan att bli sårbar för
 dessa attacker kräver lite omtanke och försiktiga övervägningnar. Det är vad
 HTTPbis-teamet försökte sig på.
 
-In kommer då [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt), Header-
-komprimering för http2, vilket – som namnet lämpligt indikerar - är ett
+In kommer då [HPACK](https://www.rfc-editor.org/rfc/rfc7541.txt),
+Header-komprimering för http2, vilket – som namnet lämpligt indikerar - är ett
 komprimeringsformat speciellt framtaget för http2-headers och det är strikt
 talat specificerat i en egen specifikation. Det nya formatet, tillsammans med
 andra motåtgärder, som en bit som ber mellanhänder att inte komprimera en viss
@@ -147,7 +147,7 @@ det kommer till priset av att du måste förhandla upp ett nytt TCP-koppel igen.
 
 En bättre lösning skulle vara att bara stoppa meddelandet och skicka ett
 nytt. Det kan göras med http2:s RST_STREAM-paket som därmed hjälper till att
-undvika slösa på bandbredd och onödiga nedrivningar av koppel.
+undvika att slösa på bandbredd och onödiga nedrivningar av koppel.
 
 ## 6.7. Server push
 
@@ -163,9 +163,9 @@ pushad ström med RST_STREAM ifall den inte vill ha den.
 
 ## 6.8. Flödeskontroll
 
-Varje individuell ström över http2 har sin eget annonserade flödesfönster som
+Varje individuell ström över http2 har sitt eget annonserade flödesfönster som
 den andra sidan är tillåten att sända data för. Det är väldigt likt hur SSH
-fungerar i stil och koncept, om du råkar veta hur det fungerar.
+fungerar i stil och koncept, om du råkar känna till hur det fungerar.
 
 För varje ström måste båda sidor berätta för den andra hur mycket utrymme det
 finns att lagra inkommande data i, och den andra änden har bara tillåtelse att
